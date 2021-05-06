@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="CameraMenu_ResetCamera.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Numpad 0</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CameraMenu_ResetCamera.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="CameraMenu_ResetCamera.Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="AlignToMenu_Top.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Numpad 7</value>
+  </data>
+  <data name="AlignToMenu_Top.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="AlignToMenu_Top.Text" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="AlignToMenu_Bottom.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl Numpad 7</value>
+  </data>
+  <data name="AlignToMenu_Bottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="AlignToMenu_Bottom.Text" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="AlignToMenu_Front.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Numpad 1</value>
+  </data>
+  <data name="AlignToMenu_Front.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="AlignToMenu_Front.Text" xml:space="preserve">
+    <value>Front</value>
+  </data>
+  <data name="AlignToMenu_Back.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl Numpad 1</value>
+  </data>
+  <data name="AlignToMenu_Back.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="AlignToMenu_Back.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="AlignToMenu_Right.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Numpad 3</value>
+  </data>
+  <data name="AlignToMenu_Right.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="AlignToMenu_Right.Text" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="AlignToMenu_Left.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl Numpad 3</value>
+  </data>
+  <data name="AlignToMenu_Left.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 22</value>
+  </data>
+  <data name="AlignToMenu_Left.Text" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="CameraMenu_AlignTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="CameraMenu_AlignTo.Text" xml:space="preserve">
+    <value>Align to</value>
+  </data>
+  <data name="CameraMenu_LookAt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="CameraMenu_LookAt.Text" xml:space="preserve">
+    <value>Look at selection</value>
+  </data>
+  <data name="CameraMenu_Orthographic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="CameraMenu_Orthographic.Text" xml:space="preserve">
+    <value>Orthographic</value>
+  </data>
+  <data name="CameraMenuDropDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
+        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
+        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
+        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
+        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
+        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
+        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
+        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
+        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="CameraMenuDropDown.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CameraMenuDropDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 24</value>
+  </data>
+  <data name="CameraMenuDropDown.Text" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="DisplayMenu_Meshes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 22</value>
+  </data>
+  <data name="DisplayMenu_Meshes.Text" xml:space="preserve">
+    <value>Meshes</value>
+  </data>
+  <data name="DisplayMenu_Collisions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 22</value>
+  </data>
+  <data name="DisplayMenu_Collisions.Text" xml:space="preserve">
+    <value>Collisions</value>
+  </data>
+  <data name="DisplayMenu_Connections.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 22</value>
+  </data>
+  <data name="DisplayMenu_Connections.Text" xml:space="preserve">
+    <value>Connections</value>
+  </data>
+  <data name="DisplayMenu_3dCursor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 22</value>
+  </data>
+  <data name="DisplayMenu_3dCursor.Text" xml:space="preserve">
+    <value>3D Cursor</value>
+  </data>
+  <data name="DisplayMenu_Bones.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 22</value>
+  </data>
+  <data name="DisplayMenu_Bones.Text" xml:space="preserve">
+    <value>Bones</value>
+  </data>
+  <data name="DisplayMenuDropDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
+        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
+        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
+        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
+        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
+        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
+        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
+        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
+        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="DisplayMenuDropDown.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="DisplayMenuDropDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="DisplayMenuDropDown.Text" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="MeshesMenu_ConfigureOutlines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="MeshesMenu_ConfigureOutlines.Text" xml:space="preserve">
+    <value>Configure Outlines</value>
+  </data>
+  <data name="MeshesMenu_CalculateOutlines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="MeshesMenu_CalculateOutlines.Text" xml:space="preserve">
+    <value>Calculate Outlines</value>
+  </data>
+  <data name="MeshesMenu_RemoveOutlines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="MeshesMenu_RemoveOutlines.Text" xml:space="preserve">
+    <value>Remove Outlines</value>
+  </data>
+  <data name="MeshesMenu_Separator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 6</value>
+  </data>
+  <data name="MeshesMenu_Separate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="MeshesMenu_Separate.Text" xml:space="preserve">
+    <value>Separate Meshes</value>
+  </data>
+  <data name="MeshesMenu_Merge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="MeshesMenu_Merge.Text" xml:space="preserve">
+    <value>Merge Meshes</value>
+  </data>
+  <data name="MeshesDropDownMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
+        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
+        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
+        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
+        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
+        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
+        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
+        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
+        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="MeshesDropDownMenu.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="MeshesDropDownMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 24</value>
+  </data>
+  <data name="MeshesDropDownMenu.Text" xml:space="preserve">
+    <value>Meshes</value>
+  </data>
+  <data name="Bones_LinkBones.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="Bones_LinkBones.Text" xml:space="preserve">
+    <value>Link bones...</value>
+  </data>
+  <data name="Bones_RebuildConnections.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="Bones_RebuildConnections.Text" xml:space="preserve">
+    <value>Rebuild connections</value>
+  </data>
+  <data name="Bones_CalcBounding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="Bones_CalcBounding.Text" xml:space="preserve">
+    <value>Calculate bounding boxes</value>
+  </data>
+  <data name="Bones_CopyData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 22</value>
+  </data>
+  <data name="Bones_CopyData.Text" xml:space="preserve">
+    <value>Copy bone data</value>
+  </data>
+  <data name="BonesDropDownMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
+        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
+        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
+        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
+        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
+        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
+        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
+        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
+        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="BonesDropDownMenu.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BonesDropDownMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 24</value>
+  </data>
+  <data name="BonesDropDownMenu.Text" xml:space="preserve">
+    <value>Bones</value>
+  </data>
+  <data name="globalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 22</value>
+  </data>
+  <data name="globalToolStripMenuItem.Text" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="localToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 22</value>
+  </data>
+  <data name="localToolStripMenuItem.Text" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="GizmoOrientationMenu.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="GizmoOrientationMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 24</value>
+  </data>
+  <data name="GizmoOrientationMenu.Text" xml:space="preserve">
+    <value>Transform orientation</value>
+  </data>
+  <data name="boundingBoxCenterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 22</value>
+  </data>
+  <data name="boundingBoxCenterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bounding Box Center</value>
+  </data>
+  <data name="medianOriginsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 22</value>
+  </data>
+  <data name="medianOriginsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Median (Origins)</value>
+  </data>
+  <data name="medianBoundingBoxToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 22</value>
+  </data>
+  <data name="medianBoundingBoxToolStripMenuItem.Text" xml:space="preserve">
+    <value>Median (Bounding Box Center)</value>
+  </data>
+  <data name="activeElementToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 22</value>
+  </data>
+  <data name="activeElementToolStripMenuItem.Text" xml:space="preserve">
+    <value>Active Element</value>
+  </data>
+  <data name="cursorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 22</value>
+  </data>
+  <data name="cursorToolStripMenuItem.Text" xml:space="preserve">
+    <value>3D Cursor</value>
+  </data>
+  <data name="GizmoPivotModeMenu.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="GizmoPivotModeMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 24</value>
+  </data>
+  <data name="GizmoPivotModeMenu.Text" xml:space="preserve">
+    <value>Pivot point</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ToggleGridButton.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ToggleGridButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ToggleGridButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="ToggleGridButton.Text" xml:space="preserve">
+    <value>Show / Hide Grid</value>
+  </data>
+  <data name="ModelRenderMode1Button.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ModelRenderMode1Button.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ModelRenderMode1Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="ModelRenderMode1Button.Text" xml:space="preserve">
+    <value>Wireframe</value>
+  </data>
+  <data name="ModelRenderMode2Button.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ModelRenderMode2Button.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ModelRenderMode2Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="ModelRenderMode2Button.Text" xml:space="preserve">
+    <value>Solid</value>
+  </data>
+  <data name="ModelRenderMode3Button.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ModelRenderMode3Button.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ModelRenderMode3Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="ModelRenderMode3Button.Text" xml:space="preserve">
+    <value>Solid + Wireframe</value>
+  </data>
+  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 1, 1, 1</value>
+  </data>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 29</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="toolStrip1.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="visualStudioToolStripExtender1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
+  </metadata>
+  <data name="SelectionInfoPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="SelectionTransformEditor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SelectionTransformEditor.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="SelectionTransformEditor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="SelectionTransformEditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 88</value>
+  </data>
+  <data name="SelectionTransformEditor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SelectionTransformEditor.Name" xml:space="preserve">
+    <value>SelectionTransformEditor</value>
+  </data>
+  <data name="&gt;&gt;SelectionTransformEditor.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.TransformEditor, Brick Studio, Version=1.0.7.26207, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SelectionTransformEditor.Parent" xml:space="preserve">
+    <value>SelectionInfoPanel</value>
+  </data>
+  <data name="&gt;&gt;SelectionTransformEditor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SelectionInfoPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 29</value>
+  </data>
+  <data name="SelectionInfoPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 95</value>
+  </data>
+  <data name="SelectionInfoPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SelectionInfoPanel.Name" xml:space="preserve">
+    <value>SelectionInfoPanel</value>
+  </data>
+  <data name="&gt;&gt;SelectionInfoPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectionInfoPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SelectionInfoPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>549, 381</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ViewportPanel</value>
+  </data>
+  <data name="&gt;&gt;CameraMenuDropDown.Name" xml:space="preserve">
+    <value>CameraMenuDropDown</value>
+  </data>
+  <data name="&gt;&gt;CameraMenuDropDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CameraMenu_ResetCamera.Name" xml:space="preserve">
+    <value>CameraMenu_ResetCamera</value>
+  </data>
+  <data name="&gt;&gt;CameraMenu_ResetCamera.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CameraMenu_AlignTo.Name" xml:space="preserve">
+    <value>CameraMenu_AlignTo</value>
+  </data>
+  <data name="&gt;&gt;CameraMenu_AlignTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Top.Name" xml:space="preserve">
+    <value>AlignToMenu_Top</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Top.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Bottom.Name" xml:space="preserve">
+    <value>AlignToMenu_Bottom</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Bottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Front.Name" xml:space="preserve">
+    <value>AlignToMenu_Front</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Front.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Back.Name" xml:space="preserve">
+    <value>AlignToMenu_Back</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Back.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Right.Name" xml:space="preserve">
+    <value>AlignToMenu_Right</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Right.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Left.Name" xml:space="preserve">
+    <value>AlignToMenu_Left</value>
+  </data>
+  <data name="&gt;&gt;AlignToMenu_Left.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CameraMenu_LookAt.Name" xml:space="preserve">
+    <value>CameraMenu_LookAt</value>
+  </data>
+  <data name="&gt;&gt;CameraMenu_LookAt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CameraMenu_Orthographic.Name" xml:space="preserve">
+    <value>CameraMenu_Orthographic</value>
+  </data>
+  <data name="&gt;&gt;CameraMenu_Orthographic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenuDropDown.Name" xml:space="preserve">
+    <value>DisplayMenuDropDown</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenuDropDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_Meshes.Name" xml:space="preserve">
+    <value>DisplayMenu_Meshes</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_Meshes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_Collisions.Name" xml:space="preserve">
+    <value>DisplayMenu_Collisions</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_Collisions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_Connections.Name" xml:space="preserve">
+    <value>DisplayMenu_Connections</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_Connections.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_3dCursor.Name" xml:space="preserve">
+    <value>DisplayMenu_3dCursor</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_3dCursor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_Bones.Name" xml:space="preserve">
+    <value>DisplayMenu_Bones</value>
+  </data>
+  <data name="&gt;&gt;DisplayMenu_Bones.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MeshesDropDownMenu.Name" xml:space="preserve">
+    <value>MeshesDropDownMenu</value>
+  </data>
+  <data name="&gt;&gt;MeshesDropDownMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_ConfigureOutlines.Name" xml:space="preserve">
+    <value>MeshesMenu_ConfigureOutlines</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_ConfigureOutlines.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_CalculateOutlines.Name" xml:space="preserve">
+    <value>MeshesMenu_CalculateOutlines</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_CalculateOutlines.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_RemoveOutlines.Name" xml:space="preserve">
+    <value>MeshesMenu_RemoveOutlines</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_RemoveOutlines.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_Separator1.Name" xml:space="preserve">
+    <value>MeshesMenu_Separator1</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_Separator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_Separate.Name" xml:space="preserve">
+    <value>MeshesMenu_Separate</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_Separate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_Merge.Name" xml:space="preserve">
+    <value>MeshesMenu_Merge</value>
+  </data>
+  <data name="&gt;&gt;MeshesMenu_Merge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BonesDropDownMenu.Name" xml:space="preserve">
+    <value>BonesDropDownMenu</value>
+  </data>
+  <data name="&gt;&gt;BonesDropDownMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Bones_LinkBones.Name" xml:space="preserve">
+    <value>Bones_LinkBones</value>
+  </data>
+  <data name="&gt;&gt;Bones_LinkBones.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Bones_RebuildConnections.Name" xml:space="preserve">
+    <value>Bones_RebuildConnections</value>
+  </data>
+  <data name="&gt;&gt;Bones_RebuildConnections.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Bones_CalcBounding.Name" xml:space="preserve">
+    <value>Bones_CalcBounding</value>
+  </data>
+  <data name="&gt;&gt;Bones_CalcBounding.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Bones_CopyData.Name" xml:space="preserve">
+    <value>Bones_CopyData</value>
+  </data>
+  <data name="&gt;&gt;Bones_CopyData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GizmoOrientationMenu.Name" xml:space="preserve">
+    <value>GizmoOrientationMenu</value>
+  </data>
+  <data name="&gt;&gt;GizmoOrientationMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;globalToolStripMenuItem.Name" xml:space="preserve">
+    <value>globalToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;globalToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;localToolStripMenuItem.Name" xml:space="preserve">
+    <value>localToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;localToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GizmoPivotModeMenu.Name" xml:space="preserve">
+    <value>GizmoPivotModeMenu</value>
+  </data>
+  <data name="&gt;&gt;GizmoPivotModeMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;boundingBoxCenterToolStripMenuItem.Name" xml:space="preserve">
+    <value>boundingBoxCenterToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;boundingBoxCenterToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;medianOriginsToolStripMenuItem.Name" xml:space="preserve">
+    <value>medianOriginsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;medianOriginsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;medianBoundingBoxToolStripMenuItem.Name" xml:space="preserve">
+    <value>medianBoundingBoxToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;medianBoundingBoxToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;activeElementToolStripMenuItem.Name" xml:space="preserve">
+    <value>activeElementToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;activeElementToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cursorToolStripMenuItem.Name" xml:space="preserve">
+    <value>cursorToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;cursorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToggleGridButton.Name" xml:space="preserve">
+    <value>ToggleGridButton</value>
+  </data>
+  <data name="&gt;&gt;ToggleGridButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ModelRenderMode1Button.Name" xml:space="preserve">
+    <value>ModelRenderMode1Button</value>
+  </data>
+  <data name="&gt;&gt;ModelRenderMode1Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ModelRenderMode2Button.Name" xml:space="preserve">
+    <value>ModelRenderMode2Button</value>
+  </data>
+  <data name="&gt;&gt;ModelRenderMode2Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ModelRenderMode3Button.Name" xml:space="preserve">
+    <value>ModelRenderMode3Button</value>
+  </data>
+  <data name="&gt;&gt;ModelRenderMode3Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;visualStudioToolStripExtender1.Name" xml:space="preserve">
+    <value>visualStudioToolStripExtender1</value>
+  </data>
+  <data name="&gt;&gt;visualStudioToolStripExtender1.Type" xml:space="preserve">
+    <value>WeifenLuo.WinFormsUI.Docking.VisualStudioToolStripExtender, WeifenLuo.WinFormsUI.Docking, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ViewportPanel</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Panels.ProjectDocumentPanel, Brick Studio, Version=1.0.7.26207, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

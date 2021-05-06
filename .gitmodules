@@ -1,0 +1,6 @@
+[submodule "sources/ldd-core"]
+	path = sources/ldd-core
+	url = git@github.com:Polymaker/ldd-core.git
+[submodule "sources/ldd-modding"]
+	path = sources/ldd-modding
+	url = git@github.com:Polymaker/ldd-modding.git

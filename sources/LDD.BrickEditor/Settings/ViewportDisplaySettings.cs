@@ -1,0 +1,16 @@
+﻿using Newtonsoft.Json;
+
+namespace LDD.BrickEditor.Settings
+{
+    public class ViewportDisplaySettings
+    {
+        [JsonProperty("meshes.visible")]
+        public bool ShowPartModels { get; set; }
+        [JsonProperty("meshes.render_mode")]
+        public Rendering.MeshRenderMode PartRenderMode { get; set; }
+        [JsonProperty("collisions.visible")]
+        public bool ShowCollisions { get; set; }
+        [JsonProperty("connections.visible")]
+        public bool ShowConnections { get; set; }
+    }
+}
