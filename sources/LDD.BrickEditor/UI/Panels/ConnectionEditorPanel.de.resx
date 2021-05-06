@@ -117,70 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NameControlLabel.Text" xml:space="preserve">
-    <value>Nom</value>
+  <data name="TypeValueLabel.Text" xml:space="preserve">
+    <value>&lt;Verbindungstyp&gt;</value>
   </data>
-  <data name="LengthControlLabel.Text" xml:space="preserve">
-    <value>Longueur</value>
-  </data>
-  <data name="OrientedCheckBox.Text" xml:space="preserve">
-    <value>Orienté?</value>
-  </data>
-  <data name="SpringCheckBox.Text" xml:space="preserve">
-    <value>Ressort</value>
+  <data name="TypeControlLabel.Text" xml:space="preserve">
+    <value>Typ</value>
   </data>
   <data name="SubtypeControlLabel.Text" xml:space="preserve">
-    <value>Sous-type</value>
+    <value>Subtyp</value>
   </data>
-  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
-    <value>Sync. sélection</value>
+  <data name="ToothCountLabel.Text" xml:space="preserve">
+    <value>Zahnzählung</value>
   </data>
   <data name="TagControlLabel.Text" xml:space="preserve">
     <value>Tag</value>
   </data>
-  <data name="TypeControlLabel.Text" xml:space="preserve">
-    <value>Type</value>
+  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
+    <value>Auswahl sync.</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Limite min</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Limite max</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Limite Flip min</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Limite Flip max</value>
-  </data>
-  <data name="AddConnectionDropDown.Text" xml:space="preserve">
-    <value>Ajouter une connexion</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Connexions</value>
-  </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Sélection:</value>
-  </data>
-  <data name="TypeValueLabel.Text" xml:space="preserve">
-    <value>&lt;Type de connexion&gt;</value>
+  <data name="SpringCheckBox.Text" xml:space="preserve">
+    <value>Frühling</value>
   </data>
   <data name="RadiusLabel.Text" xml:space="preserve">
-    <value>Rayon</value>
+    <value>Radius</value>
   </data>
-  <data name="ToothCountLabel.Text" xml:space="preserve">
-    <value>Nb. dents</value>
+  <data name="NameControlLabel.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
+    <value>Aktuell:</value>
+  </data>
+  <data name="AddConnectionDropDown.Text" xml:space="preserve">
+    <value>Verbindung hinzufügen</value>
+  </data>
+  <data name="LengthControlLabel.Text" xml:space="preserve">
+    <value>Länge</value>
   </data>
   <data name="AxesControlLabel.Text" xml:space="preserve">
-    <value>Axes</value>
+    <value>Achsen</value>
   </data>
   <data name="CylindricalCheckBox.Text" xml:space="preserve">
-    <value>Cylindrique</value>
-  </data>
-  <data name="StartCappedCheckBox.Text" xml:space="preserve">
-    <value>Début plafonné</value>
+    <value>Zylindrisch</value>
   </data>
   <data name="EndCappedCheckBox.Text" xml:space="preserve">
-    <value>Fin plafonné</value>
+    <value>Ende mit einer Kappe versehen</value>
+  </data>
+  <data name="StartCappedCheckBox.Text" xml:space="preserve">
+    <value>Beginnen Sie mit der Kappe</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Limit min</value>
+  </data>
+  <data name="OrientedCheckBox.Text" xml:space="preserve">
+    <value>Orientiert?</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Limit max</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Flip Limit min</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Flip Limit max</value>
+  </data>
+  <data name="FlexControlLabel.Text" xml:space="preserve">
+    <value>Biegen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Verbindungen</value>
   </data>
 </root>

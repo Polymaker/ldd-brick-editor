@@ -117,70 +117,112 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NameControlLabel.Text" xml:space="preserve">
-    <value>Nom</value>
+  <data name="File_SaveAsMenu.Text" xml:space="preserve">
+    <value>Speichern als...</value>
   </data>
-  <data name="LengthControlLabel.Text" xml:space="preserve">
-    <value>Longueur</value>
+  <data name="File_CloseProjectMenu.Text" xml:space="preserve">
+    <value>Projekt schließen</value>
   </data>
-  <data name="OrientedCheckBox.Text" xml:space="preserve">
-    <value>Orienté?</value>
+  <data name="File_CreateFromBrickMenu.Text" xml:space="preserve">
+    <value>Aus Ziegeln erstellen...</value>
   </data>
-  <data name="SpringCheckBox.Text" xml:space="preserve">
-    <value>Ressort</value>
+  <data name="File_NewProjectMenu.Text" xml:space="preserve">
+    <value>Neues Teilprojekt</value>
   </data>
-  <data name="SubtypeControlLabel.Text" xml:space="preserve">
-    <value>Sous-type</value>
+  <data name="File_OpenProjectMenu.Text" xml:space="preserve">
+    <value>Offenes Projekt...</value>
   </data>
-  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
-    <value>Sync. sélection</value>
+  <data name="File_OpenRecentMenu.Text" xml:space="preserve">
+    <value>Zuletzt geöffnet</value>
   </data>
-  <data name="TagControlLabel.Text" xml:space="preserve">
-    <value>Tag</value>
-  </data>
-  <data name="TypeControlLabel.Text" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Limite min</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Limite max</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Limite Flip min</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Limite Flip max</value>
-  </data>
-  <data name="AddConnectionDropDown.Text" xml:space="preserve">
-    <value>Ajouter une connexion</value>
+  <data name="File_SaveMenu.Text" xml:space="preserve">
+    <value>speichern</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Connexions</value>
+    <value>LDD Brick Studio</value>
   </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Sélection:</value>
+  <data name="Edit_BatchBuild.Text" xml:space="preserve">
+    <value>Batch Build...</value>
   </data>
-  <data name="TypeValueLabel.Text" xml:space="preserve">
-    <value>&lt;Type de connexion&gt;</value>
+  <data name="Edit_GenerateFilesMenu.Text" xml:space="preserve">
+    <value>Generieren Sie LDD-Dateien</value>
   </data>
-  <data name="RadiusLabel.Text" xml:space="preserve">
-    <value>Rayon</value>
+  <data name="Edit_ImportMeshMenu.Text" xml:space="preserve">
+    <value>3D-Modell importieren...</value>
   </data>
-  <data name="ToothCountLabel.Text" xml:space="preserve">
-    <value>Nb. dents</value>
+  <data name="Edit_ValidatePartMenu.Text" xml:space="preserve">
+    <value>Teil validieren</value>
   </data>
-  <data name="AxesControlLabel.Text" xml:space="preserve">
-    <value>Axes</value>
+  <data name="EditMenu_Redo.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl + Y</value>
   </data>
-  <data name="CylindricalCheckBox.Text" xml:space="preserve">
-    <value>Cylindrique</value>
+  <data name="EditMenu_Redo.Text" xml:space="preserve">
+    <value>Wiederholen</value>
   </data>
-  <data name="StartCappedCheckBox.Text" xml:space="preserve">
-    <value>Début plafonné</value>
+  <data name="EditMenu_Undo.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl + Z</value>
   </data>
-  <data name="EndCappedCheckBox.Text" xml:space="preserve">
-    <value>Fin plafonné</value>
+  <data name="EditMenu_Undo.Text" xml:space="preserve">
+    <value>Rückgängig machen</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="ExportBrickMenuItem.Text" xml:space="preserve">
+    <value>Ziegelmodell exportieren ...</value>
+  </data>
+  <data name="WindowMenu_SaveLayout.Text" xml:space="preserve">
+    <value>Aktuelles Layout speichern</value>
+  </data>
+  <data name="Tools_SettingsMenu.Text" xml:space="preserve">
+    <value>die Einstellungen</value>
+  </data>
+  <data name="ToolsMenuItem.Text" xml:space="preserve">
+    <value>Werkzeuge</value>
+  </data>
+  <data name="WindowMenu_ApplyLayout.Text" xml:space="preserve">
+    <value>Layout anwenden</value>
+  </data>
+  <data name="WindowMenu_ManageLayouts.Text" xml:space="preserve">
+    <value>Layouts verwalten</value>
+  </data>
+  <data name="WindowMenu_ResetLayout.Text" xml:space="preserve">
+    <value>Layout zurücksetzen</value>
+  </data>
+  <data name="WindowMenuItem.Text" xml:space="preserve">
+    <value>Fenster</value>
+  </data>
+  <data name="WindowTitle.Text" xml:space="preserve">
+    <value>LDD Brick Studio</value>
+  </data>
+  <data name="FileMenu_OpenPartFiles.Text" xml:space="preserve">
+    <value>Teiledateien öffnen ...</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="Tools_ConnectionsReportMenu.Text" xml:space="preserve">
+    <value>Verbindungsnutzungsbericht</value>
+  </data>
+  <data name="StartLddMenuItem.Text" xml:space="preserve">
+    <value>LDD starten ...</value>
+  </data>
+  <data name="Tools_OpenPartMenu.Text" xml:space="preserve">
+    <value>Teil in LDD öffnen ...</value>
+  </data>
+  <data name="HelpMenu_About.Text" xml:space="preserve">
+    <value>Über...</value>
+  </data>
+  <data name="HelpMenuItem.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="SelectedBuildLabel.Text" xml:space="preserve">
+    <value>Ausgabedateien in:</value>
+  </data>
+  <data name="StartLddText.Text" xml:space="preserve">
+    <value>LDD starten ...</value>
+  </data>
+  <data name="RestartLddText.Text" xml:space="preserve">
+    <value>Starten Sie LDD neu ...</value>
   </data>
 </root>

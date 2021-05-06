@@ -117,70 +117,67 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NameControlLabel.Text" xml:space="preserve">
-    <value>Nom</value>
-  </data>
-  <data name="LengthControlLabel.Text" xml:space="preserve">
-    <value>Longueur</value>
-  </data>
-  <data name="OrientedCheckBox.Text" xml:space="preserve">
-    <value>Orienté?</value>
-  </data>
-  <data name="SpringCheckBox.Text" xml:space="preserve">
-    <value>Ressort</value>
-  </data>
-  <data name="SubtypeControlLabel.Text" xml:space="preserve">
-    <value>Sous-type</value>
-  </data>
-  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
-    <value>Sync. sélection</value>
-  </data>
-  <data name="TagControlLabel.Text" xml:space="preserve">
-    <value>Tag</value>
-  </data>
-  <data name="TypeControlLabel.Text" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Limite min</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Limite max</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Limite Flip min</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Limite Flip max</value>
-  </data>
-  <data name="AddConnectionDropDown.Text" xml:space="preserve">
-    <value>Ajouter une connexion</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Connexions</value>
+    <value>Sélection</value>
   </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Sélection:</value>
+  <data name="$this.ToolTipText" xml:space="preserve">
+    <value>Propriétés de la sélection</value>
   </data>
-  <data name="TypeValueLabel.Text" xml:space="preserve">
-    <value>&lt;Type de connexion&gt;</value>
-  </data>
-  <data name="RadiusLabel.Text" xml:space="preserve">
+  <data name="CollisionRadiusLabel.Text" xml:space="preserve">
     <value>Rayon</value>
   </data>
-  <data name="ToothCountLabel.Text" xml:space="preserve">
-    <value>Nb. dents</value>
+  <data name="CollisionSizeLabel.Text" xml:space="preserve">
+    <value>Taille</value>
   </data>
-  <data name="AxesControlLabel.Text" xml:space="preserve">
-    <value>Axes</value>
+  <data name="MainInfoTab.Text" xml:space="preserve">
+    <value>Propriétés de l'élément</value>
   </data>
-  <data name="CylindricalCheckBox.Text" xml:space="preserve">
-    <value>Cylindrique</value>
+  <data name="MultiSelectionMsg.Text" xml:space="preserve">
+    <value>Plusieurs éléments sélectionnés</value>
   </data>
-  <data name="StartCappedCheckBox.Text" xml:space="preserve">
-    <value>Début plafonné</value>
+  <data name="NameLabel.Text" xml:space="preserve">
+    <value>Nom</value>
   </data>
-  <data name="EndCappedCheckBox.Text" xml:space="preserve">
-    <value>Fin plafonné</value>
+  <data name="NoSelectionMsg.Text" xml:space="preserve">
+    <value>Aucun élément sélectionné</value>
+  </data>
+  <data name="StudRefTab.Text" xml:space="preserve">
+    <value>Référencement de Studs</value>
+  </data>
+  <data name="SelectionInfoLabel.Text" xml:space="preserve">
+    <value>Aucune sélection</value>
+  </data>
+  <data name="AdjStudColumn.HeaderText" xml:space="preserve">
+    <value>Adjacent</value>
+  </data>
+  <data name="BottomStudsLabel.Text" xml:space="preserve">
+    <value>Studs femelle</value>
+  </data>
+  <data name="ConnectionColumn.HeaderText" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="FieldIndexColumn.HeaderText" xml:space="preserve">
+    <value>Index de champ</value>
+  </data>
+  <data name="FieldPositionColumn.HeaderText" xml:space="preserve">
+    <value>Index 2D</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Cette fonctionnalité n'est pas encore terminée!</value>
+  </data>
+  <data name="NoConnectorRefLabel.Text" xml:space="preserve">
+    <value>Aucune référence</value>
+  </data>
+  <data name="StudRefValue1Colunm.HeaderText" xml:space="preserve">
+    <value>Valeur 1</value>
+  </data>
+  <data name="StudRefValue2Colunm.HeaderText" xml:space="preserve">
+    <value>Valeur 2</value>
+  </data>
+  <data name="SubMaterialIndexLabel.Text" xml:space="preserve">
+    <value>Index des sous-matériaux</value>
+  </data>
+  <data name="TopStudsLabel.Text" xml:space="preserve">
+    <value>Studs mâle</value>
   </data>
 </root>

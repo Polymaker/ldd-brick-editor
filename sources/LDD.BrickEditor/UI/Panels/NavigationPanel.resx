@@ -141,7 +141,7 @@
     <value>139, 22</value>
   </data>
   <data name="AddElementMenu_Part.Text" xml:space="preserve">
-    <value>Part Body</value>
+    <value>Part Model</value>
   </data>
   <data name="AddElementMenu_MaleStud.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 22</value>

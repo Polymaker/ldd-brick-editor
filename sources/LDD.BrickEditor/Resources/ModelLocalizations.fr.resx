@@ -364,7 +364,7 @@
     <value>Les connexions 'Flex' ne sont pas définies.</value>
   </data>
   <data name="BONE_MULTIPLE_LINKS" xml:space="preserve">
-    <value>L'os "{nom}" est référencé par plusieurs os.</value>
+    <value>L'os "{name}" est référencé par plusieurs os.</value>
   </data>
   <data name="Label_ClonePatterns" xml:space="preserve">
     <value>Modèles de clonage</value>

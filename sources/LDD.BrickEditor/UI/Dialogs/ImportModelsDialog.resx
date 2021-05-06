@@ -433,7 +433,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="WarningNotAllFlexible.Text" xml:space="preserve">
-    <value>Cannot import both flexible and not flexible models. </value>
+    <value>Cannot import both flexible and not flexible models.</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

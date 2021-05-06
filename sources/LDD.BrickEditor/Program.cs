@@ -27,7 +27,7 @@ namespace LDD.BrickEditor
         [STAThread]
         static void Main(string[] args)
         {
-            //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fr-CA");
+            //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de");
             ConfigureLogging();
 
             Logger.Info("Startup");

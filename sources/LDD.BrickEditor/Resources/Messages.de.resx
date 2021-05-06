@@ -117,70 +117,121 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NameControlLabel.Text" xml:space="preserve">
-    <value>Nom</value>
+  <data name="Error_OpeningFile" xml:space="preserve">
+    <value>Beim Öffnen einer Datei ist ein Fehler aufgetreten.</value>
   </data>
-  <data name="LengthControlLabel.Text" xml:space="preserve">
-    <value>Longueur</value>
+  <data name="LddInstallNotFound" xml:space="preserve">
+    <value>LDD-Installation wurde nicht gefunden.
+Einige Funktionen funktionieren nicht richtig.</value>
   </data>
-  <data name="OrientedCheckBox.Text" xml:space="preserve">
-    <value>Orienté?</value>
+  <data name="Caption_OpeningFile" xml:space="preserve">
+    <value>Datei öffnen</value>
   </data>
-  <data name="SpringCheckBox.Text" xml:space="preserve">
-    <value>Ressort</value>
+  <data name="Error_OpeningProject" xml:space="preserve">
+    <value>Beim Öffnen des Projekts ist ein Fehler aufgetreten.</value>
   </data>
-  <data name="SubtypeControlLabel.Text" xml:space="preserve">
-    <value>Sous-type</value>
+  <data name="Error_CreatingProject" xml:space="preserve">
+    <value>Beim Erstellen des Projekts ist ein Fehler aufgetreten.</value>
   </data>
-  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
-    <value>Sync. sélection</value>
+  <data name="Caption_OpeningProject" xml:space="preserve">
+    <value>Projekt eröffnen</value>
   </data>
-  <data name="TagControlLabel.Text" xml:space="preserve">
-    <value>Tag</value>
+  <data name="Message_SaveChanges" xml:space="preserve">
+    <value>Möchten Sie die vorgenommenen Änderungen speichern?</value>
   </data>
-  <data name="TypeControlLabel.Text" xml:space="preserve">
-    <value>Type</value>
+  <data name="Message_SaveNewProject" xml:space="preserve">
+    <value>Möchten Sie das Projekt speichern?</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Limite min</value>
+  <data name="Caption_SaveBeforeClose" xml:space="preserve">
+    <value>Projekt speichern</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Limite max</value>
+  <data name="Message_RecoverProject" xml:space="preserve">
+    <value>Die App wurde nicht richtig geschlossen. Möchten Sie das Projekt wiederherstellen?</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Limite Flip min</value>
+  <data name="Message_FileGenerationError" xml:space="preserve">
+    <value>LDD-Teiledateien konnten nicht generiert werden.
+Weitere Informationen finden Sie im Validierungsfenster.</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Limite Flip max</value>
+  <data name="Caption_LddPartGeneration" xml:space="preserve">
+    <value>Generierung von LDD-Teiledateien</value>
   </data>
-  <data name="AddConnectionDropDown.Text" xml:space="preserve">
-    <value>Ajouter une connexion</value>
+  <data name="BuildConfig_LDD" xml:space="preserve">
+    <value>LDD-Ordner</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Connexions</value>
+  <data name="BuildConfig_Browse" xml:space="preserve">
+    <value>Verzeichnis auswählen</value>
   </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Sélection:</value>
+  <data name="BuildConfig_Manage" xml:space="preserve">
+    <value>Konfigurationen verwalten ...</value>
   </data>
-  <data name="TypeValueLabel.Text" xml:space="preserve">
-    <value>&lt;Type de connexion&gt;</value>
+  <data name="LddConfigInvalid" xml:space="preserve">
+    <value>Die konfigurierte LDD-Umgebung ist ungültig, aber LDD scheint korrekt installiert zu sein.</value>
   </data>
-  <data name="RadiusLabel.Text" xml:space="preserve">
-    <value>Rayon</value>
+  <data name="Caption_StartupValidations" xml:space="preserve">
+    <value>Startvalidierungen</value>
   </data>
-  <data name="ToothCountLabel.Text" xml:space="preserve">
-    <value>Nb. dents</value>
+  <data name="Message_ConfirmResizeStuds" xml:space="preserve">
+    <value>Einige Modellkomponenten verweisen auf Bolzen, die außerhalb der neuen Größe liegen.
+Möchten Sie trotzdem fortfahren?</value>
   </data>
-  <data name="AxesControlLabel.Text" xml:space="preserve">
-    <value>Axes</value>
+  <data name="Caption_Confirmation" xml:space="preserve">
+    <value>Bestätigung</value>
   </data>
-  <data name="CylindricalCheckBox.Text" xml:space="preserve">
-    <value>Cylindrique</value>
+  <data name="Message_ConfirmDeleteStudConnection" xml:space="preserve">
+    <value>Die Verbindung "{0}" wird von Elementen des Modells referenziert.
+Möchten Sie trotzdem löschen?</value>
   </data>
-  <data name="StartCappedCheckBox.Text" xml:space="preserve">
-    <value>Début plafonné</value>
+  <data name="Message_ConfirmDeleteBoneConnection" xml:space="preserve">
+    <value>Die Verbindung "{0}" wird von Bones verwendet.
+Möchten Sie trotzdem löschen?</value>
   </data>
-  <data name="EndCappedCheckBox.Text" xml:space="preserve">
-    <value>Fin plafonné</value>
+  <data name="Caption_DeleteConfirmation" xml:space="preserve">
+    <value>Bestätigung löschen</value>
+  </data>
+  <data name="Message_InitializingUI" xml:space="preserve">
+    <value>Benutzeroberfläche initialisieren</value>
+  </data>
+  <data name="Message_InitializingResources" xml:space="preserve">
+    <value>Ressourcen initialisieren</value>
+  </data>
+  <data name="Message_LddFilesGenerated" xml:space="preserve">
+    <value>Dateien erfolgreich generiert.</value>
+  </data>
+  <data name="Message_ConfirmOverwritePartFiles" xml:space="preserve">
+    <value>Die Dateien für diesen Teil sind bereits vorhanden.
+Sind Sie sicher, dass Sie sie überschreiben möchten?
+
+* Sie können diese Bestätigung in den Einstellungen entfernen.</value>
+  </data>
+  <data name="Caption_RecoverLastProject" xml:space="preserve">
+    <value>Letzte Sitzung wiederherstellen</value>
+  </data>
+  <data name="Caption_Warning" xml:space="preserve">
+    <value>Warnung</value>
+  </data>
+  <data name="Message_SaveWindowLayout" xml:space="preserve">
+    <value>Layoutname:</value>
+  </data>
+  <data name="Caption_SaveWindowLayout" xml:space="preserve">
+    <value>Fensterlayout speichern</value>
+  </data>
+  <data name="Message_LayoutNameAlreadyExist" xml:space="preserve">
+    <value>Layoutname existiert bereits.</value>
+  </data>
+  <data name="Caption_UnexpectedError" xml:space="preserve">
+    <value>Unerwarteter Fehler</value>
+  </data>
+  <data name="Message_CouldNotLoadFreetype6" xml:space="preserve">
+    <value>Die Bibliothek 'freetype6.dll "konnte nicht geladen werden.
+Diese Bibliothek wird zum Zeichnen von Text in OpenGL verwendet.
+Die Anwendung kann weiterhin funktionieren, es wird jedoch kein Text im Ansichtsfenster angezeigt.</value>
+  </data>
+  <data name="Message_ConfirmDeleteReferencedElement" xml:space="preserve">
+    <value>Das Element "{0}" wird von anderen Elementen des Projekts referenziert.
+Möchten Sie trotzdem löschen?</value>
+  </data>
+  <data name="Message_UnhandledException" xml:space="preserve">
+    <value>Ein unerwarteter Fehler ist aufgetreten.
+Weitere Informationen finden Sie in der Protokolldatei.</value>
   </data>
 </root>

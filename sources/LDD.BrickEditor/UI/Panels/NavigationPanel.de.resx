@@ -117,70 +117,106 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NameControlLabel.Text" xml:space="preserve">
-    <value>Nom</value>
+  <data name="olvColumnElement.Text" xml:space="preserve">
+    <value>Elemente</value>
   </data>
-  <data name="LengthControlLabel.Text" xml:space="preserve">
-    <value>Longueur</value>
+  <data name="ContextMenu_AddSurface.Text" xml:space="preserve">
+    <value>Oberfläche hinzufügen</value>
   </data>
-  <data name="OrientedCheckBox.Text" xml:space="preserve">
-    <value>Orienté?</value>
+  <data name="AddElementMenu_Part.Text" xml:space="preserve">
+    <value>Hauptmodell</value>
   </data>
-  <data name="SpringCheckBox.Text" xml:space="preserve">
-    <value>Ressort</value>
+  <data name="AddElementMenu_MaleStud.Text" xml:space="preserve">
+    <value>Männliches Stud</value>
   </data>
-  <data name="SubtypeControlLabel.Text" xml:space="preserve">
-    <value>Sous-type</value>
+  <data name="AddElementMenu_FemaleStud.Text" xml:space="preserve">
+    <value>Weibliches Stud</value>
   </data>
-  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
-    <value>Sync. sélection</value>
+  <data name="AddElementMenu_BrickTube.Text" xml:space="preserve">
+    <value>Ziegelrohr</value>
   </data>
-  <data name="TagControlLabel.Text" xml:space="preserve">
-    <value>Tag</value>
+  <data name="ContextMenu_AddElement.Text" xml:space="preserve">
+    <value>Modell hinzufügen</value>
   </data>
-  <data name="TypeControlLabel.Text" xml:space="preserve">
-    <value>Type</value>
+  <data name="AddCollisionMenu_Box.Text" xml:space="preserve">
+    <value>Box</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Limite min</value>
+  <data name="AddCollisionMenu_Sphere.Text" xml:space="preserve">
+    <value>Kugel</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Limite max</value>
+  <data name="ContextMenu_AddCollision.Text" xml:space="preserve">
+    <value>Kollision hinzufügen</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Limite Flip min</value>
+  <data name="AddConnectionMenu_Axel.Text" xml:space="preserve">
+    <value>Axel</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Limite Flip max</value>
+  <data name="AddConnectionMenu_Ball.Text" xml:space="preserve">
+    <value>Ball</value>
   </data>
-  <data name="AddConnectionDropDown.Text" xml:space="preserve">
-    <value>Ajouter une connexion</value>
+  <data name="AddConnectionMenu_Custom2DField.Text" xml:space="preserve">
+    <value>Custom2DField</value>
+  </data>
+  <data name="AddConnectionMenu_Fixed.Text" xml:space="preserve">
+    <value>Fest</value>
+  </data>
+  <data name="AddConnectionMenu_Gear.Text" xml:space="preserve">
+    <value>Ausrüstung</value>
+  </data>
+  <data name="AddConnectionMenu_Hinge.Text" xml:space="preserve">
+    <value>Scharnier</value>
+  </data>
+  <data name="AddConnectionMenu_Rail.Text" xml:space="preserve">
+    <value>Schiene</value>
+  </data>
+  <data name="AddConnectionMenu_Slider.Text" xml:space="preserve">
+    <value>Schieberegler</value>
+  </data>
+  <data name="ContextMenu_AddConnection.Text" xml:space="preserve">
+    <value>Verbindung hinzufügen</value>
+  </data>
+  <data name="AddClonePatternMenu_Mirror.Text" xml:space="preserve">
+    <value>Spiegel</value>
+  </data>
+  <data name="AddClonePatternMenu_Linear.Text" xml:space="preserve">
+    <value>Lineare Wiederholung</value>
+  </data>
+  <data name="AddClonePatternMenu_Circular.Text" xml:space="preserve">
+    <value>Zirkuläre Wiederholung</value>
+  </data>
+  <data name="ContextMenu_AddClonePattern.Text" xml:space="preserve">
+    <value>Klonmuster hinzufügen</value>
+  </data>
+  <data name="ContextMenu_Duplicate.Text" xml:space="preserve">
+    <value>Duplikat</value>
+  </data>
+  <data name="ContextMenu_Rename.Text" xml:space="preserve">
+    <value>Umbenennen</value>
+  </data>
+  <data name="ContextMenu_Delete.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="ContextMenu_DisolvePattern.Text" xml:space="preserve">
+    <value>Muster auflösen</value>
+  </data>
+  <data name="ViewModeLabel.Text" xml:space="preserve">
+    <value>Momentane Sicht:</value>
+  </data>
+  <data name="ViewModeAll.Text" xml:space="preserve">
+    <value>Projektbaum</value>
+  </data>
+  <data name="ViewModeBones.Text" xml:space="preserve">
+    <value>Knochen</value>
+  </data>
+  <data name="ViewModeCollisions.Text" xml:space="preserve">
+    <value>Kollisionen</value>
+  </data>
+  <data name="ViewModeConnections.Text" xml:space="preserve">
+    <value>Verbindungen</value>
+  </data>
+  <data name="ViewModeSurfaces.Text" xml:space="preserve">
+    <value>Oberflächen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Connexions</value>
-  </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Sélection:</value>
-  </data>
-  <data name="TypeValueLabel.Text" xml:space="preserve">
-    <value>&lt;Type de connexion&gt;</value>
-  </data>
-  <data name="RadiusLabel.Text" xml:space="preserve">
-    <value>Rayon</value>
-  </data>
-  <data name="ToothCountLabel.Text" xml:space="preserve">
-    <value>Nb. dents</value>
-  </data>
-  <data name="AxesControlLabel.Text" xml:space="preserve">
-    <value>Axes</value>
-  </data>
-  <data name="CylindricalCheckBox.Text" xml:space="preserve">
-    <value>Cylindrique</value>
-  </data>
-  <data name="StartCappedCheckBox.Text" xml:space="preserve">
-    <value>Début plafonné</value>
-  </data>
-  <data name="EndCappedCheckBox.Text" xml:space="preserve">
-    <value>Fin plafonné</value>
+    <value>Navigation</value>
   </data>
 </root>

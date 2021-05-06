@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  
+	<Fragment>
+    <?define BrickEditor.TargetDir=$(var.LDD.BrickEditor.TargetDir)?>
+    <?define BrickEditor.Name="Brick Studio"?>
+    <?define BrickEditor.Description="LDD Model Editor"?>
+
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Directory Id="dir777F6281BDA39BE4D21394C1207E9DD6" Name="Brick Studio">
+        <Component Id="BrickEditor.FolderPermissions" Guid="{7F4FBEB7-A9E1-4EC7-8EBE-1DF6C0302598}">
+          <CreateFolder>
+            <Permission  User="Everyone" GenericAll="yes" />
+          </CreateFolder>
+        </Component>
+        <Directory Id="BrickEditor.Resources.FR" Name="fr" />
+      </Directory>
+    </DirectoryRef>
+    
+    <Component Id="BrickEditor.DeleteFreetype6" Guid="{8720A739-AC41-49A2-82A2-E9178A98D8A3}" Directory="dir777F6281BDA39BE4D21394C1207E9DD6">
+      <RemoveFile Id="DeleteFreetype6" Name="freetype6.dll" On="uninstall" />
+    </Component>
+  </Fragment>
+  
+  <Fragment>
+    <ComponentGroup Id="BrickEditor.Binaries" Directory="dir777F6281BDA39BE4D21394C1207E9DD6">
+      <Component Id="cmp2AD0CDBA16C06A1CFFBEB37A0147C04C" Guid="{DD93AF7D-3254-4806-84EE-2EF894DE3882}">
+        <File Id="filCF2CDA50B2557CD18C6F131F6E8D7CCA" Source="$(var.BrickEditor.TargetDir)Brick Studio.exe" />
+      </Component>
+      <Component Id="cmp8E14AD3CE4A5E5832DD48B150913F9D0" Guid="{72BD6034-7234-4CCD-8815-0860F339ECB2}">
+        <File Id="fil68EE88D45B5A68BAE9EF1EC271D1B45C" Source="$(var.BrickEditor.TargetDir)Brick Studio.exe.config" />
+      </Component>
+      <Component Id="cmp565A6EEAE6004102B14AD5C11501E114" Guid="{43B300E3-5B13-40E7-AD3B-58D3CC901B7E}">
+        <File Id="fil7D288874A58C43819CA1FF635FDA4D6E" Source="$(var.BrickEditor.TargetDir)LDD.Common.dll" />
+      </Component>
+      <Component Id="cmpE38341300F634F0F8C480B8B9BFAD597" Guid="{9C4F3011-6D63-441B-98F5-F65E73BEC132}">
+        <File Id="fil3600831F73EF4D9FA19F0690A59C1B4C" Source="$(var.BrickEditor.TargetDir)LDD.Core.dll" />
+      </Component>
+      <Component Id="cmp184006FBCB0B4C31B070CB23190DA183" Guid="{C5B2A849-7DAF-4E02-B025-C31C777235E9}">
+        <File Id="fil1D439D8924544689A4A45EB0410592F7" Source="$(var.BrickEditor.TargetDir)LDD.Modding.dll" />
+      </Component>
+      <Component Id="cmp2AFBB53AF18344F093CE1996F5FC95EB" Guid="{76106895-66C1-4DEF-9B3C-C376044DCE75}">
+        <File Id="fil7DD96F7B0218407A92745DBD996DCF26" Source="$(var.LDD.BrickEditor.ProjectDir)Resources\BrickStudioIcon.ico" />
+      </Component>
+      <Component Id="cmpF43EEFB36E7C45AEA7DCA72C85F9CB5D" Guid="{4B4E9F8B-23D4-48D4-9439-3ECA8DF737E0}">
+        <File Id="fil4BB5099EC1E545489736DF7A5FE7D2CA" Source="$(var.SolutionDir)LICENSE.rtf" />
+      </Component>
+    </ComponentGroup>
+    
+    <ComponentGroup Id="BrickEditor.References" Directory="dir777F6281BDA39BE4D21394C1207E9DD6">
+      
+      <!--OpenGL Related-->
+      <Component Id="cmp63AF2DA8BF8B83E84EBB77A3B9892E31" Guid="{B4BC4601-1750-4B45-B767-7ED76604EE5C}">
+        <File Id="fil51384F597EC1A431DE80A5A9530F6DD8" Source="$(var.BrickEditor.TargetDir)OpenTK.dll" />
+        <File Id="filE572E30424614267F6BD830C1CB80E4A" Source="$(var.BrickEditor.TargetDir)OpenTK.GLControl.dll" />
+        <File Id="fil3109B8E4172C259DDC1F2AD457D29DA7" Source="$(var.BrickEditor.TargetDir)ObjectTK.dll" />
+        <File Id="fil74E1EB928D2096019F5A848D72C1269B" Source="$(var.BrickEditor.TargetDir)log4net.dll" />
+      </Component>
+      
+      <Component Id="cmp54D9DB1D25A2ABDCC3E988F6031F7DFD" Guid="{EC835685-3159-40F5-A648-22EFFC672570}">
+        <File Id="fil8204BADA2EC8AB9D2D5A290568E095DD" Source="$(var.BrickEditor.TargetDir)QuickFont.dll" />
+        <File Id="fil47284D97704A47216BFB7F7B5208EB3F" Source="$(var.BrickEditor.TargetDir)SharpFont.dll" />
+        <File Id="fil32092EF234AEECBD3898A96572822E39" Source="$(var.BrickEditor.TargetDir)SharpFont.dll.config" />
+        <!--<File Id="fil641569533A75D694E97A4AAE17D3400E" Source="$(var.BrickEditor.TargetDir)lib\freetype6_x64.dll" />
+        <File Id="fil10F70E1BA6F843CAA6ABF07E9156E003" Source="$(var.BrickEditor.TargetDir)lib\freetype6_x86.dll" />-->
+      </Component>
+    
+      <Component Id="cmpD3B22905445222A719148A81E09AB7BE" Guid="{0AD2276A-A0CE-41CF-B89B-5E6AB1F0D14F}">
+        <File Id="filA823034FDFEDF7CB41286EF83117D51F" Source="$(var.BrickEditor.TargetDir)AssimpNet.dll" />
+      </Component>
+      
+      <!--<?if $(var.Platform) = x64 ?>-->
+      <!-- Assimp x64 runtime -->
+      <ComponentRef Id="cmp18BD1316715DE0299161DEE11E7DE014"/>
+
+      <!--<?else ?>-->
+      <!-- Assimp x86 runtime -->
+      <ComponentRef Id="cmp85072CD5430AA1158EBBB00E3E9A2DBB"/>
+      <!--<?endif ?>-->
+
+      <Component Id="cmp55211B7A442496DC766CB4B99BF1ECDF" Guid="{DF9ADB75-2E5D-4575-B62E-88CB6778785D}">
+        <File Id="fil2523B552A126304EDBC52CF80758887A" Source="$(var.BrickEditor.TargetDir)WeifenLuo.WinFormsUI.Docking.dll" />
+        <File Id="filB7D8A38CEF080A87396DD5A652537117" Source="$(var.BrickEditor.TargetDir)WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll" />
+      </Component>
+
+      <Component Id="cmp0FF5039DCC636155DE2DB5FF6F3A0D79" Guid="{695F2AE8-0BE5-420C-9012-71210078BFD7}">
+        <File Id="fil8F59009487B204D009A8D501E6416CCE" Source="$(var.BrickEditor.TargetDir)Newtonsoft.Json.dll" />
+      </Component>
+      
+      <Component Id="cmpBF6AA24A0CFB3FA28AA567E1CE5DEF17" Guid="{E84D54E3-9DD6-49D2-A2D9-B083999CE46C}">
+        <File Id="fil6CD2E34CF0BEB0E323301CB609DAFAA5" Source="$(var.BrickEditor.TargetDir)ObjectListView.dll" />
+      </Component>
+
+      <Component Id="cmp5E88E63BDF6E252E33172A2BE596859B" Guid="{64E20FEB-7B8C-4143-8A59-799502C1CFDB}">
+        <File Id="filFA9C9198DECB971188CD5674984C1D9E" Source="$(var.BrickEditor.TargetDir)ICSharpCode.SharpZipLib.dll" />
+      </Component>
+
+      <Component Id="cmp7EF3D5873028407D86FA4C595464C9E2" Guid="{7A6AEAF3-DCF9-4F62-AA8D-2BCE897F728E}">
+        <File Id="fil207F72F6D47C48BBAABD44CCC8A93B35" Source="$(var.BrickEditor.TargetDir)Microsoft.Win32.Registry.dll" />
+      </Component>
+
+      <Component Id="cmp7A1D6566589E4599AA284DD649911F9F" Guid="{D8C0AD45-0305-40EE-A829-B34F37575BEB}">
+        <File Id="fil23B624A94EA649BF8F0D9E30B3B6BC62" Source="$(var.BrickEditor.TargetDir)System.Security.AccessControl.dll" />
+      </Component>
+
+      <Component Id="cmp9D8F323A54C0430F8B228320DC699DBE" Guid="{617DBB12-AD99-4C7C-AC63-89648E8EE1D5}">
+        <File Id="fil8CB0BCCC05ED4C7F8F56ABFBAEED3E3C" Source="$(var.BrickEditor.TargetDir)System.Security.Principal.Windows.dll" />
+      </Component>
+
+      <Component Id="cmp49FDF5481D5F47DC92C3B3B10C1A35FE" Guid="{DA562BC4-AFE5-4C19-A291-454E65F59B8D}">
+        <File Id="filF0E0A4C55FA84863B5B598E2E3DBDD33" Source="$(var.BrickEditor.TargetDir)NLog.dll" />
+      </Component>
+
+    </ComponentGroup>
+    
+    <DirectoryRef Id="dir777F6281BDA39BE4D21394C1207E9DD6">
+      <Directory Id="dir4750A130985FFE42691D1688CF127A81" Name="runtimes">
+
+        <Directory Id="dir3A5CC21DF3BC4A98C363950BDD643A59" Name="win-x64">
+          <Directory Id="dirDE676F8467C337A86CFEE59BACABF3C2" Name="native">
+            <Component Id="cmp18BD1316715DE0299161DEE11E7DE014" Guid="{B4D85769-D250-4332-AE49-7DD7CD3E68EC}">
+              <File Id="filDF243D4323E71789D9A7826B390A58DD" Source="$(var.BrickEditor.TargetDir)runtimes\win-x64\native\assimp.dll" />
+              <File Id="fil641569533A75D694E97A4AAE17D3400E" Source="$(var.BrickEditor.TargetDir)runtimes\win-x64\native\freetype6.dll" />
+            </Component>
+          </Directory>
+        </Directory>
+
+        <Directory Id="dirEB927AF4CE1EEC43866FC1B30493AAC0" Name="win-x86">
+          <Directory Id="dir809EDC985557A74F80153E56DF596302" Name="native">
+            <Component Id="cmp85072CD5430AA1158EBBB00E3E9A2DBB" Guid="{A1D6B0A5-54E4-43C7-9E24-6957041D6BB1}">
+              <File Id="fil8D71BE96BA691404962D35E5DAD823B9" Source="$(var.BrickEditor.TargetDir)runtimes\win-x86\native\assimp.dll" />
+              <File Id="fil10F70E1BA6F843CAA6ABF07E9156E003" Source="$(var.BrickEditor.TargetDir)runtimes\win-x86\native\freetype6.dll" />
+            </Component>
+          </Directory>
+        </Directory>
+
+      </Directory>
+    </DirectoryRef>
+    
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="BrickEditor.Resources.FR" Directory="BrickEditor.Resources.FR">
+      <Component Id="cmp7D48BB299992D325E7610AB9EF44F785" Guid="{4900BF9D-10C5-4376-B83D-4288CFF97680}">
+        <File Id="fil63B942EEA8B1EC55BB4BE522FF6211ED" Source="$(var.BrickEditor.TargetDir)fr\Brick Studio.resources.dll" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="BrickEditor.Shortcuts">
+      <Component Id="ApplicationShortcut" Guid="0AE01D31-70E6-44AF-B92F-2F86F1258CFD" Directory="ApplicationProgramsFolder">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="$(var.BrickEditor.Name)" Description="$(var.BrickEditor.Description)"
+                  Target="[dir777F6281BDA39BE4D21394C1207E9DD6]Brick Studio.exe"
+                  WorkingDirectory="dir777F6281BDA39BE4D21394C1207E9DD6"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\LDDModder\BrickStudio" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+      <Component Id="DesktopShortcut" Guid="7C1ED4FE-C189-4B05-8EAB-02B44276E3A6" Directory="DesktopFolder">
+        <Shortcut Id="ApplicationDesktopShortcut" Directory="DesktopFolder"
+             Name="$(var.BrickEditor.Name)" Description="$(var.BrickEditor.Description)"
+                  Target="[dir777F6281BDA39BE4D21394C1207E9DD6]Brick Studio.exe"
+                  WorkingDirectory="dir777F6281BDA39BE4D21394C1207E9DD6" />
+        <RegistryValue Root="HKCU" Key="Software\LDDModder\BrickStudio" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </ComponentGroup>
+    
+    <!--<DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="0AE01D31-70E6-44AF-B92F-2F86F1258CFD" >
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="$(var.BrickEditor.Name)" Description="$(var.BrickEditor.Description)" 
+                  Target="[dir777F6281BDA39BE4D21394C1207E9DD6]Brick Studio.exe"
+                  WorkingDirectory="dir777F6281BDA39BE4D21394C1207E9DD6"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\LDDModder\BrickStudio" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="DesktopShortcut" Guid="7C1ED4FE-C189-4B05-8EAB-02B44276E3A6">
+        <Shortcut Id="ApplicationDesktopShortcut" Directory="DesktopFolder"
+             Name="$(var.BrickEditor.Name)" Description="$(var.BrickEditor.Description)"
+                  Target="[dir777F6281BDA39BE4D21394C1207E9DD6]Brick Studio.exe"
+                  WorkingDirectory="dir777F6281BDA39BE4D21394C1207E9DD6" />
+        <RegistryValue Root="HKCU" Key="Software\LDDModder\BrickStudio" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>-->
+  </Fragment>
+</Wix>

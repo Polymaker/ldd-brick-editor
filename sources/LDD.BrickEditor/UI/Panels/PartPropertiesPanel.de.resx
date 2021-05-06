@@ -117,70 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NameControlLabel.Text" xml:space="preserve">
-    <value>Nom</value>
+  <data name="LabelBounding.Text" xml:space="preserve">
+    <value>Begrenzung</value>
   </data>
-  <data name="LengthControlLabel.Text" xml:space="preserve">
-    <value>Longueur</value>
+  <data name="CalcBoundingButton.Text" xml:space="preserve">
+    <value>Berechnung</value>
   </data>
-  <data name="OrientedCheckBox.Text" xml:space="preserve">
-    <value>Orienté?</value>
+  <data name="LabelGeomBounding.Text" xml:space="preserve">
+    <value>Geometriebegrenzung</value>
   </data>
-  <data name="SpringCheckBox.Text" xml:space="preserve">
-    <value>Ressort</value>
+  <data name="CalcGeomBoundingButton.Text" xml:space="preserve">
+    <value>Berechnung</value>
   </data>
-  <data name="SubtypeControlLabel.Text" xml:space="preserve">
-    <value>Sous-type</value>
+  <data name="BoundingsPanel.Text" xml:space="preserve">
+    <value>Teilbegrenzungen</value>
   </data>
-  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
-    <value>Sync. sélection</value>
+  <data name="LabelAliases.Text" xml:space="preserve">
+    <value>Aliase</value>
   </data>
-  <data name="TagControlLabel.Text" xml:space="preserve">
-    <value>Tag</value>
+  <data name="LabelPlatform.Text" xml:space="preserve">
+    <value>Plattform</value>
   </data>
-  <data name="TypeControlLabel.Text" xml:space="preserve">
-    <value>Type</value>
+  <data name="LabelPartID.Text" xml:space="preserve">
+    <value>Teile-ID</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Limite min</value>
+  <data name="LabelDescription.Text" xml:space="preserve">
+    <value>Beschreibung</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Limite max</value>
+  <data name="LabelCategory.Text" xml:space="preserve">
+    <value>Kategorie</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Limite Flip min</value>
+  <data name="DescriptionPanel.Text" xml:space="preserve">
+    <value>Teilebeschreibung</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Limite Flip max</value>
+  <data name="LabelInertiaTensor.Text" xml:space="preserve">
+    <value>Trägheitstensor</value>
   </data>
-  <data name="AddConnectionDropDown.Text" xml:space="preserve">
-    <value>Ajouter une connexion</value>
+  <data name="LabelCenterOfMass.Text" xml:space="preserve">
+    <value>Massezentrum</value>
+  </data>
+  <data name="LabelMass.Text" xml:space="preserve">
+    <value>Masse</value>
+  </data>
+  <data name="LabelFriction.Text" xml:space="preserve">
+    <value>Reibungsart</value>
+  </data>
+  <data name="FrictionCheckBox.Text" xml:space="preserve">
+    <value>(Hat Reibung?)</value>
+  </data>
+  <data name="PhysicalPanel.Text" xml:space="preserve">
+    <value>Physikalische Eigenschaften</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Connexions</value>
+    <value>Teileigenschaften</value>
   </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Sélection:</value>
-  </data>
-  <data name="TypeValueLabel.Text" xml:space="preserve">
-    <value>&lt;Type de connexion&gt;</value>
-  </data>
-  <data name="RadiusLabel.Text" xml:space="preserve">
-    <value>Rayon</value>
-  </data>
-  <data name="ToothCountLabel.Text" xml:space="preserve">
-    <value>Nb. dents</value>
-  </data>
-  <data name="AxesControlLabel.Text" xml:space="preserve">
-    <value>Axes</value>
-  </data>
-  <data name="CylindricalCheckBox.Text" xml:space="preserve">
-    <value>Cylindrique</value>
-  </data>
-  <data name="StartCappedCheckBox.Text" xml:space="preserve">
-    <value>Début plafonné</value>
-  </data>
-  <data name="EndCappedCheckBox.Text" xml:space="preserve">
-    <value>Fin plafonné</value>
+  <data name="AliasesButtonBox.ButtonText" xml:space="preserve">
+    <value>...</value>
   </data>
 </root>

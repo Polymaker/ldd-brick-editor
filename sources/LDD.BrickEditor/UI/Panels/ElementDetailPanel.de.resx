@@ -117,70 +117,67 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NameControlLabel.Text" xml:space="preserve">
-    <value>Nom</value>
+  <data name="FieldIndexColumn.HeaderText" xml:space="preserve">
+    <value>Feldindex</value>
   </data>
-  <data name="LengthControlLabel.Text" xml:space="preserve">
-    <value>Longueur</value>
+  <data name="$this.ToolTipText" xml:space="preserve">
+    <value>Auswahleigenschaften</value>
   </data>
-  <data name="OrientedCheckBox.Text" xml:space="preserve">
-    <value>Orienté?</value>
+  <data name="AdjStudColumn.HeaderText" xml:space="preserve">
+    <value>Benachbart</value>
   </data>
-  <data name="SpringCheckBox.Text" xml:space="preserve">
-    <value>Ressort</value>
+  <data name="BottomStudsLabel.Text" xml:space="preserve">
+    <value>Weiblich Stud</value>
   </data>
-  <data name="SubtypeControlLabel.Text" xml:space="preserve">
-    <value>Sous-type</value>
+  <data name="CollisionRadiusLabel.Text" xml:space="preserve">
+    <value>Radius</value>
   </data>
-  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
-    <value>Sync. sélection</value>
+  <data name="CollisionSizeLabel.Text" xml:space="preserve">
+    <value>Größe</value>
   </data>
-  <data name="TagControlLabel.Text" xml:space="preserve">
-    <value>Tag</value>
+  <data name="ConnectionColumn.HeaderText" xml:space="preserve">
+    <value>Verbindung</value>
   </data>
-  <data name="TypeControlLabel.Text" xml:space="preserve">
-    <value>Type</value>
+  <data name="FieldPositionColumn.HeaderText" xml:space="preserve">
+    <value>2D-Index</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Limite min</value>
+    <value>Diese Funktion ist noch nicht fertig!</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Limite max</value>
+  <data name="MainInfoTab.Text" xml:space="preserve">
+    <value>Elementeigenschaften</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Limite Flip min</value>
+  <data name="MultiSelectionMsg.Text" xml:space="preserve">
+    <value>Mehrere Elemente ausgewählt</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Limite Flip max</value>
+  <data name="NameLabel.Text" xml:space="preserve">
+    <value>Name</value>
   </data>
-  <data name="AddConnectionDropDown.Text" xml:space="preserve">
-    <value>Ajouter une connexion</value>
+  <data name="NoConnectorRefLabel.Text" xml:space="preserve">
+    <value>Keine Referenz</value>
+  </data>
+  <data name="NoSelectionMsg.Text" xml:space="preserve">
+    <value>Kein Element ausgewählt</value>
+  </data>
+  <data name="SelectionInfoLabel.Text" xml:space="preserve">
+    <value>Keine Auswahl</value>
+  </data>
+  <data name="StudRefTab.Text" xml:space="preserve">
+    <value>Stud Referenzen</value>
+  </data>
+  <data name="StudRefValue1Colunm.HeaderText" xml:space="preserve">
+    <value>Wert 1</value>
+  </data>
+  <data name="StudRefValue2Colunm.HeaderText" xml:space="preserve">
+    <value>Wert 2</value>
+  </data>
+  <data name="SubMaterialIndexLabel.Text" xml:space="preserve">
+    <value>SubMaterial Index</value>
+  </data>
+  <data name="TopStudsLabel.Text" xml:space="preserve">
+    <value>Männlich Stud</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Connexions</value>
-  </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Sélection:</value>
-  </data>
-  <data name="TypeValueLabel.Text" xml:space="preserve">
-    <value>&lt;Type de connexion&gt;</value>
-  </data>
-  <data name="RadiusLabel.Text" xml:space="preserve">
-    <value>Rayon</value>
-  </data>
-  <data name="ToothCountLabel.Text" xml:space="preserve">
-    <value>Nb. dents</value>
-  </data>
-  <data name="AxesControlLabel.Text" xml:space="preserve">
-    <value>Axes</value>
-  </data>
-  <data name="CylindricalCheckBox.Text" xml:space="preserve">
-    <value>Cylindrique</value>
-  </data>
-  <data name="StartCappedCheckBox.Text" xml:space="preserve">
-    <value>Début plafonné</value>
-  </data>
-  <data name="EndCappedCheckBox.Text" xml:space="preserve">
-    <value>Fin plafonné</value>
+    <value>Auswahl</value>
   </data>
 </root>

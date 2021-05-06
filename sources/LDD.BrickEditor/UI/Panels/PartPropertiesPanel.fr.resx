@@ -168,4 +168,10 @@
   <data name="PhysicalPanel.Text" xml:space="preserve">
     <value>Propriétés physiques</value>
   </data>
+  <data name="FrictionCheckBox.Text" xml:space="preserve">
+    <value>(Avec friction?)</value>
+  </data>
+  <data name="AliasesButtonBox.ButtonText" xml:space="preserve">
+    <value>...</value>
+  </data>
 </root>

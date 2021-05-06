@@ -117,70 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NameControlLabel.Text" xml:space="preserve">
-    <value>Nom</value>
+  <data name="ApplyEditButton.Text" xml:space="preserve">
+    <value>Speichern</value>
   </data>
-  <data name="LengthControlLabel.Text" xml:space="preserve">
-    <value>Longueur</value>
-  </data>
-  <data name="OrientedCheckBox.Text" xml:space="preserve">
-    <value>Orienté?</value>
-  </data>
-  <data name="SpringCheckBox.Text" xml:space="preserve">
-    <value>Ressort</value>
-  </data>
-  <data name="SubtypeControlLabel.Text" xml:space="preserve">
-    <value>Sous-type</value>
-  </data>
-  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
-    <value>Sync. sélection</value>
-  </data>
-  <data name="TagControlLabel.Text" xml:space="preserve">
-    <value>Tag</value>
-  </data>
-  <data name="TypeControlLabel.Text" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Limite min</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Limite max</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Limite Flip min</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Limite Flip max</value>
-  </data>
-  <data name="AddConnectionDropDown.Text" xml:space="preserve">
-    <value>Ajouter une connexion</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Connexions</value>
-  </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Sélection:</value>
-  </data>
-  <data name="TypeValueLabel.Text" xml:space="preserve">
-    <value>&lt;Type de connexion&gt;</value>
-  </data>
-  <data name="RadiusLabel.Text" xml:space="preserve">
-    <value>Rayon</value>
-  </data>
-  <data name="ToothCountLabel.Text" xml:space="preserve">
-    <value>Nb. dents</value>
-  </data>
-  <data name="AxesControlLabel.Text" xml:space="preserve">
-    <value>Axes</value>
-  </data>
-  <data name="CylindricalCheckBox.Text" xml:space="preserve">
-    <value>Cylindrique</value>
-  </data>
-  <data name="StartCappedCheckBox.Text" xml:space="preserve">
-    <value>Début plafonné</value>
-  </data>
-  <data name="EndCappedCheckBox.Text" xml:space="preserve">
-    <value>Fin plafonné</value>
+  <data name="CancelEditButton.Text" xml:space="preserve">
+    <value>Stornieren</value>
   </data>
 </root>

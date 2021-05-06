@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BONES_DUPLICATE_IDS" xml:space="preserve">
+    <value>Doppelte Knochen-IDs ({0})</value>
+  </data>
+  <data name="BONE_CONNECTION_NOT_SET" xml:space="preserve">
+    <value>'Flex'-Verbindungen sind nicht definiert.</value>
+  </data>
+  <data name="BONE_MULTIPLE_LINKS" xml:space="preserve">
+    <value>Knochen "{name}" wird von mehreren Knochen referenziert.</value>
+  </data>
+  <data name="BONE_NO_BOUNDING" xml:space="preserve">
+    <value>Begrenzungsrahmen ist nicht definiert.</value>
+  </data>
+  <data name="BONE_NOT_LINKED" xml:space="preserve">
+    <value>Knochen "{name}" ist nicht verknüpft.</value>
+  </data>
+  <data name="BONES_ID_GAP" xml:space="preserve">
+    <value>Nummerierungslücke für Knochen-ID (fehlende ID: {0})</value>
+  </data>
+  <data name="CollisionType_Sphere" xml:space="preserve">
+    <value>Kugel</value>
+  </data>
+  <data name="ClonePatternType_Circular" xml:space="preserve">
+    <value>Zirkuläre Wiederholung</value>
+  </data>
+  <data name="ClonePatternType_Linear" xml:space="preserve">
+    <value>Lineare Wiederholung</value>
+  </data>
+  <data name="ClonePatternType_Mirror" xml:space="preserve">
+    <value>Spiegel</value>
+  </data>
+  <data name="CollisionType_Box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="ConnectorType_Axel" xml:space="preserve">
+    <value>Zylindrisch (Stangen &amp; Technik)</value>
+  </data>
+  <data name="ConnectorType_Ball" xml:space="preserve">
+    <value>Kugelgelenk &amp; Sonstiges</value>
+  </data>
+  <data name="ConnectorType_Custom2DField" xml:space="preserve">
+    <value>Bolzen (Ziegel)</value>
+  </data>
+  <data name="ConnectorType_Fixed" xml:space="preserve">
+    <value>Feste Kupplung (Reifen, Türen usw.)</value>
+  </data>
+  <data name="ConnectorType_Gear" xml:space="preserve">
+    <value>Ausrüstung</value>
+  </data>
+  <data name="ConnectorType_Hinge" xml:space="preserve">
+    <value>Scharnier</value>
+  </data>
+  <data name="ConnectorType_Rail" xml:space="preserve">
+    <value>Eisenbahnschienen</value>
+  </data>
+  <data name="ConnectorType_Slider" xml:space="preserve">
+    <value>Schieberegler</value>
+  </data>
+  <data name="Label_Component" xml:space="preserve">
+    <value>Komponente</value>
+  </data>
+  <data name="Label_AlternateMeshes" xml:space="preserve">
+    <value>Alternatives Modell</value>
+  </data>
+  <data name="Label_AxelConnectors" xml:space="preserve">
+    <value>Zylindrische</value>
+  </data>
+  <data name="Label_BallConnectors" xml:space="preserve">
+    <value>Bälle</value>
+  </data>
+  <data name="Label_Bone" xml:space="preserve">
+    <value>Knochen</value>
+  </data>
+  <data name="Label_Bones" xml:space="preserve">
+    <value>Knochen</value>
+  </data>
+  <data name="Label_Brick" xml:space="preserve">
+    <value>Backstein</value>
+  </data>
+  <data name="Label_BrickTubeComponents" xml:space="preserve">
+    <value>Ziegelrohre</value>
+  </data>
+  <data name="Label_BrickTubes" xml:space="preserve">
+    <value>Röhren</value>
+  </data>
+  <data name="Label_ClonePatterns" xml:space="preserve">
+    <value>Klonmuster</value>
+  </data>
+  <data name="Label_Collision" xml:space="preserve">
+    <value>Kollision</value>
+  </data>
+  <data name="Label_CollisionBoxes" xml:space="preserve">
+    <value>Boxen</value>
+  </data>
+  <data name="Label_Collisions" xml:space="preserve">
+    <value>Kollisionen</value>
+  </data>
+  <data name="Label_CollisionSpheres" xml:space="preserve">
+    <value>Kugeln</value>
+  </data>
+  <data name="Label_Connection" xml:space="preserve">
+    <value>Verbindung</value>
+  </data>
+  <data name="Label_Connections" xml:space="preserve">
+    <value>Verbindungen</value>
+  </data>
+  <data name="Label_Custom2DFieldConnectors" xml:space="preserve">
+    <value>Bolzen</value>
+  </data>
+  <data name="Label_MaleStuds" xml:space="preserve">
+    <value>Ohrstecker (männlich)</value>
+  </data>
+  <data name="Label_Decoration" xml:space="preserve">
+    <value>Dekoration</value>
+  </data>
+  <data name="Label_DecorationSurface" xml:space="preserve">
+    <value>Dekorationsfläche</value>
+  </data>
+  <data name="Label_DecorationSurfaceNumber" xml:space="preserve">
+    <value>Dekorationsfläche {0}</value>
+  </data>
+  <data name="Label_DefaultMeshes" xml:space="preserve">
+    <value>Normales Modell</value>
+  </data>
+  <data name="Label_FemaleStud" xml:space="preserve">
+    <value>Weibliches Gestüt</value>
+  </data>
+  <data name="Label_FemaleStudComponents" xml:space="preserve">
+    <value>Weibliche Nieten</value>
+  </data>
+  <data name="Label_FemaleStuds" xml:space="preserve">
+    <value>Ohrstecker (weiblich)</value>
+  </data>
+  <data name="Label_FixedConnectors" xml:space="preserve">
+    <value>Feste Verbindung</value>
+  </data>
+  <data name="Label_GearConnectors" xml:space="preserve">
+    <value>Getriebe</value>
+  </data>
+  <data name="Label_Geometry" xml:space="preserve">
+    <value>Geometrie</value>
+  </data>
+  <data name="Label_HingeConnectors" xml:space="preserve">
+    <value>Scharniere</value>
+  </data>
+  <data name="Label_MainSurface" xml:space="preserve">
+    <value>Hauptfläche</value>
+  </data>
+  <data name="Label_MaleStudComponents" xml:space="preserve">
+    <value>Männliche Nieten</value>
+  </data>
+  <data name="Label_Mesh" xml:space="preserve">
+    <value>Gittergewebe</value>
+  </data>
+  <data name="Label_Model" xml:space="preserve">
+    <value>Modell</value>
+  </data>
+  <data name="Label_Models" xml:space="preserve">
+    <value>Modelle</value>
+  </data>
+  <data name="Label_NewPartProject" xml:space="preserve">
+    <value>Neuer Teil</value>
+  </data>
+  <data name="Label_NoActiveProject" xml:space="preserve">
+    <value>Kein aktives Projekt</value>
+  </data>
+  <data name="Label_Stud" xml:space="preserve">
+    <value>Zucht</value>
+  </data>
+  <data name="Label_Part" xml:space="preserve">
+    <value>Teil</value>
+  </data>
+  <data name="Label_PartComponents" xml:space="preserve">
+    <value>Teilemodelle</value>
+  </data>
+  <data name="Label_PartProjectName" xml:space="preserve">
+    <value>Teil %partid%</value>
+  </data>
+  <data name="Label_Project" xml:space="preserve">
+    <value>Projekt</value>
+  </data>
+  <data name="Label_RailConnectors" xml:space="preserve">
+    <value>Schienen</value>
+  </data>
+  <data name="Label_SliderConnectors" xml:space="preserve">
+    <value>Schieberegler</value>
+  </data>
+  <data name="Label_Studs" xml:space="preserve">
+    <value>Bolzen</value>
+  </data>
+  <data name="Label_Surface" xml:space="preserve">
+    <value>Oberfläche</value>
+  </data>
+  <data name="Label_Surfaces" xml:space="preserve">
+    <value>Oberflächen</value>
+  </data>
+  <data name="MODEL_STUDS_NOT_DEFINED" xml:space="preserve">
+    <value>Das Modell bezieht sich nicht auf einen Bolzen.</value>
+  </data>
+  <data name="MODEL_STUDS_NOT_DEFINED_ALT" xml:space="preserve">
+    <value>Das Modell bezieht sich nicht auf einen Bolzen. Daher wird das alternative Modell niemals angezeigt.</value>
+  </data>
+  <data name="ModelComponentType_BrickTube" xml:space="preserve">
+    <value>Ziegelrohr</value>
+  </data>
+  <data name="ModelComponentType_FemaleStud" xml:space="preserve">
+    <value>Stud (weiblich)</value>
+  </data>
+  <data name="ModelComponentType_MaleStud" xml:space="preserve">
+    <value>Stud (männlich)</value>
+  </data>
+  <data name="ModelComponentType_Part" xml:space="preserve">
+    <value>Teilemodell</value>
+  </data>
+  <data name="SURFACE_NO_MODELS" xml:space="preserve">
+    <value>Die Oberfläche {0} enthält kein Modell.</value>
+  </data>
+  <data name="PART_EMPTY_DESCRIPTION" xml:space="preserve">
+    <value>Die Teilebeschreibung ist leer.</value>
+  </data>
+  <data name="PART_EMPTY_PART_ID" xml:space="preserve">
+    <value>Sie müssen eine Teile-ID eingeben.</value>
+  </data>
+  <data name="PART_NO_BOUNDING" xml:space="preserve">
+    <value>Der Teilbegrenzungsrahmen ist nicht definiert.</value>
+  </data>
+  <data name="PART_NO_GEOMETRYBOUNDING" xml:space="preserve">
+    <value>Der Geometrie-Begrenzungsrahmen ist nicht definiert.</value>
+  </data>
+  <data name="PROJECT_NO_BONES" xml:space="preserve">
+    <value>Es ist kein Knochen definiert. Das Teil kann nicht flexibel sein.</value>
+  </data>
+  <data name="PROJECT_NO_COLLISIONS" xml:space="preserve">
+    <value>Es ist keine Kollision definiert.</value>
+  </data>
+  <data name="PROJECT_NO_CONNECTIONS" xml:space="preserve">
+    <value>Es ist keine Verbindung definiert. Das Teil wird mit nichts verbunden.</value>
+  </data>
+  <data name="PROJECT_NO_ISSUES" xml:space="preserve">
+    <value>Kein Konfigurationsproblem gefunden.</value>
+  </data>
+  <data name="PROJECT_NO_SURFACES" xml:space="preserve">
+    <value>Das Teil muss mindestens eine Oberfläche haben.</value>
+  </data>
+  <data name="STUD_CONNECTION_FIELD_INVALID" xml:space="preserve">
+    <value>Der referenzierte Bolzen ist ungültig.</value>
+  </data>
+  <data name="STUD_CONNECTION_FIELD_NOT_DEFINED" xml:space="preserve">
+    <value>Der referenzierte Bolzen ist nicht definiert.</value>
+  </data>
+  <data name="STUD_CONNECTION_NOT_DEFINED" xml:space="preserve">
+    <value>Die Verbindung ist nicht gesetzt oder ungültig.</value>
+  </data>
+  <data name="SURFACE_NO_TEXTURED_MODEL" xml:space="preserve">
+    <value>Die Oberfläche {0} hat einige Modelle ohne Texturkoordinaten.</value>
+  </data>
+  <data name="NodeRangeFormat1" xml:space="preserve">
+    <value>{0} bis {1}</value>
+  </data>
+  <data name="NodeRangeFormat2" xml:space="preserve">
+    <value>{0} +</value>
+  </data>
+</root>

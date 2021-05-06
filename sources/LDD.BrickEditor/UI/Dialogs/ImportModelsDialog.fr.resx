@@ -117,70 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NameControlLabel.Text" xml:space="preserve">
-    <value>Nom</value>
+  <data name="BrowseModelBox.ButtonText" xml:space="preserve">
+    <value>Sélectionnez le modèle ...</value>
   </data>
-  <data name="LengthControlLabel.Text" xml:space="preserve">
-    <value>Longueur</value>
+  <data name="SelectionColumn.HeaderText" xml:space="preserve">
+    <value>Importer</value>
   </data>
-  <data name="OrientedCheckBox.Text" xml:space="preserve">
-    <value>Orienté?</value>
+  <data name="ModelNameColumn.HeaderText" xml:space="preserve">
+    <value>Nom du modèle</value>
   </data>
-  <data name="SpringCheckBox.Text" xml:space="preserve">
-    <value>Ressort</value>
+  <data name="TriangleCountColumn.HeaderText" xml:space="preserve">
+    <value>Nombre de triangles</value>
   </data>
-  <data name="SubtypeControlLabel.Text" xml:space="preserve">
-    <value>Sous-type</value>
+  <data name="TexturedColumn.HeaderText" xml:space="preserve">
+    <value>Texturé</value>
   </data>
-  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
-    <value>Sync. sélection</value>
+  <data name="FlexibleColumn.HeaderText" xml:space="preserve">
+    <value>Souple</value>
   </data>
-  <data name="TagControlLabel.Text" xml:space="preserve">
-    <value>Tag</value>
-  </data>
-  <data name="TypeControlLabel.Text" xml:space="preserve">
-    <value>Type</value>
+  <data name="SurfaceColumn.HeaderText" xml:space="preserve">
+    <value>Surface de destination</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Limite min</value>
+    <value>Fichier à importer</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Limite max</value>
+  <data name="ImportButton.Text" xml:space="preserve">
+    <value>Importer</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Limite Flip min</value>
+  <data name="ReturnButton.Text" xml:space="preserve">
+    <value>Annuler</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Limite Flip max</value>
+  <data name="CheckUncheckButton.Text" xml:space="preserve">
+    <value>Tout cocher / décocher</value>
   </data>
-  <data name="AddConnectionDropDown.Text" xml:space="preserve">
-    <value>Ajouter une connexion</value>
+  <data name="WarningMessageLabel.Text" xml:space="preserve">
+    <value>Message d'alerte</value>
+  </data>
+  <data name="WarningNotAllFlexible.Text" xml:space="preserve">
+    <value>Impossible d'importer les modèles flexibles et non flexibles.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Connexions</value>
-  </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Sélection:</value>
-  </data>
-  <data name="TypeValueLabel.Text" xml:space="preserve">
-    <value>&lt;Type de connexion&gt;</value>
-  </data>
-  <data name="RadiusLabel.Text" xml:space="preserve">
-    <value>Rayon</value>
-  </data>
-  <data name="ToothCountLabel.Text" xml:space="preserve">
-    <value>Nb. dents</value>
-  </data>
-  <data name="AxesControlLabel.Text" xml:space="preserve">
-    <value>Axes</value>
-  </data>
-  <data name="CylindricalCheckBox.Text" xml:space="preserve">
-    <value>Cylindrique</value>
-  </data>
-  <data name="StartCappedCheckBox.Text" xml:space="preserve">
-    <value>Début plafonné</value>
-  </data>
-  <data name="EndCappedCheckBox.Text" xml:space="preserve">
-    <value>Fin plafonné</value>
+    <value>Importer des modèles</value>
   </data>
 </root>

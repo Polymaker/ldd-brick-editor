@@ -201,4 +201,28 @@
   <data name="WindowMenuItem.Text" xml:space="preserve">
     <value>Fenêtres</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>LDD Brick Studio</value>
+  </data>
+  <data name="Edit_BatchBuild.Text" xml:space="preserve">
+    <value>Construction par lots...</value>
+  </data>
+  <data name="EditMenu_Redo.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl + Y</value>
+  </data>
+  <data name="EditMenu_Undo.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl + Z</value>
+  </data>
+  <data name="FileMenu_OpenPartFiles.Text" xml:space="preserve">
+    <value>Ouvrir les fichiers pièce ...</value>
+  </data>
+  <data name="Tools_ConnectionsReportMenu.Text" xml:space="preserve">
+    <value>Rapport d'utilisation de la connexion</value>
+  </data>
+  <data name="Tools_OpenPartMenu.Text" xml:space="preserve">
+    <value>Pièce ouverte dans LDD ...</value>
+  </data>
+  <data name="HelpMenuItem.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
 </root>

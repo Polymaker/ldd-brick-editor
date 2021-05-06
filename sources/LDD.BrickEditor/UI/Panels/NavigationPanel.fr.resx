@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -161,5 +161,62 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Navigation</value>
+  </data>
+  <data name="AddElementMenu_Part.Text" xml:space="preserve">
+    <value>Modèle principal</value>
+  </data>
+  <data name="AddElementMenu_MaleStud.Text" xml:space="preserve">
+    <value>Mâle Stud</value>
+  </data>
+  <data name="AddElementMenu_FemaleStud.Text" xml:space="preserve">
+    <value>Stud femelle</value>
+  </data>
+  <data name="AddElementMenu_BrickTube.Text" xml:space="preserve">
+    <value>Tube de brique</value>
+  </data>
+  <data name="AddCollisionMenu_Box.Text" xml:space="preserve">
+    <value>Boîte</value>
+  </data>
+  <data name="AddCollisionMenu_Sphere.Text" xml:space="preserve">
+    <value>Sphère</value>
+  </data>
+  <data name="AddConnectionMenu_Axel.Text" xml:space="preserve">
+    <value>Axel</value>
+  </data>
+  <data name="AddConnectionMenu_Ball.Text" xml:space="preserve">
+    <value>Balle</value>
+  </data>
+  <data name="AddConnectionMenu_Custom2DField.Text" xml:space="preserve">
+    <value>Custom2DField</value>
+  </data>
+  <data name="AddConnectionMenu_Fixed.Text" xml:space="preserve">
+    <value>Fixé</value>
+  </data>
+  <data name="AddConnectionMenu_Gear.Text" xml:space="preserve">
+    <value>Équipement</value>
+  </data>
+  <data name="AddConnectionMenu_Hinge.Text" xml:space="preserve">
+    <value>Charnière</value>
+  </data>
+  <data name="AddConnectionMenu_Rail.Text" xml:space="preserve">
+    <value>Rail</value>
+  </data>
+  <data name="AddConnectionMenu_Slider.Text" xml:space="preserve">
+    <value>Glissière</value>
+  </data>
+  <data name="AddClonePatternMenu_Mirror.Text" xml:space="preserve">
+    <value>Miroir</value>
+  </data>
+  <data name="AddClonePatternMenu_Linear.Text" xml:space="preserve">
+    <value>Répétition linéaire</value>
+  </data>
+  <data name="AddClonePatternMenu_Circular.Text" xml:space="preserve">
+    <value>Répétition circulaire</value>
+  </data>
+  <data name="ContextMenu_AddClonePattern.Text" xml:space="preserve">
+    <value>Ajouter un modèle de clonage</value>
+  </data>
+  <data name="ContextMenu_DisolvePattern.Text" xml:space="preserve">
+    <value>Disolve Pattern</value>
   </data>
 </root>
