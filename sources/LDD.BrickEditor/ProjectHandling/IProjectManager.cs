@@ -30,5 +30,14 @@ namespace LDD.BrickEditor.ProjectHandling
         void SetElementHidden(PartElement element, bool hidden);
 
         void SetElementsHidden(IEnumerable<PartElement> elements, bool hidden);
+
+        event EventHandler BonesVisibilityChanged;
+
+        event EventHandler PartModelsVisibilityChanged;
+
+        event EventHandler CollisionsVisibilityChanged;
+
+        event EventHandler ConnectionsVisibilityChanged;
+        event EventHandler ElementCollectionVisibilityChanged;
     }
 }

@@ -36,19 +36,22 @@
             this.AddBuildCfgBtn = new System.Windows.Forms.Button();
             this.BuildConfigListView = new System.Windows.Forms.ListView();
             this.BuildCfgNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SaveBuildCfgBtn = new System.Windows.Forms.Button();
+            this.BuildCfgNameLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
             this.BuildCfg_NameBox = new System.Windows.Forms.TextBox();
-            this.BuildCfgNameLabel = new System.Windows.Forms.Label();
+            this.SaveBuildCfgBtn = new System.Windows.Forms.Button();
             this.CancelBuildCfgBtn = new System.Windows.Forms.Button();
             this.BuildCfg_Lod0Chk = new System.Windows.Forms.CheckBox();
             this.BuildCfg_PathBox = new LDD.BrickEditor.UI.Controls.BrowseTextBox();
             this.BuildCfgPathLabel = new System.Windows.Forms.Label();
             this.BuildCfg_OverwriteChk = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LanguageNoteLabel = new System.Windows.Forms.Label();
+            this.LanguageLabel = new System.Windows.Forms.Label();
+            this.LanguageCombo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.BackupIntervalBox = new System.Windows.Forms.NumericUpDown();
+            this.UsernameOptionalLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.UsernameTextbox = new System.Windows.Forms.TextBox();
             this.WorkspaceBrowseBox = new LDD.BrickEditor.UI.Controls.BrowseTextBox();
@@ -59,8 +62,10 @@
             this.BuildCfgSplitContainer.Panel2.SuspendLayout();
             this.BuildCfgSplitContainer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuildCfgNameLabel)).BeginInit();
+            this.BuildCfgNameLabel.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackupIntervalBox)).BeginInit();
             this.SuspendLayout();
             // 
             // BuildConfigsGroupBox
@@ -82,9 +87,8 @@
             // 
             // BuildCfgSplitContainer.Panel2
             // 
-            this.BuildCfgSplitContainer.Panel2.Controls.Add(this.SaveBuildCfgBtn);
-            this.BuildCfgSplitContainer.Panel2.Controls.Add(this.BuildCfg_NameBox);
             this.BuildCfgSplitContainer.Panel2.Controls.Add(this.BuildCfgNameLabel);
+            this.BuildCfgSplitContainer.Panel2.Controls.Add(this.SaveBuildCfgBtn);
             this.BuildCfgSplitContainer.Panel2.Controls.Add(this.CancelBuildCfgBtn);
             this.BuildCfgSplitContainer.Panel2.Controls.Add(this.BuildCfg_Lod0Chk);
             this.BuildCfgSplitContainer.Panel2.Controls.Add(this.BuildCfg_PathBox);
@@ -132,12 +136,11 @@
             // 
             resources.ApplyResources(this.BuildCfgNameColumn, "BuildCfgNameColumn");
             // 
-            // SaveBuildCfgBtn
+            // BuildCfgNameLabel
             // 
-            resources.ApplyResources(this.SaveBuildCfgBtn, "SaveBuildCfgBtn");
-            this.SaveBuildCfgBtn.Name = "SaveBuildCfgBtn";
-            this.SaveBuildCfgBtn.UseVisualStyleBackColor = true;
-            this.SaveBuildCfgBtn.Click += new System.EventHandler(this.SaveBuildCfgBtn_Click);
+            resources.ApplyResources(this.BuildCfgNameLabel, "BuildCfgNameLabel");
+            this.BuildCfgNameLabel.Controls.Add(this.BuildCfg_NameBox);
+            this.BuildCfgNameLabel.Name = "BuildCfgNameLabel";
             // 
             // BuildCfg_NameBox
             // 
@@ -145,10 +148,12 @@
             this.BuildCfg_NameBox.Name = "BuildCfg_NameBox";
             this.BuildCfg_NameBox.TextChanged += new System.EventHandler(this.BuildCfgProperty_ValueChanged);
             // 
-            // BuildCfgNameLabel
+            // SaveBuildCfgBtn
             // 
-            resources.ApplyResources(this.BuildCfgNameLabel, "BuildCfgNameLabel");
-            this.BuildCfgNameLabel.Name = "BuildCfgNameLabel";
+            resources.ApplyResources(this.SaveBuildCfgBtn, "SaveBuildCfgBtn");
+            this.SaveBuildCfgBtn.Name = "SaveBuildCfgBtn";
+            this.SaveBuildCfgBtn.UseVisualStyleBackColor = true;
+            this.SaveBuildCfgBtn.Click += new System.EventHandler(this.SaveBuildCfgBtn_Click);
             // 
             // CancelBuildCfgBtn
             // 
@@ -190,16 +195,36 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.LanguageNoteLabel);
+            this.groupBox1.Controls.Add(this.LanguageLabel);
+            this.groupBox1.Controls.Add(this.LanguageCombo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.BackupIntervalBox);
+            this.groupBox1.Controls.Add(this.UsernameOptionalLabel);
             this.groupBox1.Controls.Add(this.UsernameLabel);
             this.groupBox1.Controls.Add(this.UsernameTextbox);
             this.groupBox1.Controls.Add(this.WorkspaceBrowseBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // LanguageNoteLabel
+            // 
+            resources.ApplyResources(this.LanguageNoteLabel, "LanguageNoteLabel");
+            this.LanguageNoteLabel.Name = "LanguageNoteLabel";
+            // 
+            // LanguageLabel
+            // 
+            resources.ApplyResources(this.LanguageLabel, "LanguageLabel");
+            this.LanguageLabel.Name = "LanguageLabel";
+            // 
+            // LanguageCombo
+            // 
+            this.LanguageCombo.FormattingEnabled = true;
+            resources.ApplyResources(this.LanguageCombo, "LanguageCombo");
+            this.LanguageCombo.Name = "LanguageCombo";
+            this.LanguageCombo.SelectedIndexChanged += new System.EventHandler(this.LanguageCombo_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -211,20 +236,20 @@
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
-            // numericUpDown1
+            // BackupIntervalBox
             // 
-            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Value = new decimal(new int[] {
+            resources.ApplyResources(this.BackupIntervalBox, "BackupIntervalBox");
+            this.BackupIntervalBox.Name = "BackupIntervalBox";
+            this.BackupIntervalBox.Value = new decimal(new int[] {
             60,
             0,
             0,
             0});
             // 
-            // label4
+            // UsernameOptionalLabel
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.UsernameOptionalLabel, "UsernameOptionalLabel");
+            this.UsernameOptionalLabel.Name = "UsernameOptionalLabel";
             // 
             // UsernameLabel
             // 
@@ -243,6 +268,7 @@
             this.WorkspaceBrowseBox.ButtonWidth = 26;
             this.WorkspaceBrowseBox.Name = "WorkspaceBrowseBox";
             this.WorkspaceBrowseBox.Value = "";
+            this.WorkspaceBrowseBox.BrowseButtonClicked += new System.EventHandler(this.WorkspaceBrowseBox_BrowseButtonClicked);
             // 
             // label3
             // 
@@ -263,9 +289,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.BuildCfgSplitContainer)).EndInit();
             this.BuildCfgSplitContainer.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BuildCfgNameLabel)).EndInit();
+            this.BuildCfgNameLabel.ResumeLayout(false);
+            this.BuildCfgNameLabel.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackupIntervalBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,16 +314,19 @@
         private Controls.BrowseTextBox BuildCfg_PathBox;
         private System.Windows.Forms.TextBox BuildCfg_NameBox;
         private System.Windows.Forms.CheckBox BuildCfg_Lod0Chk;
-        private System.Windows.Forms.Label BuildCfgNameLabel;
         private System.Windows.Forms.Label BuildCfgPathLabel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown BackupIntervalBox;
+        private System.Windows.Forms.Label UsernameOptionalLabel;
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.TextBox UsernameTextbox;
         private Controls.BrowseTextBox WorkspaceBrowseBox;
         private System.Windows.Forms.Label label3;
+        private Controls.ControlLabel BuildCfgNameLabel;
+        private System.Windows.Forms.Label LanguageLabel;
+        private System.Windows.Forms.ComboBox LanguageCombo;
+        private System.Windows.Forms.Label LanguageNoteLabel;
     }
 }

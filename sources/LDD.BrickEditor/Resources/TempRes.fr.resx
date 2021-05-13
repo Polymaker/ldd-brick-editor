@@ -117,67 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Sélection</value>
+  <data name="AlignToMenu_Back.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+Pavé num. 1</value>
   </data>
-  <data name="$this.ToolTipText" xml:space="preserve">
-    <value>Propriétés de la sélection</value>
+  <data name="AlignToMenu_Back.Text" xml:space="preserve">
+    <value>Arrière</value>
   </data>
-  <data name="CollisionRadiusLabel.Text" xml:space="preserve">
-    <value>Rayon</value>
+  <data name="AlignToMenu_Bottom.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+Pavé num. 7</value>
   </data>
-  <data name="CollisionSizeLabel.Text" xml:space="preserve">
-    <value>Taille</value>
+  <data name="AlignToMenu_Bottom.Text" xml:space="preserve">
+    <value>Bas</value>
   </data>
-  <data name="MainInfoTab.Text" xml:space="preserve">
-    <value>Propriétés de l'élément</value>
+  <data name="AlignToMenu_Front.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Pavé numérique 1</value>
   </data>
-  <data name="MultiSelectionMsg.Text" xml:space="preserve">
-    <value>Plusieurs éléments sélectionnés</value>
+  <data name="AlignToMenu_Front.Text" xml:space="preserve">
+    <value>Devant</value>
   </data>
-  <data name="NameLabel.Text" xml:space="preserve">
-    <value>Nom</value>
+  <data name="AlignToMenu_Left.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+Pavé num. 3</value>
   </data>
-  <data name="NoSelectionMsg.Text" xml:space="preserve">
-    <value>Aucun élément sélectionné</value>
+  <data name="AlignToMenu_Left.Text" xml:space="preserve">
+    <value>Gauche</value>
   </data>
-  <data name="StudRefTab.Text" xml:space="preserve">
-    <value>Référencement de Studs</value>
+  <data name="AlignToMenu_Right.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Pavé numérique 3</value>
   </data>
-  <data name="SelectionInfoLabel.Text" xml:space="preserve">
-    <value>Aucune sélection</value>
+  <data name="AlignToMenu_Right.Text" xml:space="preserve">
+    <value>Droite</value>
   </data>
-  <data name="AdjStudColumn.HeaderText" xml:space="preserve">
-    <value>Adjacent</value>
+  <data name="AlignToMenu_Top.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Pavé numérique 7</value>
   </data>
-  <data name="BottomStudsLabel.Text" xml:space="preserve">
-    <value>Studs femelle</value>
-  </data>
-  <data name="ConnectionColumn.HeaderText" xml:space="preserve">
-    <value>Connexion</value>
-  </data>
-  <data name="FieldIndexColumn.HeaderText" xml:space="preserve">
-    <value>Index de champ</value>
-  </data>
-  <data name="FieldPositionColumn.HeaderText" xml:space="preserve">
-    <value>Index 2D</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Cette fonctionnalité n'est pas encore terminée!</value>
-  </data>
-  <data name="NoConnectorRefLabel.Text" xml:space="preserve">
-    <value>Aucune référence</value>
-  </data>
-  <data name="StudRefValue1Colunm.HeaderText" xml:space="preserve">
-    <value>Valeur 1</value>
-  </data>
-  <data name="StudRefValue2Colunm.HeaderText" xml:space="preserve">
-    <value>Valeur 2</value>
-  </data>
-  <data name="SubMaterialIndexLabel.Text" xml:space="preserve">
-    <value>Index des sous-matériaux</value>
-  </data>
-  <data name="TopStudsLabel.Text" xml:space="preserve">
-    <value>Studs mâle</value>
+  <data name="AlignToMenu_Top.Text" xml:space="preserve">
+    <value>Haut</value>
   </data>
 </root>

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LDD.BrickEditor.Settings;
+using LDD.BrickEditor.Resources;
+using System.Globalization;
 
 namespace LDD.BrickEditor.UI.Settings
 {
@@ -21,16 +23,54 @@ namespace LDD.BrickEditor.UI.Settings
         public EditorSettingsPanel()
         {
             InitializeComponent();
+            LanguageNoteLabel.Visible = false;
         }
 
-        public override void FillSettings(AppSettings settings)
+        
+
+        protected override void OnLoad(EventArgs e)
         {
-            base.FillSettings(settings);
+            base.OnLoad(e);
+            InitializeLanguageCombobox();
+        }
+
+        private void InitializeLanguageCombobox()
+        {
+            var languages = new List<LanguageItem>();
+            foreach (string lang in new string[] { "en", "fr", "de" })
+            {
+                var culture = CultureInfo.GetCultureInfo(lang);
+                languages.Add(new LanguageItem(lang, culture.DisplayName));
+            }
+            using (FlagManager.UseFlag(nameof(InitializeLanguageCombobox)))
+            {
+                LanguageCombo.DataSource = languages;
+                LanguageCombo.ValueMember = "Value";
+                LanguageCombo.DisplayMember = "Display";
+            }
+            
+        }
+
+        protected override void FillSettingsCore(AppSettings settings)
+        {
+            base.FillSettingsCore(settings);
             BuildSettings = settings.BuildSettings;
             EditorSettings = settings.EditorSettings;
             UsernameTextbox.Text = EditorSettings.Username;
             WorkspaceBrowseBox.Value = EditorSettings.ProjectWorkspace;
-            numericUpDown1.Value = EditorSettings.BackupInterval;
+            BackupIntervalBox.Value = EditorSettings.BackupInterval;
+
+            string langKey = EditorSettings.Language;
+            if (string.IsNullOrEmpty(langKey))
+                langKey = CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
+            else if (langKey.Length > 2)
+                langKey = langKey.Substring(0, 2);
+
+
+            LanguageCombo.SelectedValue = langKey;
+
+            if (LanguageCombo.SelectedIndex == -1)
+                LanguageCombo.SelectedValue = "en";
 
             FillBuildSettingsList();
         }
@@ -39,7 +79,11 @@ namespace LDD.BrickEditor.UI.Settings
         {
             base.ApplySettings(settings);
             settings.EditorSettings.Username = UsernameTextbox.Text;
-            settings.EditorSettings.BackupInterval = (int)numericUpDown1.Value;
+            settings.EditorSettings.BackupInterval = (int)BackupIntervalBox.Value;
+            settings.EditorSettings.ProjectWorkspace = WorkspaceBrowseBox.Value;
+            if (LanguageCombo.SelectedIndex != -1)
+                settings.EditorSettings.Language = LanguageCombo.SelectedValue as string;
+
             settings.BuildSettings.LDD.Update(BuildSettings.LDD);
             settings.BuildSettings.Manual.Update(BuildSettings.Manual);
             settings.BuildSettings.UserDefined.Clear();
@@ -242,6 +286,16 @@ namespace LDD.BrickEditor.UI.Settings
             }
         }
 
+        private void WorkspaceBrowseBox_BrowseButtonClicked(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                //if (!string.IsNullOrEmpty(BuildCfg_PathBox.Value) && Dire)
+                if (fbd.ShowDialog() == DialogResult.OK)
+                    WorkspaceBrowseBox.Value = fbd.SelectedPath;
+            }
+        }
+
         private void BuildCfg_PathBox_BrowseButtonClicked(object sender, EventArgs e)
         {
             using (var fbd = new FolderBrowserDialog())
@@ -335,6 +389,27 @@ namespace LDD.BrickEditor.UI.Settings
         private void BuildConfigListView_SizeChanged(object sender, EventArgs e)
         {
             BuildCfgNameColumn.Width = BuildConfigListView.Width - 3;
+        }
+
+        class LanguageItem
+        {
+            public LanguageItem(string value, string display)
+            {
+                Value = value;
+                Display = display;
+            }
+
+            public string Value { get; set; }
+            public string Display { get; set; }
+
+        }
+
+        private void LanguageCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (FlagManager.IsSet(nameof(FillSettings)) || FlagManager.IsSet(nameof(InitializeLanguageCombobox)))
+                return;
+
+            LanguageNoteLabel.Visible = true;
         }
     }
 }

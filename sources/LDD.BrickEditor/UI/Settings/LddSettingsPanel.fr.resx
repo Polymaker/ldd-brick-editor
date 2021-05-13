@@ -168,4 +168,16 @@
   <data name="$this.Title" xml:space="preserve">
     <value>Environnement LDD</value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Atouts du programme:</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Contenu principal:</value>
+  </data>
+  <data name="AssetsStatusLabel.Text" xml:space="preserve">
+    <value>État du LIF "Assets"</value>
+  </data>
+  <data name="DbStatusLabel.Text" xml:space="preserve">
+    <value>État du LIF "DB"</value>
+  </data>
 </root>

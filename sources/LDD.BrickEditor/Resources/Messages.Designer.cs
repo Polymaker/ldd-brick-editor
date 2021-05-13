@@ -124,6 +124,15 @@ namespace LDD.BrickEditor.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Opening part in LDD.
+        /// </summary>
+        internal static string Caption_OpeningPartInLdd {
+            get {
+                return ResourceManager.GetString("Caption_OpeningPartInLdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Opening project.
         /// </summary>
         internal static string Caption_OpeningProject {
@@ -281,6 +290,16 @@ namespace LDD.BrickEditor.Resources {
         internal static string Message_ConfirmResizeStuds {
             get {
                 return ResourceManager.GetString("Message_ConfirmResizeStuds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The current part could not be found in LDD.
+        ///Make sure to generate the LDD files beforehand for new parts..
+        /// </summary>
+        internal static string Message_CouldNotFindPartInLDD {
+            get {
+                return ResourceManager.GetString("Message_CouldNotFindPartInLDD", resourceCulture);
             }
         }
         

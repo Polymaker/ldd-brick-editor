@@ -15,15 +15,17 @@ namespace LDD.BrickEditor.Models.Navigation
 
         //public ProjectManager Manager { get; set; }
 
+        public bool DoNotShowNodes { get; set; }
+
         public IElementCollection Collection { get; }
 
         public Type ElementType => Collection.ElementType;
 
-        public ProjectCollectionNode(IElementCollection collection)
-        {
-            Collection = collection;
-            NodeID = collection.GetHashCode().ToString();
-        }
+        //public ProjectCollectionNode(IElementCollection collection)
+        //{
+        //    Collection = collection;
+        //    NodeID = collection.GetHashCode().ToString();
+        //}
 
         public ProjectCollectionNode(IElementCollection collection, string text) : base (text)
         {
@@ -31,10 +33,35 @@ namespace LDD.BrickEditor.Models.Navigation
             NodeID = collection.GetHashCode().ToString();
             Text = text;
         }
+        protected override void OnManagerAssigned()
+        {
+            base.OnManagerAssigned();
+            if (Manager != null)
+                Manager.ElementCollectionVisibilityChanged += Manager_ElementCollectionVisibilityChanged;
+        }
+
+        private void Manager_ElementCollectionVisibilityChanged(object sender, EventArgs e)
+        {
+            if (sender == Collection)
+            {
+                InvalidateVisibility();
+                Manager.RefreshNavigationNode(this);
+            }
+        }
+
+        public override void FreeObjects()
+        {
+            base.FreeObjects();
+            if (Manager != null)
+                Manager.ElementCollectionVisibilityChanged -= Manager_ElementCollectionVisibilityChanged;
+        }
 
         protected override void RebuildChildrens()
         {
             base.RebuildChildrens();
+
+            if (DoNotShowNodes)
+                return;
 
             if (Collection.ElementType == typeof(PartConnection))
             {
@@ -62,7 +89,7 @@ namespace LDD.BrickEditor.Models.Navigation
             }
         }
 
-        public override VisibilityState GetVisibilityState()
+        protected override VisibilityState GetVisibilityState2()
         {
             if (Collection == Manager.CurrentProject.Surfaces)
                 return Manager.ShowPartModels ? VisibilityState.Visible : VisibilityState.Hidden;
@@ -70,25 +97,21 @@ namespace LDD.BrickEditor.Models.Navigation
                 return Manager.ShowCollisions ? VisibilityState.Visible : VisibilityState.Hidden;
             if (Collection == Manager.CurrentProject.Connections)
                 return Manager.ShowConnections ? VisibilityState.Visible : VisibilityState.Hidden;
-
+            if (Collection == Manager.CurrentProject.Bones)
+                return Manager.ShowBones ? VisibilityState.Visible : VisibilityState.Hidden;
             return VisibilityState.None;
         }
 
-        //public override void UpdateVisibilityIcon()
-        //{
-        //    base.UpdateVisibilityIcon();
-        //    if (Manager != null)
-        //    {
-        //        if (Collection == Manager.CurrentProject.Surfaces)
-        //            VisibilityImageKey = Manager.ShowPartModels ? "Visible" : "Hidden";
-        //        if (Collection == Manager.CurrentProject.Collisions)
-        //            VisibilityImageKey = Manager.ShowCollisions ? "Visible" : "Hidden";
-        //        if (Collection == Manager.CurrentProject.Connections)
-        //            VisibilityImageKey = Manager.ShowConnections ? "Visible" : "Hidden";
-        //        //if (Collection == Manager.CurrentProject.Bones)
-        //        //    VisibilityImageKey = Manager.ShowBones ? "Visible" : "Hidden";
-        //    }
-        //}
+        protected override bool IsHiddenCore()
+        {
+            if (Collection == Manager.CurrentProject.Surfaces)
+                return !Manager.ShowPartModels;
+            if (Collection == Manager.CurrentProject.Collisions)
+                return !Manager.ShowCollisions;
+            if (Collection == Manager.CurrentProject.Connections)
+                return !Manager.ShowConnections;
+            return false;
+        }
 
         protected override bool CanToggleVisibilityCore()
         {
@@ -97,14 +120,16 @@ namespace LDD.BrickEditor.Models.Navigation
                 Collection == Manager.CurrentProject.Connections;
         }
 
-        public override void ToggleVisibility()
+        protected override void ToggleVisibilityCore()
         {
             if (Collection == Manager.CurrentProject.Surfaces)
                 Manager.ShowPartModels = !Manager.ShowPartModels;
-            if (Collection == Manager.CurrentProject.Collisions)
+            else if (Collection == Manager.CurrentProject.Collisions)
                 Manager.ShowCollisions = !Manager.ShowCollisions;
-            if (Collection == Manager.CurrentProject.Connections)
+            else if (Collection == Manager.CurrentProject.Connections)
                 Manager.ShowConnections = !Manager.ShowConnections;
+            else if (Collection == Manager.CurrentProject.Bones)
+                Manager.ShowBones = !Manager.ShowBones;
         }
     }
 }

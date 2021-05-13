@@ -31,9 +31,15 @@ namespace LDD.BrickEditor.UI.Settings
             FlagManager = new FlagManager();
         }
 
-        public virtual void FillSettings(AppSettings settings)
+        protected virtual void FillSettingsCore(AppSettings settings)
         {
 
+        }
+
+        public void FillSettings(AppSettings settings)
+        {
+            using (FlagManager.UseFlag(nameof(FillSettings)))
+                FillSettingsCore(settings);
         }
 
         public virtual bool SaveSettings()

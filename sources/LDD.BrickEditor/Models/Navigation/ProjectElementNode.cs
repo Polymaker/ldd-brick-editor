@@ -36,6 +36,7 @@ namespace LDD.BrickEditor.Models.Navigation
 
         private void ModelExtension_VisibilityChanged(object sender, EventArgs e)
         {
+            InvalidateVisibility();
             if (Element.Project != null)
                 Manager?.RefreshNavigationNode(this);
         }
@@ -63,7 +64,7 @@ namespace LDD.BrickEditor.Models.Navigation
         {
             var modelExt = Element.GetExtension<ModelElementExtension>();
             modelExt.InvalidateVisibility();
-            UpdateVisibilityIcon();
+            InvalidateVisibility();
         }
 
         protected override void RebuildChildrens()
@@ -247,14 +248,14 @@ namespace LDD.BrickEditor.Models.Navigation
             return modelExt != null;
         }
 
-        public override void ToggleVisibility()
+        protected override void ToggleVisibilityCore()
         {
             var modelExt = Element.GetExtension<ModelElementExtension>();
             if (modelExt != null)
                 Manager.SetElementHidden(Element, !modelExt.IsHidden);
         }
 
-        public override VisibilityState GetVisibilityState()
+        protected override VisibilityState GetVisibilityState2()
         {
             var modelExt = Element.GetExtension<ModelElementExtension>();
 
@@ -271,6 +272,12 @@ namespace LDD.BrickEditor.Models.Navigation
             return VisibilityState.None;
         }
 
+
+        protected override bool IsHiddenCore()
+        {
+            var modelExt = Element.GetExtension<ModelElementExtension>();
+            return modelExt?.IsHidden ?? false;
+        }
         //public override void UpdateVisibilityIcon()
         //{
         //    base.UpdateVisibilityIcon();
@@ -292,7 +299,7 @@ namespace LDD.BrickEditor.Models.Navigation
         //            VisibilityImageKey = modelExt.IsVisible ? "Visible" : "NotVisible";
         //        }
         //    }
-            
+
         //}
     }
 }

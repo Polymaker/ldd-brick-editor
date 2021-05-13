@@ -123,23 +123,8 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Paramètres de l'application</value>
   </data>
-  <data name="LifExtractedMessage.Text" xml:space="preserve">
-    <value>LIF extrait</value>
-  </data>
-  <data name="LifNotExtractedMessage.Text" xml:space="preserve">
-    <value>LIF non-extrait</value>
-  </data>
   <data name="SaveButton.Text" xml:space="preserve">
     <value>Enregistrer</value>
-  </data>
-  <data name="LifNotFoundMessage.Text" xml:space="preserve">
-    <value>LIF non-trouvé</value>
-  </data>
-  <data name="LddExeNotFound.Text" xml:space="preserve">
-    <value>L'application LDD n'a pas été trouvée.</value>
-  </data>
-  <data name="AppDataDbNotFound.Text" xml:space="preserve">
-    <value>Impossible de trouver les données de LDD.</value>
   </data>
   <data name="lddSettingsPanel1.Title" xml:space="preserve">
     <value>Environnement LDD</value>

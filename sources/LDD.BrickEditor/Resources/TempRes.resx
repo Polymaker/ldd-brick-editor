@@ -97,67 +97,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Selection</value>
+  <data name="AlignToMenu_Back.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+Numpad 1</value>
   </data>
-  <data name="SelectionInfoLabel.Text" xml:space="preserve">
-    <value>No selection</value>
+  <data name="AlignToMenu_Back.Text" xml:space="preserve">
+    <value>Back</value>
   </data>
-  <data name="$this.ToolTipText" xml:space="preserve">
-    <value>Selection properties</value>
+  <data name="AlignToMenu_Bottom.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+Numpad 7</value>
   </data>
-  <data name="AdjStudColumn.HeaderText" xml:space="preserve">
-    <value>Adjacent</value>
+  <data name="AlignToMenu_Bottom.Text" xml:space="preserve">
+    <value>Bottom</value>
   </data>
-  <data name="BottomStudsLabel.Text" xml:space="preserve">
-    <value>Bottom Studs</value>
+  <data name="AlignToMenu_Front.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Numpad 1</value>
   </data>
-  <data name="CollisionRadiusLabel.Text" xml:space="preserve">
-    <value>Radius</value>
+  <data name="AlignToMenu_Front.Text" xml:space="preserve">
+    <value>Front</value>
   </data>
-  <data name="CollisionSizeLabel.Text" xml:space="preserve">
-    <value>Size</value>
+  <data name="AlignToMenu_Left.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+Numpad 3</value>
   </data>
-  <data name="ConnectionColumn.HeaderText" xml:space="preserve">
-    <value>Connection</value>
+  <data name="AlignToMenu_Left.Text" xml:space="preserve">
+    <value>Left</value>
   </data>
-  <data name="FieldIndexColumn.HeaderText" xml:space="preserve">
-    <value>Field Index</value>
+  <data name="AlignToMenu_Right.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Numpad 3</value>
   </data>
-  <data name="FieldPositionColumn.HeaderText" xml:space="preserve">
-    <value>2D Index</value>
+  <data name="AlignToMenu_Right.Text" xml:space="preserve">
+    <value>Right</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>This feature is not yet finished!</value>
+  <data name="AlignToMenu_Top.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Numpad 7</value>
   </data>
-  <data name="MainInfoTab.Text" xml:space="preserve">
-    <value>Element Properties</value>
-  </data>
-  <data name="MultiSelectionMsg.Text" xml:space="preserve">
-    <value>Multiple elements selected</value>
-  </data>
-  <data name="NameLabel.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="NoConnectorRefLabel.Text" xml:space="preserve">
-    <value>No reference</value>
-  </data>
-  <data name="NoSelectionMsg.Text" xml:space="preserve">
-    <value>No element selected</value>
-  </data>
-  <data name="StudRefTab.Text" xml:space="preserve">
-    <value>Stud references</value>
-  </data>
-  <data name="StudRefValue1Colunm.HeaderText" xml:space="preserve">
-    <value>Value 1</value>
-  </data>
-  <data name="StudRefValue2Colunm.HeaderText" xml:space="preserve">
-    <value>Value 2</value>
-  </data>
-  <data name="SubMaterialIndexLabel.Text" xml:space="preserve">
-    <value>SubMaterial Index</value>
-  </data>
-  <data name="TopStudsLabel.Text" xml:space="preserve">
-    <value>Top Studs</value>
+  <data name="AlignToMenu_Top.Text" xml:space="preserve">
+    <value>Top</value>
   </data>
 </root>

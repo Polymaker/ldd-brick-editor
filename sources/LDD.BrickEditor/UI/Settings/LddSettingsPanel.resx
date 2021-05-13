@@ -430,7 +430,7 @@
     <value>2</value>
   </data>
   <data name="AssetsStatusLabel.Text" xml:space="preserve">
-    <value>Assets status</value>
+    <value>"Assets" LIF status</value>
   </data>
   <data name="&gt;&gt;AssetsStatusLabel.Name" xml:space="preserve">
     <value>AssetsStatusLabel</value>
@@ -463,7 +463,7 @@
     <value>3</value>
   </data>
   <data name="DbStatusLabel.Text" xml:space="preserve">
-    <value>DB status</value>
+    <value>"DB" LIF status</value>
   </data>
   <data name="&gt;&gt;DbStatusLabel.Name" xml:space="preserve">
     <value>DbStatusLabel</value>

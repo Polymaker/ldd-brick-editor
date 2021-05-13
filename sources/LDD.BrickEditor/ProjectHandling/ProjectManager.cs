@@ -247,7 +247,13 @@ namespace LDD.BrickEditor.ProjectHandling
                 string oldPath = CurrentProjectPath;
 
                 //SaveUserProperties();
-                CurrentProject.CleanUpAndSave(targetPath);
+
+                StartBatchChanges();
+                CurrentProject.RemoveUnreferencedMeshes();
+                EndBatchChanges();
+
+                CurrentProject.Save(targetPath);
+
                 if (CurrentProject.ErrorMessages.Any())
                     MessageBoxEX.ShowDetails(Messages.Caption_UnexpectedError, Messages.Caption_UnexpectedError, string.Join(Environment.NewLine, CurrentProject));
 
@@ -274,11 +280,14 @@ namespace LDD.BrickEditor.ProjectHandling
                     TemporaryProjectPath = tempFile;
                 }
 
+                CurrentProject.LoadProjectXml();
                 foreach (var mesh in CurrentProject.Meshes)
                 {
                     if (!mesh.IsModelLoaded)
                         mesh.ReloadModelFromXml();
                 }
+                CurrentProject.UnloadProjectXml();
+
                 CurrentProject.ProjectPath = TemporaryProjectPath;
                 CurrentProject.Save(TemporaryProjectPath);
                 
@@ -554,6 +563,8 @@ namespace LDD.BrickEditor.ProjectHandling
 
         public event EventHandler ConnectionsVisibilityChanged;
 
+        public event EventHandler ElementCollectionVisibilityChanged;
+
         public event EventHandler PartRenderModeChanged;
 
         private void SetGridVisibility(bool visible)
@@ -583,6 +594,7 @@ namespace LDD.BrickEditor.ProjectHandling
                 //}
 
                 BonesVisibilityChanged?.Invoke(this, EventArgs.Empty);
+                ElementCollectionVisibilityChanged?.Invoke(CurrentProject.Bones, EventArgs.Empty);
             }
         }
 
@@ -614,6 +626,7 @@ namespace LDD.BrickEditor.ProjectHandling
                 }
 
                 PartModelsVisibilityChanged?.Invoke(this, EventArgs.Empty);
+                ElementCollectionVisibilityChanged?.Invoke(CurrentProject.Surfaces, EventArgs.Empty);
             }
         }
 
@@ -632,6 +645,7 @@ namespace LDD.BrickEditor.ProjectHandling
                 }
 
                 CollisionsVisibilityChanged?.Invoke(this, EventArgs.Empty);
+                ElementCollectionVisibilityChanged?.Invoke(CurrentProject.Collisions, EventArgs.Empty);
             }
         }
 
@@ -650,6 +664,7 @@ namespace LDD.BrickEditor.ProjectHandling
                 }
 
                 ConnectionsVisibilityChanged?.Invoke(this, EventArgs.Empty);
+                ElementCollectionVisibilityChanged?.Invoke(CurrentProject.Connections, EventArgs.Empty);
             }
         }
 
@@ -1078,21 +1093,25 @@ namespace LDD.BrickEditor.ProjectHandling
                 CurrentProject.Surfaces,
                 ModelLocalizations.Label_Surfaces));
 
+            NavigationTreeNodes.Add(new ProjectCollectionNode(
+                   CurrentProject.Collisions,
+                   ModelLocalizations.Label_Collisions)
+            {
+                DoNotShowNodes = CurrentProject.Properties.Flexible
+            });
+
+            NavigationTreeNodes.Add(new ProjectCollectionNode(
+                CurrentProject.Connections,
+                ModelLocalizations.Label_Connections)
+            {
+                DoNotShowNodes = CurrentProject.Properties.Flexible
+            });
+
             if (CurrentProject.Properties.Flexible)
             {
                 NavigationTreeNodes.Add(new ProjectCollectionNode(
                     CurrentProject.Bones,
                     ModelLocalizations.Label_Bones));
-            }
-            else
-            {
-                NavigationTreeNodes.Add(new ProjectCollectionNode(
-                    CurrentProject.Collisions,
-                    ModelLocalizations.Label_Collisions));
-
-                NavigationTreeNodes.Add(new ProjectCollectionNode(
-                    CurrentProject.Connections,
-                    ModelLocalizations.Label_Connections));
             }
 
             NavigationTreeNodes.Add(new ProjectCollectionNode(
@@ -1605,7 +1624,6 @@ namespace LDD.BrickEditor.ProjectHandling
             {
                 var elementExt = elem.GetExtension<ModelElementExtension>();
 
-
                 if (elementExt != null && elementExt.IsHidden != hidden)
                 {
                     elementExt.IsHidden = hidden;
@@ -1791,7 +1809,62 @@ namespace LDD.BrickEditor.ProjectHandling
 
         #endregion
 
+        #region Other
 
+        public void OpenPartInLDD()
+        {
+            if (!IsProjectOpen)
+                return;
+
+            Logger.Info("Oppening current part in LDD...");
+
+            if (CurrentProject.PartID == 0 || !PartWrapper.PartExists(LDDEnvironment.Current, CurrentProject.PartID))
+            {
+                Logger.Warn("Part was not found in LDD primitive folder");
+                MessageBox.Show(Messages.Message_CouldNotFindPartInLDD, Messages.Caption_OpeningPartInLdd);
+                return;
+            }
+
+            Logger.Info("Creating temporary LDD model for part");
+
+            var emptyModel = new Core.Models.Model
+            {
+                FileVersion = new Core.Data.VersionInfo(5, 0),
+                ApplicationVersion = new Core.Data.VersionInfo(4, 3),
+                BrickSetVersion = 2670,
+                Brand = Core.Data.Brand.LDDExtended,
+                ModelName = CurrentProject.PartDescription
+            };
+            emptyModel.Bricks.Add(new Core.Models.Brick
+            {
+                DesignID = CurrentProject.PartID,
+                Part = new Core.Models.Part
+                {
+                    DesignID = CurrentProject.PartID,
+                    Materials = CurrentProject.Surfaces.Select(s => 21).ToList(),
+                    Bone = new Core.Models.Bone()
+                }
+            });
+            emptyModel.RigidSystems.Add(new Core.Models.RigidSystem()
+            {
+                RigidItems = new List<Core.Models.RigidItem>
+                {
+                    new Core.Models.RigidItem
+                    {
+                        BoneRefs = new List<int> { 0 }
+                    }
+                }
+            });
+            
+            string tmpDir = Path.GetTempPath();
+            string tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".lxfml");
+            Logger.Debug($"Model path: {tmpFile}");
+            emptyModel.Save(tmpFile);
+            Logger.Info("Launching LDD...");
+            Process.Start(tmpFile);
+        }
+
+        #endregion
 
         #endregion
     }

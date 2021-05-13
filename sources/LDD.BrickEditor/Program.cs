@@ -32,6 +32,27 @@ namespace LDD.BrickEditor
 
             Logger.Info("Startup");
             StartupArgs = args;
+
+            try
+            {
+                Logger.Info("Initializing settings...");
+                SettingsManager.Initialize();
+
+                if (!string.IsNullOrEmpty(SettingsManager.Current.EditorSettings.Language))
+                {
+                    var culture = System.Globalization.CultureInfo.GetCultureInfo(SettingsManager.Current.EditorSettings.Language);
+                    if (culture != null)
+                    {
+                        Thread.CurrentThread.CurrentUICulture = culture;
+                        SettingsManager.Current.BuildSettings.Translate();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex, "");
+                return;
+            }
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

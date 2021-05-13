@@ -156,9 +156,6 @@
   <data name="label5.Text" xml:space="preserve">
     <value>secondes</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>* Optionnel</value>
-  </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Espace de travail</value>
   </data>
@@ -167,5 +164,11 @@
   </data>
   <data name="$this.Title" xml:space="preserve">
     <value>Paramètres de l'éditeur</value>
+  </data>
+  <data name="UsernameOptionalLabel.Text" xml:space="preserve">
+    <value>* Optionnel</value>
+  </data>
+  <data name="LanguageNoteLabel.Text" xml:space="preserve">
+    <value>Vous devez redémarrer l'application pour que la modification prenne effet</value>
   </data>
 </root>

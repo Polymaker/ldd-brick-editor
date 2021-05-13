@@ -566,6 +566,9 @@
     <EmbeddedResource Include="UI\Dialogs\ConfigureOutlinesDialog.resx">
       <DependentUpon>ConfigureOutlinesDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\FlexAttributesDialog.de.resx">
+      <DependentUpon>FlexAttributesDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Dialogs\FlexAttributesDialog.fr.resx">
       <DependentUpon>FlexAttributesDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -638,6 +641,9 @@
     <EmbeddedResource Include="UI\Panels\ConnectionEditorPanel.resx">
       <DependentUpon>ConnectionEditorPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\ElementDetailPanel.de.resx">
+      <DependentUpon>ElementDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\ElementDetailPanel.fr.resx">
       <DependentUpon>ElementDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -647,11 +653,17 @@
     <EmbeddedResource Include="UI\Panels\LocalisationEditorPanel.resx">
       <DependentUpon>LocalisationEditorPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\NavigationPanel.de.resx">
+      <DependentUpon>NavigationPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\NavigationPanel.fr.resx">
       <DependentUpon>NavigationPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\NavigationPanel.resx">
       <DependentUpon>NavigationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\PartPropertiesPanel.de.resx">
+      <DependentUpon>PartPropertiesPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\PartPropertiesPanel.fr.resx">
       <DependentUpon>PartPropertiesPanel.cs</DependentUpon>
@@ -662,11 +674,20 @@
     <EmbeddedResource Include="UI\Panels\ProjectDocumentPanel.resx">
       <DependentUpon>ProjectDocumentPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\ProjectInfoPanel.de.resx">
+      <DependentUpon>ProjectInfoPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\ProjectInfoPanel.fr.resx">
       <DependentUpon>ProjectInfoPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\ProjectInfoPanel.resx">
       <DependentUpon>ProjectInfoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\StudConnectionPanel.de.resx">
+      <DependentUpon>StudConnectionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\StudConnectionPanel.fr.resx">
+      <DependentUpon>StudConnectionPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\StudConnectionPanel.resx">
       <DependentUpon>StudConnectionPanel.cs</DependentUpon>
@@ -680,8 +701,17 @@
     <EmbeddedResource Include="UI\Panels\ValidationPanel.resx">
       <DependentUpon>ValidationPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\ViewportPanel.de.resx">
+      <DependentUpon>ViewportPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\ViewportPanel.fr.resx">
+      <DependentUpon>ViewportPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\ViewportPanel.resx">
       <DependentUpon>ViewportPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\DisplaySettingsPanel.de.resx">
+      <DependentUpon>DisplaySettingsPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Settings\DisplaySettingsPanel.fr.resx">
       <DependentUpon>DisplaySettingsPanel.cs</DependentUpon>
@@ -689,11 +719,17 @@
     <EmbeddedResource Include="UI\Settings\DisplaySettingsPanel.resx">
       <DependentUpon>DisplaySettingsPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\EditorSettingsPanel.de.resx">
+      <DependentUpon>EditorSettingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Settings\EditorSettingsPanel.fr.resx">
       <DependentUpon>EditorSettingsPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Settings\EditorSettingsPanel.resx">
       <DependentUpon>EditorSettingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\LddSettingsPanel.de.resx">
+      <DependentUpon>LddSettingsPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Settings\LddSettingsPanel.fr.resx">
       <DependentUpon>LddSettingsPanel.cs</DependentUpon>
@@ -701,11 +737,17 @@
     <EmbeddedResource Include="UI\Settings\LddSettingsPanel.resx">
       <DependentUpon>LddSettingsPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Windows\AboutWindow.de.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Windows\AboutWindow.fr.resx">
       <DependentUpon>AboutWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Windows\AboutWindow.resx">
       <DependentUpon>AboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Windows\AppSettingsWindow.de.resx">
+      <DependentUpon>AppSettingsWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Windows\AppSettingsWindow.fr.resx">
       <DependentUpon>AppSettingsWindow.cs</DependentUpon>
@@ -727,6 +769,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Windows\ConnectionUsageWindow.resx">
       <DependentUpon>ConnectionUsageWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Windows\ExportPartModelWindow.de.resx">
+      <DependentUpon>ExportPartModelWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Windows\ExportPartModelWindow.fr.resx">
       <DependentUpon>ExportPartModelWindow.cs</DependentUpon>

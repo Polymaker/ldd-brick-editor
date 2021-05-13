@@ -208,10 +208,10 @@
     <value>Construction par lots...</value>
   </data>
   <data name="EditMenu_Redo.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl + Y</value>
+    <value>Ctrl+Y</value>
   </data>
   <data name="EditMenu_Undo.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl + Z</value>
+    <value>Ctrl+Z</value>
   </data>
   <data name="FileMenu_OpenPartFiles.Text" xml:space="preserve">
     <value>Ouvrir les fichiers pièce ...</value>
@@ -220,7 +220,7 @@
     <value>Rapport d'utilisation de la connexion</value>
   </data>
   <data name="Tools_OpenPartMenu.Text" xml:space="preserve">
-    <value>Pièce ouverte dans LDD ...</value>
+    <value>Ouvrir la pièce dans LDD...</value>
   </data>
   <data name="HelpMenuItem.Text" xml:space="preserve">
     <value>?</value>

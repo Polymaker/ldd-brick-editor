@@ -86,6 +86,12 @@ namespace LDD.BrickEditor.Settings
                 DefaultConfigName = string.Empty;
         }
 
+        public void Translate()
+        {
+            LDD.Name = Messages.BuildConfig_LDD;
+            Manual.Name = Messages.BuildConfig_Browse;
+        }
+
         public IEnumerable<BuildConfiguration> GetAllConfigurations()
         {
             if (LDD != null)

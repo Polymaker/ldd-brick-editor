@@ -289,7 +289,7 @@
     <value>LengthBox</value>
   </data>
   <data name="&gt;&gt;LengthBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LengthBox.Parent" xml:space="preserve">
     <value>LengthControlLabel</value>
@@ -349,7 +349,7 @@
     <value>NameControlLabel</value>
   </data>
   <data name="&gt;&gt;NameControlLabel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;NameControlLabel.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
@@ -379,7 +379,7 @@
     <value>TypeControlLabel</value>
   </data>
   <data name="&gt;&gt;TypeControlLabel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TypeControlLabel.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
@@ -409,7 +409,7 @@
     <value>SubtypeControlLabel</value>
   </data>
   <data name="&gt;&gt;SubtypeControlLabel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SubtypeControlLabel.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
@@ -439,7 +439,7 @@
     <value>LengthControlLabel</value>
   </data>
   <data name="&gt;&gt;LengthControlLabel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LengthControlLabel.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
@@ -466,7 +466,7 @@
     <value>AxesNumberBox</value>
   </data>
   <data name="&gt;&gt;AxesNumberBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;AxesNumberBox.Parent" xml:space="preserve">
     <value>AxesControlLabel</value>
@@ -496,7 +496,7 @@
     <value>AxesControlLabel</value>
   </data>
   <data name="&gt;&gt;AxesControlLabel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;AxesControlLabel.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
@@ -652,7 +652,7 @@
     <value>5</value>
   </data>
   <data name="CapLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="CylindricalCheckBox" Row="1" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="EndCappedCheckBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="StartCappedCheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="Percent,100,AutoSize,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="CylindricalCheckBox" Row="1" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="EndCappedCheckBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="StartCappedCheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="Percent,100,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="GrabbingLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -778,7 +778,7 @@
     <value>SpringEditor</value>
   </data>
   <data name="&gt;&gt;SpringEditor.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Editors.VectorEditor, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Editors.VectorEditor, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SpringEditor.Parent" xml:space="preserve">
     <value>SpringPanel</value>
@@ -907,7 +907,7 @@
     <value>ToothNumBox</value>
   </data>
   <data name="&gt;&gt;ToothNumBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ToothNumBox.Parent" xml:space="preserve">
     <value>GearLayoutPanel</value>
@@ -934,7 +934,7 @@
     <value>RadiusNumBox</value>
   </data>
   <data name="&gt;&gt;RadiusNumBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RadiusNumBox.Parent" xml:space="preserve">
     <value>GearLayoutPanel</value>
@@ -1000,7 +1000,7 @@
     <value>LimitMinBox</value>
   </data>
   <data name="&gt;&gt;LimitMinBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LimitMinBox.Parent" xml:space="preserve">
     <value>HingeLayoutPanel</value>
@@ -1123,7 +1123,7 @@
     <value>LimitMaxBox</value>
   </data>
   <data name="&gt;&gt;LimitMaxBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LimitMaxBox.Parent" xml:space="preserve">
     <value>HingeLayoutPanel</value>
@@ -1147,7 +1147,7 @@
     <value>FlipLimitMaxBox</value>
   </data>
   <data name="&gt;&gt;FlipLimitMaxBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;FlipLimitMaxBox.Parent" xml:space="preserve">
     <value>HingeLayoutPanel</value>
@@ -1171,7 +1171,7 @@
     <value>FlipLimitMinBox</value>
   </data>
   <data name="&gt;&gt;FlipLimitMinBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;FlipLimitMinBox.Parent" xml:space="preserve">
     <value>HingeLayoutPanel</value>
@@ -1327,7 +1327,7 @@
     <value>FlexControlLabel</value>
   </data>
   <data name="&gt;&gt;FlexControlLabel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;FlexControlLabel.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
@@ -1381,7 +1381,7 @@
     <value>TagControlLabel</value>
   </data>
   <data name="&gt;&gt;TagControlLabel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TagControlLabel.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
@@ -1411,7 +1411,7 @@
     <value>TransformEdit</value>
   </data>
   <data name="&gt;&gt;TransformEdit.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.TransformEditor, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.TransformEditor, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TransformEdit.Parent" xml:space="preserve">
     <value>flowLayoutPanel1</value>
@@ -1501,7 +1501,7 @@
     <value>SyncSelectionCheckBox</value>
   </data>
   <data name="&gt;&gt;SyncSelectionCheckBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ToolStripCheckBox, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.ToolStripCheckBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;AddConnectionDropDown.Name" xml:space="preserve">
     <value>AddConnectionDropDown</value>
@@ -1513,6 +1513,6 @@
     <value>ConnectionEditorPanel</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Panels.ProjectDocumentPanel, Brick Studio, Version=1.0.5.20038, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Panels.ProjectDocumentPanel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

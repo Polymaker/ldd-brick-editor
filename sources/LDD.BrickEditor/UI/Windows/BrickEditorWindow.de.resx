@@ -154,13 +154,13 @@
     <value>Teil validieren</value>
   </data>
   <data name="EditMenu_Redo.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl + Y</value>
+    <value>Ctrl+Y</value>
   </data>
   <data name="EditMenu_Redo.Text" xml:space="preserve">
     <value>Wiederholen</value>
   </data>
   <data name="EditMenu_Undo.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl + Z</value>
+    <value>Ctrl+Z</value>
   </data>
   <data name="EditMenu_Undo.Text" xml:space="preserve">
     <value>Rückgängig machen</value>
@@ -205,10 +205,10 @@
     <value>Verbindungsnutzungsbericht</value>
   </data>
   <data name="StartLddMenuItem.Text" xml:space="preserve">
-    <value>LDD starten ...</value>
+    <value>LDD starten...</value>
   </data>
   <data name="Tools_OpenPartMenu.Text" xml:space="preserve">
-    <value>Teil in LDD öffnen ...</value>
+    <value>Öffnen Sie das Teil in LDD...</value>
   </data>
   <data name="HelpMenu_About.Text" xml:space="preserve">
     <value>Über...</value>
@@ -220,9 +220,9 @@
     <value>Ausgabedateien in:</value>
   </data>
   <data name="StartLddText.Text" xml:space="preserve">
-    <value>LDD starten ...</value>
+    <value>LDD starten...</value>
   </data>
   <data name="RestartLddText.Text" xml:space="preserve">
-    <value>Starten Sie LDD neu ...</value>
+    <value>Starten Sie LDD neu...</value>
   </data>
 </root>

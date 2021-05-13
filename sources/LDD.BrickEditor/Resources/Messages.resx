@@ -214,4 +214,11 @@ Do you want to delete anyway?</value>
     <value>An unexpected error occurred.
 For more details, check the log file.</value>
   </data>
+  <data name="Caption_OpeningPartInLdd" xml:space="preserve">
+    <value>Opening part in LDD</value>
+  </data>
+  <data name="Message_CouldNotFindPartInLDD" xml:space="preserve">
+    <value>The current part could not be found in LDD.
+Make sure to generate the LDD files beforehand for new parts.</value>
+  </data>
 </root>

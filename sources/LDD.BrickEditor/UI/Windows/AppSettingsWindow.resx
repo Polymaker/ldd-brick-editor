@@ -181,7 +181,7 @@
     <value>displaySettingsPanel1</value>
   </data>
   <data name="&gt;&gt;displaySettingsPanel1.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Settings.DisplaySettingsPanel, Brick Studio, Version=1.0.5.27300, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Settings.DisplaySettingsPanel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;displaySettingsPanel1.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -205,7 +205,7 @@
     <value>editorSettingsPanel1</value>
   </data>
   <data name="&gt;&gt;editorSettingsPanel1.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Settings.EditorSettingsPanel, Brick Studio, Version=1.0.5.27300, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Settings.EditorSettingsPanel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;editorSettingsPanel1.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -229,7 +229,7 @@
     <value>lddSettingsPanel1</value>
   </data>
   <data name="&gt;&gt;lddSettingsPanel1.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Settings.LddSettingsPanel, Brick Studio, Version=1.0.5.27300, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Settings.LddSettingsPanel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lddSettingsPanel1.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -336,24 +336,6 @@
   <data name="&gt;&gt;SaveButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="LifNotExtractedMessage.Text" xml:space="preserve">
-    <value>LIF not extracted</value>
-  </data>
-  <data name="LifExtractedMessage.Text" xml:space="preserve">
-    <value>LIF extracted</value>
-  </data>
-  <data name="LifNotFoundMessage.Text" xml:space="preserve">
-    <value>LIF not found</value>
-  </data>
-  <data name="LddExeNotFound.Text" xml:space="preserve">
-    <value>LDD application not found.</value>
-  </data>
-  <data name="AppDataDbNotFound.Text" xml:space="preserve">
-    <value>Could not find LDD database.</value>
-  </data>
-  <metadata name="localizableStringList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -374,42 +356,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Application settings</value>
-  </data>
-  <data name="&gt;&gt;LifNotExtractedMessage.Name" xml:space="preserve">
-    <value>LifNotExtractedMessage</value>
-  </data>
-  <data name="&gt;&gt;LifNotExtractedMessage.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.5.27300, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LifExtractedMessage.Name" xml:space="preserve">
-    <value>LifExtractedMessage</value>
-  </data>
-  <data name="&gt;&gt;LifExtractedMessage.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.5.27300, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LifNotFoundMessage.Name" xml:space="preserve">
-    <value>LifNotFoundMessage</value>
-  </data>
-  <data name="&gt;&gt;LifNotFoundMessage.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.5.27300, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LddExeNotFound.Name" xml:space="preserve">
-    <value>LddExeNotFound</value>
-  </data>
-  <data name="&gt;&gt;LddExeNotFound.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.5.27300, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AppDataDbNotFound.Name" xml:space="preserve">
-    <value>AppDataDbNotFound</value>
-  </data>
-  <data name="&gt;&gt;AppDataDbNotFound.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.5.27300, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;localizableStringList1.Name" xml:space="preserve">
-    <value>localizableStringList1</value>
-  </data>
-  <data name="&gt;&gt;localizableStringList1.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableStringList, Brick Studio, Version=1.0.5.27300, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AppSettingsWindow</value>

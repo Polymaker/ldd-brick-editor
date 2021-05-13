@@ -117,128 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LddInstallNotFound" xml:space="preserve">
-    <value>LDD ne semble pas être installé.
-Certaines fonctionnalités ne fonctionneront pas correctement.</value>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Sekunden</value>
   </data>
-  <data name="Error_OpeningFile" xml:space="preserve">
-    <value>Une erreur s'est produite lors de l'ouverture d'un fichier.</value>
+  <data name="DelBuildCfgBtn.Text" xml:space="preserve">
+    <value>Löschen</value>
   </data>
-  <data name="Caption_OpeningFile" xml:space="preserve">
-    <value>Ouverture de fichier</value>
+  <data name="AddBuildCfgBtn.Text" xml:space="preserve">
+    <value>Hinzufügen</value>
   </data>
-  <data name="Error_OpeningProject" xml:space="preserve">
-    <value>ne erreur s'est produite lors de l'ouverture du projet.</value>
+  <data name="BuildCfgNameColumn.Text" xml:space="preserve">
+    <value>Name</value>
   </data>
-  <data name="Error_CreatingProject" xml:space="preserve">
-    <value>Une erreur s'est produite lors de la création du projet.</value>
+  <data name="SaveBuildCfgBtn.Text" xml:space="preserve">
+    <value>speichern</value>
   </data>
-  <data name="Caption_OpeningProject" xml:space="preserve">
-    <value>Ouverture d'un projet</value>
+  <data name="BuildCfgNameLabel.Text" xml:space="preserve">
+    <value>Name</value>
   </data>
-  <data name="Message_SaveChanges" xml:space="preserve">
-    <value>Voulez-vous enregistrer les modifications faites?</value>
+  <data name="CancelBuildCfgBtn.Text" xml:space="preserve">
+    <value>Stornieren</value>
   </data>
-  <data name="Message_SaveNewProject" xml:space="preserve">
-    <value>Voulez-vous enregistrer le projet?</value>
+  <data name="BuildCfg_Lod0Chk.Text" xml:space="preserve">
+    <value>Legen Sie die Modelle im LOD0-Verzeichnis ab</value>
   </data>
-  <data name="Caption_SaveBeforeClose" xml:space="preserve">
-    <value>Enregistrement du projet</value>
+  <data name="BuildCfgPathLabel.Text" xml:space="preserve">
+    <value>Ausgabeordner</value>
   </data>
-  <data name="Message_RecoverProject" xml:space="preserve">
-    <value>L'application ne s'est pas fermée correctement, souhaitez-vous récupérer le projet?</value>
+  <data name="BuildCfg_OverwriteChk.Text" xml:space="preserve">
+    <value>Bestätigung beim Überschreiben</value>
   </data>
-  <data name="Message_FileGenerationError" xml:space="preserve">
-    <value>Impossible de générer les fichiers de brique LDD.
-Voir le panneau de validation pour plus d'informations.</value>
+  <data name="BuildConfigsGroupBox.Text" xml:space="preserve">
+    <value>Ausgabevoreinstellungen</value>
   </data>
-  <data name="Caption_LddPartGeneration" xml:space="preserve">
-    <value>Génération des fichiers de brique LDD</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Sicherungsintervall</value>
   </data>
-  <data name="BuildConfig_LDD" xml:space="preserve">
-    <value>Dossier LDD</value>
+  <data name="UsernameLabel.Text" xml:space="preserve">
+    <value>Nutzername</value>
   </data>
-  <data name="BuildConfig_Browse" xml:space="preserve">
-    <value>Choisir un dossier</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Projektarbeitsbereich</value>
   </data>
-  <data name="BuildConfig_Manage" xml:space="preserve">
-    <value>Gérer les configurations...</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Allgemeine Konfiguration</value>
   </data>
-  <data name="LddConfigInvalid" xml:space="preserve">
-    <value>L'environnement LDD configuré n'est pas valide mais LDD semble être correctement installé.</value>
+  <data name="$this.Title" xml:space="preserve">
+    <value>Editor-Einstellungen</value>
   </data>
-  <data name="Caption_StartupValidations" xml:space="preserve">
-    <value>Validations de démarrage</value>
+  <data name="UsernameOptionalLabel.Text" xml:space="preserve">
+    <value>* Optional</value>
   </data>
-  <data name="Message_ConfirmResizeStuds" xml:space="preserve">
-    <value>Certains composants du modèle font référence à des Studs qui sont en dehors de la nouvelle taille.
-Voulez-vous quand même continuer?</value>
-  </data>
-  <data name="Caption_Confirmation" xml:space="preserve">
-    <value>Confirmation</value>
-  </data>
-  <data name="Caption_DeleteConfirmation" xml:space="preserve">
-    <value>Confirmation de suppression</value>
-  </data>
-  <data name="Message_ConfirmDeleteBoneConnection" xml:space="preserve">
-    <value>La connexion "{0}" est utilisée par les os.
-Voulez-vous quand même supprimer?</value>
-  </data>
-  <data name="Message_ConfirmDeleteStudConnection" xml:space="preserve">
-    <value>La connexion "{0}" est référencée par des éléments du modèle.
-Voulez-vous quand même la supprimer?</value>
-  </data>
-  <data name="Message_InitializingUI" xml:space="preserve">
-    <value>Initialisation de l'interface</value>
-  </data>
-  <data name="Message_InitializingResources" xml:space="preserve">
-    <value>Initialisation des ressources</value>
-  </data>
-  <data name="Message_LddFilesGenerated" xml:space="preserve">
-    <value>Fichiers générés avec succès.</value>
-  </data>
-  <data name="Message_ConfirmOverwritePartFiles" xml:space="preserve">
-    <value>Les fichiers de cette pièce existent déjà.
-Voulez-vous vraiment les écraser?
-
-*Vous pouvez supprimer cette confirmation dans les paramètres.</value>
-  </data>
-  <data name="Caption_RecoverLastProject" xml:space="preserve">
-    <value>Récupération de la session</value>
-  </data>
-  <data name="Caption_Warning" xml:space="preserve">
-    <value>Avertissement</value>
-  </data>
-  <data name="Message_SaveWindowLayout" xml:space="preserve">
-    <value>Nom de la disposition:</value>
-  </data>
-  <data name="Caption_SaveWindowLayout" xml:space="preserve">
-    <value>Enregistrer la disposition de la fenêtre</value>
-  </data>
-  <data name="Message_LayoutNameAlreadyExist" xml:space="preserve">
-    <value>Le nom de la mise en page existe déjà.</value>
-  </data>
-  <data name="Caption_UnexpectedError" xml:space="preserve">
-    <value>Erreur inattendue</value>
-  </data>
-  <data name="Message_CouldNotLoadFreetype6" xml:space="preserve">
-    <value>La librairie «freetype6.dll» n'a pas pu être chargée.
-Cette librairie est utilisée pour dessiner du texte dans OpenGL.
-L'application peut toujours fonctionner mais aucun texte ne sera affiché dans la vue 3D.</value>
-  </data>
-  <data name="Message_ConfirmDeleteReferencedElement" xml:space="preserve">
-    <value>L'élément "{0}" est référencé par d'autres éléments du projet.
-Voulez-vous quand même le supprimer?</value>
-  </data>
-  <data name="Message_UnhandledException" xml:space="preserve">
-    <value>Une erreur inattendue s'est produite.
-Pour plus de détails, consultez le fichier journal.</value>
-  </data>
-  <data name="Caption_OpeningPartInLdd" xml:space="preserve">
-    <value>Ouverture d'une pièce dans LDD</value>
-  </data>
-  <data name="Message_CouldNotFindPartInLDD" xml:space="preserve">
-    <value>La pièce actuelle est introuvable dans LDD.
-Assurez-vous de générer au préalable les fichiers LDD pour les nouvelles pièces.</value>
+  <data name="LanguageNoteLabel.Text" xml:space="preserve">
+    <value>Sie müssen die Anwendung neu starten, damit die Änderung wirksam wird</value>
   </data>
 </root>

@@ -117,128 +117,154 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LddInstallNotFound" xml:space="preserve">
-    <value>LDD ne semble pas être installé.
-Certaines fonctionnalités ne fonctionneront pas correctement.</value>
+  <data name="AlignToMenu_Front.Text" xml:space="preserve">
+    <value>Devant</value>
   </data>
-  <data name="Error_OpeningFile" xml:space="preserve">
-    <value>Une erreur s'est produite lors de l'ouverture d'un fichier.</value>
+  <data name="AlignToMenu_Back.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+Pavé num. 1</value>
   </data>
-  <data name="Caption_OpeningFile" xml:space="preserve">
-    <value>Ouverture de fichier</value>
+  <data name="AlignToMenu_Back.Text" xml:space="preserve">
+    <value>Arrière</value>
   </data>
-  <data name="Error_OpeningProject" xml:space="preserve">
-    <value>ne erreur s'est produite lors de l'ouverture du projet.</value>
+  <data name="AlignToMenu_Bottom.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+Pavé num. 7</value>
   </data>
-  <data name="Error_CreatingProject" xml:space="preserve">
-    <value>Une erreur s'est produite lors de la création du projet.</value>
+  <data name="AlignToMenu_Bottom.Text" xml:space="preserve">
+    <value>Bas</value>
   </data>
-  <data name="Caption_OpeningProject" xml:space="preserve">
-    <value>Ouverture d'un projet</value>
+  <data name="AlignToMenu_Front.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Pavé numérique 1</value>
   </data>
-  <data name="Message_SaveChanges" xml:space="preserve">
-    <value>Voulez-vous enregistrer les modifications faites?</value>
+  <data name="AlignToMenu_Left.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+Pavé num. 3</value>
   </data>
-  <data name="Message_SaveNewProject" xml:space="preserve">
-    <value>Voulez-vous enregistrer le projet?</value>
+  <data name="AlignToMenu_Left.Text" xml:space="preserve">
+    <value>Gauche</value>
   </data>
-  <data name="Caption_SaveBeforeClose" xml:space="preserve">
-    <value>Enregistrement du projet</value>
+  <data name="AlignToMenu_Right.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Pavé numérique 3</value>
   </data>
-  <data name="Message_RecoverProject" xml:space="preserve">
-    <value>L'application ne s'est pas fermée correctement, souhaitez-vous récupérer le projet?</value>
+  <data name="AlignToMenu_Right.Text" xml:space="preserve">
+    <value>Droite</value>
   </data>
-  <data name="Message_FileGenerationError" xml:space="preserve">
-    <value>Impossible de générer les fichiers de brique LDD.
-Voir le panneau de validation pour plus d'informations.</value>
+  <data name="AlignToMenu_Top.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Pavé numérique 7</value>
   </data>
-  <data name="Caption_LddPartGeneration" xml:space="preserve">
-    <value>Génération des fichiers de brique LDD</value>
+  <data name="AlignToMenu_Top.Text" xml:space="preserve">
+    <value>Haut</value>
   </data>
-  <data name="BuildConfig_LDD" xml:space="preserve">
-    <value>Dossier LDD</value>
+  <data name="CameraMenu_ResetCamera.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Pavé numérique 0</value>
   </data>
-  <data name="BuildConfig_Browse" xml:space="preserve">
-    <value>Choisir un dossier</value>
+  <data name="CameraMenu_ResetCamera.Text" xml:space="preserve">
+    <value>Réinitialiser</value>
   </data>
-  <data name="BuildConfig_Manage" xml:space="preserve">
-    <value>Gérer les configurations...</value>
+  <data name="CameraMenu_AlignTo.Text" xml:space="preserve">
+    <value>Aligner a</value>
   </data>
-  <data name="LddConfigInvalid" xml:space="preserve">
-    <value>L'environnement LDD configuré n'est pas valide mais LDD semble être correctement installé.</value>
+  <data name="CameraMenu_LookAt.Text" xml:space="preserve">
+    <value>Regardez la sélection</value>
   </data>
-  <data name="Caption_StartupValidations" xml:space="preserve">
-    <value>Validations de démarrage</value>
+  <data name="CameraMenu_Orthographic.Text" xml:space="preserve">
+    <value>Orthographique</value>
   </data>
-  <data name="Message_ConfirmResizeStuds" xml:space="preserve">
-    <value>Certains composants du modèle font référence à des Studs qui sont en dehors de la nouvelle taille.
-Voulez-vous quand même continuer?</value>
+  <data name="CameraMenuDropDown.Text" xml:space="preserve">
+    <value>Caméra</value>
   </data>
-  <data name="Caption_Confirmation" xml:space="preserve">
-    <value>Confirmation</value>
+  <data name="DisplayMenu_Meshes.Text" xml:space="preserve">
+    <value>Modèles</value>
   </data>
-  <data name="Caption_DeleteConfirmation" xml:space="preserve">
-    <value>Confirmation de suppression</value>
+  <data name="DisplayMenu_Collisions.Text" xml:space="preserve">
+    <value>Collisions</value>
   </data>
-  <data name="Message_ConfirmDeleteBoneConnection" xml:space="preserve">
-    <value>La connexion "{0}" est utilisée par les os.
-Voulez-vous quand même supprimer?</value>
+  <data name="DisplayMenu_Connections.Text" xml:space="preserve">
+    <value>Connexions</value>
   </data>
-  <data name="Message_ConfirmDeleteStudConnection" xml:space="preserve">
-    <value>La connexion "{0}" est référencée par des éléments du modèle.
-Voulez-vous quand même la supprimer?</value>
+  <data name="DisplayMenu_3dCursor.Text" xml:space="preserve">
+    <value>Curseur 3D</value>
   </data>
-  <data name="Message_InitializingUI" xml:space="preserve">
-    <value>Initialisation de l'interface</value>
+  <data name="DisplayMenu_Bones.Text" xml:space="preserve">
+    <value>Armature</value>
   </data>
-  <data name="Message_InitializingResources" xml:space="preserve">
-    <value>Initialisation des ressources</value>
+  <data name="DisplayMenuDropDown.Text" xml:space="preserve">
+    <value>Affichage</value>
   </data>
-  <data name="Message_LddFilesGenerated" xml:space="preserve">
-    <value>Fichiers générés avec succès.</value>
+  <data name="MeshesMenu_ConfigureOutlines.Text" xml:space="preserve">
+    <value>Configurer les contours</value>
   </data>
-  <data name="Message_ConfirmOverwritePartFiles" xml:space="preserve">
-    <value>Les fichiers de cette pièce existent déjà.
-Voulez-vous vraiment les écraser?
-
-*Vous pouvez supprimer cette confirmation dans les paramètres.</value>
+  <data name="MeshesMenu_CalculateOutlines.Text" xml:space="preserve">
+    <value>Calculer les contours</value>
   </data>
-  <data name="Caption_RecoverLastProject" xml:space="preserve">
-    <value>Récupération de la session</value>
+  <data name="MeshesMenu_RemoveOutlines.Text" xml:space="preserve">
+    <value>Supprimer les contours</value>
   </data>
-  <data name="Caption_Warning" xml:space="preserve">
-    <value>Avertissement</value>
+  <data name="MeshesMenu_Separate.Text" xml:space="preserve">
+    <value>Séparer les modèles</value>
   </data>
-  <data name="Message_SaveWindowLayout" xml:space="preserve">
-    <value>Nom de la disposition:</value>
+  <data name="MeshesMenu_Merge.Text" xml:space="preserve">
+    <value>Fusionner les modèles</value>
   </data>
-  <data name="Caption_SaveWindowLayout" xml:space="preserve">
-    <value>Enregistrer la disposition de la fenêtre</value>
+  <data name="MeshesDropDownMenu.Text" xml:space="preserve">
+    <value>Modèles</value>
   </data>
-  <data name="Message_LayoutNameAlreadyExist" xml:space="preserve">
-    <value>Le nom de la mise en page existe déjà.</value>
+  <data name="Bones_LinkBones.Text" xml:space="preserve">
+    <value>Lier les os ...</value>
   </data>
-  <data name="Caption_UnexpectedError" xml:space="preserve">
-    <value>Erreur inattendue</value>
+  <data name="Bones_RebuildConnections.Text" xml:space="preserve">
+    <value>Reconstruire les connexions</value>
   </data>
-  <data name="Message_CouldNotLoadFreetype6" xml:space="preserve">
-    <value>La librairie «freetype6.dll» n'a pas pu être chargée.
-Cette librairie est utilisée pour dessiner du texte dans OpenGL.
-L'application peut toujours fonctionner mais aucun texte ne sera affiché dans la vue 3D.</value>
+  <data name="Bones_CalcBounding.Text" xml:space="preserve">
+    <value>Calculer les boîtes englobantes</value>
   </data>
-  <data name="Message_ConfirmDeleteReferencedElement" xml:space="preserve">
-    <value>L'élément "{0}" est référencé par d'autres éléments du projet.
-Voulez-vous quand même le supprimer?</value>
+  <data name="Bones_CopyData.Text" xml:space="preserve">
+    <value>Copier les données osseuses</value>
   </data>
-  <data name="Message_UnhandledException" xml:space="preserve">
-    <value>Une erreur inattendue s'est produite.
-Pour plus de détails, consultez le fichier journal.</value>
+  <data name="BonesDropDownMenu.Text" xml:space="preserve">
+    <value>Armature</value>
   </data>
-  <data name="Caption_OpeningPartInLdd" xml:space="preserve">
-    <value>Ouverture d'une pièce dans LDD</value>
+  <data name="globalToolStripMenuItem.Text" xml:space="preserve">
+    <value>Global</value>
   </data>
-  <data name="Message_CouldNotFindPartInLDD" xml:space="preserve">
-    <value>La pièce actuelle est introuvable dans LDD.
-Assurez-vous de générer au préalable les fichiers LDD pour les nouvelles pièces.</value>
+  <data name="localToolStripMenuItem.Text" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="GizmoOrientationMenu.Text" xml:space="preserve">
+    <value>Transformer l'orientation</value>
+  </data>
+  <data name="boundingBoxCenterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Centre de la boîte englobante</value>
+  </data>
+  <data name="medianOriginsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Médiane (origines)</value>
+  </data>
+  <data name="medianBoundingBoxToolStripMenuItem.Text" xml:space="preserve">
+    <value>Médiane (centre de la boîte englobante)</value>
+  </data>
+  <data name="activeElementToolStripMenuItem.Text" xml:space="preserve">
+    <value>Élément actif</value>
+  </data>
+  <data name="cursorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Curseur 3D</value>
+  </data>
+  <data name="GizmoPivotModeMenu.Text" xml:space="preserve">
+    <value>Point de pivot</value>
+  </data>
+  <data name="ToggleGridButton.Text" xml:space="preserve">
+    <value>Afficher / masquer la grille</value>
+  </data>
+  <data name="ModelRenderMode1Button.Text" xml:space="preserve">
+    <value>Filaire</value>
+  </data>
+  <data name="ModelRenderMode2Button.Text" xml:space="preserve">
+    <value>Solide</value>
+  </data>
+  <data name="ModelRenderMode3Button.Text" xml:space="preserve">
+    <value>Solide + filaire</value>
+  </data>
+  <data name="toolStrip1.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ViewportPanel</value>
   </data>
 </root>

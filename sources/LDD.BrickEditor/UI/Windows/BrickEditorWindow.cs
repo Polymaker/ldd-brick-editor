@@ -66,11 +66,14 @@ namespace LDD.BrickEditor.UI.Windows
         {
             base.OnLoad(e);
             MultiInstanceManager.Initialize(this);
-            SettingsManager.Initialize();
 
             RestoreSavedPosition();
             InitializeProjectManager();
             menuStrip1.Enabled = false;
+
+#if DEBUG
+            FileMenu_OpenPartFiles.Visible = true;
+#endif
         }
 
         protected override void OnShown(EventArgs e)

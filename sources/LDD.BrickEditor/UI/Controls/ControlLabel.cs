@@ -13,7 +13,7 @@ using System.Windows.Forms.Design;
 namespace LDD.BrickEditor.UI.Controls
 {
     [Designer(typeof(ControlLabelDesigner))]
-    public partial class ControlLabel : Control
+    public partial class ControlLabel : Control, ISupportInitialize
     {
         const string DefaultText = "<Empty>";
 
@@ -33,6 +33,7 @@ namespace LDD.BrickEditor.UI.Controls
         private bool _AutoSizeHeight;
         private bool _AutoSizeWidth;
         private bool _MatchSiblingLabels;
+        private bool hasInitialized;
 
         private ContentAlignment _LabelAlignment;
 
@@ -145,10 +146,15 @@ namespace LDD.BrickEditor.UI.Controls
             _LabelAlignment = ContentAlignment.MiddleLeft;
             SetStyle(ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer, true);
         }
+        
 
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
+            if (!hasInitialized)
+            {
+                hasInitialized = true;
+            }
             CalculateChildControlMinSize(); 
             CalculateLabelSize();
             UpdateLabelBounds();
@@ -158,19 +164,21 @@ namespace LDD.BrickEditor.UI.Controls
         protected override void OnFontChanged(EventArgs e)
         {
             base.OnFontChanged(e);
-            AdjustSize(0, false, false, AdjustSpecified.LabelDisplay);
+            if (hasInitialized)
+                AdjustSize(0, false, false, AdjustSpecified.LabelDisplay);
         }
 
         protected override void OnTextChanged(EventArgs e)
         {
             base.OnTextChanged(e);
-            AdjustSize(0, false, false, AdjustSpecified.LabelDisplay);
+            if (hasInitialized)
+                AdjustSize(0, false, false, AdjustSpecified.LabelDisplay);
         }
 
         protected override void OnPaddingChanged(EventArgs e)
         {
             base.OnPaddingChanged(e);
-            if (AutoSizeWidth || AutoSizeHeight)
+            if ((AutoSizeWidth || AutoSizeHeight) && hasInitialized)
             {
                 AdjustSize(0, false, false, AdjustSpecified.LabelDisplay);
             }
@@ -248,26 +256,26 @@ namespace LDD.BrickEditor.UI.Controls
                     //ctrlMinSize.Height += Control.Margin.Vertical;
                     //ControlMinSize = ctrlMinSize;
                 }
+
+                UpdateChildControlBounds();
             }
             else
             {
                 ControlMinSize = new Size(Font.Height, Font.Height);
             }
 
-            UpdateChildControlBounds();
+            
         }
 
         private void UpdateChildControlBounds()
         {
-            var oldPos = ChildControlBounds.Location;
-
             ChildControlBounds = new Rectangle(
                 LabelMinSize.Width + Padding.Left,
                 Padding.Top, Width - LabelMinSize.Width - Padding.Horizontal,
                 Height - Padding.Vertical);
 
-            if (oldPos != ChildControlBounds.Location)
-                PositionChildControl();
+
+            PositionChildControl();
         }
 
         private Rectangle GetChildControlBounds()
@@ -377,10 +385,14 @@ namespace LDD.BrickEditor.UI.Controls
                 if (labelWChanged)
                     _LabelWidth = labelW;
 
-                CalculateLabelSize();
-                UpdateLabelBounds();
-                if (oldSize.Width != LabelMinSize.Width)
-                    NotifyLabelWidthChanged();
+                if (hasInitialized)
+                {
+                    CalculateLabelSize();
+                    UpdateLabelBounds();
+                    if (oldSize.Width != LabelMinSize.Width)
+                        NotifyLabelWidthChanged();
+                }
+               
             }
 
             if (autoWChanged)
@@ -388,6 +400,9 @@ namespace LDD.BrickEditor.UI.Controls
 
             if (autoHChanged)
                 _AutoSizeHeight = autoH;
+
+            if (!hasInitialized)
+                return;
 
             if (autoWChanged || autoHChanged || specified.HasFlag(AdjustSpecified.ControlSize))
             {
@@ -412,10 +427,13 @@ namespace LDD.BrickEditor.UI.Controls
         {
             CalculateChildControlMinSize();
 
-            if (AutoSizeAll)
-                SetBounds(0, 0, 0, 0, BoundsSpecified.Size); // Force resize
-            else
-                ResizeIfNeeded();
+            if (hasInitialized)
+            {
+                if (AutoSizeAll)
+                    SetBounds(0, 0, 0, 0, BoundsSpecified.Size); // Force resize
+                else
+                    ResizeIfNeeded();
+            }
         }
 
         private void ResizeIfNeeded()
@@ -433,38 +451,121 @@ namespace LDD.BrickEditor.UI.Controls
 
         protected override void OnLayout(LayoutEventArgs levent)
         {
-            //if (IsPositionChildControl)
-            //    return;
-            if (levent.AffectedControl == Control)
+            if (!hasInitialized)
+                return;
+
+            if (levent.AffectedControl == Control && !IsPositioningChildControl)
                 PositionChildControl();
+
             base.OnLayout(levent);
+
+            if (levent.AffectedControl == this && levent.AffectedProperty == "Bounds" && hasInitialized)
+            {
+                UpdateChildControlBounds();
+            }
         }
+
+        private bool IsPositioningChildControl;
 
         private void PositionChildControl()
         {
             if (Control == null)
                 return;
 
-            Control.Location = new Point(
-                ChildControlBounds.Left + Control.Margin.Left, 
-                ChildControlBounds.Top + Control.Margin.Top);
+            IsPositioningChildControl = true;
+
+            Size ctrlSize = Control.Size;
+
+            if (Control.Anchor.HasFlag(AnchorStyles.Left) && Control.Anchor.HasFlag(AnchorStyles.Right))
+            {
+                ctrlSize.Width = ChildControlBounds.Width - Control.Margin.Horizontal;
+            }
+            else if (Control.Anchor.HasFlag(AnchorStyles.Top) && Control.Anchor.HasFlag(AnchorStyles.Bottom))
+            {
+                ctrlSize.Height = ChildControlBounds.Height - Control.Margin.Vertical;
+            }
+
+            Point ctrlPos = GetPositionForControl(ctrlSize, Control.Margin, ChildControlBounds, Control.Anchor);
+
+            Control.Location = ctrlPos;
+            Control.Size = ctrlSize;
+
+            var finalSize = Control.Size;
+
+            if (finalSize != ctrlSize)
+            {
+                var adjustedPos = GetPositionForControl(finalSize, Control.Margin, ChildControlBounds, Control.Anchor);
+                Control.Location = adjustedPos;
+            }
+
+            IsPositioningChildControl = false;
+        }
+
+        private Point GetPositionForControl(Size controlSize, Padding margin, Rectangle bounds, AnchorStyles anchor)
+        {
+            Point ctrlPos = bounds.Location;
+            if (Control.Anchor.HasFlag(AnchorStyles.Left) && !Control.Anchor.HasFlag(AnchorStyles.Right))
+            {
+                ctrlPos.X += margin.Left;
+            }
+            else if (Control.Anchor.HasFlag(AnchorStyles.Right) && !Control.Anchor.HasFlag(AnchorStyles.Left))
+            {
+                ctrlPos.X = bounds.Right - controlSize.Width - margin.Right;
+            }
+            else
+            {
+                ctrlPos.X = (bounds.Width - (controlSize.Width + margin.Horizontal)) / 2;
+                ctrlPos.X += bounds.Left + margin.Left;
+            }
+
+            if (Control.Anchor.HasFlag(AnchorStyles.Top) && !Control.Anchor.HasFlag(AnchorStyles.Bottom))
+            {
+                ctrlPos.Y += margin.Top;
+            }
+            else if (Control.Anchor.HasFlag(AnchorStyles.Bottom) && !Control.Anchor.HasFlag(AnchorStyles.Top))
+            {
+                ctrlPos.Y = bounds.Bottom - controlSize.Height - margin.Bottom;
+            }
+            else
+            {
+                ctrlPos.Y = (bounds.Height - (controlSize.Height + margin.Vertical)) / 2;
+                ctrlPos.Y += bounds.Top + margin.Top;
+            }
+
+            return ctrlPos;
         }
 
         public override Size GetPreferredSize(Size proposedSize)
         {
             var minSize = new Size(
-                    LabelMinSize.Width + ControlMinSize.Width + Padding.Horizontal,
-                    Math.Max(LabelMinSize.Height, ControlMinSize.Height) + Padding.Vertical
+                    LabelMinSize.Width + ControlMinSize.Width,
+                    Math.Max(LabelMinSize.Height, ControlMinSize.Height)
                 );
+
+            if (!MinimumSize.IsEmpty)
+            {
+                minSize.Width = Math.Max(minSize.Width, MinimumSize.Width);
+                minSize.Height = Math.Max(minSize.Height, MinimumSize.Height);
+            }
+
             return minSize;
         }
 
+        private List<string> MessageList = new List<string>();
+
         protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified)
         {
+            if (!hasInitialized)
+            {
+                base.SetBoundsCore(x, y, width, height, specified);
+                return;
+            }
+
             bool sizeAssigned = false;
 
             if (specified.HasFlag(BoundsSpecified.Width) ||
-                specified.HasFlag(BoundsSpecified.Height))
+                specified.HasFlag(BoundsSpecified.Height) ||
+                specified.HasFlag(BoundsSpecified.Size))
             {
                 sizeAssigned = true;
             }
@@ -478,11 +579,28 @@ namespace LDD.BrickEditor.UI.Controls
 
             base.SetBoundsCore(x, y, width, height, specified);
 
-            if (sizeAssigned)
+
+            if (sizeAssigned )
             {
                 UpdateLabelBounds();
                 UpdateChildControlBounds();
             }
+        }
+
+        private string GetCallStack()
+        {
+            var t = new System.Diagnostics.StackTrace();
+            var sb = new StringBuilder();
+            for (int i = 0; i < t.FrameCount; i++)
+            {
+                var frame = t.GetFrame(i);
+                var methodCall = frame.GetMethod();
+                sb.AppendLine($"{methodCall.DeclaringType.Name}.{methodCall.Name} at {frame.GetFileLineNumber()}");
+                if (i > 10)
+                    break;
+            }
+
+            return sb.ToString();
         }
 
         protected override void OnPaint(PaintEventArgs pe)
@@ -496,6 +614,20 @@ namespace LDD.BrickEditor.UI.Controls
             if (DesignMode && !ChildControlBounds.IsEmpty)
             {
                 ControlPaint.DrawFocusRectangle(pe.Graphics, ChildControlBounds);
+            }
+        }
+
+        public void BeginInit()
+        {
+            
+        }
+
+        public void EndInit()
+        {
+            hasInitialized = true;
+            if (MessageList.Any())
+            {
+                MessageBox.Show(string.Join(Environment.NewLine, MessageList));
             }
         }
     }

@@ -60,7 +60,8 @@ namespace LDD.BrickEditor.Models.Navigation
         //    }
         //}
 
-        public override VisibilityState GetVisibilityState()
+
+        protected override VisibilityState GetVisibilityState2()
         {
             var femaleModelExt = Element.GetExtension<FemaleStudModelExtension>();
 
@@ -74,8 +75,27 @@ namespace LDD.BrickEditor.Models.Navigation
                 else
                     return isVisible ? VisibilityState.Visible : VisibilityState.Hidden;
             }
+            else if (Element is PartBone bone)
+            {
+                bool isCollectionVisible = false;
+                if (Collection == bone.Connections)
+                    isCollectionVisible = Manager?.ShowConnections ?? false;
+                else if (Collection == bone.Collisions)
+                    isCollectionVisible = Manager?.ShowCollisions ?? false;
 
-            return base.GetVisibilityState();
+                var baseVisibility = base.GetVisibilityState2();
+
+
+                if (!isCollectionVisible)
+                {
+                    if (baseVisibility == VisibilityState.Hidden)
+                        return VisibilityState.HiddenNotVisible;
+                    else
+                        return VisibilityState.NotVisible;
+                }
+                return baseVisibility;
+            }
+            return base.GetVisibilityState2();
         }
 
         protected override bool CanToggleVisibilityCore()
@@ -85,7 +105,7 @@ namespace LDD.BrickEditor.Models.Navigation
             return femaleModelExt != null;
         }
 
-        public override void ToggleVisibility()
+        protected override void ToggleVisibilityCore()
         {
             var femaleModelExt = Element.GetExtension<FemaleStudModelExtension>();
             if (femaleModelExt != null)
@@ -93,7 +113,25 @@ namespace LDD.BrickEditor.Models.Navigation
                 femaleModelExt.ShowAlternateModels = !femaleModelExt.ShowAlternateModels;
                 return;
             }
-            base.ToggleVisibility();
+            else if (Element is PartBone bone && Manager != null)
+            {
+                var baseVisibility = GetVisibilityState2();
+                
+                if (Collection == bone.Connections && !Manager.ShowConnections)
+                {
+                    Manager.ShowConnections = true;
+                    if (baseVisibility == VisibilityState.NotVisible)
+                        return;
+                }
+                else if (Collection == bone.Collisions && !Manager.ShowCollisions)
+                {
+                    Manager.ShowCollisions = true;
+                    if (baseVisibility == VisibilityState.NotVisible)
+                        return;
+                }
+
+            }
+            base.ToggleVisibilityCore();
         }
     }
 }

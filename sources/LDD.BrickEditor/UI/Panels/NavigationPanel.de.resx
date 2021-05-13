@@ -124,7 +124,7 @@
     <value>Oberfläche hinzufügen</value>
   </data>
   <data name="AddElementMenu_Part.Text" xml:space="preserve">
-    <value>Hauptmodell</value>
+    <value>Teilemodell</value>
   </data>
   <data name="AddElementMenu_MaleStud.Text" xml:space="preserve">
     <value>Männliches Stud</value>
@@ -136,7 +136,7 @@
     <value>Ziegelrohr</value>
   </data>
   <data name="ContextMenu_AddElement.Text" xml:space="preserve">
-    <value>Modell hinzufügen</value>
+    <value>Modellelement hinzufügen</value>
   </data>
   <data name="AddCollisionMenu_Box.Text" xml:space="preserve">
     <value>Box</value>
@@ -205,7 +205,7 @@
     <value>Projektbaum</value>
   </data>
   <data name="ViewModeBones.Text" xml:space="preserve">
-    <value>Knochen</value>
+    <value>Knochenrahmen</value>
   </data>
   <data name="ViewModeCollisions.Text" xml:space="preserve">
     <value>Kollisionen</value>

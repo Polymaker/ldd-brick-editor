@@ -413,7 +413,7 @@ namespace LDD.BrickEditor.UI.Panels
 
                 if (e.Model is ProjectTreeNode treeNode)
                 {
-                    if (treeNode.CanToggleVisibility())
+                    //if (treeNode.CanToggleVisibility())
                     {
                         treeNode.ToggleVisibility();
                         ProjectTreeView.RefreshObject(treeNode);

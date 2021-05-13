@@ -140,7 +140,7 @@
     <value>Top</value>
   </data>
   <data name="AlignToMenu_Bottom.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl Numpad 7</value>
+    <value>Ctrl+Numpad 7</value>
   </data>
   <data name="AlignToMenu_Bottom.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 22</value>
@@ -158,7 +158,7 @@
     <value>Front</value>
   </data>
   <data name="AlignToMenu_Back.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl Numpad 1</value>
+    <value>Ctrl+Numpad 1</value>
   </data>
   <data name="AlignToMenu_Back.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 22</value>
@@ -176,7 +176,7 @@
     <value>Right</value>
   </data>
   <data name="AlignToMenu_Left.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl Numpad 3</value>
+    <value>Ctrl+Numpad 3</value>
   </data>
   <data name="AlignToMenu_Left.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 22</value>

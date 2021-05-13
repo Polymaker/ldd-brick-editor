@@ -113,8 +113,7 @@ namespace LDD.BrickEditor.ProjectHandling
                 {
                     if (prevColChange != null)
                     {
-                        if (colChange.Data.Collection == prevColChange.Data.Collection/* &&
-                            colChange.Data.Action == prevColChange.Data.Action*/)
+                        if (colChange.Data.Collection == prevColChange.Data.Collection)
                         {
                             prevColChange = new CollectionChangeAction(
                                 new CollectionChangedEventArgs(

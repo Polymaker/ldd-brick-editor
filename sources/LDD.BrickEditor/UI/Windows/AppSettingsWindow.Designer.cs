@@ -28,21 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppSettingsWindow));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.CategoryListView = new BrightIdeasSoftware.ObjectListView();
-            this.CloseButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
+            this.displaySettingsPanel1 = new LDD.BrickEditor.UI.Settings.DisplaySettingsPanel();
             this.editorSettingsPanel1 = new LDD.BrickEditor.UI.Settings.EditorSettingsPanel();
             this.lddSettingsPanel1 = new LDD.BrickEditor.UI.Settings.LddSettingsPanel();
-            this.LifNotExtractedMessage = new LDD.BrickEditor.Localization.LocalizableString();
-            this.LifExtractedMessage = new LDD.BrickEditor.Localization.LocalizableString();
-            this.LifNotFoundMessage = new LDD.BrickEditor.Localization.LocalizableString();
-            this.LddExeNotFound = new LDD.BrickEditor.Localization.LocalizableString();
-            this.AppDataDbNotFound = new LDD.BrickEditor.Localization.LocalizableString();
-            this.localizableStringList1 = new LDD.BrickEditor.Localization.LocalizableStringList(this.components);
-            this.displaySettingsPanel1 = new LDD.BrickEditor.UI.Settings.DisplaySettingsPanel();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,6 +76,21 @@
             this.CategoryListView.View = System.Windows.Forms.View.Details;
             this.CategoryListView.SelectionChanged += new System.EventHandler(this.CategoryListView_SelectionChanged);
             // 
+            // displaySettingsPanel1
+            // 
+            resources.ApplyResources(this.displaySettingsPanel1, "displaySettingsPanel1");
+            this.displaySettingsPanel1.Name = "displaySettingsPanel1";
+            // 
+            // editorSettingsPanel1
+            // 
+            resources.ApplyResources(this.editorSettingsPanel1, "editorSettingsPanel1");
+            this.editorSettingsPanel1.Name = "editorSettingsPanel1";
+            // 
+            // lddSettingsPanel1
+            // 
+            resources.ApplyResources(this.lddSettingsPanel1, "lddSettingsPanel1");
+            this.lddSettingsPanel1.Name = "lddSettingsPanel1";
+            // 
             // CloseButton
             // 
             resources.ApplyResources(this.CloseButton, "CloseButton");
@@ -96,50 +104,6 @@
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // editorSettingsPanel1
-            // 
-            resources.ApplyResources(this.editorSettingsPanel1, "editorSettingsPanel1");
-            this.editorSettingsPanel1.Name = "editorSettingsPanel1";
-            // 
-            // lddSettingsPanel1
-            // 
-            resources.ApplyResources(this.lddSettingsPanel1, "lddSettingsPanel1");
-            this.lddSettingsPanel1.Name = "lddSettingsPanel1";
-            // 
-            // LifNotExtractedMessage
-            // 
-            resources.ApplyResources(this.LifNotExtractedMessage, "LifNotExtractedMessage");
-            // 
-            // LifExtractedMessage
-            // 
-            resources.ApplyResources(this.LifExtractedMessage, "LifExtractedMessage");
-            // 
-            // LifNotFoundMessage
-            // 
-            resources.ApplyResources(this.LifNotFoundMessage, "LifNotFoundMessage");
-            // 
-            // LddExeNotFound
-            // 
-            resources.ApplyResources(this.LddExeNotFound, "LddExeNotFound");
-            // 
-            // AppDataDbNotFound
-            // 
-            resources.ApplyResources(this.AppDataDbNotFound, "AppDataDbNotFound");
-            // 
-            // localizableStringList1
-            // 
-            this.localizableStringList1.Items.AddRange(new LDD.BrickEditor.Localization.LocalizableString[] {
-            this.LifExtractedMessage,
-            this.LifNotExtractedMessage,
-            this.LifNotFoundMessage,
-            this.LddExeNotFound,
-            this.AppDataDbNotFound});
-            // 
-            // displaySettingsPanel1
-            // 
-            resources.ApplyResources(this.displaySettingsPanel1, "displaySettingsPanel1");
-            this.displaySettingsPanel1.Name = "displaySettingsPanel1";
             // 
             // AppSettingsWindow
             // 
@@ -161,12 +125,6 @@
         }
 
         #endregion
-        private Localization.LocalizableString LifNotExtractedMessage;
-        private Localization.LocalizableString LifExtractedMessage;
-        private Localization.LocalizableStringList localizableStringList1;
-        private Localization.LocalizableString LifNotFoundMessage;
-        private Localization.LocalizableString LddExeNotFound;
-        private Localization.LocalizableString AppDataDbNotFound;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button SaveButton;

@@ -30,6 +30,22 @@ namespace LDD.BrickEditor.Models.Navigation
                 Nodes.Add(ProjectElementNode.CreateDefault(elem));
         }
 
+        protected override VisibilityState GetVisibilityState2()
+        {
+            if (Elements.Count > 0 && Nodes.Count == 0)
+            {
+                var childModels = Elements.Select(x => x.GetExtension<ModelElementExtension>()).Where(x => x != null).ToList();
+                if (childModels.Count > 0)
+                {
+                    int hiddenModels = childModels.Count(x => x.IsHidden);
+                    int visibleModels = childModels.Count - hiddenModels;
+                    bool hideElements = visibleModels > hiddenModels;
+                }
+                
+            }
+            return base.GetVisibilityState2();
+        }
+
         //public override void ToggleVisibility()
         //{
         //    var childModels = Nodes.OfType<ProjectElementNode>().Select(x => x.Element.GetExtension<ModelElementExtension>()).Where(x => x != null).ToList();

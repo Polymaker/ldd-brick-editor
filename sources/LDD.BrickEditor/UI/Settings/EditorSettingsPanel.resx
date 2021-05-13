@@ -132,6 +132,372 @@
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;DelBuildCfgBtn.Name" xml:space="preserve">
+    <value>DelBuildCfgBtn</value>
+  </data>
+  <data name="&gt;&gt;DelBuildCfgBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DelBuildCfgBtn.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;DelBuildCfgBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AddBuildCfgBtn.Name" xml:space="preserve">
+    <value>AddBuildCfgBtn</value>
+  </data>
+  <data name="&gt;&gt;AddBuildCfgBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddBuildCfgBtn.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;AddBuildCfgBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;BuildConfigListView.Name" xml:space="preserve">
+    <value>BuildConfigListView</value>
+  </data>
+  <data name="&gt;&gt;BuildConfigListView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildConfigListView.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;BuildConfigListView.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 141</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="DelBuildCfgBtn" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="AddBuildCfgBtn" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="BuildConfigListView" Row="0" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Panel1.Name" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Panel1.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BuildCfgNameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_NameBox.Name" xml:space="preserve">
+    <value>BuildCfg_NameBox</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_NameBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_NameBox.Parent" xml:space="preserve">
+    <value>BuildCfgNameLabel</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_NameBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BuildCfgNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 1</value>
+  </data>
+  <data name="BuildCfgNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 26</value>
+  </data>
+  <data name="BuildCfgNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="BuildCfgNameLabel.Text" xml:space="preserve">
+    <value>Preset Name</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgNameLabel.Name" xml:space="preserve">
+    <value>BuildCfgNameLabel</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgNameLabel.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgNameLabel.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgNameLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SaveBuildCfgBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="SaveBuildCfgBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="SaveBuildCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 115</value>
+  </data>
+  <data name="SaveBuildCfgBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 2, 3</value>
+  </data>
+  <data name="SaveBuildCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="SaveBuildCfgBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="SaveBuildCfgBtn.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;SaveBuildCfgBtn.Name" xml:space="preserve">
+    <value>SaveBuildCfgBtn</value>
+  </data>
+  <data name="&gt;&gt;SaveBuildCfgBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveBuildCfgBtn.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;SaveBuildCfgBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CancelBuildCfgBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="CancelBuildCfgBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CancelBuildCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 115</value>
+  </data>
+  <data name="CancelBuildCfgBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 3, 3, 3</value>
+  </data>
+  <data name="CancelBuildCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="CancelBuildCfgBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="CancelBuildCfgBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;CancelBuildCfgBtn.Name" xml:space="preserve">
+    <value>CancelBuildCfgBtn</value>
+  </data>
+  <data name="&gt;&gt;CancelBuildCfgBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CancelBuildCfgBtn.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;CancelBuildCfgBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BuildCfg_Lod0Chk.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BuildCfg_Lod0Chk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BuildCfg_Lod0Chk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 70</value>
+  </data>
+  <data name="BuildCfg_Lod0Chk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 17</value>
+  </data>
+  <data name="BuildCfg_Lod0Chk.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="BuildCfg_Lod0Chk.Text" xml:space="preserve">
+    <value>Place meshes in LOD0 directory</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_Lod0Chk.Name" xml:space="preserve">
+    <value>BuildCfg_Lod0Chk</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_Lod0Chk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_Lod0Chk.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_Lod0Chk.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BuildCfg_PathBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="BuildCfg_PathBox.ButtonText" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="BuildCfg_PathBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 45</value>
+  </data>
+  <data name="BuildCfg_PathBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 20</value>
+  </data>
+  <data name="BuildCfg_PathBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_PathBox.Name" xml:space="preserve">
+    <value>BuildCfg_PathBox</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_PathBox.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.BrowseTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_PathBox.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_PathBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BuildCfgPathLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BuildCfgPathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BuildCfgPathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 29</value>
+  </data>
+  <data name="BuildCfgPathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="BuildCfgPathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="BuildCfgPathLabel.Text" xml:space="preserve">
+    <value>Output Folder</value>
+  </data>
+  <data name="BuildCfgPathLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgPathLabel.Name" xml:space="preserve">
+    <value>BuildCfgPathLabel</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgPathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgPathLabel.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgPathLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="BuildCfg_OverwriteChk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="BuildCfg_OverwriteChk.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="BuildCfg_OverwriteChk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BuildCfg_OverwriteChk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 93</value>
+  </data>
+  <data name="BuildCfg_OverwriteChk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 45</value>
+  </data>
+  <data name="BuildCfg_OverwriteChk.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="BuildCfg_OverwriteChk.Text" xml:space="preserve">
+    <value>Ask confirmation on overwrite</value>
+  </data>
+  <data name="BuildCfg_OverwriteChk.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_OverwriteChk.Name" xml:space="preserve">
+    <value>BuildCfg_OverwriteChk</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_OverwriteChk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_OverwriteChk.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BuildCfg_OverwriteChk.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Panel2.Name" xml:space="preserve">
+    <value>BuildCfgSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Panel2.Parent" xml:space="preserve">
+    <value>BuildCfgSplitContainer</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BuildCfgSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>457, 141</value>
+  </data>
+  <data name="BuildCfgSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
+  <data name="BuildCfgSplitContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Name" xml:space="preserve">
+    <value>BuildCfgSplitContainer</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.Parent" xml:space="preserve">
+    <value>BuildConfigsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;BuildCfgSplitContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BuildConfigsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 144</value>
+  </data>
+  <data name="BuildConfigsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>463, 160</value>
+  </data>
+  <data name="BuildConfigsGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="BuildConfigsGroupBox.Text" xml:space="preserve">
+    <value>Output Presets</value>
+  </data>
+  <data name="&gt;&gt;BuildConfigsGroupBox.Name" xml:space="preserve">
+    <value>BuildConfigsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;BuildConfigsGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildConfigsGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BuildConfigsGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="DelBuildCfgBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
   </data>
@@ -204,12 +570,6 @@
   <data name="BuildConfigListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="BuildCfgNameColumn.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="BuildCfgNameColumn.Width" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
   <data name="BuildConfigListView.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
@@ -234,86 +594,20 @@
   <data name="&gt;&gt;BuildConfigListView.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="BuildCfgNameColumn.Text" xml:space="preserve">
+    <value>Name</value>
   </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="BuildCfgNameColumn.Width" type="System.Int32, mscorlib">
+    <value>120</value>
   </data>
-  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 141</value>
-  </data>
-  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel1</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="DelBuildCfgBtn" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="AddBuildCfgBtn" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="BuildConfigListView" Row="0" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Panel1.Name" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel1</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Panel1.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="SaveBuildCfgBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="SaveBuildCfgBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SaveBuildCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 115</value>
-  </data>
-  <data name="SaveBuildCfgBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 2, 3</value>
-  </data>
-  <data name="SaveBuildCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="SaveBuildCfgBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="SaveBuildCfgBtn.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;SaveBuildCfgBtn.Name" xml:space="preserve">
-    <value>SaveBuildCfgBtn</value>
-  </data>
-  <data name="&gt;&gt;SaveBuildCfgBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SaveBuildCfgBtn.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;SaveBuildCfgBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="BuildCfg_NameBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="BuildCfg_NameBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 3</value>
+    <value>71, 3</value>
   </data>
   <data name="BuildCfg_NameBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 20</value>
+    <value>233, 20</value>
   </data>
   <data name="BuildCfg_NameBox.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -325,256 +619,91 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BuildCfg_NameBox.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_NameBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="BuildCfgNameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="BuildCfgNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="BuildCfgNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 6</value>
-  </data>
-  <data name="BuildCfgNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 13</value>
-  </data>
-  <data name="BuildCfgNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="BuildCfgNameLabel.Text" xml:space="preserve">
-    <value>Preset Name</value>
-  </data>
-  <data name="BuildCfgNameLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgNameLabel.Name" xml:space="preserve">
     <value>BuildCfgNameLabel</value>
   </data>
-  <data name="&gt;&gt;BuildCfgNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgNameLabel.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgNameLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="CancelBuildCfgBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="CancelBuildCfgBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="CancelBuildCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 115</value>
-  </data>
-  <data name="CancelBuildCfgBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 3, 3, 3</value>
-  </data>
-  <data name="CancelBuildCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="CancelBuildCfgBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="CancelBuildCfgBtn.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;CancelBuildCfgBtn.Name" xml:space="preserve">
-    <value>CancelBuildCfgBtn</value>
-  </data>
-  <data name="&gt;&gt;CancelBuildCfgBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CancelBuildCfgBtn.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;CancelBuildCfgBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="BuildCfg_Lod0Chk.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="BuildCfg_Lod0Chk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="BuildCfg_Lod0Chk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 70</value>
-  </data>
-  <data name="BuildCfg_Lod0Chk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 17</value>
-  </data>
-  <data name="BuildCfg_Lod0Chk.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="BuildCfg_Lod0Chk.Text" xml:space="preserve">
-    <value>Place meshes in LOD0 directory</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_Lod0Chk.Name" xml:space="preserve">
-    <value>BuildCfg_Lod0Chk</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_Lod0Chk.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_Lod0Chk.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_Lod0Chk.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="BuildCfg_PathBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="BuildCfg_PathBox.ButtonText" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="BuildCfg_PathBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 45</value>
-  </data>
-  <data name="BuildCfg_PathBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 20</value>
-  </data>
-  <data name="BuildCfg_PathBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_PathBox.Name" xml:space="preserve">
-    <value>BuildCfg_PathBox</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_PathBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.BrowseTextBox, Brick Studio, Version=1.0.6.15675, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_PathBox.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_PathBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="BuildCfgPathLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="BuildCfgPathLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="BuildCfgPathLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 29</value>
-  </data>
-  <data name="BuildCfgPathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
-  </data>
-  <data name="BuildCfgPathLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="BuildCfgPathLabel.Text" xml:space="preserve">
-    <value>Output Folder</value>
-  </data>
-  <data name="BuildCfgPathLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgPathLabel.Name" xml:space="preserve">
-    <value>BuildCfgPathLabel</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgPathLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgPathLabel.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgPathLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="BuildCfg_OverwriteChk.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="BuildCfg_OverwriteChk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="BuildCfg_OverwriteChk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 93</value>
-  </data>
-  <data name="BuildCfg_OverwriteChk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 17</value>
-  </data>
-  <data name="BuildCfg_OverwriteChk.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="BuildCfg_OverwriteChk.Text" xml:space="preserve">
-    <value>Ask confirmation on overwrite</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_OverwriteChk.Name" xml:space="preserve">
-    <value>BuildCfg_OverwriteChk</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_OverwriteChk.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_OverwriteChk.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_OverwriteChk.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Panel2.Name" xml:space="preserve">
-    <value>BuildCfgSplitContainer.Panel2</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Panel2.Parent" xml:space="preserve">
-    <value>BuildCfgSplitContainer</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="BuildCfgSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>482, 141</value>
-  </data>
-  <data name="BuildCfgSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
-    <value>143</value>
-  </data>
-  <data name="BuildCfgSplitContainer.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Name" xml:space="preserve">
-    <value>BuildCfgSplitContainer</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.Parent" xml:space="preserve">
-    <value>BuildConfigsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;BuildCfgSplitContainer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="BuildConfigsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 128</value>
-  </data>
-  <data name="BuildConfigsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>488, 160</value>
-  </data>
-  <data name="BuildConfigsGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="BuildConfigsGroupBox.Text" xml:space="preserve">
-    <value>Output Presets</value>
-  </data>
-  <data name="&gt;&gt;BuildConfigsGroupBox.Name" xml:space="preserve">
-    <value>BuildConfigsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;BuildConfigsGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildConfigsGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BuildConfigsGroupBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BuildCfg_NameBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="LanguageNoteLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="LanguageNoteLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 92</value>
+  </data>
+  <data name="LanguageNoteLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 36</value>
+  </data>
+  <data name="LanguageNoteLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="LanguageNoteLabel.Text" xml:space="preserve">
+    <value>You must restart the application for the change to take effect</value>
+  </data>
+  <data name="LanguageNoteLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;LanguageNoteLabel.Name" xml:space="preserve">
+    <value>LanguageNoteLabel</value>
+  </data>
+  <data name="&gt;&gt;LanguageNoteLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageNoteLabel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;LanguageNoteLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LanguageLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LanguageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 104</value>
+  </data>
+  <data name="LanguageLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="LanguageLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="LanguageLabel.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;LanguageLabel.Name" xml:space="preserve">
+    <value>LanguageLabel</value>
+  </data>
+  <data name="&gt;&gt;LanguageLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageLabel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;LanguageLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LanguageCombo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 100</value>
+  </data>
+  <data name="LanguageCombo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 21</value>
+  </data>
+  <data name="LanguageCombo.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;LanguageCombo.Name" xml:space="preserve">
+    <value>LanguageCombo</value>
+  </data>
+  <data name="&gt;&gt;LanguageCombo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageCombo.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;LanguageCombo.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -604,7 +733,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -634,61 +763,61 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
-  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BackupIntervalBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>112, 73</value>
   </data>
-  <data name="numericUpDown1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BackupIntervalBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 20</value>
   </data>
-  <data name="numericUpDown1.TabIndex" type="System.Int32, mscorlib">
+  <data name="BackupIntervalBox.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="numericUpDown1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="BackupIntervalBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.Name" xml:space="preserve">
-    <value>numericUpDown1</value>
+  <data name="&gt;&gt;BackupIntervalBox.Name" xml:space="preserve">
+    <value>BackupIntervalBox</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.Type" xml:space="preserve">
+  <data name="&gt;&gt;BackupIntervalBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BackupIntervalBox.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;BackupIntervalBox.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="UsernameOptionalLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="UsernameOptionalLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="UsernameOptionalLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>226, 21</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="UsernameOptionalLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+  <data name="UsernameOptionalLabel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="UsernameOptionalLabel.Text" xml:space="preserve">
     <value>* Optional</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="&gt;&gt;UsernameOptionalLabel.Name" xml:space="preserve">
+    <value>UsernameOptionalLabel</value>
   </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;UsernameOptionalLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;UsernameOptionalLabel.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;UsernameOptionalLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="UsernameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -718,7 +847,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;UsernameLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="UsernameTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>112, 17</value>
@@ -739,7 +868,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;UsernameTextbox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="WorkspaceBrowseBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -751,7 +880,7 @@
     <value>112, 45</value>
   </data>
   <data name="WorkspaceBrowseBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 20</value>
+    <value>345, 20</value>
   </data>
   <data name="WorkspaceBrowseBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -760,13 +889,13 @@
     <value>WorkspaceBrowseBox</value>
   </data>
   <data name="&gt;&gt;WorkspaceBrowseBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.BrowseTextBox, Brick Studio, Version=1.0.6.15675, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.BrowseTextBox, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;WorkspaceBrowseBox.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;WorkspaceBrowseBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -796,13 +925,13 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>488, 119</value>
+    <value>463, 135</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -829,7 +958,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 301</value>
+    <value>469, 365</value>
   </data>
   <data name="$this.Title" xml:space="preserve">
     <value>Editor Settings</value>
@@ -844,6 +973,6 @@
     <value>EditorSettingsPanel</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Settings.SettingsPanelBase, Brick Studio, Version=1.0.6.15675, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Settings.SettingsPanelBase, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

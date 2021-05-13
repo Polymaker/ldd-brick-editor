@@ -9,19 +9,13 @@ using System.Threading.Tasks;
 
 namespace LDD.BrickEditor.ProjectHandling
 {
-    public class ChangeAction
+    public abstract class ChangeAction
     {
         internal long ChangeID;
 
-        public virtual void Undo()
-        {
+        public abstract void Undo();
 
-        }
-
-        public virtual void Redo()
-        {
-
-        }
+        public abstract void Redo();
     }
 
     public class CollectionChangeAction : ChangeAction
@@ -88,6 +82,7 @@ namespace LDD.BrickEditor.ProjectHandling
             }
         }
     }
+    
     public class PropertyChangeAction : ChangeAction
     {
         public ObjectPropertyChangedEventArgs Data { get; }
@@ -135,6 +130,8 @@ namespace LDD.BrickEditor.ProjectHandling
 
     public class BatchChangeAction : ChangeAction
     {
+        public string Name { get; set; }
+
         public List<ChangeAction> Actions { get; }
 
         public BatchChangeAction(IEnumerable<ChangeAction> actions)

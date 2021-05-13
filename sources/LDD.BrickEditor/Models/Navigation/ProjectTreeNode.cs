@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace LDD.BrickEditor.Models.Navigation
@@ -15,13 +16,28 @@ namespace LDD.BrickEditor.Models.Navigation
 
         public string Text { get; set; }
 
-        public IProjectManager Manager { get; set; }
+        private IProjectManager _Manager;
+        public IProjectManager Manager
+        {
+
+            get => _Manager;
+            set
+            {
+                if (_Manager != value)
+                {
+                    _Manager = value;
+                    OnManagerAssigned();
+                }
+            }
+        }
         //public IProjectDocument Document { get; set; }
 
 
         public ProjectTreeNode Parent { get; set; }
 
         public ProjectTreeNode RootNode => Parent == null ? this : Parent.RootNode;
+
+        public bool IsRoot => Parent == null;
 
         public int TreeLevel => Parent == null ? 0 : Parent.TreeLevel + 1;
 
@@ -31,12 +47,26 @@ namespace LDD.BrickEditor.Models.Navigation
 
         public string VisibilityImageKey { get; set; }
 
+        protected bool IsVisibilityDirty { get; set; }
+
+        private VisibilityState _VisibilityState;
+        public VisibilityState VisibilityState
+        {
+            get
+            {
+                if (IsVisibilityDirty)
+                    RecalculateVisibility();
+                return _VisibilityState;
+            }
+        }
+
 
         public ProjectTreeNode()
         {
             NodeID = GetHashCode().ToString();
             Nodes = new ProjectTreeNodeCollection(this);
             nodesDirty = true;
+            IsVisibilityDirty = true;
         }
 
         public ProjectTreeNode(string text) : this()
@@ -47,7 +77,14 @@ namespace LDD.BrickEditor.Models.Navigation
         internal void AssignParent(ProjectTreeNode node)
         {
             Parent = node;
-            Manager = node?.Manager;
+
+            if (node?.Manager != null)
+                Manager = node?.Manager;
+        }
+
+        protected virtual void OnManagerAssigned()
+        {
+
         }
 
         public virtual void FreeObjects()
@@ -190,51 +227,147 @@ namespace LDD.BrickEditor.Models.Navigation
             return Nodes.Any(x => x.CanToggleVisibility());
         }
 
-        public virtual VisibilityState GetVisibilityState()
+        private readonly object VisibilityLock = new object();
+
+        private void RecalculateVisibility()
         {
-            if (!CanToggleVisibility())
-                return VisibilityState.Visible;
-
-            if (Nodes.Count == 0)
-                return VisibilityState.None;
-
-
-            var parentState = VisibilityState.Visible;
-
-            if (Parent is ProjectCollectionNode)
-                parentState = Parent.GetVisibilityState();
-
-            var parentIsHidden = parentState == VisibilityState.Hidden || parentState == VisibilityState.HiddenNotVisible;
-
-            var nodeStates = Nodes.Select(x => x.GetVisibilityState());
-            int hiddenCount = nodeStates.Count(x => x == VisibilityState.Hidden || x == VisibilityState.HiddenNotVisible);
-            int visibleCount = nodeStates.Count() - hiddenCount;
-
-
-            if (hiddenCount > visibleCount)
+            try
             {
-                return /*parentIsHidden ? VisibilityState.HiddenNotVisible :  */VisibilityState.NotVisible;
+                if (Monitor.TryEnter(VisibilityLock))
+                {
+                    _VisibilityState = GetVisibilityState2();
+                    IsVisibilityDirty = false;
+                }
+            }
+            catch { 
+            }
+            finally
+            {
+                Monitor.Exit(VisibilityLock);
+            }
+            
+        }
+
+        protected bool TryGetVisibility(out VisibilityState state)
+        {
+            if (!IsVisibilityDirty)
+            {
+                state = _VisibilityState;
+                return true;
+            }
+
+            try
+            {
+                if (Monitor.TryEnter(VisibilityLock))
+                {
+                    _VisibilityState = GetVisibilityState2();
+                    state = _VisibilityState;
+                    IsVisibilityDirty = false;
+                    return true;
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                Monitor.Exit(VisibilityLock);
+            }
+
+            state = VisibilityState.None;
+            return false;
+        }
+
+        public void InvalidateVisibility()
+        {
+            ProjectTreeNode curNode = this;
+            while(curNode != null)
+            {
+                curNode.IsVisibilityDirty = true;
+                curNode = curNode.Parent;
+            }
+        }
+
+        protected virtual bool IsHiddenCore()
+        {
+            return false;
+        }
+
+        public bool IsHidden()
+        {
+            return IsHiddenCore();
+        }
+
+        protected virtual VisibilityState GetVisibilityState2()
+        {
+            bool isHidden = IsHiddenCore();
+
+            if (IsRoot)
+            {
+                return isHidden ? VisibilityState.Hidden : VisibilityState.Visible;
+            }
+
+            bool parentIsHidden = Parent.IsHiddenCore() || RootNode.IsHiddenCore();
+
+            if (Nodes.Count > 0)
+            {
+                var allChilds = GetChildHierarchy();
+                var nodeStates = Nodes.Select(x => x.VisibilityState);
+                int hiddenCount = allChilds.Count(x => x.IsHiddenCore());
+                int visibleCount = allChilds.Count() - hiddenCount;
+
+                if (hiddenCount > visibleCount)
+                {
+                    return parentIsHidden ? VisibilityState.HiddenNotVisible :  VisibilityState.Hidden;
+                }
             }
 
             return parentIsHidden ? VisibilityState.NotVisible : VisibilityState.Visible;
         }
 
-        public virtual void ToggleVisibility()
+        protected int GetHiddenElementCount()
         {
-            if (CanToggleVisibility())
+            var childModels = Nodes.OfType<ProjectElementNode>().Select(x => x.Element.GetExtension<ModelElementExtension>()).Where(x => x != null).ToList();
+            return childModels.Count(x => x.IsHidden);
+        }
+
+
+        public void ToggleVisibility()
+        {
+            //if (!CanToggleVisibility())
+            //    return;
+
+            ToggleVisibilityCore();
+            IsVisibilityDirty = true;
+        }
+
+        protected virtual void ToggleVisibilityCore()
+        {
+            if (Nodes.All(x => x is ElementGroupNode))
             {
-                if (Nodes.All(x => x is ElementGroupNode) || Nodes.All(x => x is ProjectElementNode))
-                {
-                    var elements = GetChildHierarchy().OfType<ProjectElementNode>().Select(x => x.Element);
+                var elements = GetChildHierarchy().OfType<ProjectElementNode>().Select(x => x.Element);
 
-                    var nodeStates = Nodes.Select(x => x.GetVisibilityState());
-                    int hiddenCount = nodeStates.Count(x => x == VisibilityState.Hidden || x == VisibilityState.HiddenNotVisible);
-                    int visibleCount = nodeStates.Count() - hiddenCount;
+                var nodeStates = Nodes.Select(x => x.VisibilityState);
 
-                    bool hideElements = visibleCount > hiddenCount;
+                int hiddenCount = nodeStates.Count(x => x != VisibilityState.Visible);
+                int visibleCount = nodeStates.Count() - hiddenCount;
 
-                    Manager.SetElementsHidden(elements, hideElements);
-                }
+                bool hideElements = visibleCount > hiddenCount;
+
+                Manager.SetElementsHidden(elements, hideElements);
+            }
+            else if (Nodes.All(x => x is ProjectElementNode))
+            {
+                var elements = GetChildHierarchy().OfType<ProjectElementNode>().Select(x => x.Element);
+
+                var nodeStates = Nodes.Select(x => x.VisibilityState);
+
+                int hiddenCount = nodeStates.Count(x => x == VisibilityState.Hidden || x == VisibilityState.HiddenNotVisible);
+                int visibleCount = nodeStates.Count() - hiddenCount;
+
+                bool hideElements = visibleCount > hiddenCount;
+
+                Manager.SetElementsHidden(elements, hideElements);
             }
         }
 
@@ -242,7 +375,7 @@ namespace LDD.BrickEditor.Models.Navigation
         {
             VisibilityImageKey = string.Empty;
 
-            switch (GetVisibilityState())
+            switch (VisibilityState)
             {
                 case VisibilityState.Visible:
                     VisibilityImageKey = "Visible";

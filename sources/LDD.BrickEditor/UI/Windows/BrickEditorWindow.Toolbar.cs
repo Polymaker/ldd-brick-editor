@@ -20,24 +20,18 @@ namespace LDD.BrickEditor.UI.Windows
         {
             using (FlagManager.UseFlag("UpdateMenuItemStates"))
             {
-                if (SettingsManager.HasInitialized)
-                {
-                    File_CreateFromBrickMenu.Enabled = LDDEnvironment.Current?.IsValidInstall ?? false;
-                    ExportBrickMenuItem.Enabled = LDDEnvironment.Current?.IsValidInstall ?? false;
-                }
-                else
-                {
-                    File_CreateFromBrickMenu.Enabled = false;
-                    ExportBrickMenuItem.Enabled = false;
-                }
-                
+                bool isValidLddInstall = SettingsManager.HasInitialized && (LDDEnvironment.Current?.IsValidInstall ?? false);
+
+                File_CreateFromBrickMenu.Enabled = isValidLddInstall;
                 File_SaveMenu.Enabled = ProjectManager.IsProjectOpen;
                 File_SaveAsMenu.Enabled = ProjectManager.IsProjectOpen;
                 File_CloseProjectMenu.Enabled = ProjectManager.IsProjectOpen;
                 Edit_ImportMeshMenu.Enabled = ProjectManager.IsProjectOpen;
                 Edit_ValidatePartMenu.Enabled = ProjectManager.IsProjectOpen;
                 Edit_GenerateFilesMenu.Enabled = ProjectManager.IsProjectOpen;
-                Tools_OpenPartMenu.Enabled = ProjectManager.IsProjectOpen;
+                StartLddMenuItem.Enabled = isValidLddInstall;
+                ExportBrickMenuItem.Enabled = isValidLddInstall;
+                Tools_OpenPartMenu.Enabled = ProjectManager.IsProjectOpen && isValidLddInstall;
             }
 
             UpdateUndoRedoMenus();
@@ -286,7 +280,6 @@ namespace LDD.BrickEditor.UI.Windows
                 }
                 catch { }
 
-
                 var exePath = Core.LDDEnvironment.Current.GetExecutablePath();
                 if (File.Exists(exePath))
                     Process.Start(exePath);
@@ -295,44 +288,7 @@ namespace LDD.BrickEditor.UI.Windows
 
         private void Tools_OpenPartMenu_Click(object sender, EventArgs e)
         {
-            if (!ProjectManager.IsProjectOpen)
-                return;
-
-            var emptyModel = new Core.Models.Model
-            {
-                FileVersion = new Core.Data.VersionInfo(5, 0),
-                ApplicationVersion = new Core.Data.VersionInfo(4, 3),
-                BrickSetVersion = 2670,
-                Brand = Core.Data.Brand.LDDExtended,
-                ModelName = CurrentProject.PartDescription
-            };
-            emptyModel.Bricks.Add(new Core.Models.Brick
-            {
-                DesignID = CurrentProject.PartID,
-                Part = new Core.Models.Part
-                {
-                    DesignID = CurrentProject.PartID,
-                    Materials = CurrentProject.Surfaces.Select(s => 21).ToList(),
-                    Bone = new Core.Models.Bone()
-                }
-            });
-            emptyModel.RigidSystems.Add(new Core.Models.RigidSystem()
-            {
-                RigidItems = new List<Core.Models.RigidItem>
-                {
-                    new Core.Models.RigidItem
-                    {
-                        BoneRefs = new List<int> { 0 }
-                    }
-                }
-            });
-            Logger.Info("Creating temporary LDD model for part");
-            string tmpDir = Path.GetTempPath();
-            string tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".lxfml");
-            Logger.Debug($"Model path: {tmpFile}");
-            emptyModel.Save(tmpFile);
-            Logger.Info("Launching LDD...");
-            Process.Start(tmpFile);
+            ProjectManager.OpenPartInLDD();
         }
 
         private Process GetRunningLDDProcess()

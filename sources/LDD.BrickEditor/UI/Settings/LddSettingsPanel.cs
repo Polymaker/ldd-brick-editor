@@ -25,7 +25,7 @@ namespace LDD.BrickEditor.UI.Settings
             InitializeComponent();
         }
 
-        public override void FillSettings(AppSettings settings)
+        protected override void FillSettingsCore(AppSettings settings)
         {
             LddSettings = settings.LddSettings;
             SettingsEnvironment = new LDDEnvironment(
