@@ -241,4 +241,8 @@ Weitere Informationen finden Sie in der Protokolldatei.</value>
     <value>Der aktuelle Teil konnte in LDD nicht gefunden werden.
 Stellen Sie sicher, dass Sie die LDD-Dateien für neue Teile im Voraus generieren.</value>
   </data>
+  <data name="Message_NoModelFoundOpenAnyway" xml:space="preserve">
+    <value>Es wurde keine Modelldatei (*.g) gefunden.
+Möchten Sie die Datei trotzdem öffnen?</value>
+  </data>
 </root>

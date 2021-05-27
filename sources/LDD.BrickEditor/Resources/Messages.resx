@@ -221,4 +221,8 @@ For more details, check the log file.</value>
     <value>The current part could not be found in LDD.
 Make sure to generate the LDD files beforehand for new parts.</value>
   </data>
+  <data name="Message_NoModelFoundOpenAnyway" xml:space="preserve">
+    <value>No model file (*.g) was found.
+Do you want to open the file anyway?</value>
+  </data>
 </root>

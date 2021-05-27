@@ -98,6 +98,8 @@ namespace LDD.BrickEditor.UI.Panels
             mainForm.Activated += MainForm_Activated;
             mainForm.Deactivate += MainForm_Deactivate;
 
+            MeshesMenu_ConfigureOutlines.Visible = Program.IsDebug();
+
 #if DEBUG
             var dbgMenu = new ToolStripMenuItem
             {
@@ -165,6 +167,7 @@ namespace LDD.BrickEditor.UI.Panels
         #region Initialization
 
         private bool GlContextCreated = false;
+        public bool GlResourcesInitialized { get; private set; }
         private IWindowInfo GlWindowInfo;
 
         public override void DefferedInitialization()
@@ -234,7 +237,8 @@ namespace LDD.BrickEditor.UI.Panels
                 GlContextCreated = false;
                 return;
             }
-            
+
+            GlResourcesInitialized = true;
 
             SetupUIElements();
 
@@ -646,7 +650,7 @@ namespace LDD.BrickEditor.UI.Panels
             GL.DepthMask(true);
         }
         
-        private double AvgRenderFPS = 0;
+        //private double AvgRenderFPS = 0;
 
         private void RenderUI()
         {
@@ -665,9 +669,6 @@ namespace LDD.BrickEditor.UI.Panels
             foreach (var elem in UIElements)
                 elem.Draw();
 
-            //if (CurrentProject != null && CurrentProject.Flexible && ProjectManager.ShowBones)
-            //    DrawBoneNames();
-
             foreach (var model in LoadedModels.OrderBy(x => x.ZDepth))
             {
                 if (!model.Visible)
@@ -677,12 +678,12 @@ namespace LDD.BrickEditor.UI.Panels
             }
 
 
-            if (AvgRenderFPS == 0)
-                AvgRenderFPS = LoopController.RenderFrequency;
-            else
-                AvgRenderFPS = (AvgRenderFPS + LoopController.RenderFrequency) / 2d;
+            //if (AvgRenderFPS == 0)
+            //    AvgRenderFPS = LoopController.RenderFrequency;
+            //else
+            //    AvgRenderFPS = (AvgRenderFPS + LoopController.RenderFrequency) / 2d;
 
-            UIRenderHelper.DrawText($"Render FPS: {AvgRenderFPS:0}", UIRenderHelper.NormalFont, Color.White, new Vector2(10, 10));
+            //UIRenderHelper.DrawText($"Render FPS: {AvgRenderFPS:0}", UIRenderHelper.NormalFont, Color.White, new Vector2(10, 10));
 
             if (SelectionGizmo.IsEditing)
                 DrawGizmoStatus();
@@ -695,27 +696,6 @@ namespace LDD.BrickEditor.UI.Panels
             }
             
             UIRenderHelper.RenderElements();
-        }
-
-        private void DrawBoneNames()
-        {
-            var boneModels = LoadedModels.OfType<BoneModel>().ToList();
-
-            foreach (var bone in boneModels)
-            {
-                if (!bone.Visible)
-                    continue;
-
-                var rootPos = bone.Transform.ExtractTranslation();
-                var tipPos = rootPos + Vector3.TransformVector(new Vector3(bone.BoneLength, 0, 0), bone.Transform);
-                var boneCenter = (rootPos + tipPos) / 2f;
-                var screenPos = Camera.WorldPointToScreen(boneCenter);
-                var boneBounds = new Vector4(screenPos.X - 30, screenPos.Y - 20, 60, 40);
-
-                UIRenderHelper.DrawShadowText(bone.Element.Name,
-                    UIRenderHelper.NormalFont, Color.White, boneBounds,
-                    StringAlignment.Center, StringAlignment.Center);
-            }
         }
 
         private void DrawGizmoStatus()
@@ -2049,6 +2029,9 @@ namespace LDD.BrickEditor.UI.Panels
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
+            if (!HasViewInitialized || !GlResourcesInitialized)
+                return base.ProcessCmdKey(ref msg, keyData);
+
             //Trace.WriteLine($"ProcessCmdKey( keyData => {keyData} ({(int)keyData}))");
             var normalKey = keyData & ~Keys.Control;
             normalKey &= ~Keys.Shift;

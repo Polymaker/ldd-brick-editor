@@ -34,7 +34,7 @@
             this.vS2015LightTheme1 = new WeifenLuo.WinFormsUI.Docking.VS2015LightTheme();
             this.vS2015DarkTheme1 = new WeifenLuo.WinFormsUI.Docking.VS2015DarkTheme();
             this.visualStudioToolStripExtender1 = new WeifenLuo.WinFormsUI.Docking.VisualStudioToolStripExtender(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.File_NewProjectMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.File_CreateFromBrickMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +61,7 @@
             this.Tools_ConnectionsReportMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.StartLddMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tools_OpenPartMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.Tools_SettingsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.WindowMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,8 +78,7 @@
             this.StartLddText = new LDD.BrickEditor.Localization.LocalizableString();
             this.RestartLddText = new LDD.BrickEditor.Localization.LocalizableString();
             this.WindowTitle = new LDD.BrickEditor.Localization.LocalizableString();
-            this.Tools_OpenPartMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // DockPanelControl
@@ -94,10 +94,10 @@
             // 
             this.visualStudioToolStripExtender1.DefaultRenderer = null;
             // 
-            // menuStrip1
+            // MainMenu
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.ToolsMenuItem,
@@ -105,8 +105,8 @@
             this.HelpMenuItem,
             this.SelectedBuildLabel,
             this.BuildConfigComboBox});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Name = "menuStrip1";
+            resources.ApplyResources(this.MainMenu, "MainMenu");
+            this.MainMenu.Name = "MainMenu";
             // 
             // fileToolStripMenuItem
             // 
@@ -284,6 +284,12 @@
             resources.ApplyResources(this.StartLddMenuItem, "StartLddMenuItem");
             this.StartLddMenuItem.Click += new System.EventHandler(this.StartLddMenuItem_Click);
             // 
+            // Tools_OpenPartMenu
+            // 
+            this.Tools_OpenPartMenu.Name = "Tools_OpenPartMenu";
+            resources.ApplyResources(this.Tools_OpenPartMenu, "Tools_OpenPartMenu");
+            this.Tools_OpenPartMenu.Click += new System.EventHandler(this.Tools_OpenPartMenu_Click);
+            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
@@ -378,24 +384,18 @@
             // 
             resources.ApplyResources(this.WindowTitle, "WindowTitle");
             // 
-            // Tools_OpenPartMenu
-            // 
-            this.Tools_OpenPartMenu.Name = "Tools_OpenPartMenu";
-            resources.ApplyResources(this.Tools_OpenPartMenu, "Tools_OpenPartMenu");
-            this.Tools_OpenPartMenu.Click += new System.EventHandler(this.Tools_OpenPartMenu_Click);
-            // 
             // BrickEditorWindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.DockPanelControl);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.MainMenu);
+            this.MainMenuStrip = this.MainMenu;
             this.Name = "BrickEditorWindow";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BrickEditorWindow_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BrickEditorWindow_FormClosed);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.MainMenu.ResumeLayout(false);
+            this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,7 +405,7 @@
         private WeifenLuo.WinFormsUI.Docking.VS2015DarkTheme vS2015DarkTheme1;
         private WeifenLuo.WinFormsUI.Docking.VisualStudioToolStripExtender visualStudioToolStripExtender1;
         private WeifenLuo.WinFormsUI.Docking.VS2015LightTheme vS2015LightTheme1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem File_NewProjectMenu;
         private System.Windows.Forms.ToolStripMenuItem File_OpenProjectMenu;

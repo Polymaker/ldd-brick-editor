@@ -28,6 +28,8 @@ namespace LDD.BrickEditor.Models
         [JsonProperty]
         public bool Flexible { get; set; }
         [JsonProperty]
+        public bool IsCustom { get; set; }
+        [JsonProperty]
         public DateTime LastUpdate { get; set; }
 
         [JsonIgnore]
@@ -47,6 +49,7 @@ namespace LDD.BrickEditor.Models
             MeshFilenames = meshPaths;
             Flexible = primitive.FlexBones.Any();
             Decorated = meshPaths.Length > 1;
+            IsCustom = !string.IsNullOrEmpty(primitive.Comments);
         }
 
         public BrickInfo(PartWrapper part) : this(
@@ -56,7 +59,6 @@ namespace LDD.BrickEditor.Models
         {
         }
 
-
         public void UpdateInfo(Primitive primitive)
         {
             PartId = primitive.ID;
@@ -65,6 +67,7 @@ namespace LDD.BrickEditor.Models
             Platform = primitive.Platform.Name;
             Category = primitive.MainGroup.Name;
             Flexible = primitive.FlexBones.Any();
+            IsCustom = !string.IsNullOrEmpty(primitive.Comments);
         }
 
         public void UpdateInfo(PartWrapper part)

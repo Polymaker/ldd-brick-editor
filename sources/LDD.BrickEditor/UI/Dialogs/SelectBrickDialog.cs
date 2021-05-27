@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -318,10 +319,16 @@ namespace LDD.BrickEditor.UI.Windows
             if (string.IsNullOrWhiteSpace(filterText))
                 return true;
 
+            var regexFilter = new Regex(Regex.Escape(filterText).Replace("%", ".*?").Replace("\\*", ".*?"), RegexOptions.IgnoreCase);
             return
-                b.Description.ToUpperInvariant().Contains(filterText.ToUpperInvariant()) ||
-                b.Category.ToUpperInvariant().Contains(filterText.ToUpperInvariant()) ||
-                b.PartId.ToString().Contains(filterText);
+                regexFilter.IsMatch(b.Description.ToUpperInvariant()) ||
+                regexFilter.IsMatch(b.Category.ToUpperInvariant()) ||
+                regexFilter.IsMatch(b.PartId.ToString());
+
+            //return
+            //    b.Description.ToUpperInvariant().Contains(filterText.ToUpperInvariant()) ||
+            //    b.Category.ToUpperInvariant().Contains(filterText.ToUpperInvariant()) ||
+            //    b.PartId.ToString().Contains(filterText);
         }
 
         private void SelectBrickDialog_FormClosing(object sender, FormClosingEventArgs e)

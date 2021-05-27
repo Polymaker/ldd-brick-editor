@@ -1,6 +1,5 @@
 ﻿using LDD.BrickEditor.ProjectHandling;
 using LDD.Modding;
-using LDD.Modding;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,7 +60,7 @@ namespace LDD.BrickEditor.Models.Navigation
         //}
 
 
-        protected override VisibilityState GetVisibilityState2()
+        protected override VisibilityState GetVisibilityState()
         {
             var femaleModelExt = Element.GetExtension<FemaleStudModelExtension>();
 
@@ -83,7 +82,7 @@ namespace LDD.BrickEditor.Models.Navigation
                 else if (Collection == bone.Collisions)
                     isCollectionVisible = Manager?.ShowCollisions ?? false;
 
-                var baseVisibility = base.GetVisibilityState2();
+                var baseVisibility = base.GetVisibilityState();
 
 
                 if (!isCollectionVisible)
@@ -95,7 +94,7 @@ namespace LDD.BrickEditor.Models.Navigation
                 }
                 return baseVisibility;
             }
-            return base.GetVisibilityState2();
+            return base.GetVisibilityState();
         }
 
         protected override bool CanToggleVisibilityCore()
@@ -115,7 +114,7 @@ namespace LDD.BrickEditor.Models.Navigation
             }
             else if (Element is PartBone bone && Manager != null)
             {
-                var baseVisibility = GetVisibilityState2();
+                var baseVisibility = GetVisibilityState();
                 
                 if (Collection == bone.Connections && !Manager.ShowConnections)
                 {

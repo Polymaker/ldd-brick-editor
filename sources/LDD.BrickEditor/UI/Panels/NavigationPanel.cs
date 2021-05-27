@@ -84,9 +84,8 @@ namespace LDD.BrickEditor.UI.Panels
             InitializeNavigationTreeView();
             InitializeViewComboBox();
 
-#if !DEBUG
-            AddClonePatternMenu_Mirror.Enabled = false;
-#endif
+            AddClonePatternMenu_Mirror.Enabled = Program.IsDebug();
+
         }
 
         private void InitializeViewComboBox()

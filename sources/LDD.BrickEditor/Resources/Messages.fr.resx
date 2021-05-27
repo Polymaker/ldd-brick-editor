@@ -241,4 +241,8 @@ Pour plus de détails, consultez le fichier journal.</value>
     <value>La pièce actuelle est introuvable dans LDD.
 Assurez-vous de générer au préalable les fichiers LDD pour les nouvelles pièces.</value>
   </data>
+  <data name="Message_NoModelFoundOpenAnyway" xml:space="preserve">
+    <value>Aucun fichier de modèle (*.g) n'a été trouvé.
+Voulez-vous tout de même ouvrir le fichier?</value>
+  </data>
 </root>

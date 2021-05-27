@@ -89,7 +89,7 @@ namespace LDD.BrickEditor.Models.Navigation
             }
         }
 
-        protected override VisibilityState GetVisibilityState2()
+        protected override VisibilityState GetVisibilityState()
         {
             if (Collection == Manager.CurrentProject.Surfaces)
                 return Manager.ShowPartModels ? VisibilityState.Visible : VisibilityState.Hidden;

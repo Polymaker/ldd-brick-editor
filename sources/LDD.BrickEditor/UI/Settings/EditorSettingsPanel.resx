@@ -132,6 +132,30 @@
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="DelBuildCfgBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="DelBuildCfgBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DelBuildCfgBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="DelBuildCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 115</value>
+  </data>
+  <data name="DelBuildCfgBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="DelBuildCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 23</value>
+  </data>
+  <data name="DelBuildCfgBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="DelBuildCfgBtn.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="&gt;&gt;DelBuildCfgBtn.Name" xml:space="preserve">
     <value>DelBuildCfgBtn</value>
   </data>
@@ -144,6 +168,27 @@
   <data name="&gt;&gt;DelBuildCfgBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="AddBuildCfgBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="AddBuildCfgBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddBuildCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 115</value>
+  </data>
+  <data name="AddBuildCfgBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="AddBuildCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 23</value>
+  </data>
+  <data name="AddBuildCfgBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="AddBuildCfgBtn.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
   <data name="&gt;&gt;AddBuildCfgBtn.Name" xml:space="preserve">
     <value>AddBuildCfgBtn</value>
   </data>
@@ -155,6 +200,27 @@
   </data>
   <data name="&gt;&gt;AddBuildCfgBtn.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="BuildConfigListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="BuildCfgNameColumn.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="BuildCfgNameColumn.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="BuildConfigListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="BuildConfigListView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 0</value>
+  </data>
+  <data name="BuildConfigListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 109</value>
+  </data>
+  <data name="BuildConfigListView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;BuildConfigListView.Name" xml:space="preserve">
     <value>BuildConfigListView</value>
@@ -212,6 +278,18 @@
   </data>
   <data name="BuildCfgNameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="BuildCfg_NameBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="BuildCfg_NameBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 3</value>
+  </data>
+  <data name="BuildCfg_NameBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 20</value>
+  </data>
+  <data name="BuildCfg_NameBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;BuildCfg_NameBox.Name" xml:space="preserve">
     <value>BuildCfg_NameBox</value>
@@ -475,7 +553,7 @@
     <value>0</value>
   </data>
   <data name="BuildConfigsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 144</value>
+    <value>3, 159</value>
   </data>
   <data name="BuildConfigsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>463, 160</value>
@@ -498,143 +576,17 @@
   <data name="&gt;&gt;BuildConfigsGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="DelBuildCfgBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
-  <data name="DelBuildCfgBtn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DelBuildCfgBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="DelBuildCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 115</value>
-  </data>
-  <data name="DelBuildCfgBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
-  </data>
-  <data name="DelBuildCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 23</value>
-  </data>
-  <data name="DelBuildCfgBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="DelBuildCfgBtn.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="&gt;&gt;DelBuildCfgBtn.Name" xml:space="preserve">
-    <value>DelBuildCfgBtn</value>
-  </data>
-  <data name="&gt;&gt;DelBuildCfgBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DelBuildCfgBtn.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;DelBuildCfgBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="AddBuildCfgBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
-  <data name="AddBuildCfgBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="AddBuildCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 115</value>
-  </data>
-  <data name="AddBuildCfgBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
-  </data>
-  <data name="AddBuildCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 23</value>
-  </data>
-  <data name="AddBuildCfgBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="AddBuildCfgBtn.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="&gt;&gt;AddBuildCfgBtn.Name" xml:space="preserve">
-    <value>AddBuildCfgBtn</value>
-  </data>
-  <data name="&gt;&gt;AddBuildCfgBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddBuildCfgBtn.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;AddBuildCfgBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="BuildConfigListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="BuildConfigListView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="BuildConfigListView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 0</value>
-  </data>
-  <data name="BuildConfigListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 109</value>
-  </data>
-  <data name="BuildConfigListView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;BuildConfigListView.Name" xml:space="preserve">
-    <value>BuildConfigListView</value>
-  </data>
-  <data name="&gt;&gt;BuildConfigListView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildConfigListView.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;BuildConfigListView.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="BuildCfgNameColumn.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="BuildCfgNameColumn.Width" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="BuildCfg_NameBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="BuildCfg_NameBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 3</value>
-  </data>
-  <data name="BuildCfg_NameBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 20</value>
-  </data>
-  <data name="BuildCfg_NameBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_NameBox.Name" xml:space="preserve">
-    <value>BuildCfg_NameBox</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_NameBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_NameBox.Parent" xml:space="preserve">
-    <value>BuildCfgNameLabel</value>
-  </data>
-  <data name="&gt;&gt;BuildCfg_NameBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="LanguageNoteLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="LanguageNoteLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="LanguageNoteLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 92</value>
+    <value>6, 127</value>
   </data>
   <data name="LanguageNoteLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 36</value>
+    <value>293, 13</value>
   </data>
   <data name="LanguageNoteLabel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -931,7 +883,7 @@
     <value>3, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>463, 135</value>
+    <value>463, 150</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>

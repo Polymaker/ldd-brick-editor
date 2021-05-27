@@ -255,7 +255,7 @@ namespace LDD.BrickEditor.Models.Navigation
                 Manager.SetElementHidden(Element, !modelExt.IsHidden);
         }
 
-        protected override VisibilityState GetVisibilityState2()
+        protected override VisibilityState GetVisibilityState()
         {
             var modelExt = Element.GetExtension<ModelElementExtension>();
 

@@ -43,25 +43,47 @@ namespace LDD.BrickEditor.UI.Windows
         {
             base.OnShown(e);
 
-            int borderHeight = Height - tableLayoutPanel1.Height;
-            int currentHeight = tableLayoutPanel1.Height;
+            CalculateMinimumSize();
+        }
+
+        private void CalculateMinimumSize()
+        {
+            int borderHeight = Height - (tableLayoutPanel1.Height + tableLayoutPanel1.Margin.Vertical);
+            int borderWidth = Width - (tableLayoutPanel1.Width + tableLayoutPanel1.Margin.Horizontal);
 
             int messageWidth = tableLayoutPanel1.Width - MessageTextLabel.Margin.Horizontal;
             if (MessageIconBox.Visible)
                 messageWidth -= MessageIconBox.Width + MessageIconBox.Margin.Horizontal;
+            var minTextSize = MessageTextLabel.GetPreferredSize(new Size(messageWidth, 9999));
 
-            var minHeight = MessageTextLabel.GetPreferredSize(new Size(messageWidth ,9999)).Height + MessageTextLabel.Margin.Vertical;
+            int minTextHeight = minTextSize.Height + MessageTextLabel.Margin.Vertical;
+            int minTextWidth = minTextSize.Width + MessageTextLabel.Margin.Horizontal;
 
-            if (MessageIconBox.Visible)
-                minHeight = Math.Max(minHeight, MessageIconBox.Height + MessageIconBox.Margin.Vertical);
+            int minImageHeight = MessageIconBox.Visible ? MessageIconBox.Height + MessageIconBox.Margin.Vertical : 0;
 
+            int minimumHeight = Math.Max(minTextHeight, minImageHeight);
+            minimumHeight += Option1Button.Height + Option1Button.Margin.Vertical;
             if (ErrorDetailTextBox.Visible)
-                minHeight += 90 + ErrorDetailTextBox.Margin.Vertical;
+                minimumHeight += 90 + ErrorDetailTextBox.Margin.Vertical;
 
-            minHeight += flowLayoutPanel1.Height + flowLayoutPanel1.Margin.Vertical;
+            minimumHeight += borderHeight + tableLayoutPanel1.Margin.Vertical;
 
-            //if (currentHeight < minHeight)
-                Height = minHeight + borderHeight;
+            int minimumWidth = minTextWidth;
+            if (MessageIconBox.Visible)
+                minimumWidth += MessageIconBox.Width + MessageIconBox.Margin.Horizontal;
+            minimumWidth += borderWidth + tableLayoutPanel1.Margin.Horizontal;
+
+            MinimumSize = new Size(260, minimumHeight);
+
+            if (!ErrorDetailTextBox.Visible && Width > minimumWidth)
+                Width = minimumWidth;
+
+            Height = minimumHeight;
+
+            if (StartPosition == FormStartPosition.CenterParent)
+                CenterToParent();
+            else if (StartPosition == FormStartPosition.CenterScreen)
+                CenterToScreen();
         }
 
         public void SetDialogButtons(MessageBoxButtons buttons, bool centered = true)

@@ -117,40 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AlignToMenu_Back.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Strg+Numpad 1</value>
+  <data name="ConnTypeColumn.HeaderText" xml:space="preserve">
+    <value>Art</value>
   </data>
-  <data name="AlignToMenu_Back.Text" xml:space="preserve">
-    <value>Zurück</value>
+  <data name="ConnSubTypeColumn.HeaderText" xml:space="preserve">
+    <value>SubType</value>
   </data>
-  <data name="AlignToMenu_Bottom.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Strg+Numpad 7</value>
+  <data name="RefCountColumn.HeaderText" xml:space="preserve">
+    <value>Anzahl der Ref.</value>
   </data>
-  <data name="AlignToMenu_Bottom.Text" xml:space="preserve">
-    <value>Unterseite</value>
+  <data name="PartListColumn.HeaderText" xml:space="preserve">
+    <value>Teile</value>
   </data>
-  <data name="AlignToMenu_Front.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Numpad 1</value>
+  <data name="SearchButton.Text" xml:space="preserve">
+    <value>Beginnen Sie mit der Analyse</value>
   </data>
-  <data name="AlignToMenu_Front.Text" xml:space="preserve">
-    <value>Vorderseite</value>
+  <data name="ExportButton.Text" xml:space="preserve">
+    <value>Nach Excel exportieren...</value>
   </data>
-  <data name="AlignToMenu_Left.Text" xml:space="preserve">
-    <value>Links</value>
+  <data name="StartAnalysingLabel.Text" xml:space="preserve">
+    <value>Beginnen Sie mit der Analyse</value>
   </data>
-  <data name="AlignToMenu_Right.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Numpad 3</value>
+  <data name="CancelAnalysingLabel.Text" xml:space="preserve">
+    <value>Stornieren</value>
   </data>
-  <data name="AlignToMenu_Right.Text" xml:space="preserve">
-    <value>Recht</value>
+  <data name="CancelingLabel.Text" xml:space="preserve">
+    <value>Abbrechen ...</value>
   </data>
-  <data name="AlignToMenu_Top.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Numpad 7</value>
+  <data name="ExcelFileFilterLabel.Text" xml:space="preserve">
+    <value>Excel-Dokument</value>
   </data>
-  <data name="AlignToMenu_Top.Text" xml:space="preserve">
-    <value>oben</value>
-  </data>
-  <data name="AlignToMenu_Left.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Strg+Numpad 3</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Verbindungsnutzungsbericht</value>
   </data>
 </root>

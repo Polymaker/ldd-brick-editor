@@ -3,32 +3,31 @@
   
 	<Fragment>
     <?define BrickEditor.TargetDir=$(var.LDD.BrickEditor.TargetDir)?>
-    <?define BrickEditor.Name="Brick Studio"?>
-    <?define BrickEditor.Description="LDD Model Editor"?>
+    <?define BrickEditor.Name="Brick Editor"?>
+    <?define BrickEditor.Description="LDD part and model editor"?>
 
     <DirectoryRef Id="INSTALLFOLDER">
-      <Directory Id="dir777F6281BDA39BE4D21394C1207E9DD6" Name="Brick Studio">
-        <Component Id="BrickEditor.FolderPermissions" Guid="{7F4FBEB7-A9E1-4EC7-8EBE-1DF6C0302598}">
-          <CreateFolder>
-            <Permission  User="Everyone" GenericAll="yes" />
-          </CreateFolder>
-        </Component>
-        <Directory Id="BrickEditor.Resources.FR" Name="fr" />
-      </Directory>
+      <Component Id="BrickEditor.FolderPermissions" Guid="{7F4FBEB7-A9E1-4EC7-8EBE-1DF6C0302598}">
+        <CreateFolder>
+          <Permission  User="Everyone" GenericAll="yes" />
+        </CreateFolder>
+      </Component>
+      <Directory Id="BrickEditor.Resources.FR" Name="fr" />
+      <Directory Id="BrickEditor.Resources.DE" Name="de" />
     </DirectoryRef>
     
-    <Component Id="BrickEditor.DeleteFreetype6" Guid="{8720A739-AC41-49A2-82A2-E9178A98D8A3}" Directory="dir777F6281BDA39BE4D21394C1207E9DD6">
+    <Component Id="BrickEditor.DeleteFreetype6" Guid="{8720A739-AC41-49A2-82A2-E9178A98D8A3}" Directory="INSTALLFOLDER">
       <RemoveFile Id="DeleteFreetype6" Name="freetype6.dll" On="uninstall" />
     </Component>
   </Fragment>
   
   <Fragment>
-    <ComponentGroup Id="BrickEditor.Binaries" Directory="dir777F6281BDA39BE4D21394C1207E9DD6">
+    <ComponentGroup Id="BrickEditor.Binaries" Directory="INSTALLFOLDER">
       <Component Id="cmp2AD0CDBA16C06A1CFFBEB37A0147C04C" Guid="{DD93AF7D-3254-4806-84EE-2EF894DE3882}">
-        <File Id="filCF2CDA50B2557CD18C6F131F6E8D7CCA" Source="$(var.BrickEditor.TargetDir)Brick Studio.exe" />
+        <File Id="filCF2CDA50B2557CD18C6F131F6E8D7CCA" Source="$(var.BrickEditor.TargetDir)Brick Editor.exe" />
       </Component>
       <Component Id="cmp8E14AD3CE4A5E5832DD48B150913F9D0" Guid="{72BD6034-7234-4CCD-8815-0860F339ECB2}">
-        <File Id="fil68EE88D45B5A68BAE9EF1EC271D1B45C" Source="$(var.BrickEditor.TargetDir)Brick Studio.exe.config" />
+        <File Id="fil68EE88D45B5A68BAE9EF1EC271D1B45C" Source="$(var.BrickEditor.TargetDir)Brick Editor.exe.config" />
       </Component>
       <Component Id="cmp565A6EEAE6004102B14AD5C11501E114" Guid="{43B300E3-5B13-40E7-AD3B-58D3CC901B7E}">
         <File Id="fil7D288874A58C43819CA1FF635FDA4D6E" Source="$(var.BrickEditor.TargetDir)LDD.Common.dll" />
@@ -47,7 +46,7 @@
       </Component>
     </ComponentGroup>
     
-    <ComponentGroup Id="BrickEditor.References" Directory="dir777F6281BDA39BE4D21394C1207E9DD6">
+    <ComponentGroup Id="BrickEditor.References" Directory="INSTALLFOLDER">
       
       <!--OpenGL Related-->
       <Component Id="cmp63AF2DA8BF8B83E84EBB77A3B9892E31" Guid="{B4BC4601-1750-4B45-B767-7ED76604EE5C}">
@@ -113,7 +112,7 @@
 
     </ComponentGroup>
     
-    <DirectoryRef Id="dir777F6281BDA39BE4D21394C1207E9DD6">
+    <DirectoryRef Id="INSTALLFOLDER">
       <Directory Id="dir4750A130985FFE42691D1688CF127A81" Name="runtimes">
 
         <Directory Id="dir3A5CC21DF3BC4A98C363950BDD643A59" Name="win-x64">
@@ -142,27 +141,36 @@
   <Fragment>
     <ComponentGroup Id="BrickEditor.Resources.FR" Directory="BrickEditor.Resources.FR">
       <Component Id="cmp7D48BB299992D325E7610AB9EF44F785" Guid="{4900BF9D-10C5-4376-B83D-4288CFF97680}">
-        <File Id="fil63B942EEA8B1EC55BB4BE522FF6211ED" Source="$(var.BrickEditor.TargetDir)fr\Brick Studio.resources.dll" />
+        <File Id="fil63B942EEA8B1EC55BB4BE522FF6211ED" Source="$(var.BrickEditor.TargetDir)fr\Brick Editor.resources.dll" />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="BrickEditor.Resources.DE" Directory="BrickEditor.Resources.DE">
+      <Component Id="cmp6DA00AABBE714FF29647D19AB5BDBCC8" Guid="{88BFC1FF-674B-4224-A04E-446AB2816ECB}">
+        <File Id="fil42F11F812C794942ACE35AA58EAC3B4D" Source="$(var.BrickEditor.TargetDir)de\Brick Editor.resources.dll" />
       </Component>
     </ComponentGroup>
   </Fragment>
 
   <Fragment>
     <ComponentGroup Id="BrickEditor.Shortcuts">
-      <Component Id="ApplicationShortcut" Guid="0AE01D31-70E6-44AF-B92F-2F86F1258CFD" Directory="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="0AE01D31-70E6-44AF-B92F-2F86F1258CFD" Directory="ProgramMenuFolder">
         <Shortcut Id="ApplicationStartMenuShortcut"
                   Name="$(var.BrickEditor.Name)" Description="$(var.BrickEditor.Description)"
-                  Target="[dir777F6281BDA39BE4D21394C1207E9DD6]Brick Studio.exe"
-                  WorkingDirectory="dir777F6281BDA39BE4D21394C1207E9DD6"/>
-        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
-        <RegistryValue Root="HKCU" Key="Software\LDDModder\BrickStudio" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+                  Target="[INSTALLFOLDER]Brick Editor.exe"
+                  WorkingDirectory="INSTALLFOLDER">
+          <Icon Id="StartMenuIcon.ico" SourceFile="$(var.LDD.BrickEditor.ProjectDir)Resources\BrickStudioIcon.ico"/>
+        </Shortcut>
+        <RemoveFolder Id="ProgramMenuFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\PolyDev\BrickEditor" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
       </Component>
       <Component Id="DesktopShortcut" Guid="7C1ED4FE-C189-4B05-8EAB-02B44276E3A6" Directory="DesktopFolder">
         <Shortcut Id="ApplicationDesktopShortcut" Directory="DesktopFolder"
              Name="$(var.BrickEditor.Name)" Description="$(var.BrickEditor.Description)"
-                  Target="[dir777F6281BDA39BE4D21394C1207E9DD6]Brick Studio.exe"
-                  WorkingDirectory="dir777F6281BDA39BE4D21394C1207E9DD6" />
-        <RegistryValue Root="HKCU" Key="Software\LDDModder\BrickStudio" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+                  Target="[INSTALLFOLDER]Brick Editor.exe"
+                  WorkingDirectory="INSTALLFOLDER">
+          <Icon Id="DesktopIcon.ico" SourceFile="$(var.LDD.BrickEditor.ProjectDir)Resources\BrickStudioIcon.ico"/>
+        </Shortcut>
+        <RegistryValue Root="HKCU" Key="Software\PolyDev\BrickEditor" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
       </Component>
     </ComponentGroup>
     

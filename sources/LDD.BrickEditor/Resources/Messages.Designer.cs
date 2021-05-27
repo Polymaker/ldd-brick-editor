@@ -361,6 +361,16 @@ namespace LDD.BrickEditor.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No model file (*.g) was found.
+        ///Do you want to open the file anyway?.
+        /// </summary>
+        internal static string Message_NoModelFoundOpenAnyway {
+            get {
+                return ResourceManager.GetString("Message_NoModelFoundOpenAnyway", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The app did not close correctly, do you want to recover the project?.
         /// </summary>
         internal static string Message_RecoverProject {

@@ -406,7 +406,7 @@ namespace LDD.BrickEditor.UI.Windows
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Could not import file!");
+                        MessageBoxEX.ShowException(this, "Could not import file!", "", ex);
                     }
                     finally
                     {

@@ -103,5 +103,16 @@ namespace LDD.BrickEditor
             }
             
         }
+
+        public static bool IsDebug()
+        {
+            bool isDebug = false;
+
+#if DEBUG
+            isDebug = true;
+#endif
+
+            return isDebug;
+        }
     }
 }

@@ -145,12 +145,12 @@ namespace LDD.BrickEditor.UI.Panels
 
                 if (CurrentProject != null)
                 {
-                    var studConnectors = CurrentProject.GetAllElements<PartConnection>();
+                    var connectionElems = CurrentProject.GetAllElements<PartConnection>();
 
                     if (rebuild)
-                        Connections.AddRange(studConnectors);
+                        Connections.AddRange(connectionElems);
                     else
-                        Connections.SyncItems(studConnectors);
+                        Connections.SyncItems(connectionElems);
                 }
             }
             

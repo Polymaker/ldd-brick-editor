@@ -44,7 +44,7 @@ namespace LDD.BrickEditor.UI.Windows
 
             DockPanelControl.Theme = new CustomDockTheme();
 
-            visualStudioToolStripExtender1.SetStyle(menuStrip1, 
+            visualStudioToolStripExtender1.SetStyle(MainMenu, 
                 VisualStudioToolStripExtender.VsVersion.Vs2015,
                 DockPanelControl.Theme);
 
@@ -69,11 +69,7 @@ namespace LDD.BrickEditor.UI.Windows
 
             RestoreSavedPosition();
             InitializeProjectManager();
-            menuStrip1.Enabled = false;
-
-#if DEBUG
-            FileMenu_OpenPartFiles.Visible = true;
-#endif
+            MainMenu.Enabled = false;
         }
 
         protected override void OnShown(EventArgs e)
@@ -225,17 +221,6 @@ namespace LDD.BrickEditor.UI.Windows
             if (WaitPopup != null && WaitPopup.Visible)
                 WaitPopup.UpdateProgress(10, 10);
 
-            ViewportPanel.Activate();//must be visible to properly init GL resource
-
-            //if (PropertiesPanel.Pane == DetailPanel.Pane)
-            //{
-            //    PropertiesPanel.Activate();
-            //}
-            //else
-            //{
-            //    DetailPanel.Activate();
-            //}
-
             foreach (IDockContent dockPanel in DockPanelControl.Contents)
             {
                 if (dockPanel is ProjectDocumentPanel documentPanel)
@@ -259,17 +244,27 @@ namespace LDD.BrickEditor.UI.Windows
             {
                 Logger.Warn("Could not find DockPane! Loading Default Layout...");
                 LoadDefaultLayout();
-                return;
             }
-
-            for (int i = 0; i < panels.Length; i++)
+            else
             {
-                if (!loadedPanels.Contains(panels[i]))
+                for (int i = 0; i < panels.Length; i++)
                 {
-                    (panels[i] as DockContent).Show(pane, null);
+                    if (!loadedPanels.Contains(panels[i]))
+                        (panels[i] as DockContent).Show(pane, null);
                 }
             }
+
+
+            foreach(var dockPane in DockPanelControl.Panes)
+            {
+                var activeContent = dockPane.ActiveContent;
+                foreach(var content in dockPane.Contents.OfType<DockContent>())
+                    content.Show();
+                dockPane.ActiveContent = activeContent;
+            }
         }
+
+
 
         private IDockContent DockContentLoadingHandler(string str)
         {
@@ -390,13 +385,21 @@ namespace LDD.BrickEditor.UI.Windows
             WaitPopup.Message = Messages.Message_InitializingUI;
             WaitPopup.Shown += OnInitializationPopupLoaded;
             WaitPopup.ShowCenter(this);
+
+            var test = new AsyncInvoker(this);
+            test.WhenShown(WaitPopup, () =>
+            {
+
+            }).Then(() =>
+            {
+
+            });
         }
 
         private void OnInitializationPopupLoaded(object sender, EventArgs e)
         {
             WaitPopup.Shown -= OnInitializationPopupLoaded;
             
-
             this.InvokeWithDelay(100, ()=>
             {
                 try
@@ -437,12 +440,16 @@ namespace LDD.BrickEditor.UI.Windows
 
             ResourceHelper.LoadResources();
 
+            LDDEnvironment.Initialize();
+            SettingsManager.ValidateLddPaths();
+
             var documentPanels = DockPanelControl.Contents.OfType<ProjectDocumentPanel>().ToList();
 
             foreach (var documentPanel in documentPanels)
             {
                 documentPanel.Enabled = true;
                 documentPanel.DefferedInitialization();
+                documentPanel.HasViewInitialized = true;
             }
 
             if (!UIRenderHelper.LoadFreetype6())
@@ -453,6 +460,8 @@ namespace LDD.BrickEditor.UI.Windows
                     MessageBoxIcon.Warning);
             }
 
+            ViewportPanel.Activate();//must be visible to properly init GL resource
+
             Task.Factory.StartNew(() =>
             {
                 ViewportPanel.InitGlResourcesAsync();
@@ -462,7 +471,7 @@ namespace LDD.BrickEditor.UI.Windows
 
         private void OnInitializationFinished()
         {
-            menuStrip1.Enabled = true;
+            MainMenu.Enabled = true;
             WaitPopup.Hide();
             WaitPopup.Close();
 
@@ -563,11 +572,11 @@ namespace LDD.BrickEditor.UI.Windows
             return loadedProject != null;
         }
 
-        private void OpenPartFromFiles(string primitiveFilepath)
+        private void OpenPartFromFiles(string lddFilePath)
         {
-
-            string filename = Path.GetFileNameWithoutExtension(primitiveFilepath);
-            string fileType = Path.GetExtension(primitiveFilepath);
+            string directory = Path.GetDirectoryName(lddFilePath);
+            string filename = Path.GetFileNameWithoutExtension(lddFilePath);
+            string fileType = Path.GetExtension(lddFilePath);
 
             if (!int.TryParse(filename, out int partID))
             {
@@ -576,46 +585,78 @@ namespace LDD.BrickEditor.UI.Windows
             }
 
             Core.Primitives.Primitive primitive = null;
-            
-            if (fileType.ToLower() == ".xml")
+
+            string primitivePath = Path.Combine(directory, $"{partID}.xml");
+
+            if (!File.Exists(primitivePath))
             {
-                try
-                {
-                    primitive = Core.Primitives.Primitive.Load(primitiveFilepath);
-                }
-                catch
-                {
-                    MessageBoxEX.ShowDetails(this,
+                MessageBoxEX.ShowDetails(this,
                         Messages.Error_OpeningFile, //TODO: change
                         Messages.Caption_OpeningProject,
-                        "File is not an LDD Primitive."); //TODO: translate
-
-                    return;
-                }
-            }
-            else if (fileType.ToLower().StartsWith(".g"))
-            {
-
+                        "Could not find primitive xml file."); //TODO: translate
+                return;
             }
 
-            string fileDir = Path.GetDirectoryName(primitiveFilepath);
-            string fileDirLod0 = Path.Combine(fileDir, "Lod0");
-
-            var meshFiles = Directory.GetFiles(fileDir, primitive.ID + ".g*");
-
-            if (meshFiles.Length == 0 && Directory.Exists(fileDirLod0))
+            try
             {
-                meshFiles = Directory.GetFiles(fileDirLod0, primitive.ID + ".g*");
+                primitive = Core.Primitives.Primitive.Load(primitivePath);
             }
-
-            if (meshFiles.Length == 0)
+            catch (Exception ex)
             {
+                Logger.Error(ex, $"Could not read primitive '{primitivePath}'");
+
                 MessageBoxEX.ShowDetails(this,
                     Messages.Error_OpeningFile, //TODO: change
                     Messages.Caption_OpeningProject,
-                    "No mesh file found."); //TODO: translate
+                    "File is not an LDD Primitive."); //TODO: translate
+
                 return;
             }
+
+            string lod0Folder = Path.Combine(directory, "LOD0");
+
+            string[] meshFiles = new string[0];
+
+            if (Directory.Exists(lod0Folder))
+                meshFiles = Directory.GetFiles(lod0Folder, primitive.ID + ".g*");
+            if (meshFiles.Length == 0)
+                meshFiles = Directory.GetFiles(directory, primitive.ID + ".g*");
+
+            if (meshFiles.Length == 0)
+            {
+                var res = MessageBoxEX.Show(this,
+                    Messages.Message_NoModelFoundOpenAnyway,
+                    Messages.Caption_OpeningProject,
+                    MessageBoxButtons.YesNo); //TODO: translate
+
+                if (res != DialogResult.Yes)
+                    return;
+            }
+
+
+            var partInfo = new PartWrapper(primitive);
+
+            foreach (string meshPath in meshFiles)
+            {
+                if (PartSurfaceMesh.ParseSurfaceID(meshPath, out int surfaceID))
+                {
+                    try
+                    {
+                        var mesh = Core.Files.MeshFile.Read(meshPath);
+                        partInfo.Surfaces.Add(new PartSurfaceMesh(partID, surfaceID, mesh)
+                        {
+                            Filepath = meshPath
+                        });
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.Error(ex, $"Could not read mesh '{meshPath}'");
+                    }
+                }
+            }
+
+            var tmpProject = PartProject.CreateFromLddPart(partInfo);
+            LoadNewPartProject(tmpProject);
         }
 
         private void LoadNewPartProject(PartProject project)

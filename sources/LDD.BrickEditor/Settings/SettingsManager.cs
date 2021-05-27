@@ -15,6 +15,7 @@ namespace LDD.BrickEditor.Settings
 {
     public static class SettingsManager
     {
+        public const string APPDATA_FOLDER_NAME = "LDD Brick Editor";
         public static string AppDataFolder { get; set; }
 
         public const string AppSettingsFileName = "settings.json";
@@ -30,7 +31,7 @@ namespace LDD.BrickEditor.Settings
         static SettingsManager()
         {
             AppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            AppDataFolder = Path.Combine(AppDataFolder, "LDDModder", "BrickEditor");
+            AppDataFolder = Path.Combine(AppDataFolder, APPDATA_FOLDER_NAME);
             CurrentAppVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
         }
 
@@ -39,12 +40,45 @@ namespace LDD.BrickEditor.Settings
             if (!Directory.Exists(AppDataFolder))
                 Directory.CreateDirectory(AppDataFolder);
 
-            if (!LDDEnvironment.HasInitialized)
-                LDDEnvironment.Initialize();
+            CheckOldVersionSettings();
+
+            //if (!LDDEnvironment.HasInitialized)
+            //    LDDEnvironment.Initialize();
 
             LoadSettings();
 
             HasInitialized = true;
+        }
+
+        private static void CheckOldVersionSettings()
+        {
+            var oldAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            oldAppDataFolder = Path.Combine(oldAppDataFolder, "LDDModder", "BrickEditor");
+
+            
+
+            if (Directory.Exists(oldAppDataFolder))
+            {
+                var oldFiles = Directory.EnumerateFiles(oldAppDataFolder, "*", SearchOption.AllDirectories);
+
+                foreach (string oldFilePath in oldFiles)
+                {
+                    string oldFolder = Path.GetDirectoryName(oldFilePath);
+                    string subFolder = oldFolder.Length > oldAppDataFolder.Length ? oldFolder.Substring(oldAppDataFolder.Length+1) : string.Empty;
+
+                    string newPath = Path.Combine(AppDataFolder, subFolder, Path.GetFileName(oldFilePath));
+                    string newFolder = Path.GetDirectoryName(newPath);
+                    if (!Directory.Exists(newFolder))
+                        Directory.CreateDirectory(newFolder);
+
+                    if (!File.Exists(newPath))
+                        File.Move(oldFilePath, newPath);
+                    else
+                        File.Delete(oldFilePath);
+                }
+
+                Directory.Delete(oldAppDataFolder, true);
+            }
         }
 
         public static void LoadSettings()
@@ -119,8 +153,21 @@ namespace LDD.BrickEditor.Settings
             Current.OpenedProjects = currentSettings.OpenedProjects;
         }
 
-        private static void ValidateLddPaths()
+        public static void ValidateLddPaths()
         {
+            if (!LDDEnvironment.HasInitialized)
+            {
+                if (!string.IsNullOrEmpty(Current.LddSettings.ProgramFilesPath) ||
+                    !string.IsNullOrEmpty(Current.LddSettings.ApplicationDataPath))
+                {
+                    var custom = LDDEnvironment.Create(
+                        Current.LddSettings.ProgramFilesPath,
+                        Current.LddSettings.ApplicationDataPath);
+                    LDDEnvironment.SetOverride(custom);
+                }
+                return;
+            }
+
             bool sameAsInstalled = false;
 
             if (LDDEnvironment.IsInstalled)
@@ -413,7 +460,6 @@ namespace LDD.BrickEditor.Settings
 
 
         #endregion
-
 
         public static bool IsWorkspaceDefined => !string.IsNullOrEmpty(Current.EditorSettings?.ProjectWorkspace);
     }

@@ -148,6 +148,7 @@ namespace LDD.BrickEditor.UI.Settings
                                 if (itemConfig.UniqueID == config.UniqueID)
                                 {
                                     lvi.Selected = true;
+                                    lvi.Tag = config; //update config
                                     break;
                                 }
                             }
@@ -366,7 +367,7 @@ namespace LDD.BrickEditor.UI.Settings
                 SaveBuildCfgBtn.Visible = false;
                 CancelBuildCfgBtn.Visible = false;
                 AddBuildCfgBtn.Enabled = true;
-                DelBuildCfgBtn.Enabled = !(SelectedBuildConfig?.IsInternalConfig ?? false);
+                DelBuildCfgBtn.Enabled = SelectedBuildConfig != null && !SelectedBuildConfig.IsInternalConfig;
             }
         }
 

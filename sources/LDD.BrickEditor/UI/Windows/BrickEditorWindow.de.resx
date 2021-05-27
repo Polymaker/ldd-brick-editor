@@ -123,9 +123,6 @@
   <data name="File_CloseProjectMenu.Text" xml:space="preserve">
     <value>Projekt schließen</value>
   </data>
-  <data name="File_CreateFromBrickMenu.Text" xml:space="preserve">
-    <value>Aus Ziegeln erstellen...</value>
-  </data>
   <data name="File_NewProjectMenu.Text" xml:space="preserve">
     <value>Neues Teilprojekt</value>
   </data>
@@ -195,9 +192,6 @@
   <data name="WindowTitle.Text" xml:space="preserve">
     <value>LDD Brick Studio</value>
   </data>
-  <data name="FileMenu_OpenPartFiles.Text" xml:space="preserve">
-    <value>Teiledateien öffnen ...</value>
-  </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>Datei</value>
   </data>
@@ -224,5 +218,11 @@
   </data>
   <data name="RestartLddText.Text" xml:space="preserve">
     <value>Starten Sie LDD neu...</value>
+  </data>
+  <data name="File_CreateFromBrickMenu.Text" xml:space="preserve">
+    <value>Import aus LDD...</value>
+  </data>
+  <data name="FileMenu_OpenPartFiles.Text" xml:space="preserve">
+    <value>Öffnen Sie primitive Dateien...</value>
   </data>
 </root>

@@ -24,6 +24,9 @@ namespace LDD.BrickEditor.UI.Panels
 
         public Windows.BrickEditorWindow EditorWindow => DockPanel?.Parent as Windows.BrickEditorWindow;
 
+
+        public bool HasViewInitialized { get; set; }
+
         public ProjectDocumentPanel()
         {
             FlagManager = new FlagManager();

@@ -15,6 +15,8 @@ namespace LDD.BrickEditor.Models
 {
     public static class BrickListCache
     {
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetLogger("LDD Part Cache");
+
         private const string BRICK_LIST_CACHE_FILENAME = "BrickList.json";
 
         private static FileSystemWatcher FSW;
@@ -363,6 +365,10 @@ namespace LDD.BrickEditor.Models
                         brickInfo.LastUpdate = DateTime.Now;
                         brickInfo.Validated = true;
                     }
+                }
+                else
+                {
+                    Logger.Warn($"Invalid or missing files for part {partID}");
                 }
 
                 CurrentProgress.TotalValidated++;

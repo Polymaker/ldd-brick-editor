@@ -120,9 +120,6 @@
   <data name="File_NewProjectMenu.Text" xml:space="preserve">
     <value>Nouveau projet</value>
   </data>
-  <data name="File_CreateFromBrickMenu.Text" xml:space="preserve">
-    <value>Créer depuis une brique...</value>
-  </data>
   <data name="File_OpenProjectMenu.Text" xml:space="preserve">
     <value>Ouvrir un projet...</value>
   </data>
@@ -213,9 +210,6 @@
   <data name="EditMenu_Undo.ShortcutKeyDisplayString" xml:space="preserve">
     <value>Ctrl+Z</value>
   </data>
-  <data name="FileMenu_OpenPartFiles.Text" xml:space="preserve">
-    <value>Ouvrir les fichiers pièce ...</value>
-  </data>
   <data name="Tools_ConnectionsReportMenu.Text" xml:space="preserve">
     <value>Rapport d'utilisation de la connexion</value>
   </data>
@@ -224,5 +218,11 @@
   </data>
   <data name="HelpMenuItem.Text" xml:space="preserve">
     <value>?</value>
+  </data>
+  <data name="File_CreateFromBrickMenu.Text" xml:space="preserve">
+    <value>Importer depuis LDD...</value>
+  </data>
+  <data name="FileMenu_OpenPartFiles.Text" xml:space="preserve">
+    <value>Ouvrir des fichiers primitifs...</value>
   </data>
 </root>

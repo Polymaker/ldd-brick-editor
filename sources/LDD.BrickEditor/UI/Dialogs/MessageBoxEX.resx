@@ -403,49 +403,49 @@
     <value>ButtonLabels</value>
   </data>
   <data name="&gt;&gt;ButtonLabels.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableStringList, Brick Studio, Version=1.0.6.35412, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableStringList, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Label_OK.Name" xml:space="preserve">
     <value>Label_OK</value>
   </data>
   <data name="&gt;&gt;Label_OK.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.6.35412, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Label_Cancel.Name" xml:space="preserve">
     <value>Label_Cancel</value>
   </data>
   <data name="&gt;&gt;Label_Cancel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.6.35412, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Label_Yes.Name" xml:space="preserve">
     <value>Label_Yes</value>
   </data>
   <data name="&gt;&gt;Label_Yes.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.6.35412, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Label_No.Name" xml:space="preserve">
     <value>Label_No</value>
   </data>
   <data name="&gt;&gt;Label_No.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.6.35412, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Label_Abort.Name" xml:space="preserve">
     <value>Label_Abort</value>
   </data>
   <data name="&gt;&gt;Label_Abort.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.6.35412, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Label_Retry.Name" xml:space="preserve">
     <value>Label_Retry</value>
   </data>
   <data name="&gt;&gt;Label_Retry.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.6.35412, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Label_Ignore.Name" xml:space="preserve">
     <value>Label_Ignore</value>
   </data>
   <data name="&gt;&gt;Label_Ignore.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.6.35412, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MessageBoxEX</value>

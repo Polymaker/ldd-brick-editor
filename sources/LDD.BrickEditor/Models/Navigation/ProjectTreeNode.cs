@@ -235,7 +235,7 @@ namespace LDD.BrickEditor.Models.Navigation
             {
                 if (Monitor.TryEnter(VisibilityLock))
                 {
-                    _VisibilityState = GetVisibilityState2();
+                    _VisibilityState = GetVisibilityState();
                     IsVisibilityDirty = false;
                 }
             }
@@ -260,7 +260,7 @@ namespace LDD.BrickEditor.Models.Navigation
             {
                 if (Monitor.TryEnter(VisibilityLock))
                 {
-                    _VisibilityState = GetVisibilityState2();
+                    _VisibilityState = GetVisibilityState();
                     state = _VisibilityState;
                     IsVisibilityDirty = false;
                     return true;
@@ -298,7 +298,7 @@ namespace LDD.BrickEditor.Models.Navigation
             return IsHiddenCore();
         }
 
-        protected virtual VisibilityState GetVisibilityState2()
+        protected virtual VisibilityState GetVisibilityState()
         {
             bool isHidden = IsHiddenCore();
 
