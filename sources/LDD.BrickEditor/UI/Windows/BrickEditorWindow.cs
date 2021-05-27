@@ -386,14 +386,14 @@ namespace LDD.BrickEditor.UI.Windows
             WaitPopup.Shown += OnInitializationPopupLoaded;
             WaitPopup.ShowCenter(this);
 
-            var test = new AsyncInvoker(this);
-            test.WhenShown(WaitPopup, () =>
-            {
+            //var test = new AsyncInvoker(this);
+            //test.WhenShown(WaitPopup, () =>
+            //{
 
-            }).Then(() =>
-            {
+            //}).Then(() =>
+            //{
 
-            });
+            //});
         }
 
         private void OnInitializationPopupLoaded(object sender, EventArgs e)

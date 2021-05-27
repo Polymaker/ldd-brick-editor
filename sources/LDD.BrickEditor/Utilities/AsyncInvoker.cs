@@ -19,8 +19,6 @@ namespace LDD.BrickEditor.Utilities
             ActionQueue = new Queue<ScheduledAction>();
         }
 
-        
-
         private class ScheduledAction
         {
             public Action Action { get; set; }
