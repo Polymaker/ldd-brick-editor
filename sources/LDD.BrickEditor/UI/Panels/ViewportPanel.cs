@@ -57,6 +57,8 @@ namespace LDD.BrickEditor.UI.Panels
 
         private List<LightInfo> SceneLights;
 
+        public StudRefModel SelectedStudModel { get; private set; }
+
         public ViewportPanel()
         {
             InitializeComponent();
@@ -150,7 +152,6 @@ namespace LDD.BrickEditor.UI.Panels
             });
 #endif
         }
-
 
         protected override void OnVisibleChanged(EventArgs e)
         {
@@ -246,6 +247,12 @@ namespace LDD.BrickEditor.UI.Panels
 
             CameraManipulator = new CameraManipulator(new Camera());
             CameraManipulator.Initialize(new Vector3(5), Vector3.Zero);
+
+            SelectedStudModel = new StudRefModel()
+            {
+                Visible = false,
+                RenderLayer = 2
+            };
 
             InitializeSelectionGizmo();
         }
@@ -994,7 +1001,11 @@ namespace LDD.BrickEditor.UI.Panels
             RebuildBoneModels();
             RebuildPatternModels();
             SetupDefaultCamera();
-            LoadedModels.Add(CursorModel);
+
+            if (!LoadedModels.Contains(CursorModel))
+                LoadedModels.Add(CursorModel);
+            if (!LoadedModels.Contains(SelectedStudModel))
+                LoadedModels.Add(SelectedStudModel);
             project.UpdateModelStatistics();
         }
 
@@ -1389,11 +1400,19 @@ namespace LDD.BrickEditor.UI.Panels
 
             UpdateGizmoFromSelection();
             UpdateSelectionInfoPanel();
+
+            if (ProjectManager.SelectedElements.Any())
+            {
+                var selectedMiscModels = LoadedModels.Where(x => x.IsSelected && !(x is PartElementModel)).ToList();
+                if (selectedMiscModels.Count > 0)
+                    selectedMiscModels.ForEach(x => x.IsSelected = false);
+            }
+
         }
 
         private void UpdateGizmoFromSelection()
         {
-            var selectedModels = GetSelectedModels(true).ToList();
+            var selectedModels = GetSelectedModels(true).Where(x => x.IsUserTransformable).ToList();
 
             if (selectedModels.Any() &&
                 selectedModels.All(x => x is CollisionModel))
@@ -1474,18 +1493,30 @@ namespace LDD.BrickEditor.UI.Panels
             }
         }
 
+        public void SelectModel(ModelBase model)
+        {
+            ProjectManager.ClearSelection();
+            var selectedMiscModels = LoadedModels.Where(x => x.IsSelected && !(x is PartElementModel)).ToList();
+            selectedMiscModels.ForEach(x => x.IsSelected = false);
+            model.IsSelected = true;
+
+            UpdateGizmoFromSelection();
+            UpdateSelectionInfoPanel();
+        }
+
         private void PerformRaySelection(Ray ray)
         {
             var visibleModels = GetVisibleModels();
             var selectedModels = LoadedModels.Where(x => x.IsSelected).ToList();
-            bool nonElementModelSelected = false;
+            bool nonElementModelWereSelected = false;
+            bool nonElementModelAreSelected = false;
 
-            foreach(var model in selectedModels)
+            foreach (var model in selectedModels)
             {
                 if (!(model is PartElementModel))
                 {
                     model.IsSelected = false;
-                    nonElementModelSelected = true;
+                    nonElementModelWereSelected = true;
                 }
             }
 
@@ -1507,11 +1538,11 @@ namespace LDD.BrickEditor.UI.Panels
                     }
                 }
 
-                int maxRenderLayer = intersectingModels.Any() ? 
+                int maxRenderLayer = intersectingModels.Any() ?
                     intersectingModels.Max(x => x.Item1.RenderLayer) : 0;
 
                 var closestHit = intersectingModels
-                    .Where(x=>x.Item1.RenderLayer == maxRenderLayer)
+                    .Where(x => x.Item1.RenderLayer == maxRenderLayer)
                     .OrderBy(x => x.Item2).FirstOrDefault();
 
                 var closestModel = closestHit?.Item1;
@@ -1521,11 +1552,10 @@ namespace LDD.BrickEditor.UI.Panels
                 {
                     ProjectManager.ClearSelection();
                     closestModel.IsSelected = true;
-                    nonElementModelSelected = true;
+                    nonElementModelAreSelected = true;
                 }
-                else if(closestElement != null)
+                else if (closestElement != null)
                 {
-                    nonElementModelSelected = false;
 
                     if (InputManager.IsControlDown())
                     {
@@ -1540,15 +1570,16 @@ namespace LDD.BrickEditor.UI.Panels
                         ProjectManager.SelectElement(closestElement);
                     }
                 }
-                else
+                else if (!(InputManager.IsControlDown() || InputManager.IsShiftDown()))
                     ProjectManager.ClearSelection();
             }
 
-            if (nonElementModelSelected)
+            if (nonElementModelWereSelected || nonElementModelAreSelected)
             {
                 UpdateGizmoFromSelection();
                 UpdateSelectionInfoPanel();
             }
+
         }
 
         #endregion
@@ -1932,23 +1963,12 @@ namespace LDD.BrickEditor.UI.Panels
 
         private void MeshesMenu_CalculateOutlines_Click(object sender, EventArgs e)
         {
-            if (ProjectManager.IsProjectOpen)
-            {
-                try
-                {
-                    CurrentProject.ComputeEdgeOutlines();
-                }
-                catch (Exception ex)
-                {
-                    Logger.Error(ex, "Error while calculating outlines");
-                }
-            }
+            ProjectManager.RecalculateOutlines();
         }
 
         private void MeshesMenu_RemoveOutlines_Click(object sender, EventArgs e)
         {
-            if (ProjectManager.IsProjectOpen)
-                CurrentProject.ClearEdgeOutlines();
+            ProjectManager.RemoveOutlines();
         }
 
         private void Bones_CalcBounding_Click(object sender, EventArgs e)
@@ -2147,7 +2167,15 @@ namespace LDD.BrickEditor.UI.Panels
         public bool Is3DViewFocused => InputManager.ContainsFocus;
 
 
+        public void SelectStudReference(StudReference reference)
+        {
+            SelectedStudModel.Stud = reference;
 
+            if (reference != null)
+                SelectModel(SelectedStudModel);
+
+            SelectedStudModel.Visible = reference != null;
+        }
 
         #endregion
 

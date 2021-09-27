@@ -12,6 +12,26 @@ namespace LDD.BrickEditor.Rendering
         
     }
 
+    public struct Vert : IVertexData
+    {
+        public Vector3 Position;
+
+        public Vert(Vector3 position)
+        {
+            Position = position;
+        }
+
+        public Vert(float x, float y, float z)
+        {
+            Position = new Vector3(x, y, z);
+        }
+
+        public static explicit operator Vert(VertVNT vert)
+        {
+            return new Vert(vert.Position);
+        }
+    }
+
     public struct VertVN : IVertexData
     {
         public Vector3 Position;

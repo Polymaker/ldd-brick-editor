@@ -183,6 +183,7 @@
     <Compile Include="Native\Kernel32.cs" />
     <Compile Include="Native\User32.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectHandling\ApplicationPanels.cs" />
     <Compile Include="ProjectHandling\ChangeAction.cs" />
     <Compile Include="ProjectHandling\Extensions\BoneElementExtension.cs" />
     <Compile Include="ProjectHandling\Extensions\FemaleStudModelExtension.cs" />
@@ -230,6 +231,7 @@
     <Compile Include="Rendering\Models\ModelBase.cs" />
     <Compile Include="Rendering\Models\PartElementModel.cs" />
     <Compile Include="Rendering\Models\PartialModel.cs" />
+    <Compile Include="Rendering\Models\StudRefModel.cs" />
     <Compile Include="Rendering\Models\SurfaceMeshBuffer.cs" />
     <Compile Include="Rendering\Models\SurfaceModelMesh.cs" />
     <Compile Include="Rendering\Models\VertexArrayBuffer.cs" />
@@ -452,6 +454,12 @@
     </Compile>
     <Compile Include="UI\Panels\StudConnectionPanel.Designer.cs">
       <DependentUpon>StudConnectionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\StudReferencesPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\StudReferencesPanel.Designer.cs">
+      <DependentUpon>StudReferencesPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\ValidationPanel.cs">
       <SubType>Form</SubType>
@@ -705,6 +713,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\StudConnectionPanel.resx">
       <DependentUpon>StudConnectionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\StudReferencesPanel.resx">
+      <DependentUpon>StudReferencesPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\ValidationPanel.de.resx">
       <DependentUpon>ValidationPanel.cs</DependentUpon>

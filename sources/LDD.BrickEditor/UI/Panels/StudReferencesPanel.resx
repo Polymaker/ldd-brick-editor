@@ -117,15 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SelectionToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ValidatePartButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
+  <metadata name="SelectionToolStrip.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ValidatePartButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="CurrentSelectionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
+    <value>Current:</value>
+  </data>
+  <data name="ElementsComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 23</value>
+  </data>
+  <data name="SyncSelectionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 20</value>
+  </data>
+  <data name="SyncSelectionCheckBox.Text" xml:space="preserve">
+    <value>Sync selection</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 23</value>
+  </data>
+  <data name="AddStudButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -140,132 +157,88 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="ValidatePartButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="AddStudButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="ValidatePartButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
+  <data name="AddStudButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
   </data>
-  <data name="ValidatePartButton.Text" xml:space="preserve">
-    <value>Validate Part</value>
+  <data name="AddStudButton.Text" xml:space="preserve">
+    <value>Add stud</value>
   </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 23</value>
-  </data>
-  <data name="ToggleErrorsButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToggleErrorsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 20</value>
-  </data>
-  <data name="ToggleErrorsButton.Text" xml:space="preserve">
-    <value>{0} Errors</value>
-  </data>
-  <data name="ToggleWarningsButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToggleWarningsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 20</value>
-  </data>
-  <data name="ToggleWarningsButton.Text" xml:space="preserve">
-    <value>{0} Warnings</value>
-  </data>
-  <data name="ToggleMessagesButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToggleMessagesButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 20</value>
-  </data>
-  <data name="ToggleMessagesButton.Text" xml:space="preserve">
-    <value>{0} Messages</value>
-  </data>
-  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="SelectionToolStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="toolStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="SelectionToolStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 29</value>
+  <data name="SelectionToolStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>852, 29</value>
   </data>
-  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SelectionToolStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="toolStrip1.Text" xml:space="preserve">
+  <data name="SelectionToolStrip.Text" xml:space="preserve">
     <value>toolStrip1</value>
   </data>
-  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
-    <value>toolStrip1</value>
+  <data name="&gt;&gt;SelectionToolStrip.Name" xml:space="preserve">
+    <value>SelectionToolStrip</value>
   </data>
-  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
+  <data name="&gt;&gt;SelectionToolStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;SelectionToolStrip.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;SelectionToolStrip.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="ColumnMessageType.Width" type="System.Int32, mscorlib">
-    <value>24</value>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>202, 17</value>
+  </metadata>
+  <data name="StudRefListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
   </data>
-  <data name="ColumnMessageCode.DisplayIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="StudRefListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
   </data>
-  <data name="ColumnMessageCode.Text" xml:space="preserve">
-    <value>Code</value>
+  <data name="StudRefListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>468, 266</value>
   </data>
-  <data name="ColumnMessageCode.Width" type="System.Int32, mscorlib">
-    <value>126</value>
+  <data name="StudRefListView.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="ColumnMessageDescription.Text" xml:space="preserve">
-    <value>Description</value>
+  <data name="&gt;&gt;StudRefListView.Name" xml:space="preserve">
+    <value>StudRefListView</value>
   </data>
-  <data name="ColumnMessageDescription.Width" type="System.Int32, mscorlib">
-    <value>322</value>
+  <data name="&gt;&gt;StudRefListView.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.DataListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="ColumnMessageSource.Text" xml:space="preserve">
-    <value>Source</value>
-  </data>
-  <data name="ColumnMessageSource.Width" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="ValidationMessageList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ValidationMessageList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 29</value>
-  </data>
-  <data name="ValidationMessageList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 192</value>
-  </data>
-  <data name="ValidationMessageList.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ValidationMessageList.Name" xml:space="preserve">
-    <value>ValidationMessageList</value>
-  </data>
-  <data name="&gt;&gt;ValidationMessageList.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.ObjectListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;ValidationMessageList.Parent" xml:space="preserve">
+  <data name="&gt;&gt;StudRefListView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ValidationMessageList.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;StudRefListView.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="localizableStringList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>122, 17</value>
-  </metadata>
-  <data name="ErrorCountText.Text" xml:space="preserve">
-    <value>{0} Errors</value>
+  <data name="olvConnectionColumn.Text" xml:space="preserve">
+    <value>Connection</value>
   </data>
-  <data name="WarningCountText.Text" xml:space="preserve">
-    <value>{0} Warnings</value>
+  <data name="olvConnectionColumn.Width" type="System.Int32, mscorlib">
+    <value>150</value>
   </data>
-  <data name="MessageCountText.Text" xml:space="preserve">
-    <value>{0} Messages</value>
+  <data name="olvPositionColumn.Text" xml:space="preserve">
+    <value>Stud position</value>
+  </data>
+  <data name="olvPositionColumn.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="olvValue1Column.Text" xml:space="preserve">
+    <value>Value 1</value>
+  </data>
+  <data name="olvValue2Column.Text" xml:space="preserve">
+    <value>Value 2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -273,20 +246,29 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>516, 221</value>
+    <value>852, 301</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Validations</value>
+    <value>Stud References</value>
   </data>
-  <data name="&gt;&gt;ValidatePartButton.Name" xml:space="preserve">
-    <value>ValidatePartButton</value>
+  <data name="&gt;&gt;CurrentSelectionLabel.Name" xml:space="preserve">
+    <value>CurrentSelectionLabel</value>
   </data>
-  <data name="&gt;&gt;ValidatePartButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;CurrentSelectionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ElementsComboBox.Name" xml:space="preserve">
+    <value>ElementsComboBox</value>
+  </data>
+  <data name="&gt;&gt;ElementsComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SyncSelectionCheckBox.Name" xml:space="preserve">
+    <value>SyncSelectionCheckBox</value>
+  </data>
+  <data name="&gt;&gt;SyncSelectionCheckBox.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.ToolStripCheckBox, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
@@ -294,74 +276,44 @@
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToggleErrorsButton.Name" xml:space="preserve">
-    <value>ToggleErrorsButton</value>
+  <data name="&gt;&gt;AddStudButton.Name" xml:space="preserve">
+    <value>AddStudButton</value>
   </data>
-  <data name="&gt;&gt;ToggleErrorsButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AddStudButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToggleWarningsButton.Name" xml:space="preserve">
-    <value>ToggleWarningsButton</value>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
   </data>
-  <data name="&gt;&gt;ToggleWarningsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToggleMessagesButton.Name" xml:space="preserve">
-    <value>ToggleMessagesButton</value>
+  <data name="&gt;&gt;olvConnectionColumn.Name" xml:space="preserve">
+    <value>olvConnectionColumn</value>
   </data>
-  <data name="&gt;&gt;ToggleMessagesButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColumnMessageType.Name" xml:space="preserve">
-    <value>ColumnMessageType</value>
-  </data>
-  <data name="&gt;&gt;ColumnMessageType.Type" xml:space="preserve">
+  <data name="&gt;&gt;olvConnectionColumn.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="&gt;&gt;ColumnMessageCode.Name" xml:space="preserve">
-    <value>ColumnMessageCode</value>
+  <data name="&gt;&gt;olvPositionColumn.Name" xml:space="preserve">
+    <value>olvPositionColumn</value>
   </data>
-  <data name="&gt;&gt;ColumnMessageCode.Type" xml:space="preserve">
+  <data name="&gt;&gt;olvPositionColumn.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="&gt;&gt;ColumnMessageDescription.Name" xml:space="preserve">
-    <value>ColumnMessageDescription</value>
+  <data name="&gt;&gt;olvValue1Column.Name" xml:space="preserve">
+    <value>olvValue1Column</value>
   </data>
-  <data name="&gt;&gt;ColumnMessageDescription.Type" xml:space="preserve">
+  <data name="&gt;&gt;olvValue1Column.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="&gt;&gt;ColumnMessageSource.Name" xml:space="preserve">
-    <value>ColumnMessageSource</value>
+  <data name="&gt;&gt;olvValue2Column.Name" xml:space="preserve">
+    <value>olvValue2Column</value>
   </data>
-  <data name="&gt;&gt;ColumnMessageSource.Type" xml:space="preserve">
+  <data name="&gt;&gt;olvValue2Column.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;localizableStringList1.Name" xml:space="preserve">
-    <value>localizableStringList1</value>
-  </data>
-  <data name="&gt;&gt;localizableStringList1.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableStringList, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ErrorCountText.Name" xml:space="preserve">
-    <value>ErrorCountText</value>
-  </data>
-  <data name="&gt;&gt;ErrorCountText.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;WarningCountText.Name" xml:space="preserve">
-    <value>WarningCountText</value>
-  </data>
-  <data name="&gt;&gt;WarningCountText.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;MessageCountText.Name" xml:space="preserve">
-    <value>MessageCountText</value>
-  </data>
-  <data name="&gt;&gt;MessageCountText.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ValidationPanel</value>
+    <value>StudReferencesPanel</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>LDD.BrickEditor.UI.Panels.ProjectDocumentPanel, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>

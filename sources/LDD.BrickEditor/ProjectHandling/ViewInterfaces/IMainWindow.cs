@@ -11,5 +11,6 @@ namespace LDD.BrickEditor.ProjectHandling.ViewInterfaces
     public interface IMainWindow : IWin32Window
     {
         DockPanel GetDockPanelControl();
+        void ActivatePanel(ApplicationPanels panel);
     }
 }

@@ -23,6 +23,8 @@ namespace LDD.BrickEditor.ProjectHandling
 
         public bool ProjectIsModified { get; private set; }
 
+        public bool NonReversibleActionPerformed { get; set; }
+
         private List<ChangeAction> UndoHistory { get; }
 
         private List<ChangeAction> RedoHistory { get; }

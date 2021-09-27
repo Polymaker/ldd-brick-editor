@@ -14,6 +14,7 @@ namespace LDD.BrickEditor.Rendering.Models
         public HardEdgesModel()
         {
             EdgePoints = new List<Vector3>();
+            IsSelectable = false;
         }
 
         public override bool RayIntersects(Ray ray, out float distance)

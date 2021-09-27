@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--DockPanel configuration file. Author: Weifen Luo, all rights reserved.-->
 <!--!!! AUTOMATICALLY GENERATED FILE. DO NOT MODIFY !!!-->
-<DockPanel FormatVersion="1.0" DockLeftPortion="280" DockRightPortion="0.25" DockTopPortion="0.25" DockBottomPortion="250" ActiveDocumentPane="0" ActivePane="2" Name="Default Layout" AppVersion="1.0.6">
-  <Contents Count="8">
+<DockPanel FormatVersion="1.0" DockLeftPortion="291" DockRightPortion="0.25" DockTopPortion="0.25" DockBottomPortion="250" ActiveDocumentPane="0" ActivePane="0" Name="Default Layout" AppVersion="1.0.7">
+  <Contents Count="9">
     <Content ID="0" PersistString="LDD.BrickEditor.UI.Panels.ViewportPanel" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     <Content ID="1" PersistString="LDD.BrickEditor.UI.Panels.StudConnectionPanel" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     <Content ID="2" PersistString="LDD.BrickEditor.UI.Panels.NavigationPanel" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
@@ -11,6 +11,7 @@
     <Content ID="5" PersistString="LDD.BrickEditor.UI.Panels.ConnectionEditorPanel" AutoHidePortion="250" IsHidden="False" IsFloat="False" />
     <Content ID="6" PersistString="LDD.BrickEditor.UI.Panels.ValidationPanel" AutoHidePortion="250" IsHidden="False" IsFloat="False" />
     <Content ID="7" PersistString="LDD.BrickEditor.UI.Panels.ProjectInfoPanel" AutoHidePortion="250" IsHidden="False" IsFloat="False" />
+    <Content ID="8" PersistString="LDD.BrickEditor.UI.Panels.StudReferencesPanel" AutoHidePortion="250" IsHidden="False" IsFloat="False" />
   </Contents>
   <Panes Count="4">
     <Pane ID="0" DockState="Document" ActiveContent="0">
@@ -25,11 +26,12 @@
       </Contents>
     </Pane>
     <Pane ID="2" DockState="DockBottom" ActiveContent="4">
-      <Contents Count="4">
-        <Content ID="0" RefID="4" />
-        <Content ID="1" RefID="5" />
-        <Content ID="2" RefID="6" />
-        <Content ID="3" RefID="7" />
+      <Contents Count="5">
+        <Content ID="0" RefID="7" />
+        <Content ID="1" RefID="4" />
+        <Content ID="2" RefID="5" />
+        <Content ID="3" RefID="8" />
+        <Content ID="4" RefID="6" />
       </Contents>
     </Pane>
     <Pane ID="3" DockState="DockRight" ActiveContent="2">

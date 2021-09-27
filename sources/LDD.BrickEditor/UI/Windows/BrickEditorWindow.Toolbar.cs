@@ -352,7 +352,8 @@ namespace LDD.BrickEditor.UI.Windows
             var tsmi = sender as ToolStripMenuItem;
             if (tsmi.Tag is UserUILayout layout)
             {
-                LoadCustomLayout(layout);
+                if (LoadCustomLayout(layout))
+                    ValidateAllPanelsLoaded();
             }
         }
 
@@ -381,6 +382,7 @@ namespace LDD.BrickEditor.UI.Windows
         private void WindowMenu_ResetLayout_Click(object sender, EventArgs e)
         {
             LoadDefaultLayout();
+            ValidateAllPanelsLoaded();
         }
 
         private void HelpMenu_About_Click(object sender, EventArgs e)

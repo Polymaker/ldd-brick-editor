@@ -159,36 +159,6 @@
   <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>665, 17</value>
   </metadata>
-  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>984, 27</value>
-  </data>
-  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="MainMenu.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
-    <value>MainMenu</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 23</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
   <data name="File_NewProjectMenu.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+N</value>
   </data>
@@ -209,9 +179,6 @@
   </data>
   <data name="FileMenu_OpenPartFiles.Text" xml:space="preserve">
     <value>Open primitive files...</value>
-  </data>
-  <data name="FileMenu_OpenPartFiles.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 6</value>
@@ -270,11 +237,11 @@
   <data name="File_CloseProjectMenu.Text" xml:space="preserve">
     <value>Close Project</value>
   </data>
-  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 23</value>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 23</value>
   </data>
-  <data name="editToolStripMenuItem.Text" xml:space="preserve">
-    <value>Edit</value>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
   </data>
   <data name="EditMenu_Undo.ShortcutKeyDisplayString" xml:space="preserve">
     <value>Ctrl+Z</value>
@@ -333,11 +300,11 @@
   <data name="Edit_BatchBuild.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="ToolsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 23</value>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 23</value>
   </data>
-  <data name="ToolsMenuItem.Text" xml:space="preserve">
-    <value>Tools</value>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit</value>
   </data>
   <data name="ExportBrickMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 22</value>
@@ -375,11 +342,11 @@
   <data name="Tools_SettingsMenu.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
-  <data name="WindowMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 23</value>
+  <data name="ToolsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 23</value>
   </data>
-  <data name="WindowMenuItem.Text" xml:space="preserve">
-    <value>Window</value>
+  <data name="ToolsMenuItem.Text" xml:space="preserve">
+    <value>Tools</value>
   </data>
   <data name="WindowMenu_SaveLayout.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
@@ -405,17 +372,23 @@
   <data name="WindowMenu_ResetLayout.Text" xml:space="preserve">
     <value>Reset Layout</value>
   </data>
-  <data name="HelpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
+  <data name="WindowMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 23</value>
   </data>
-  <data name="HelpMenuItem.Text" xml:space="preserve">
-    <value>?</value>
+  <data name="WindowMenuItem.Text" xml:space="preserve">
+    <value>Window</value>
   </data>
   <data name="HelpMenu_About.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 22</value>
   </data>
   <data name="HelpMenu_About.Text" xml:space="preserve">
     <value>About...</value>
+  </data>
+  <data name="HelpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="HelpMenuItem.Text" xml:space="preserve">
+    <value>?</value>
   </data>
   <data name="SelectedBuildLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 20</value>
@@ -425,6 +398,30 @@
   </data>
   <data name="BuildConfigComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 23</value>
+  </data>
+  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>984, 27</value>
+  </data>
+  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MainMenu.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
+    <value>MainMenu</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="AutoSaveTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>780, 17</value>
@@ -439,7 +436,7 @@
     <value>Restart LDD...</value>
   </data>
   <data name="WindowTitle.Text" xml:space="preserve">
-    <value>LDD Brick Studio</value>
+    <value>LDD Brick Editor</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -454,7 +451,7 @@
     <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>LDD Brick Studio</value>
+    <value>LDD Brick Editor</value>
   </data>
   <data name="&gt;&gt;vS2015LightTheme1.Name" xml:space="preserve">
     <value>vS2015LightTheme1</value>
@@ -712,25 +709,25 @@
     <value>localizableStringList1</value>
   </data>
   <data name="&gt;&gt;localizableStringList1.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableStringList, Brick Studio, Version=1.0.7.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableStringList, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;StartLddText.Name" xml:space="preserve">
     <value>StartLddText</value>
   </data>
   <data name="&gt;&gt;StartLddText.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RestartLddText.Name" xml:space="preserve">
     <value>RestartLddText</value>
   </data>
   <data name="&gt;&gt;RestartLddText.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;WindowTitle.Name" xml:space="preserve">
     <value>WindowTitle</value>
   </data>
   <data name="&gt;&gt;WindowTitle.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Studio, Version=1.0.7.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.Localization.LocalizableString, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>BrickEditorWindow</value>

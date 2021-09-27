@@ -119,6 +119,7 @@ namespace LDD.BrickEditor.UI.Panels
             }
 
             UpdateStatusButtons();
+            ColumnMessageSource.AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
         public void ShowBuildMessages(IEnumerable<ValidationMessage> messages)
@@ -189,6 +190,8 @@ namespace LDD.BrickEditor.UI.Panels
             {
                 if (message.SourceElement is PartProperties)
                     return ModelLocalizations.Label_Part;
+                else if (message.SourceElement is StudReference studReference)
+                    return $"{studReference.Parent.Name} > {studReference.Name}";
                 return message.SourceElement.Name;
             }
 
@@ -202,14 +205,39 @@ namespace LDD.BrickEditor.UI.Panels
 
         private void ValidationMessageList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (ValidationMessageList.FocusedItem != null)
+            if (ValidationMessageList.FocusedObject is ValidationMessage message)
             {
-                var message = ValidationMessageList.FocusedObject as ValidationMessage;
-                if (message?.SourceElement != null)
-                {
-                    ProjectManager.SelectElement(message.SourceElement);
-                }
+                GotoValidationMessage(message);
+
             }
+        }
+
+        private void GotoValidationMessage(ValidationMessage message)
+        {
+            PartElement elementToSelect = message.SourceElement;
+
+
+            if (message.SourceElement is PartProperties)
+                ProjectManager.MainWindow.ActivatePanel(ApplicationPanels.PropertiesPanel);
+            else if (message.SourceElement is PartConnection)
+                ProjectManager.MainWindow.ActivatePanel(ApplicationPanels.ConnectionPanel);
+            else if (message.SourceElement is StudReference studReference)
+            {
+                elementToSelect = studReference.Parent;
+                ProjectManager.MainWindow.ActivatePanel(ApplicationPanels.StudReferencesPanel);
+            }
+            else
+            {
+                if (elementToSelect is PartCullingModel && message.Code.Contains("STUD"))
+                    ProjectManager.MainWindow.ActivatePanel(ApplicationPanels.StudReferencesPanel);
+                else
+                    ProjectManager.MainWindow.ActivatePanel(ApplicationPanels.DetailPanel);
+            }
+
+            if (elementToSelect != null)
+                ProjectManager.SelectElement(elementToSelect);
+
+
         }
     }
 }

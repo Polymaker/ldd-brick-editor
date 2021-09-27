@@ -158,7 +158,7 @@
                   Name="$(var.BrickEditor.Name)" Description="$(var.BrickEditor.Description)"
                   Target="[INSTALLFOLDER]Brick Editor.exe"
                   WorkingDirectory="INSTALLFOLDER">
-          <Icon Id="StartMenuIcon.ico" SourceFile="$(var.LDD.BrickEditor.ProjectDir)Resources\BrickStudioIcon.ico"/>
+          <!--<Icon Id="StartMenuIcon.ico" SourceFile="$(var.LDD.BrickEditor.ProjectDir)Resources\BrickStudioIcon.ico"/>-->
         </Shortcut>
         <RemoveFolder Id="ProgramMenuFolder" On="uninstall"/>
         <RegistryValue Root="HKCU" Key="Software\PolyDev\BrickEditor" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
@@ -168,7 +168,7 @@
              Name="$(var.BrickEditor.Name)" Description="$(var.BrickEditor.Description)"
                   Target="[INSTALLFOLDER]Brick Editor.exe"
                   WorkingDirectory="INSTALLFOLDER">
-          <Icon Id="DesktopIcon.ico" SourceFile="$(var.LDD.BrickEditor.ProjectDir)Resources\BrickStudioIcon.ico"/>
+          <!--<Icon Id="DesktopIcon.ico" SourceFile="$(var.LDD.BrickEditor.ProjectDir)Resources\BrickStudioIcon.ico"/>-->
         </Shortcut>
         <RegistryValue Root="HKCU" Key="Software\PolyDev\BrickEditor" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
       </Component>

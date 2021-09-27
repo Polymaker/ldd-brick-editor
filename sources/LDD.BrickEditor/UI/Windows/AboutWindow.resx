@@ -235,7 +235,7 @@
     <value>10</value>
   </data>
   <data name="AppTitleLabel.Text" xml:space="preserve">
-    <value>LDD Brick Studio</value>
+    <value>LDD Brick Editor</value>
   </data>
   <data name="&gt;&gt;AppTitleLabel.Name" xml:space="preserve">
     <value>AppTitleLabel</value>

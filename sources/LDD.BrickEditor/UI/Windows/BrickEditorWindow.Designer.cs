@@ -75,9 +75,9 @@
             this.BuildConfigComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.AutoSaveTimer = new System.Windows.Forms.Timer(this.components);
             this.localizableStringList1 = new LDD.BrickEditor.Localization.LocalizableStringList(this.components);
-            this.StartLddText = new LDD.BrickEditor.Localization.LocalizableString();
-            this.RestartLddText = new LDD.BrickEditor.Localization.LocalizableString();
-            this.WindowTitle = new LDD.BrickEditor.Localization.LocalizableString();
+            this.StartLddText = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
+            this.RestartLddText = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
+            this.WindowTitle = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 

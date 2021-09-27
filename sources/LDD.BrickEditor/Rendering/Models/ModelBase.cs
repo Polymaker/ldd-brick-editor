@@ -10,6 +10,7 @@ namespace LDD.BrickEditor.Rendering
     public abstract class ModelBase : ITransformableElement, IDisposable
     {
         private bool _Visible;
+        private bool _Selected;
 
         public bool Visible
         {
@@ -65,14 +66,27 @@ namespace LDD.BrickEditor.Rendering
 
         public bool IsSelectable { get; set; } = true;
 
-        public bool IsSelected { get; set; }
+        public bool IsUserTransformable { get; set; } = true;   
+
+        public bool IsSelected
+        {
+            get => _Selected;
+            set
+            {
+                if (_Selected != value)
+                {
+                    _Selected = value;
+                    OnSelectedChanged();
+                }
+            }
+        }
 
         public int RenderLayer { get; set; }
 
         public Vector3 Origin => Vector3.TransformPosition(Vector3.Zero, Transform);
 
         public event EventHandler VisibilityChanged;
-
+        public event EventHandler SelectedChanged;
         public event EventHandler TransformChanged;
 
         public ModelBase()
@@ -135,6 +149,11 @@ namespace LDD.BrickEditor.Rendering
         protected virtual void OnVisibilityChanged()
         {
             VisibilityChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        protected virtual void OnSelectedChanged()
+        {
+            SelectedChanged?.Invoke(this, EventArgs.Empty);
         }
 
         public virtual void RenderModel(Camera camera, MeshRenderMode mode = MeshRenderMode.Solid)

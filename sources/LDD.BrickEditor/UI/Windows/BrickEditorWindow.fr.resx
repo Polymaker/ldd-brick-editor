@@ -178,7 +178,7 @@
     <value>Générer les fichiers dans:</value>
   </data>
   <data name="WindowTitle.Text" xml:space="preserve">
-    <value>LDD Brick Studio</value>
+    <value>LDD Brick Editor</value>
   </data>
   <data name="HelpMenu_About.Text" xml:space="preserve">
     <value>À propos...</value>
@@ -199,7 +199,7 @@
     <value>Fenêtres</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>LDD Brick Studio</value>
+    <value>LDD Brick Editor</value>
   </data>
   <data name="Edit_BatchBuild.Text" xml:space="preserve">
     <value>Construction par lots...</value>

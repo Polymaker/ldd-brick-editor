@@ -136,7 +136,7 @@
     <value>speichern</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>LDD Brick Studio</value>
+    <value>LDD Brick Editor</value>
   </data>
   <data name="Edit_BatchBuild.Text" xml:space="preserve">
     <value>Batch Build...</value>
@@ -190,7 +190,7 @@
     <value>Fenster</value>
   </data>
   <data name="WindowTitle.Text" xml:space="preserve">
-    <value>LDD Brick Studio</value>
+    <value>LDD Brick Editor</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>Datei</value>

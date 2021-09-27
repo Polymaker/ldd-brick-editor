@@ -158,6 +158,7 @@ namespace LDD.BrickEditor.UI.Windows
         public ElementDetailPanel DetailPanel { get; private set; }
         public StudConnectionPanel StudConnectionPanel { get; private set; }
         public ConnectionEditorPanel ConnectionPanel { get; private set; }
+        public StudReferencesPanel StudReferencesPanel { get; private set; }
         public ProjectInfoPanel InfoPanel { get; private set; }
         public ProgressPopupWindow WaitPopup { get; private set; }
 
@@ -170,38 +171,44 @@ namespace LDD.BrickEditor.UI.Windows
             DetailPanel,
             StudConnectionPanel,
             ConnectionPanel,
-            InfoPanel
+            InfoPanel,
+            StudReferencesPanel
         };
 
         private void InitializePanels()
         {
             Logger.Info("Initializing Panels");
 
-            WaitPopup.UpdateProgress(0, 10);
+            int totalPanels = DockPanels.Length;
+            int currentPanel = 0;
+            WaitPopup.UpdateProgress(0, totalPanels);
 
             NavigationPanel = new NavigationPanel(ProjectManager);
-            WaitPopup.UpdateProgress(1, 10);
+            WaitPopup.UpdateProgress(++currentPanel, totalPanels);
 
             ViewportPanel = new ViewportPanel(ProjectManager);
-            WaitPopup.UpdateProgress(2, 10);
+            WaitPopup.UpdateProgress(++currentPanel, totalPanels);
 
             ValidationPanel = new ValidationPanel(ProjectManager);
-            WaitPopup.UpdateProgress(3, 10);
+            WaitPopup.UpdateProgress(++currentPanel, totalPanels);
 
             PropertiesPanel = new PartPropertiesPanel(ProjectManager);
-            WaitPopup.UpdateProgress(4, 10);
+            WaitPopup.UpdateProgress(++currentPanel, totalPanels);
 
             DetailPanel = new ElementDetailPanel(ProjectManager);
-            WaitPopup.UpdateProgress(5, 10);
+            WaitPopup.UpdateProgress(++currentPanel, totalPanels);
 
             StudConnectionPanel = new StudConnectionPanel(ProjectManager);
-            WaitPopup.UpdateProgress(6, 10);
+            WaitPopup.UpdateProgress(++currentPanel, totalPanels);
+
+            StudReferencesPanel = new StudReferencesPanel(ProjectManager);
+            WaitPopup.UpdateProgress(++currentPanel, totalPanels);
 
             ConnectionPanel = new ConnectionEditorPanel(ProjectManager);
-            WaitPopup.UpdateProgress(7, 10);
+            WaitPopup.UpdateProgress(++currentPanel, totalPanels);
 
             InfoPanel = new ProjectInfoPanel(ProjectManager);
-            WaitPopup.UpdateProgress(8, 10);
+            WaitPopup.UpdateProgress(++currentPanel, totalPanels);
 
         }
 
@@ -209,17 +216,21 @@ namespace LDD.BrickEditor.UI.Windows
         {
             Logger.Info("Loading Panels");
 
+            if (WaitPopup != null && WaitPopup.Visible)
+                WaitPopup.UpdateProgress(0, 2);
+
             var savedLayout = SettingsManager.GetSavedUserLayout();
+
             if (!(savedLayout != null && LoadCustomLayout(savedLayout)))
                 LoadDefaultLayout();
-
+            
             if (WaitPopup != null && WaitPopup.Visible)
-                WaitPopup.UpdateProgress(9, 10);
+                WaitPopup.UpdateProgress(1, 2);
 
             ValidateAllPanelsLoaded();
 
             if (WaitPopup != null && WaitPopup.Visible)
-                WaitPopup.UpdateProgress(10, 10);
+                WaitPopup.UpdateProgress(1, 2);
 
             foreach (IDockContent dockPanel in DockPanelControl.Contents)
             {
@@ -250,7 +261,10 @@ namespace LDD.BrickEditor.UI.Windows
                 for (int i = 0; i < panels.Length; i++)
                 {
                     if (!loadedPanels.Contains(panels[i]))
+                    {
+                        Logger.Warn($"Panel '{panels[i].GetType().Name}' was not loaded");
                         (panels[i] as DockContent).Show(pane, null);
+                    }
                 }
             }
 
@@ -263,8 +277,6 @@ namespace LDD.BrickEditor.UI.Windows
                 dockPane.ActiveContent = activeContent;
             }
         }
-
-
 
         private IDockContent DockContentLoadingHandler(string str)
         {
@@ -492,6 +504,40 @@ namespace LDD.BrickEditor.UI.Windows
                 Thread.Sleep(200);
                 Invoke(new MethodInvoker(CheckCanRecoverProject));
             });
+        }
+
+        public void ActivatePanel(ApplicationPanels panel)
+        {
+            switch (panel)
+            {
+                case ApplicationPanels.NavigationPanel:
+                    NavigationPanel.Activate();
+                    break;
+                case ApplicationPanels.ViewportPanel:
+                    ViewportPanel.Activate();
+                    break;
+                case ApplicationPanels.ValidationPanel:
+                    ValidationPanel.Activate();
+                    break;
+                case ApplicationPanels.PropertiesPanel:
+                    PropertiesPanel.Activate();
+                    break;
+                case ApplicationPanels.DetailPanel:
+                    DetailPanel.Activate();
+                    break;
+                case ApplicationPanels.StudConnectionPanel:
+                    StudConnectionPanel.Activate();
+                    break;
+                case ApplicationPanels.ConnectionPanel:
+                    ConnectionPanel.Activate();
+                    break;
+                case ApplicationPanels.InfoPanel:
+                    InfoPanel.Activate();
+                    break;
+                case ApplicationPanels.StudReferencesPanel:
+                    StudReferencesPanel.Activate();
+                    break;
+            }
         }
 
         #endregion
@@ -964,6 +1010,6 @@ namespace LDD.BrickEditor.UI.Windows
             }
         }
 
-        
+
     }
 }

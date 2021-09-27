@@ -457,6 +457,35 @@ namespace LDD.BrickEditor.Rendering
             GL.PopAttrib();
         }
 
+        public static void FillRectangle(Matrix4 transform, Vector2 size, Vector4 color, float thickness = 1f)
+        {
+            ColorShader.Use();
+            ColorShader.ModelMatrix.Set(transform);
+            ColorShader.Color.Set(color);
+
+            Vector3 CreateVert(Vector2 pos)
+            {
+                return new Vector3(pos.X, 0, pos.Y);
+            }
+
+            var positions = new Vector4(0, 0, size.X, size.Y);
+            var quadVerts = new Vector3[]
+            {
+                CreateVert(positions.Xy),
+                CreateVert(positions.Xw),
+                CreateVert(positions.Zw),
+                CreateVert(positions.Zy)
+            };
+
+            var vertBuffer = new VertexArrayBuffer<Vector3>();
+
+            vertBuffer.SetElements(quadVerts);
+            vertBuffer.Bind();
+            vertBuffer.BindAttribute(SimpleTextureShader.Position, 0);
+            vertBuffer.DrawArray(PrimitiveType.Quads, 0, 4);
+            vertBuffer.Dispose();
+        }
+
         public static void DrawBoundingBox(Matrix4 transform, Vector3 pos, Vector3 size, Vector4 color, float thickness = 1f)
         {
             ColorShader.Use();

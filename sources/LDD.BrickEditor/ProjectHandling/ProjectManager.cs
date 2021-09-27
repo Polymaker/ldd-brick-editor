@@ -32,7 +32,6 @@ namespace LDD.BrickEditor.ProjectHandling
         private List<ValidationMessage> _ValidationMessages;
         private long LastValidation;
         private long LastSavedChange;
-        private bool ProjectWasModified;
 
         public PartProject CurrentProject { get; private set; }
 
@@ -47,7 +46,7 @@ namespace LDD.BrickEditor.ProjectHandling
         //public bool IsNewProject => IsProjectOpen && string.IsNullOrEmpty(CurrentProject.ProjectPath);
         public bool IsNewProject => IsProjectOpen && string.IsNullOrEmpty(CurrentProjectPath);
 
-        public bool IsModified => LastSavedChange != UndoRedoManager.CurrentChangeID;
+        public bool IsModified => LastSavedChange != UndoRedoManager.CurrentChangeID || UndoRedoManager.NonReversibleActionPerformed;
 
         public event EventHandler UndoHistoryChanged
         {
@@ -137,7 +136,6 @@ namespace LDD.BrickEditor.ProjectHandling
 
         #region Project Loading/Closing
 
-
         public void SetCurrentProject(PartProject project, string tempPath = null)
         {
             if (CurrentProject != project)
@@ -148,7 +146,6 @@ namespace LDD.BrickEditor.ProjectHandling
 
                 CurrentProject = project;
                 CurrentProjectPath = project.ProjectPath;
-                ProjectWasModified = false;
 
                 if (!string.IsNullOrEmpty(tempPath))
                 {
@@ -183,7 +180,7 @@ namespace LDD.BrickEditor.ProjectHandling
 
                 CurrentProject = null;
                 UndoRedoManager.ClearHistory();
-                ProjectWasModified = false;
+
                 if (!PreventProjectChange)
                     ProjectChanged?.Invoke(this, EventArgs.Empty);
             }
@@ -260,6 +257,7 @@ namespace LDD.BrickEditor.ProjectHandling
                 CurrentProjectPath = targetPath;
                 
                 LastSavedChange = UndoRedoManager.CurrentChangeID;
+                UndoRedoManager.NonReversibleActionPerformed = false;
 
                 if (oldPath != CurrentProjectPath)
                     SettingsManager.UpdateOpenedFile(TemporaryProjectPath, CurrentProjectPath);
@@ -418,6 +416,7 @@ namespace LDD.BrickEditor.ProjectHandling
 
             UndoRedoManager.ProcessElementPropertyChanged(e);
         }
+
         private void Project_ProjectCollectionChanged(object sender, System.ComponentModel.CollectionChangedEventArgs ccea)
         {
             var removedElements = ccea.RemovedElements<PartElement>();
@@ -830,12 +829,6 @@ namespace LDD.BrickEditor.ProjectHandling
         private void UndoRedoManager_UndoHistoryChanged(object sender, EventArgs e)
         {
             ProjectModified?.Invoke(this, EventArgs.Empty);
-
-            if (IsModified && !ProjectWasModified)
-            {
-                ProjectWasModified = true;
-                //CurrentProject.ProjectInfo.LastModification = DateTime.Now;
-            }
         }
 
         private void UndoRedoManager_BeginUndoRedo(object sender, EventArgs e)
@@ -1594,6 +1587,28 @@ namespace LDD.BrickEditor.ProjectHandling
             PreventCollectionEvents = false;
             ViewportWindow.InvalidateBones();
             EndBatchChanges();
+        }
+
+        public void RemoveOutlines()
+        {
+            if (!IsProjectOpen)
+                return;
+
+            CurrentProject.ClearEdgeOutlines();
+
+            UndoRedoManager.NonReversibleActionPerformed = true;
+            ProjectModified?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void RecalculateOutlines()
+        {
+            if (!IsProjectOpen)
+                return;
+
+            CurrentProject.ComputeEdgeOutlines();
+
+            UndoRedoManager.NonReversibleActionPerformed = true;
+            ProjectModified?.Invoke(this, EventArgs.Empty);
         }
 
         #endregion

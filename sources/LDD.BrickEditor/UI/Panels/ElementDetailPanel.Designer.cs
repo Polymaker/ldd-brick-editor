@@ -30,40 +30,113 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ElementDetailPanel));
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.LabelInertiaTensor = new System.Windows.Forms.Label();
+            this.LabelCenterOfMass = new System.Windows.Forms.Label();
+            this.InertiaTensorTextBox = new System.Windows.Forms.TextBox();
+            this.LabelMass = new System.Windows.Forms.Label();
+            this.CenterOfMassEditor = new LDD.BrickEditor.UI.Editors.VectorEditor();
+            this.MassNumberBox = new LDD.BrickEditor.UI.Controls.NumberTextBox();
+            this.FrictionCheckBox = new System.Windows.Forms.CheckBox();
+            this.BoundingEditor = new LDD.BrickEditor.UI.Controls.BoundingBoxEditor();
             this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.PropertiesTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.CollisionSizeLabel = new System.Windows.Forms.Label();
-            this.CollisionRadiusLabel = new System.Windows.Forms.Label();
-            this.SelectionTransformEdit = new LDD.BrickEditor.UI.Controls.TransformEditor();
-            this.NameLabel = new System.Windows.Forms.Label();
-            this.SubMaterialIndexLabel = new System.Windows.Forms.Label();
+            this.TransformEdit = new LDD.BrickEditor.UI.Controls.TransformEditor();
             this.SubMaterialIndexBox = new LDD.BrickEditor.UI.Controls.NumberTextBox();
             this.CollisionSizeEditor = new LDD.BrickEditor.UI.Editors.VectorEditor();
             this.CollisionRadiusBox = new LDD.BrickEditor.UI.Controls.NumberTextBox();
             this.SelectionInfoLabel = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.MainInfoTab = new System.Windows.Forms.TabPage();
-            this.StudRefTab = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.StudRefGridView = new System.Windows.Forms.DataGridView();
-            this.ConnectionColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.FieldIndexColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FieldPositionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudRefValue1Colunm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudRefValue2Colunm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AdjStudColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.localizableStringList1 = new LDD.BrickEditor.Localization.LocalizableStringList(this.components);
-            this.MultiSelectionMsg = new LDD.BrickEditor.Localization.LocalizableString();
-            this.NoSelectionMsg = new LDD.BrickEditor.Localization.LocalizableString();
-            this.TopStudsLabel = new LDD.BrickEditor.Localization.LocalizableString();
-            this.BottomStudsLabel = new LDD.BrickEditor.Localization.LocalizableString();
-            this.NoConnectorRefLabel = new LDD.BrickEditor.Localization.LocalizableString();
-            this.PropertiesTableLayout.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.MainInfoTab.SuspendLayout();
-            this.StudRefTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StudRefGridView)).BeginInit();
+            this.MultiSelectionMsg = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
+            this.NoSelectionMsg = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
+            this.TopStudsLabel = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
+            this.BottomStudsLabel = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
+            this.NoConnectorRefLabel = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
+            this.SelectionToolStrip = new System.Windows.Forms.ToolStrip();
+            this.CurrentSelectionLabel = new System.Windows.Forms.ToolStripLabel();
+            this.ElementsComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this.NameLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.SubMaterialIndexLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.CollisionRadiusLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.CollisionSizeLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.controlLabel1 = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.BonePhysPropertiesLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.BoneBoundsLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.SelectionToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NameLabel)).BeginInit();
+            this.NameLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SubMaterialIndexLabel)).BeginInit();
+            this.SubMaterialIndexLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CollisionRadiusLabel)).BeginInit();
+            this.CollisionRadiusLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CollisionSizeLabel)).BeginInit();
+            this.CollisionSizeLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlLabel1)).BeginInit();
+            this.controlLabel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BonePhysPropertiesLabel)).BeginInit();
+            this.BonePhysPropertiesLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BoneBoundsLabel)).BeginInit();
+            this.BoneBoundsLabel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanel3
+            // 
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
+            this.tableLayoutPanel3.Controls.Add(this.LabelInertiaTensor, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.LabelCenterOfMass, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.InertiaTensorTextBox, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.LabelMass, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.CenterOfMassEditor, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.MassNumberBox, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.FrictionCheckBox, 2, 2);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            // 
+            // LabelInertiaTensor
+            // 
+            resources.ApplyResources(this.LabelInertiaTensor, "LabelInertiaTensor");
+            this.LabelInertiaTensor.Name = "LabelInertiaTensor";
+            // 
+            // LabelCenterOfMass
+            // 
+            resources.ApplyResources(this.LabelCenterOfMass, "LabelCenterOfMass");
+            this.LabelCenterOfMass.Name = "LabelCenterOfMass";
+            // 
+            // InertiaTensorTextBox
+            // 
+            resources.ApplyResources(this.InertiaTensorTextBox, "InertiaTensorTextBox");
+            this.tableLayoutPanel3.SetColumnSpan(this.InertiaTensorTextBox, 2);
+            this.InertiaTensorTextBox.Name = "InertiaTensorTextBox";
+            // 
+            // LabelMass
+            // 
+            resources.ApplyResources(this.LabelMass, "LabelMass");
+            this.LabelMass.Name = "LabelMass";
+            // 
+            // CenterOfMassEditor
+            // 
+            resources.ApplyResources(this.CenterOfMassEditor, "CenterOfMassEditor");
+            this.tableLayoutPanel3.SetColumnSpan(this.CenterOfMassEditor, 2);
+            this.CenterOfMassEditor.Name = "CenterOfMassEditor";
+            // 
+            // MassNumberBox
+            // 
+            resources.ApplyResources(this.MassNumberBox, "MassNumberBox");
+            this.MassNumberBox.MaximumValue = 99999D;
+            this.MassNumberBox.Name = "MassNumberBox";
+            // 
+            // FrictionCheckBox
+            // 
+            resources.ApplyResources(this.FrictionCheckBox, "FrictionCheckBox");
+            this.FrictionCheckBox.Name = "FrictionCheckBox";
+            this.FrictionCheckBox.UseVisualStyleBackColor = true;
+            this.FrictionCheckBox.CheckedChanged += new System.EventHandler(this.FrictionCheckBox_CheckedChanged);
+            // 
+            // BoundingEditor
+            // 
+            resources.ApplyResources(this.BoundingEditor, "BoundingEditor");
+            this.BoundingEditor.Name = "BoundingEditor";
             // 
             // NameTextBox
             // 
@@ -72,46 +145,10 @@
             this.NameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.NameTextBox_Validating);
             this.NameTextBox.Validated += new System.EventHandler(this.NameTextBox_Validated);
             // 
-            // PropertiesTableLayout
+            // TransformEdit
             // 
-            resources.ApplyResources(this.PropertiesTableLayout, "PropertiesTableLayout");
-            this.PropertiesTableLayout.Controls.Add(this.CollisionSizeLabel, 0, 4);
-            this.PropertiesTableLayout.Controls.Add(this.CollisionRadiusLabel, 0, 3);
-            this.PropertiesTableLayout.Controls.Add(this.SelectionTransformEdit, 0, 5);
-            this.PropertiesTableLayout.Controls.Add(this.NameTextBox, 1, 1);
-            this.PropertiesTableLayout.Controls.Add(this.NameLabel, 0, 1);
-            this.PropertiesTableLayout.Controls.Add(this.SubMaterialIndexLabel, 0, 2);
-            this.PropertiesTableLayout.Controls.Add(this.SubMaterialIndexBox, 1, 2);
-            this.PropertiesTableLayout.Controls.Add(this.CollisionSizeEditor, 1, 4);
-            this.PropertiesTableLayout.Controls.Add(this.CollisionRadiusBox, 1, 3);
-            this.PropertiesTableLayout.Controls.Add(this.SelectionInfoLabel, 1, 0);
-            this.PropertiesTableLayout.Name = "PropertiesTableLayout";
-            // 
-            // CollisionSizeLabel
-            // 
-            resources.ApplyResources(this.CollisionSizeLabel, "CollisionSizeLabel");
-            this.CollisionSizeLabel.Name = "CollisionSizeLabel";
-            // 
-            // CollisionRadiusLabel
-            // 
-            resources.ApplyResources(this.CollisionRadiusLabel, "CollisionRadiusLabel");
-            this.CollisionRadiusLabel.Name = "CollisionRadiusLabel";
-            // 
-            // SelectionTransformEdit
-            // 
-            resources.ApplyResources(this.SelectionTransformEdit, "SelectionTransformEdit");
-            this.PropertiesTableLayout.SetColumnSpan(this.SelectionTransformEdit, 2);
-            this.SelectionTransformEdit.Name = "SelectionTransformEdit";
-            // 
-            // NameLabel
-            // 
-            resources.ApplyResources(this.NameLabel, "NameLabel");
-            this.NameLabel.Name = "NameLabel";
-            // 
-            // SubMaterialIndexLabel
-            // 
-            resources.ApplyResources(this.SubMaterialIndexLabel, "SubMaterialIndexLabel");
-            this.SubMaterialIndexLabel.Name = "SubMaterialIndexLabel";
+            resources.ApplyResources(this.TransformEdit, "TransformEdit");
+            this.TransformEdit.Name = "TransformEdit";
             // 
             // SubMaterialIndexBox
             // 
@@ -135,92 +172,6 @@
             // 
             resources.ApplyResources(this.SelectionInfoLabel, "SelectionInfoLabel");
             this.SelectionInfoLabel.Name = "SelectionInfoLabel";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.MainInfoTab);
-            this.tabControl1.Controls.Add(this.StudRefTab);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            // 
-            // MainInfoTab
-            // 
-            resources.ApplyResources(this.MainInfoTab, "MainInfoTab");
-            this.MainInfoTab.Controls.Add(this.PropertiesTableLayout);
-            this.MainInfoTab.Name = "MainInfoTab";
-            this.MainInfoTab.UseVisualStyleBackColor = true;
-            // 
-            // StudRefTab
-            // 
-            this.StudRefTab.Controls.Add(this.label1);
-            this.StudRefTab.Controls.Add(this.StudRefGridView);
-            resources.ApplyResources(this.StudRefTab, "StudRefTab");
-            this.StudRefTab.Name = "StudRefTab";
-            this.StudRefTab.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // StudRefGridView
-            // 
-            resources.ApplyResources(this.StudRefGridView, "StudRefGridView");
-            this.StudRefGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudRefGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ConnectionColumn,
-            this.FieldIndexColumn,
-            this.FieldPositionColumn,
-            this.StudRefValue1Colunm,
-            this.StudRefValue2Colunm,
-            this.AdjStudColumn});
-            this.StudRefGridView.Name = "StudRefGridView";
-            this.StudRefGridView.ReadOnly = true;
-            this.StudRefGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.StudRefGridView_CellFormatting);
-            this.StudRefGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.StudRefGridView_DataError);
-            // 
-            // ConnectionColumn
-            // 
-            this.ConnectionColumn.DataPropertyName = "ConnectionID";
-            resources.ApplyResources(this.ConnectionColumn, "ConnectionColumn");
-            this.ConnectionColumn.Name = "ConnectionColumn";
-            this.ConnectionColumn.ReadOnly = true;
-            // 
-            // FieldIndexColumn
-            // 
-            this.FieldIndexColumn.DataPropertyName = "FieldIndex";
-            resources.ApplyResources(this.FieldIndexColumn, "FieldIndexColumn");
-            this.FieldIndexColumn.Name = "FieldIndexColumn";
-            this.FieldIndexColumn.ReadOnly = true;
-            // 
-            // FieldPositionColumn
-            // 
-            resources.ApplyResources(this.FieldPositionColumn, "FieldPositionColumn");
-            this.FieldPositionColumn.Name = "FieldPositionColumn";
-            this.FieldPositionColumn.ReadOnly = true;
-            // 
-            // StudRefValue1Colunm
-            // 
-            this.StudRefValue1Colunm.DataPropertyName = "Value1";
-            resources.ApplyResources(this.StudRefValue1Colunm, "StudRefValue1Colunm");
-            this.StudRefValue1Colunm.Name = "StudRefValue1Colunm";
-            this.StudRefValue1Colunm.ReadOnly = true;
-            this.StudRefValue1Colunm.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // StudRefValue2Colunm
-            // 
-            this.StudRefValue2Colunm.DataPropertyName = "Value2";
-            resources.ApplyResources(this.StudRefValue2Colunm, "StudRefValue2Colunm");
-            this.StudRefValue2Colunm.Name = "StudRefValue2Colunm";
-            this.StudRefValue2Colunm.ReadOnly = true;
-            this.StudRefValue2Colunm.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // AdjStudColumn
-            // 
-            resources.ApplyResources(this.AdjStudColumn, "AdjStudColumn");
-            this.AdjStudColumn.Name = "AdjStudColumn";
-            this.AdjStudColumn.ReadOnly = true;
             // 
             // localizableStringList1
             // 
@@ -251,36 +202,134 @@
             // 
             resources.ApplyResources(this.NoConnectorRefLabel, "NoConnectorRefLabel");
             // 
+            // SelectionToolStrip
+            // 
+            this.SelectionToolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.SelectionToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.SelectionToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CurrentSelectionLabel,
+            this.ElementsComboBox});
+            resources.ApplyResources(this.SelectionToolStrip, "SelectionToolStrip");
+            this.SelectionToolStrip.Name = "SelectionToolStrip";
+            // 
+            // CurrentSelectionLabel
+            // 
+            this.CurrentSelectionLabel.Name = "CurrentSelectionLabel";
+            resources.ApplyResources(this.CurrentSelectionLabel, "CurrentSelectionLabel");
+            // 
+            // ElementsComboBox
+            // 
+            this.ElementsComboBox.Name = "ElementsComboBox";
+            resources.ApplyResources(this.ElementsComboBox, "ElementsComboBox");
+            this.ElementsComboBox.SelectedIndexChanged += new System.EventHandler(this.ElementsComboBox_SelectedIndexChanged);
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.Controls.Add(this.NameTextBox);
+            resources.ApplyResources(this.NameLabel, "NameLabel");
+            this.NameLabel.MatchSiblingLabels = true;
+            this.NameLabel.Name = "NameLabel";
+            // 
+            // SubMaterialIndexLabel
+            // 
+            this.SubMaterialIndexLabel.AutoSizeWidth = true;
+            this.SubMaterialIndexLabel.Controls.Add(this.SubMaterialIndexBox);
+            resources.ApplyResources(this.SubMaterialIndexLabel, "SubMaterialIndexLabel");
+            this.SubMaterialIndexLabel.MatchSiblingLabels = true;
+            this.SubMaterialIndexLabel.Name = "SubMaterialIndexLabel";
+            // 
+            // CollisionRadiusLabel
+            // 
+            this.CollisionRadiusLabel.AutoSizeWidth = true;
+            this.CollisionRadiusLabel.Controls.Add(this.CollisionRadiusBox);
+            resources.ApplyResources(this.CollisionRadiusLabel, "CollisionRadiusLabel");
+            this.CollisionRadiusLabel.MatchSiblingLabels = true;
+            this.CollisionRadiusLabel.Name = "CollisionRadiusLabel";
+            // 
+            // CollisionSizeLabel
+            // 
+            this.CollisionSizeLabel.Controls.Add(this.CollisionSizeEditor);
+            resources.ApplyResources(this.CollisionSizeLabel, "CollisionSizeLabel");
+            this.CollisionSizeLabel.MatchSiblingLabels = true;
+            this.CollisionSizeLabel.Name = "CollisionSizeLabel";
+            // 
+            // controlLabel1
+            // 
+            this.controlLabel1.Controls.Add(this.SelectionInfoLabel);
+            resources.ApplyResources(this.controlLabel1, "controlLabel1");
+            this.controlLabel1.MatchSiblingLabels = true;
+            this.controlLabel1.Name = "controlLabel1";
+            // 
+            // flowLayoutPanel1
+            // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.Controls.Add(this.controlLabel1);
+            this.flowLayoutPanel1.Controls.Add(this.NameLabel);
+            this.flowLayoutPanel1.Controls.Add(this.SubMaterialIndexLabel);
+            this.flowLayoutPanel1.Controls.Add(this.CollisionRadiusLabel);
+            this.flowLayoutPanel1.Controls.Add(this.CollisionSizeLabel);
+            this.flowLayoutPanel1.Controls.Add(this.BonePhysPropertiesLabel);
+            this.flowLayoutPanel1.Controls.Add(this.BoneBoundsLabel);
+            this.flowLayoutPanel1.Controls.Add(this.TransformEdit);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            // 
+            // BonePhysPropertiesLabel
+            // 
+            this.BonePhysPropertiesLabel.Controls.Add(this.tableLayoutPanel3);
+            this.BonePhysPropertiesLabel.LabelPosition = System.Windows.Forms.ArrowDirection.Up;
+            resources.ApplyResources(this.BonePhysPropertiesLabel, "BonePhysPropertiesLabel");
+            this.BonePhysPropertiesLabel.MatchSiblingLabels = true;
+            this.BonePhysPropertiesLabel.Name = "BonePhysPropertiesLabel";
+            // 
+            // BoneBoundsLabel
+            // 
+            this.BoneBoundsLabel.Controls.Add(this.BoundingEditor);
+            this.BoneBoundsLabel.LabelPosition = System.Windows.Forms.ArrowDirection.Up;
+            resources.ApplyResources(this.BoneBoundsLabel, "BoneBoundsLabel");
+            this.BoneBoundsLabel.MatchSiblingLabels = true;
+            this.BoneBoundsLabel.Name = "BoneBoundsLabel";
+            // 
             // ElementDetailPanel
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.SelectionToolStrip);
             this.Name = "ElementDetailPanel";
-            this.PropertiesTableLayout.ResumeLayout(false);
-            this.PropertiesTableLayout.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.MainInfoTab.ResumeLayout(false);
-            this.MainInfoTab.PerformLayout();
-            this.StudRefTab.ResumeLayout(false);
-            this.StudRefTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StudRefGridView)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.SelectionToolStrip.ResumeLayout(false);
+            this.SelectionToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NameLabel)).EndInit();
+            this.NameLabel.ResumeLayout(false);
+            this.NameLabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SubMaterialIndexLabel)).EndInit();
+            this.SubMaterialIndexLabel.ResumeLayout(false);
+            this.SubMaterialIndexLabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CollisionRadiusLabel)).EndInit();
+            this.CollisionRadiusLabel.ResumeLayout(false);
+            this.CollisionRadiusLabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CollisionSizeLabel)).EndInit();
+            this.CollisionSizeLabel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.controlLabel1)).EndInit();
+            this.controlLabel1.ResumeLayout(false);
+            this.controlLabel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BonePhysPropertiesLabel)).EndInit();
+            this.BonePhysPropertiesLabel.ResumeLayout(false);
+            this.BonePhysPropertiesLabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BoneBoundsLabel)).EndInit();
+            this.BoneBoundsLabel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private Controls.TransformEditor SelectionTransformEdit;
+        private Controls.TransformEditor TransformEdit;
         private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.TableLayoutPanel PropertiesTableLayout;
-        private System.Windows.Forms.Label NameLabel;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage MainInfoTab;
-        private System.Windows.Forms.TabPage StudRefTab;
-        private System.Windows.Forms.Label CollisionSizeLabel;
-        private System.Windows.Forms.Label CollisionRadiusLabel;
-        private System.Windows.Forms.Label SubMaterialIndexLabel;
         private Controls.NumberTextBox SubMaterialIndexBox;
         private Editors.VectorEditor CollisionSizeEditor;
         private Controls.NumberTextBox CollisionRadiusBox;
@@ -291,13 +340,25 @@
         private Localization.LocalizableString TopStudsLabel;
         private Localization.LocalizableString BottomStudsLabel;
         private Localization.LocalizableString NoConnectorRefLabel;
-        private System.Windows.Forms.DataGridView StudRefGridView;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ConnectionColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FieldIndexColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FieldPositionColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudRefValue1Colunm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudRefValue2Colunm;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn AdjStudColumn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStrip SelectionToolStrip;
+        private System.Windows.Forms.ToolStripLabel CurrentSelectionLabel;
+        private System.Windows.Forms.ToolStripComboBox ElementsComboBox;
+        private Controls.ControlLabel NameLabel;
+        private Controls.ControlLabel SubMaterialIndexLabel;
+        private Controls.ControlLabel CollisionRadiusLabel;
+        private Controls.ControlLabel CollisionSizeLabel;
+        private Controls.ControlLabel controlLabel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label LabelInertiaTensor;
+        private System.Windows.Forms.Label LabelCenterOfMass;
+        private System.Windows.Forms.TextBox InertiaTensorTextBox;
+        private System.Windows.Forms.Label LabelMass;
+        private Editors.VectorEditor CenterOfMassEditor;
+        private Controls.NumberTextBox MassNumberBox;
+        private System.Windows.Forms.CheckBox FrictionCheckBox;
+        private Controls.BoundingBoxEditor BoundingEditor;
+        private Controls.ControlLabel BoneBoundsLabel;
+        private Controls.ControlLabel BonePhysPropertiesLabel;
     }
 }

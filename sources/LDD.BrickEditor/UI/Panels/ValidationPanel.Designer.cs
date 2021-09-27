@@ -42,9 +42,9 @@
             this.ColumnMessageDescription = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.ColumnMessageSource = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.localizableStringList1 = new LDD.BrickEditor.Localization.LocalizableStringList(this.components);
-            this.ErrorCountText = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
-            this.WarningCountText = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
-            this.MessageCountText = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
+            this.ErrorCountText = new LDD.BrickEditor.Localization.LocalizableString();
+            this.WarningCountText = new LDD.BrickEditor.Localization.LocalizableString();
+            this.MessageCountText = new LDD.BrickEditor.Localization.LocalizableString();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationMessageList)).BeginInit();
             this.SuspendLayout();

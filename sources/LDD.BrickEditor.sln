@@ -90,7 +90,6 @@ Global
 		{15842808-E389-4B83-A9B4-C0B3D57C1AAA}.Debug|x64.ActiveCfg = Debug|x64
 		{15842808-E389-4B83-A9B4-C0B3D57C1AAA}.Debug|x64.Build.0 = Debug|x64
 		{15842808-E389-4B83-A9B4-C0B3D57C1AAA}.Debug|x86.ActiveCfg = Debug|x86
-		{15842808-E389-4B83-A9B4-C0B3D57C1AAA}.Debug|x86.Build.0 = Debug|x86
 		{15842808-E389-4B83-A9B4-C0B3D57C1AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15842808-E389-4B83-A9B4-C0B3D57C1AAA}.Release|x64.ActiveCfg = Release|x64
 		{15842808-E389-4B83-A9B4-C0B3D57C1AAA}.Release|x64.Build.0 = Release|x64
@@ -108,7 +107,7 @@ Global
 		{15842808-E389-4B83-A9B4-C0B3D57C1AAA} = {A6286975-B844-4556-9F8A-F6BC196B4B80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_ShowErrorsInErrorList = False
 		SolutionGuid = {A5E3F92A-0F1D-486E-BFEC-3B721517D00B}
+		RESX_ShowErrorsInErrorList = False
 	EndGlobalSection
 EndGlobal
