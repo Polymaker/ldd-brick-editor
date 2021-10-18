@@ -317,6 +317,7 @@ namespace LDD.BrickEditor.UI.Controls
 
         #endregion
 
+
         protected void OnBeginEdit()
         {
             BeginEdit?.Invoke(this, EventArgs.Empty);

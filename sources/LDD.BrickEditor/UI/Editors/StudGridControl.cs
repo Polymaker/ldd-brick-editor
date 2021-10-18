@@ -20,7 +20,7 @@ namespace LDD.BrickEditor.UI.Editors
 
         private Point? SelectionStart;
         private Point? SelectionEnd;
-        private Point? FocusedCell;
+        private Point? _FocusedCell;
 
         private Point SelectionSize
         {
@@ -80,6 +80,13 @@ namespace LDD.BrickEditor.UI.Editors
             }
         }
 
+        [Browsable(false)]
+        public Point? FocusedCell
+        {
+            get => _FocusedCell;
+            set => SetFocusedCell(value, false);
+        }
+
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Custom2DFieldNode SelectedNode => GetNodeFromCell(FocusedCell);
 
@@ -88,6 +95,8 @@ namespace LDD.BrickEditor.UI.Editors
         public event EventHandler ConnectorSizeChanged;
 
         public event EventHandler DataChanged;
+
+        public event EventHandler FocusedCellChanged;
 
         public StudGridControl()
         {
@@ -111,7 +120,7 @@ namespace LDD.BrickEditor.UI.Editors
         {
             SelectionStart = null;
             SelectionEnd = null;
-            FocusedCell = null;
+            _FocusedCell = null;
             ScrollOffset = new Point(0, 0);
             IsSelectingRange = false;
 
@@ -220,6 +229,53 @@ namespace LDD.BrickEditor.UI.Editors
         //    );
         //}
 
+        private Size CalculateGridSize(Size availableSize)
+        {
+            availableSize.Width -= RowHeaderWidth;
+            availableSize.Height -= ColumnHeaderHeight;
+
+            int visibleCols = (int)Math.Floor(availableSize.Width / (double)GridCellSize.Width);
+            int visibleRows = (int)Math.Floor(availableSize.Height / (double)GridCellSize.Height);
+
+            bool showHScroll = false, showVScroll = false;
+            if (visibleCols < (StudConnector?.ArrayWidth ?? 1))
+            {
+                availableSize.Height -= SystemInformation.HorizontalScrollBarHeight;
+                showHScroll = true;
+            }
+
+            if (visibleRows < (StudConnector?.ArrayHeight ?? 1))
+            {
+                availableSize.Width -= SystemInformation.VerticalScrollBarWidth;
+                showVScroll = true;
+            }
+
+            visibleCols = (int)Math.Floor(availableSize.Width / (double)GridCellSize.Width);
+            visibleCols = Math.Max(visibleCols, 1);
+
+            visibleRows = (int)Math.Floor(availableSize.Height / (double)GridCellSize.Height);
+            visibleRows = Math.Max(visibleRows, 1);
+
+            if (StudConnector != null)
+            {
+                visibleCols = Math.Min(visibleCols, StudConnector.ArrayWidth);
+                visibleRows = Math.Min(visibleRows, StudConnector.ArrayHeight);
+            }
+
+            var preferedSize = new Size(
+                RowHeaderWidth + (visibleCols * GridCellSize.Width) + 1,
+                ColumnHeaderHeight + (visibleRows * GridCellSize.Height) + 1
+            );
+
+            if (showHScroll)
+                preferedSize.Height += SystemInformation.HorizontalScrollBarHeight;
+
+            if (showVScroll)
+                preferedSize.Width += SystemInformation.VerticalScrollBarWidth;
+
+            return preferedSize;
+        }
+
         private void UpdateControlSize()
         {
             if (!SizesInitialized)
@@ -236,7 +292,7 @@ namespace LDD.BrickEditor.UI.Editors
                 availableSize.Height -= SystemInformation.HorizontalScrollBarHeight;
 
             if (visibleRows < (StudConnector?.ArrayHeight ?? 1))
-                availableSize.Width -= SystemInformation.VerticalScrollBarArrowHeight;
+                availableSize.Width -= SystemInformation.VerticalScrollBarWidth;
 
             visibleCols = (int)Math.Floor(availableSize.Width / (double)GridCellSize.Width);
             visibleRows = (int)Math.Floor(availableSize.Height / (double)GridCellSize.Height);
@@ -259,6 +315,12 @@ namespace LDD.BrickEditor.UI.Editors
 
             //Size = CalculateControlSize();
             UpdateScrollbars();
+        }
+
+        public override Size GetPreferredSize(Size proposedSize)
+        {
+
+            return CalculateGridSize(proposedSize);
         }
 
         protected override void OnFontChanged(EventArgs e)
@@ -461,7 +523,9 @@ namespace LDD.BrickEditor.UI.Editors
                         if (IsEditingNode && !FinishEditNode())
                             return;
 
-                        FocusedCell = GetCellAddressFromPosition(e.Location);
+                        var clickedCell = GetCellAddressFromPosition(e.Location);
+                        SetFocusedCell(clickedCell, true);
+
                         if (ModifierKeys.HasFlag(Keys.Shift) && SelectionStart != null)
                         {
                             SelectionEnd = FocusedCell;
@@ -577,7 +641,8 @@ namespace LDD.BrickEditor.UI.Editors
 
                 if (nextNode != null && (!IsEditingNode || FinishEditNode()))
                 {
-                    FocusedCell = new Point(nextNode.X, nextNode.Y);
+                    var nextCell = new Point(nextNode.X, nextNode.Y);
+                    SetFocusedCell(nextCell, true);
                     SelectionStart = FocusedCell;
                     SelectionEnd = null;
                     Invalidate();
@@ -783,6 +848,28 @@ namespace LDD.BrickEditor.UI.Editors
 
         private bool IsSelectingRange;
 
+        private void SetFocusedCell(Point? cell, bool @internal)
+        {
+            if (cell.HasValue && cell.Value.X == -1 && cell.Value.Y == -1)
+                cell = null;
+
+            if ((cell.HasValue != _FocusedCell.HasValue) || (cell.HasValue && cell.Value != _FocusedCell.Value))
+            {
+                _FocusedCell = cell;
+                FocusedCellChanged?.Invoke(this, EventArgs.Empty);
+
+                if (!@internal)
+                {
+                    SelectionStart = cell;
+                    SelectionEnd = cell;
+
+                    if ((HScrollBar.Visible || VScrollBar.Visible) && cell.HasValue)
+                        ScrollIntoView(cell.Value);
+                    Invalidate();
+                }
+            }
+        }
+
         private void UpdateDragSelection()
         {
             var mousePos = PointToClient(MousePosition);
@@ -792,7 +879,7 @@ namespace LDD.BrickEditor.UI.Editors
             if (!end.Equals(curCell))
             {
                 SelectionEnd = curCell;
-                FocusedCell = curCell;
+                SetFocusedCell(curCell, true);
                 Invalidate();
             }
         }
@@ -814,6 +901,8 @@ namespace LDD.BrickEditor.UI.Editors
 
             return false;
         }
+
+
 
         #endregion
 
@@ -1180,6 +1269,7 @@ namespace LDD.BrickEditor.UI.Editors
             SelectionEnd = null;
             IsSelectingRange = false;
 
+            
             ScrollIntoView(FocusedCell.Value);
 
 

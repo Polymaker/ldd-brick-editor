@@ -36,12 +36,14 @@
             this.SyncSelectionCheckBox = new LDD.BrickEditor.UI.Controls.ToolStripCheckBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.AddStudButton = new System.Windows.Forms.ToolStripButton();
+            this.GenerateAdjStudsButton = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.StudRefListView = new BrightIdeasSoftware.DataListView();
             this.olvConnectionColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvPositionColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvValue1Column = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvValue2Column = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvDeleteColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.SelectionToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudRefListView)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +57,8 @@
             this.ElementsComboBox,
             this.SyncSelectionCheckBox,
             this.toolStripSeparator1,
-            this.AddStudButton});
+            this.AddStudButton,
+            this.GenerateAdjStudsButton});
             resources.ApplyResources(this.SelectionToolStrip, "SelectionToolStrip");
             this.SelectionToolStrip.Name = "SelectionToolStrip";
             // 
@@ -89,13 +92,20 @@
             this.AddStudButton.Name = "AddStudButton";
             this.AddStudButton.Click += new System.EventHandler(this.AddStudButton_Click);
             // 
+            // GenerateAdjStudsButton
+            // 
+            this.GenerateAdjStudsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            resources.ApplyResources(this.GenerateAdjStudsButton, "GenerateAdjStudsButton");
+            this.GenerateAdjStudsButton.Name = "GenerateAdjStudsButton";
+            this.GenerateAdjStudsButton.Click += new System.EventHandler(this.GenerateAdjStudsButton_Click);
+            // 
             // StudRefListView
             // 
             this.StudRefListView.AllColumns.Add(this.olvConnectionColumn);
             this.StudRefListView.AllColumns.Add(this.olvPositionColumn);
             this.StudRefListView.AllColumns.Add(this.olvValue1Column);
             this.StudRefListView.AllColumns.Add(this.olvValue2Column);
-            resources.ApplyResources(this.StudRefListView, "StudRefListView");
+            this.StudRefListView.AllColumns.Add(this.olvDeleteColumn);
             this.StudRefListView.AutoGenerateColumns = false;
             this.StudRefListView.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
             this.StudRefListView.CellEditUseWholeCell = false;
@@ -103,15 +113,18 @@
             this.olvConnectionColumn,
             this.olvPositionColumn,
             this.olvValue1Column,
-            this.olvValue2Column});
+            this.olvValue2Column,
+            this.olvDeleteColumn});
             this.StudRefListView.Cursor = System.Windows.Forms.Cursors.Default;
             this.StudRefListView.DataSource = null;
+            resources.ApplyResources(this.StudRefListView, "StudRefListView");
             this.StudRefListView.FullRowSelect = true;
             this.StudRefListView.HideSelection = false;
             this.StudRefListView.Name = "StudRefListView";
             this.StudRefListView.RowHeight = 21;
             this.StudRefListView.UseCompatibleStateImageBehavior = false;
             this.StudRefListView.View = System.Windows.Forms.View.Details;
+            this.StudRefListView.ButtonClick += new System.EventHandler<BrightIdeasSoftware.CellClickEventArgs>(this.StudRefListView_ButtonClick);
             this.StudRefListView.CellEditFinished += new BrightIdeasSoftware.CellEditEventHandler(this.StudRefListView_CellEditFinished);
             this.StudRefListView.CellEditStarting += new BrightIdeasSoftware.CellEditEventHandler(this.StudRefListView_CellEditStarting);
             this.StudRefListView.SelectedIndexChanged += new System.EventHandler(this.StudRefListView_SelectedIndexChanged);
@@ -138,6 +151,14 @@
             this.olvValue2Column.AspectName = "Value2";
             this.olvValue2Column.Groupable = false;
             resources.ApplyResources(this.olvValue2Column, "olvValue2Column");
+            // 
+            // olvDeleteColumn
+            // 
+            this.olvDeleteColumn.AspectName = "ButtonText";
+            this.olvDeleteColumn.ButtonSizing = BrightIdeasSoftware.OLVColumn.ButtonSizingMode.CellBounds;
+            this.olvDeleteColumn.IsButton = true;
+            this.olvDeleteColumn.IsEditable = false;
+            resources.ApplyResources(this.olvDeleteColumn, "olvDeleteColumn");
             // 
             // StudReferencesPanel
             // 
@@ -168,5 +189,7 @@
         private BrightIdeasSoftware.OLVColumn olvValue2Column;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton AddStudButton;
+        private BrightIdeasSoftware.OLVColumn olvDeleteColumn;
+        private System.Windows.Forms.ToolStripButton GenerateAdjStudsButton;
     }
 }

@@ -2170,6 +2170,14 @@ namespace LDD.BrickEditor.UI.Panels
         public void SelectStudReference(StudReference reference)
         {
             SelectedStudModel.Stud = reference;
+            if (reference != null)
+            {
+                var models = LoadedModels.OfType<PartElementModel>()
+                    .Where(x => x.Element is ModelMeshReference meshRef && meshRef.Parent.ID == reference.Parent.ID);
+                SelectedStudModel.StudModels = new List<ModelBase>(models);
+            }
+            else
+                SelectedStudModel.StudModels = null;
 
             if (reference != null)
                 SelectModel(SelectedStudModel);
@@ -2179,6 +2187,6 @@ namespace LDD.BrickEditor.UI.Panels
 
         #endregion
 
-        
+
     }
 }

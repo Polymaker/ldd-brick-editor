@@ -56,7 +56,7 @@ namespace LDD.BrickEditor.UI.Panels
             ElementsComboBox.ComboBox.DataSource = Elements;
             ElementsComboBox.ComboBox.DisplayMember = "Name";
             ElementsComboBox.ComboBox.ValueMember = "ID";
-
+            ElementsComboBox.ComboBox.DropDownHeight = 200;
             SetCurrentObject(null, false);
         }
 

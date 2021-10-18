@@ -104,7 +104,7 @@ namespace LDD.BrickEditor.Rendering
             }
         }
 
-        private void DrawModelElements()
+        public void DrawModelElements()
         {
             SurfaceModel.VertexBuffer.DrawElementsBaseVertex(PrimitiveType.Triangles,
                 StartVertex,
@@ -112,14 +112,14 @@ namespace LDD.BrickEditor.Rendering
                 StartIndex * 4);
         }
 
-        private void DrawWireframeModel(Vector4 color, float thickness)
+        public void DrawWireframeModel(Vector4 color, float thickness)
         {
             RenderHelper.BeginDrawWireframe(SurfaceModel.VertexBuffer, Transform, thickness, color);
             DrawModelElements();
             RenderHelper.EndDrawWireframe(SurfaceModel.VertexBuffer);
         }
 
-        private void DrawSolidModel(MaterialInfo material)
+        public void DrawSolidModel(MaterialInfo material)
         {
             RenderHelper.BeginDrawModel(SurfaceModel.VertexBuffer, Transform, material);
             RenderHelper.ModelShader.IsSelected.Set(IsSelected);

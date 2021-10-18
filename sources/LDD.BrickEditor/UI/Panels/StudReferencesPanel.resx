@@ -166,6 +166,30 @@
   <data name="AddStudButton.Text" xml:space="preserve">
     <value>Add stud</value>
   </data>
+  <data name="GenerateAdjStudsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
+        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
+        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
+        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
+        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
+        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
+        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
+        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
+        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="GenerateAdjStudsButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="GenerateAdjStudsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 20</value>
+  </data>
+  <data name="GenerateAdjStudsButton.Text" xml:space="preserve">
+    <value>Generate adjacent studs</value>
+  </data>
   <data name="SelectionToolStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -174,7 +198,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="SelectionToolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>852, 29</value>
+    <value>792, 29</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="SelectionToolStrip.TabIndex" type="System.Int32, mscorlib">
@@ -198,30 +222,6 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>202, 17</value>
   </metadata>
-  <data name="StudRefListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
-  </data>
-  <data name="StudRefListView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 32</value>
-  </data>
-  <data name="StudRefListView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>468, 266</value>
-  </data>
-  <data name="StudRefListView.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;StudRefListView.Name" xml:space="preserve">
-    <value>StudRefListView</value>
-  </data>
-  <data name="&gt;&gt;StudRefListView.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.DataListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;StudRefListView.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;StudRefListView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="olvConnectionColumn.Text" xml:space="preserve">
     <value>Connection</value>
   </data>
@@ -240,6 +240,39 @@
   <data name="olvValue2Column.Text" xml:space="preserve">
     <value>Value 2</value>
   </data>
+  <data name="olvDeleteColumn.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="olvDeleteColumn.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="StudRefListView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="StudRefListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 29</value>
+  </data>
+  <data name="StudRefListView.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 100000</value>
+  </data>
+  <data name="StudRefListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 260</value>
+  </data>
+  <data name="StudRefListView.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;StudRefListView.Name" xml:space="preserve">
+    <value>StudRefListView</value>
+  </data>
+  <data name="&gt;&gt;StudRefListView.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.DataListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;StudRefListView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StudRefListView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -247,7 +280,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>852, 301</value>
+    <value>792, 289</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Stud References</value>
@@ -282,6 +315,12 @@
   <data name="&gt;&gt;AddStudButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;GenerateAdjStudsButton.Name" xml:space="preserve">
+    <value>GenerateAdjStudsButton</value>
+  </data>
+  <data name="&gt;&gt;GenerateAdjStudsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
   </data>
@@ -310,6 +349,12 @@
     <value>olvValue2Column</value>
   </data>
   <data name="&gt;&gt;olvValue2Column.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;olvDeleteColumn.Name" xml:space="preserve">
+    <value>olvDeleteColumn</value>
+  </data>
+  <data name="&gt;&gt;olvDeleteColumn.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

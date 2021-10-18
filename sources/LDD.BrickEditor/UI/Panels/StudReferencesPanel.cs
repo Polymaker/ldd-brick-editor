@@ -1,4 +1,5 @@
 ﻿using LDD.BrickEditor.ProjectHandling;
+using LDD.BrickEditor.UI.Editors;
 using LDD.Modding;
 using System;
 using System.Collections.Generic;
@@ -51,6 +52,7 @@ namespace LDD.BrickEditor.UI.Panels
                 get => StudReference.Value2;
                 set => StudReference.Value2 = value;
             }
+            public string ButtonText { get; set; } = "X";
             public bool IsAdjacent { get; set; }
 
             public StudReferenceListModel(StudReference studReference)
@@ -65,12 +67,16 @@ namespace LDD.BrickEditor.UI.Panels
         {
             InitializeComponent();
             InitializeView();
+            CloseButtonVisible = false;
+            CloseButton = false;
         }
 
         public StudReferencesPanel(ProjectManager projectManager) : base(projectManager)
         {
             InitializeComponent();
             InitializeView();
+            CloseButtonVisible = false;
+            CloseButton = false;
         }
 
         private void InitializeView()
@@ -82,22 +88,6 @@ namespace LDD.BrickEditor.UI.Panels
 
                 return string.Empty;
             };
-
-            olvPositionColumn.AspectGetter = (x) =>
-            {
-                if (x is StudReferenceListModel studRef)
-                    return $"X:{studRef.PositionX} Y:{studRef.PositionY}";
-
-                return string.Empty;
-            };
-
-            Models = new SortableBindingList<PartCullingModel>();
-            StudConnections = new SortableBindingList<PartConnection>();
-            StudReferences = new SortableBindingList<StudReferenceListModel>();
-            StudReferences.ListChanged += StudReferences_ListChanged;
-            StudRefListView.DataSource = StudReferences;
-            StudRefListView.ShowGroups = false;
-
             olvConnectionColumn.GroupKeyGetter = (rowObj) =>
             {
                 if (rowObj is StudReferenceListModel model)
@@ -112,17 +102,34 @@ namespace LDD.BrickEditor.UI.Panels
                     return "Adjacent studs";
                 return string.Empty;
             };
+            olvPositionColumn.AspectGetter = (x) =>
+            {
+                if (x is StudReferenceListModel studRef)
+                    return $"X:{studRef.PositionX} Y:{studRef.PositionY}";
+
+                return string.Empty;
+            };
+
+            Models = new SortableBindingList<PartCullingModel>();
+            StudConnections = new SortableBindingList<PartConnection>();
+            StudReferences = new SortableBindingList<StudReferenceListModel>();
+            StudReferences.ListChanged += StudReferences_ListChanged;
+            StudRefListView.DataSource = StudReferences;
+            StudRefListView.ShowGroups = false;
+            
+    
             ElementsComboBox.ComboBox.DataSource = Models;
             ElementsComboBox.ComboBox.DisplayMember = "Name";
             ElementsComboBox.ComboBox.ValueMember = "ID";
 
+            AddStudButton.Enabled = false;
         }
 
         protected override void OnActivated(EventArgs e)
         {
             base.OnActivated(e);
             if (ProjectManager.IsProjectOpen && SelectedElement != null)
-                DsiplaySelectedStudInViewPort();
+                DisplaySelectedStudInViewPort();
         }
 
         private void SetCurrentObject(PartCullingModel model, bool fromComboBox)
@@ -132,19 +139,22 @@ namespace LDD.BrickEditor.UI.Panels
                 if (SelectedElement != null)
                 {
                     SelectedElement.ReferencedStuds.CollectionChanged -= ReferencedStuds_CollectionChanged;
+                    if (SelectedElement is BrickTubeModel tubeModel)
+                        tubeModel.AdjacentStuds.CollectionChanged -= ReferencedStuds_CollectionChanged;
                 }
 
                 StudReferences.Clear();
 
                 SelectedElement = model;
                 StudRefListView.ShowGroups = model is BrickTubeModel;
-                AddStudButton.Enabled = model != null;
-
+                
                 if (SelectedElement != null)
                 {
                     StudReferences.AddRange(SelectedElement.GetStudReferences().Select(x => new StudReferenceListModel(x)));
                     
                     SelectedElement.ReferencedStuds.CollectionChanged += ReferencedStuds_CollectionChanged;
+                    if (SelectedElement is BrickTubeModel tubeModel)
+                        tubeModel.AdjacentStuds.CollectionChanged += ReferencedStuds_CollectionChanged;
                 }
 
                 if (!fromComboBox && ElementsComboBox.SelectedItem != SelectedElement)
@@ -152,8 +162,28 @@ namespace LDD.BrickEditor.UI.Panels
                     ElementsComboBox.SelectedItem = SelectedElement;
                 }
             }
+
+            UpdateToolBarButtonStates();
+        }
+
+        private void UpdateToolBarButtonStates()
+        {
+            bool anyStudConn = StudConnections.Any();
             
+            AddStudButton.Enabled = SelectedElement != null && anyStudConn;
             
+
+            if (SelectedElement is BrickTubeModel tubeModel && anyStudConn)
+            {
+                AddStudButton.Visible = !(tubeModel.TubeStud != null);
+                GenerateAdjStudsButton.Visible = (tubeModel.TubeStud != null);
+                GenerateAdjStudsButton.Enabled = tubeModel.TubeStud.FieldNode != null;
+            }
+            else
+            {
+                AddStudButton.Visible = true;
+                GenerateAdjStudsButton.Visible = false;
+            }
         }
 
         #region Project events
@@ -170,6 +200,7 @@ namespace LDD.BrickEditor.UI.Panels
 
             ReloadConnections();
             UpdateElementList(true);
+            UpdateToolBarButtonStates();
         }
 
         protected override void OnElementPropertyChanged(ObjectPropertyChangedEventArgs e)
@@ -195,7 +226,7 @@ namespace LDD.BrickEditor.UI.Panels
         {
             base.OnProjectCollectionChanged(e);
 
-            if (e.ElementType == typeof(PartCullingModel))
+            if (e.ChangedElements<PartCullingModel>().Any())
                 UpdateElementList(false);
             else if (e.ChangedElements<PartConnection>().Any(c => c.ConnectorType == Core.Primitives.Connectors.ConnectorType.Custom2DField))
                 ReloadConnections();
@@ -303,10 +334,11 @@ namespace LDD.BrickEditor.UI.Panels
                 StudConnections.Clear();
                 //ConnectionColumn.DataSource = new List<PartConnection>();
             }
+
+            UpdateToolBarButtonStates();
         }
 
         #endregion
-
 
         #region Reference list sync
 
@@ -316,18 +348,25 @@ namespace LDD.BrickEditor.UI.Panels
             if (SelectedElement == null || FlagManager.IsSet(nameof(SetCurrentObject)))
                 return;
 
+            if (FlagManager.IsSet("SyncStuds"))
+                return;
+
             using (FlagManager.UseFlag("SyncStuds"))
             {
+                ProjectManager.StartBatchChanges();
+
                 var normalStuds = StudReferences.Where(x => !x.IsAdjacent).Select(x => x.StudReference);
                 var adjStuds = StudReferences.Where(x => x.IsAdjacent).Select(x => x.StudReference);
-                SynchronizeElementStuds(normalStuds, SelectedElement.ReferencedStuds);
+                SyncCurrentStudsToElement(normalStuds, SelectedElement.ReferencedStuds);
 
                 if (SelectedElement is BrickTubeModel tubeModel)
-                    SynchronizeElementStuds(adjStuds, tubeModel.AdjacentStuds);
+                    SyncCurrentStudsToElement(adjStuds, tubeModel.AdjacentStuds);
+
+                ProjectManager.EndBatchChanges();
             }
         }
 
-        private void SynchronizeElementStuds(IEnumerable<StudReference> currentRefs, ElementCollection<StudReference> elementStuds)
+        private void SyncCurrentStudsToElement(IEnumerable<StudReference> currentRefs, ElementCollection<StudReference> elementStuds)
         {
             var addedItems = currentRefs.Except(elementStuds).ToList();
             var removedItems = elementStuds.Except(currentRefs).ToList();
@@ -338,15 +377,36 @@ namespace LDD.BrickEditor.UI.Panels
                 elementStuds.RemoveRange(removedItems);
         }
 
+        private void SyncCurrentStudsFromElement(IEnumerable<StudReference> currentRefs, ElementCollection<StudReference> elementStuds)
+        {
+            var addedItems = elementStuds.Except(currentRefs).ToList();
+            var removedItems = currentRefs.Except(elementStuds).ToList();
+
+            if (addedItems.Count > 0)
+                StudReferences.AddRange(addedItems.Select(x => new StudReferenceListModel(x)));
+            if (removedItems.Count > 0)
+                StudReferences.RemoveAll(x => removedItems.Contains(x.StudReference));
+        }
+
         private void ReferencedStuds_CollectionChanged(object sender, CollectionChangedEventArgs ccea)
         {
             if (FlagManager.IsSet("SyncStuds"))
                 return;
 
+            using (FlagManager.UseFlag("SyncStuds"))
+            {
+                var normalStuds = StudReferences.Where(x => !x.IsAdjacent).Select(x => x.StudReference);
+                var adjStuds = StudReferences.Where(x => x.IsAdjacent).Select(x => x.StudReference);
+                SyncCurrentStudsFromElement(normalStuds, SelectedElement.ReferencedStuds);
 
+                if (SelectedElement is BrickTubeModel tubeModel)
+                    SyncCurrentStudsFromElement(adjStuds, tubeModel.AdjacentStuds);
+            }
         }
 
         #endregion
+
+        #region Reference list handling
 
         private void StudRefListView_CellEditStarting(object sender, BrightIdeasSoftware.CellEditEventArgs e)
         {
@@ -356,17 +416,48 @@ namespace LDD.BrickEditor.UI.Panels
                 {
                     var connCbo = new ComboBox
                     {
-                        DataSource = StudConnections,
-                        ValueMember = nameof(PartConnection.ID),
-                        DisplayMember = nameof(PartConnection.Name),
                         DropDownStyle = ComboBoxStyle.DropDownList,
-                        SelectedValue = model.ConnectionID,
                         Bounds = e.CellBounds
                     };
+                    connCbo.CreateControl();
+                    connCbo.BindingContext = new BindingContext();
+                    connCbo.DataSource = StudConnections;
+                    connCbo.ValueMember = nameof(PartConnection.ID);
+                    connCbo.DisplayMember = nameof(PartConnection.Name);
+                    connCbo.Update();
+                    if (!string.IsNullOrEmpty(model.ConnectionID))
+                        connCbo.SelectedValue = model.ConnectionID;
+                    //connCbo.SelectedIndex = StudConnections.IndexOf(model.StudReference.Connection);
                     e.Control = connCbo;
                 }
+                else if (e.Column == olvPositionColumn)
+                {
+                    var studConnector = model.StudReference.Connector;
+
+                    if (studConnector == null)
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
+
+                    var cellRefPicker = new StudGridCellPicker
+                    {
+                        Bounds = e.CellBounds
+                    };
+                    cellRefPicker.CreateControl();
+                    cellRefPicker.StudConnector = studConnector;
+                    cellRefPicker.SelectedCell = new Point(model.PositionX, model.PositionY);
+     
+                    e.Control = cellRefPicker;
+                    //this.InvokeWithDelay(40, () =>
+                    //{
+                    //    cellRefPicker.Select();
+                    //    cellRefPicker.Focus();
+                    //    cellRefPicker.ShowDropDown();
+                    //});
+
+                }
             }
-           
         }
 
         private void StudRefListView_CellEditFinished(object sender, BrightIdeasSoftware.CellEditEventArgs e)
@@ -375,20 +466,32 @@ namespace LDD.BrickEditor.UI.Panels
             {
                 if (e.Column == olvConnectionColumn)
                 {
+                    model.StudReference.ConnectionIndex = -1;
                     model.ConnectionID = e.NewValue as string;
-                    //StudRefListView.RefreshObject(model);
                 }
+                else if (e.Column == olvPositionColumn && e.Control is StudGridCellPicker cellPicker)
+                {
+                    ProjectManager.StartBatchChanges();
+                    model.PositionX = cellPicker.SelectedCell.X;
+                    model.PositionY = cellPicker.SelectedCell.Y;
+                    model.StudReference.FieldIndex = -1;
+                    ProjectManager.EndBatchChanges();
+                }
+                UpdateToolBarButtonStates();
             }
         }
 
         private void StudRefListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             if (IsActivated)
-                DsiplaySelectedStudInViewPort();
+                DisplaySelectedStudInViewPort();
         }
 
-        private void DsiplaySelectedStudInViewPort()
+
+        #endregion
+
+
+        private void DisplaySelectedStudInViewPort()
         {
             if (StudRefListView.SelectedItem?.RowObject is StudReferenceListModel model)
             {
@@ -400,10 +503,53 @@ namespace LDD.BrickEditor.UI.Panels
 
         private void AddStudButton_Click(object sender, EventArgs e)
         {
-            var newStudRef = new StudReference();
+            if (SelectedElement == null)
+                return;
+            
+            var existingRef = SelectedElement.GetStudReferences().FirstOrDefault(x => x.Connection != null);
+            string defaultConnectionID = existingRef?.ConnectionID ?? string.Empty;
+
+            if (string.IsNullOrEmpty(defaultConnectionID))
+            {
+                if (SelectedElement is MaleStudModel)
+                    defaultConnectionID = StudConnections.FirstOrDefault(x => x.SubType == 23)?.ID;
+                else
+                    defaultConnectionID = StudConnections.FirstOrDefault(x => x.SubType == 22)?.ID;
+            }
+
+            var newStudRef = new StudReference()
+            {
+                ConnectionID = defaultConnectionID
+            };
+
             var model = new StudReferenceListModel(newStudRef);
             StudReferences.Add(model);
             StudRefListView.EditModel(model);
+
+            UpdateToolBarButtonStates();
+        }
+
+        private void StudRefListView_ButtonClick(object sender, BrightIdeasSoftware.CellClickEventArgs e)
+        {
+            var modelToDelete = e.Model as StudReferenceListModel;
+
+            if (modelToDelete != null)
+                StudReferences.Remove(modelToDelete);
+
+            if (ProjectManager.ViewportWindow.SelectedStudModel.Stud == modelToDelete.StudReference)
+                ProjectManager.ViewportWindow.SelectStudReference(null);
+
+            UpdateToolBarButtonStates();
+        }
+
+        private void GenerateAdjStudsButton_Click(object sender, EventArgs e)
+        {
+            if (SelectedElement is BrickTubeModel tubeModel)
+            {
+                ProjectManager.StartBatchChanges();
+                tubeModel.AutoGenerateAdjacentStuds();
+                ProjectManager.EndBatchChanges();
+            }
         }
     }
 }

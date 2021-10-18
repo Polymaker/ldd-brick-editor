@@ -19,6 +19,8 @@ namespace LDD.BrickEditor.Rendering.Models
             set => SetStud(value);
         }
 
+        public List<ModelBase> StudModels { get; set; }
+
         private Vector4 StudBounds { get; set; }
 
         public StudRefModel()
@@ -79,7 +81,7 @@ namespace LDD.BrickEditor.Rendering.Models
 
         public override void RenderModel(Camera camera, MeshRenderMode mode = MeshRenderMode.Solid)
         {
-            if (Stud != null)
+            if (Stud != null && StudBounds.LengthFast != 0)
             {
                 var conn = Stud.Connection;
 
@@ -91,6 +93,14 @@ namespace LDD.BrickEditor.Rendering.Models
 
                 RenderHelper.FillRectangle(finalTrans, new Vector2(StudBounds.Z, StudBounds.W), new Vector4(0f, 0f, 1f, 0.4f), 3f);
                 RenderHelper.DrawRectangle(finalTrans,  new Vector2(StudBounds.Z, StudBounds.W),  new Vector4(0.1f, 0.1f, 1,1), 3f);
+
+                if (StudModels != null && StudModels.Count > 0)
+                {
+                    foreach (var model in StudModels.OfType<SurfaceModelMesh>())
+                    {
+                        model.DrawWireframeModel(new Vector4(1), 1f);
+                    }
+                }
             }
             base.RenderModel(camera, mode);
         }
@@ -99,16 +109,22 @@ namespace LDD.BrickEditor.Rendering.Models
         {
             var studConn = stud.Connector;
 
+            if (studConn == null)
+                return Vector4.Zero;
+
+            if (stud.PositionX == -1 || stud.PositionY == -1)
+                return Vector4.Zero;
+
             float cellWidth = (stud.PositionX % 2 == 1) ? 0.48f : 0.32f;
             float cellHeight = (stud.PositionY % 2 == 1) ? 0.48f : 0.32f;
 
             float offsetX = stud.PositionX * 0.4f;
             float offsetY = stud.PositionY * 0.4f;
 
-            if (Stud.PositionX > 0)
+            if (stud.PositionX > 0)
                 offsetX -= cellWidth / 2f;
 
-            if (Stud.PositionY > 0)
+            if (stud.PositionY > 0)
                 offsetY -= cellHeight / 2f;
 
             if (stud.PositionX == 0 || stud.PositionX == studConn.ArrayWidth - 1)

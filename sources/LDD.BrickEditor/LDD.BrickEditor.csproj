@@ -392,6 +392,12 @@
     <Compile Include="UI\Editors\StudConnectionEditor.Designer.cs">
       <DependentUpon>StudConnectionEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Editors\StudGridCellPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Editors\StudGridCellPicker.Designer.cs">
+      <DependentUpon>StudGridCellPicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Editors\StudGridControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -641,6 +647,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Editors\StudConnectionEditor.resx">
       <DependentUpon>StudConnectionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Editors\StudGridCellPicker.resx">
+      <DependentUpon>StudGridCellPicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Editors\TransformEditor.de.resx">
       <DependentUpon>TransformEditor.cs</DependentUpon>

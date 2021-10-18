@@ -284,6 +284,7 @@
             // BoneBoundsLabel
             // 
             this.BoneBoundsLabel.Controls.Add(this.BoundingEditor);
+            this.flowLayoutPanel1.SetFlowBreak(this.BoneBoundsLabel, true);
             this.BoneBoundsLabel.LabelPosition = System.Windows.Forms.ArrowDirection.Up;
             resources.ApplyResources(this.BoneBoundsLabel, "BoneBoundsLabel");
             this.BoneBoundsLabel.MatchSiblingLabels = true;

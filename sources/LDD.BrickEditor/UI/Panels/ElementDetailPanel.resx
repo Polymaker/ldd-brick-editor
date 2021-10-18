@@ -424,10 +424,10 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="TransformEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 281</value>
+    <value>331, 9</value>
   </data>
   <data name="TransformEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+    <value>0, 6, 0, 0</value>
   </data>
   <data name="TransformEdit.Size" type="System.Drawing.Size, System.Drawing">
     <value>302, 68</value>
@@ -567,15 +567,6 @@
   <metadata name="SelectionToolStrip.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="CurrentSelectionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Current:</value>
-  </data>
-  <data name="ElementsComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 23</value>
-  </data>
   <data name="SelectionToolStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -602,6 +593,15 @@
   </data>
   <data name="&gt;&gt;SelectionToolStrip.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="CurrentSelectionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
+    <value>Current:</value>
+  </data>
+  <data name="ElementsComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 23</value>
   </data>
   <data name="NameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 22</value>
@@ -741,63 +741,6 @@
   <data name="flowLayoutPanel1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;BonePhysPropertiesLabel.Name" xml:space="preserve">
-    <value>BonePhysPropertiesLabel</value>
-  </data>
-  <data name="&gt;&gt;BonePhysPropertiesLabel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BonePhysPropertiesLabel.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;BonePhysPropertiesLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;BoneBoundsLabel.Name" xml:space="preserve">
-    <value>BoneBoundsLabel</value>
-  </data>
-  <data name="&gt;&gt;BoneBoundsLabel.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BoneBoundsLabel.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;BoneBoundsLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="flowLayoutPanel1.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
-    <value>TopDown</value>
-  </data>
-  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 29</value>
-  </data>
-  <data name="flowLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="flowLayoutPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 3, 3, 3</value>
-  </data>
-  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1079, 544</value>
-  </data>
-  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="BonePhysPropertiesLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 126</value>
   </data>
@@ -851,6 +794,39 @@
   </data>
   <data name="&gt;&gt;BoneBoundsLabel.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flowLayoutPanel1.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 29</value>
+  </data>
+  <data name="flowLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="flowLayoutPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 3, 3, 3</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 544</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
