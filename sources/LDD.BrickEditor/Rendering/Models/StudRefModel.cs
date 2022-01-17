@@ -91,7 +91,7 @@ namespace LDD.BrickEditor.Rendering.Models
 
                 var finalTrans = offsetTrans * connTrans;
 
-                RenderHelper.FillRectangle(finalTrans, new Vector2(StudBounds.Z, StudBounds.W), new Vector4(0f, 0f, 1f, 0.4f), 3f);
+                RenderHelper.FillRectangle(finalTrans, new Vector2(StudBounds.Z, StudBounds.W), new Vector4(0f, 0f, 1f, 0.4f));
                 RenderHelper.DrawRectangle(finalTrans,  new Vector2(StudBounds.Z, StudBounds.W),  new Vector4(0.1f, 0.1f, 1,1), 3f);
 
                 if (StudModels != null && StudModels.Count > 0)

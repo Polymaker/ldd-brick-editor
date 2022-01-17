@@ -141,7 +141,7 @@ namespace SetupCustomActions
                     return ms;
                 }
             }
-            catch (Exception ex)
+            catch 
             {
                 return null;
             }

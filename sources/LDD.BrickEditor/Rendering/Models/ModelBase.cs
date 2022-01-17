@@ -64,6 +64,8 @@ namespace LDD.BrickEditor.Rendering
 
         public float ZDepth { get; set; }
 
+        public bool HasTransparency { get; set; }
+
         public bool IsSelectable { get; set; } = true;
 
         public bool IsUserTransformable { get; set; } = true;   

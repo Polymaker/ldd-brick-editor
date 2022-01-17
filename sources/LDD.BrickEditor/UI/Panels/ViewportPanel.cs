@@ -568,6 +568,20 @@ namespace LDD.BrickEditor.UI.Panels
             
         }
 
+        private void RenderModels(IEnumerable<ModelBase> models)
+        {
+            foreach (var model in models.OrderBy(x => x.HasTransparency).ThenBy(x => x.ZDepth))
+            {
+                if (!model.Visible)
+                    continue;
+
+                if (model is SurfaceModelMesh)
+                    model.RenderModel(Camera, ProjectManager.PartRenderMode);
+                else
+                    model.RenderModel(Camera);
+            }
+        }
+
         private void DrawSceneModels()
         {
             GL.Enable(EnableCap.Texture2D);
@@ -585,16 +599,9 @@ namespace LDD.BrickEditor.UI.Panels
                     lastLayer = renderLayer.Key;
                 }
 
-                foreach (var model in renderLayer.OrderBy(x => x.ZDepth))
-                {
-                    if (!model.Visible)
-                        continue;
+                RenderModels(renderLayer);
 
-                    if (model is SurfaceModelMesh)
-                        model.RenderModel(Camera, ProjectManager.PartRenderMode);
-                    else
-                        model.RenderModel(Camera);
-                }
+                //RenderModels(renderLayer.Where(x => x.HasTransparency));
 
                 Draw3DTexts();
 

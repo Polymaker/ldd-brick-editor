@@ -28,7 +28,6 @@
     <UIRef Id="CustomInstallSequence" />
     <Binary Id="CustomActionBinary" SourceFile="$(var.SetupCustomActions.TargetDir)$(var.SetupCustomActions.TargetName).CA.dll" />
     <CustomAction Id="RemoveUserDataAction" BinaryKey="CustomActionBinary" DllEntry="RemoveUserData" />
-    
     <InstallExecuteSequence>
       <Custom Action="RemoveUserDataAction" Before="InstallInitialize">REMOVE="ALL" and not UPGRADINGPRODUCTCODE</Custom>
     </InstallExecuteSequence>
@@ -51,12 +50,11 @@
   <Fragment>
     <DirectoryRef Id="TARGETDIR">
       <Component Id="RegistryEntries" Guid="E17462F6-5CC8-4D61-B925-A63590F79092">
-        <RegistryKey Root="HKLM"
-                     Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\[ProductCode]">
+        <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\[ProductCode]">
           <!--<RegistryValue Type="integer" Name="NoRemove" Value="1" />-->
           <!--<RegistryValue Type="integer" Name="NoModify" Value="0"/>-->
-          <RegistryValue Type="string" Name="ModifyPath" Value="MsiExec.exe /X[ProductCode]"/>
-          <RegistryValue Type="string" Name="UninstallString" Value="MsiExec.exe /X[ProductCode]"/>
+          <RegistryValue Type="string" Name="ModifyPath" Value="MsiExec.exe /X[ProductCode]" />
+          <RegistryValue Type="string" Name="UninstallString" Value="MsiExec.exe /X[ProductCode]" />
         </RegistryKey>
       </Component>
     </DirectoryRef>

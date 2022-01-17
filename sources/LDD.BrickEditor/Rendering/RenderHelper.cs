@@ -457,7 +457,7 @@ namespace LDD.BrickEditor.Rendering
             GL.PopAttrib();
         }
 
-        public static void FillRectangle(Matrix4 transform, Vector2 size, Vector4 color, float thickness = 1f)
+        public static void FillRectangle(Matrix4 transform, Vector2 size, Vector4 color)
         {
             ColorShader.Use();
             ColorShader.ModelMatrix.Set(transform);
@@ -481,9 +481,38 @@ namespace LDD.BrickEditor.Rendering
 
             vertBuffer.SetElements(quadVerts);
             vertBuffer.Bind();
-            vertBuffer.BindAttribute(SimpleTextureShader.Position, 0);
+            vertBuffer.BindAttribute(ColorShader.Position, 0);
             vertBuffer.DrawArray(PrimitiveType.Quads, 0, 4);
             vertBuffer.Dispose();
+        }
+
+        public static void FillRectangle(Matrix4 transform, Vector4 bounds, Vector3 normal,  Vector4 color)
+        {
+            ColorShader.Use();
+            ColorShader.ModelMatrix.Set(transform);
+            ColorShader.Color.Set(color);
+
+            var vertBuffer = GetRectangleBuffer(bounds, normal);
+            vertBuffer.Bind();
+            vertBuffer.BindAttribute(ColorShader.Position, 0);
+            vertBuffer.DrawArray(PrimitiveType.Quads, 0, 4);
+            vertBuffer.Dispose();
+        }
+
+
+        public static void DrawRectangle(Matrix4 transform, Vector4 bounds, Vector3 normal, Vector4 color, float thickness = 1f)
+        {
+            ColorShader.Use();
+            ColorShader.ModelMatrix.Set(transform);
+            ColorShader.Color.Set(color);
+            GL.PushAttrib(AttribMask.LineBit);
+            GL.LineWidth(thickness);
+            var vertBuffer = GetRectangleBuffer(bounds, normal);
+            vertBuffer.Bind();
+            vertBuffer.BindAttribute(ColorShader.Position, 0);
+            vertBuffer.DrawArray(PrimitiveType.LineLoop, 0, 4);
+            vertBuffer.Dispose();
+            GL.PopAttrib();
         }
 
         public static void DrawBoundingBox(Matrix4 transform, Vector3 pos, Vector3 size, Vector4 color, float thickness = 1f)
@@ -729,5 +758,40 @@ namespace LDD.BrickEditor.Rendering
 
         #endregion
 
+        #region Shapes
+
+        public static VertexArrayBuffer<Vector3> GetRectangleBuffer(Vector4 bounds, Vector3 normal)
+        {
+            Vector3 CreateVert(Vector2 pos)
+            {
+                return new Vector3(pos.X, 0, pos.Y);
+            }
+            var quadVerts = new Vector3[]
+            {
+                CreateVert(bounds.Xy),
+                CreateVert(bounds.Xw),
+                CreateVert(bounds.Zw),
+                CreateVert(bounds.Zy)
+            };
+
+            if (normal != Vector3.UnitY)
+            {
+                var angleDiff = Vector3.CalculateAngle(Vector3.UnitY, normal);
+                var trans = Matrix4.Identity;
+                if (!float.IsNaN(angleDiff) && Math.Abs(angleDiff) > 0.001f)
+                {
+                    var omega = (float)Math.Acos(Vector3.Dot(Vector3.UnitY, normal));
+                    trans = Matrix4.CreateFromAxisAngle(Vector3.Cross(Vector3.UnitY, normal), omega);
+                }
+                for (int i = 0; i < 4; i++)
+                    quadVerts[i] = Vector3.TransformPosition(quadVerts[i], trans);
+            }
+
+            var vertBuffer = new VertexArrayBuffer<Vector3>();
+            vertBuffer.SetElements(quadVerts);
+            return vertBuffer;
+        }
+
+        #endregion
     }
 }

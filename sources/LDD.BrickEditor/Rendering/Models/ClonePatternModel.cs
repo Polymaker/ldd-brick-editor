@@ -32,11 +32,14 @@ namespace LDD.BrickEditor.Rendering.Models
 
             if (AltColors == null)
                 GenerateAltColors();
+
+            HasTransparency = true;
         }
 
         private void ClonePattern_PropertyChanged(object sender, PropertyValueChangedEventArgs e)
         {
             if (e.PropertyName == nameof(LinearPattern.Direction) ||
+                e.PropertyName == nameof(MirrorPattern.Normal) ||
                 e.PropertyName == nameof(CircularPattern.Axis) ||
                 e.PropertyName == nameof(CircularPattern.Origin))
             {
@@ -118,6 +121,11 @@ namespace LDD.BrickEditor.Rendering.Models
                 circular.Origin = transform.ExtractTranslation().ToLDD();
 
             }
+            else if (ClonePattern is MirrorPattern mirror)
+            {
+                mirror.Normal = axis.ToLDD();
+                mirror.Origin = transform.ExtractTranslation().ToLDD();
+            }
             else if (ClonePattern is LinearPattern linear)
             {
                 linear.Direction = axis.ToLDD();
@@ -161,16 +169,27 @@ namespace LDD.BrickEditor.Rendering.Models
             if (ClonePattern?.NumberOfInstances == 0 || ElementModels == null || ElementModels.Count == 0)
                 return;
 
+            
             if (ClonePattern is RepetitionPattern repetitionPattern)
                 RenderRepetitionPattern(repetitionPattern, camera, mode);
+            else if (ClonePattern is MirrorPattern mirrorPattern)
+                RenderMirrorPattern(mirrorPattern, camera, mode);
+
+            RenderCloneGizmo(ClonePattern, camera, mode);
+
+            //if (IsSelected && !BoundingBox.IsEmpty && !IsEditingTransform)
+            //{
+            //    var selectionBox = BoundingBox;
+            //    selectionBox.Size += new Vector3(0.1f);
+            //    RenderHelper.DrawBoundingBox(Transform,
+            //        selectionBox,
+            //        new Vector4(0f, 1f, 1f, 1f), 1.5f);
+            //}
         }
 
-        private void RenderRepetitionPattern(RepetitionPattern pattern, Camera camera, MeshRenderMode mode = MeshRenderMode.Solid)
+        private void RenderCloneGizmo(ClonePattern pattern, Camera camera, MeshRenderMode mode = MeshRenderMode.Solid)
         {
-            RepetitionCenters.Clear();
-
-            for (int i = 0; i < ClonePattern.NumberOfInstances; i++)
-                RepetitionCenters.Add(Vector3.Zero);
+            GL.DepthMask(false);
 
             if (pattern is LinearPattern linearPattern)
             {
@@ -184,6 +203,31 @@ namespace LDD.BrickEditor.Rendering.Models
             {
                 RenderHelper.DrawLine(Transform, new Vector4(1f, 1f, 0f, 1f), Vector3.UnitZ * -5f, Vector3.UnitZ * 5f, 2f);
             }
+            else if (pattern is MirrorPattern mirrorPattern)
+            {
+                var rectBounds = new Vector4(-0.5f, -0.5f, 0.5f, 0.5f);
+                if (!BoundingBox.IsEmpty)
+                    rectBounds = new Vector4(BoundingBox.Left, BoundingBox.Top * -1f, BoundingBox.Right, BoundingBox.Bottom * -1f);
+
+                Vector3 rectColor = IsSelected ? new Vector3(0.5f, 0.5f, 0.7f) : new Vector3(0.6f);
+
+                
+
+                RenderHelper.FillRectangle(Transform, rectBounds, Vector3.UnitZ, new Vector4(rectColor, 0.5f));
+                RenderHelper.DrawRectangle(Transform, rectBounds, Vector3.UnitZ, new Vector4(rectColor, 1f));
+                //RenderHelper.FillRectangle(Transform, new Vector2(2, 2), new Vector4(0.5f));
+                //RenderHelper.DrawLine(Transform, new Vector4(1f, 1f, 0f, 1f), Vector3.UnitZ * -5f, Vector3.UnitZ * 5f, 2f);
+            }
+
+            GL.DepthMask(true);
+        }
+
+        private void RenderRepetitionPattern(RepetitionPattern pattern, Camera camera, MeshRenderMode mode = MeshRenderMode.Solid)
+        {
+            RepetitionCenters.Clear();
+
+            for (int i = 0; i < ClonePattern.NumberOfInstances; i++)
+                RepetitionCenters.Add(Vector3.Zero);
 
             int visibleElements = 0;
 
@@ -204,49 +248,14 @@ namespace LDD.BrickEditor.Rendering.Models
                     if (i == 0 && elemModel.Visible)
                         continue;
 
-                    var trans = ClonePattern.ApplyTransform(baseTransform, i).ToMatrix().ToGL();
-
-                    if (i > 0)
-                        RepetitionCenters[i - 1] += trans.ExtractTranslation();
-
                     if (pattern.SkippedInstances.Contains(i))
                         continue;
 
-                    var modelMat = elemModel.ModelMaterial;
-                    modelMat.Diffuse = Vector4.ComponentMin((modelMat.Diffuse * 1.2f) + new Vector4(0.05f), Vector4.One);
-                    //modelMat.Diffuse = AltColors[(i - 1) % 16];
-
-                    bool renderTransparent = !elemModel.Visible;
-                    if (renderTransparent)
-                    {
-                        modelMat.Diffuse = new Vector4(modelMat.Diffuse.Xyz, 0.6f);
-                        GL.DepthMask(false);
-                    }
-                    
-                    elemModel.ModelMaterial = modelMat;
-                    elemModel.IsSelected = IsSelected;
-                    elemModel.SetTemporaryTransform(trans);
-                    elemModel.RenderModel(camera, mode);
-                    elemModel.SetTemporaryTransform(null);
-
-                    if (renderTransparent)
-                    {
-                        GL.DepthMask(true);
-                    }
+                    RenderRepetitionPatternInstance(pattern, i, baseTransform, elemModel, camera, mode);
                 }
 
                 elemModel.IsSelected = isSelected;
                 elemModel.ModelMaterial = originalMaterial;
-
-            }
-
-            if (IsSelected && !BoundingBox.IsEmpty && !IsEditingTransform)
-            {
-                var selectionBox = BoundingBox;
-                selectionBox.Size += new Vector3(0.1f);
-                RenderHelper.DrawBoundingBox(Transform,
-                    selectionBox,
-                    new Vector4(0f, 1f, 1f, 1f), 1.5f);
             }
 
             if (visibleElements > 0)
@@ -256,9 +265,89 @@ namespace LDD.BrickEditor.Rendering.Models
                     if (RepetitionCenters[i] != Vector3.Zero)
                         RepetitionCenters[i] /= (float)visibleElements;
                 }
+
             }
             else
                 RepetitionCenters.Clear();
+        }
+
+        private void RenderRepetitionPatternInstance(RepetitionPattern pattern, int instance, ItemTransform baseTransform, PartElementModel elemModel, Camera camera, MeshRenderMode mode = MeshRenderMode.Solid)
+        {
+            var trans = pattern.GetInstanceTransform(Transform.ToMatrix4d().ToLDD(), baseTransform, instance).ToMatrix().ToGL();
+
+            if (instance > 0)
+                RepetitionCenters[instance - 1] += trans.ExtractTranslation();
+
+            bool renderTransparent = !elemModel.Visible;
+            var modelMat = GetInstanceMaterial(elemModel.ModelMaterial, instance, renderTransparent);
+
+            if (renderTransparent)
+                GL.DepthMask(false);
+
+            elemModel.ModelMaterial = modelMat;
+            elemModel.IsSelected = IsSelected;
+            elemModel.SetTemporaryTransform(trans);
+            elemModel.RenderModel(camera, mode);
+            elemModel.SetTemporaryTransform(null);
+
+            if (renderTransparent)
+                GL.DepthMask(true);
+        }
+
+        
+
+        private void RenderMirrorPattern(MirrorPattern pattern, Camera camera, MeshRenderMode mode = MeshRenderMode.Solid)
+        {
+            var patternTransform = Transform.ToMatrix4d().ToLDD();
+            if (IsEditingTransform)
+                patternTransform = pattern.QuantizeTransform(patternTransform);
+
+            foreach (var elementRef in pattern.Elements)
+            {
+                var elemModel = ElementModels.FirstOrDefault(x => x.Element.ID == elementRef.ElementID);
+                if (elemModel == null)
+                    continue;
+
+                var baseTransform = ItemTransform.FromMatrix(elemModel.Transform.ToLDD());
+                bool isSelected = elemModel.IsSelected;
+                var originalMaterial = elemModel.ModelMaterial;
+
+                for (int i = 0; i <= pattern.NumberOfInstances; i++)
+                {
+                    if (i == 0 && elemModel.Visible)
+                        continue;
+                    
+                    var trans = pattern.GetInstanceTransform(patternTransform, baseTransform, i).ToMatrix().ToGL();
+
+                    bool renderTransparent = !elemModel.Visible;
+                    var modelMat = GetInstanceMaterial(elemModel.ModelMaterial, i, renderTransparent);
+
+                    if (renderTransparent)
+                        GL.DepthMask(false);
+
+                    elemModel.ModelMaterial = modelMat;
+                    elemModel.IsSelected = IsSelected;
+                    elemModel.SetTemporaryTransform(trans);
+                    elemModel.RenderModel(camera, mode);
+                    elemModel.SetTemporaryTransform(null);
+
+                    if (renderTransparent)
+                        GL.DepthMask(true);
+                }
+                
+
+                elemModel.IsSelected = isSelected;
+                elemModel.ModelMaterial = originalMaterial;
+            }
+        }
+
+        private MaterialInfo GetInstanceMaterial(MaterialInfo baseMaterial, int instance, bool renderTransparent)
+        {
+            var newMaterial = baseMaterial;
+            newMaterial.Diffuse = Vector4.ComponentMin((newMaterial.Diffuse * 1.15f) + new Vector4(0.08f), Vector4.One);
+            if (renderTransparent)
+                newMaterial.Diffuse = new Vector4(newMaterial.Diffuse.Xyz, 0.6f);
+            return newMaterial;
         }
 
         public override void RenderUI(Camera camera)
