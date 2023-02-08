@@ -134,7 +134,7 @@
     <value>Numpad 7</value>
   </data>
   <data name="AlignToMenu_Top.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>204, 22</value>
   </data>
   <data name="AlignToMenu_Top.Text" xml:space="preserve">
     <value>Top</value>
@@ -143,7 +143,7 @@
     <value>Ctrl+Numpad 7</value>
   </data>
   <data name="AlignToMenu_Bottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>204, 22</value>
   </data>
   <data name="AlignToMenu_Bottom.Text" xml:space="preserve">
     <value>Bottom</value>
@@ -152,7 +152,7 @@
     <value>Numpad 1</value>
   </data>
   <data name="AlignToMenu_Front.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>204, 22</value>
   </data>
   <data name="AlignToMenu_Front.Text" xml:space="preserve">
     <value>Front</value>
@@ -161,7 +161,7 @@
     <value>Ctrl+Numpad 1</value>
   </data>
   <data name="AlignToMenu_Back.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>204, 22</value>
   </data>
   <data name="AlignToMenu_Back.Text" xml:space="preserve">
     <value>Back</value>
@@ -170,7 +170,7 @@
     <value>Numpad 3</value>
   </data>
   <data name="AlignToMenu_Right.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>204, 22</value>
   </data>
   <data name="AlignToMenu_Right.Text" xml:space="preserve">
     <value>Right</value>
@@ -179,7 +179,7 @@
     <value>Ctrl+Numpad 3</value>
   </data>
   <data name="AlignToMenu_Left.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>204, 22</value>
   </data>
   <data name="AlignToMenu_Left.Text" xml:space="preserve">
     <value>Left</value>
@@ -281,34 +281,34 @@
     <value>Display</value>
   </data>
   <data name="MeshesMenu_ConfigureOutlines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>174, 22</value>
   </data>
   <data name="MeshesMenu_ConfigureOutlines.Text" xml:space="preserve">
     <value>Configure Outlines</value>
   </data>
   <data name="MeshesMenu_CalculateOutlines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>174, 22</value>
   </data>
   <data name="MeshesMenu_CalculateOutlines.Text" xml:space="preserve">
     <value>Calculate Outlines</value>
   </data>
   <data name="MeshesMenu_RemoveOutlines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>174, 22</value>
   </data>
   <data name="MeshesMenu_RemoveOutlines.Text" xml:space="preserve">
     <value>Remove Outlines</value>
   </data>
   <data name="MeshesMenu_Separator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>171, 6</value>
   </data>
   <data name="MeshesMenu_Separate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>174, 22</value>
   </data>
   <data name="MeshesMenu_Separate.Text" xml:space="preserve">
     <value>Separate Meshes</value>
   </data>
   <data name="MeshesMenu_Merge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>174, 22</value>
   </data>
   <data name="MeshesMenu_Merge.Text" xml:space="preserve">
     <value>Merge Meshes</value>
@@ -501,7 +501,7 @@
     <value>0, 1, 1, 1</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>549, 29</value>
+    <value>640, 29</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -535,10 +535,10 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="SelectionTransformEditor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
+    <value>3, 5</value>
   </data>
   <data name="SelectionTransformEditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 88</value>
+    <value>201, 99</value>
   </data>
   <data name="SelectionTransformEditor.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -547,7 +547,7 @@
     <value>SelectionTransformEditor</value>
   </data>
   <data name="&gt;&gt;SelectionTransformEditor.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.TransformEditor, Brick Studio, Version=1.0.7.26207, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.TransformEditor, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SelectionTransformEditor.Parent" xml:space="preserve">
     <value>SelectionInfoPanel</value>
@@ -556,10 +556,10 @@
     <value>0</value>
   </data>
   <data name="SelectionInfoPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 29</value>
+    <value>430, 33</value>
   </data>
   <data name="SelectionInfoPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 95</value>
+    <value>210, 106</value>
   </data>
   <data name="SelectionInfoPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -580,10 +580,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>549, 381</value>
+    <value>640, 440</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ViewportPanel</value>
@@ -850,6 +853,6 @@
     <value>ViewportPanel</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Panels.ProjectDocumentPanel, Brick Studio, Version=1.0.7.26207, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Panels.ProjectDocumentPanel, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -93,9 +93,7 @@ namespace LDD.BrickEditor.UI.Panels
                 using (FlagManager.UseFlag("FillSelectionDetails"))
                 {
                     FillElementProperties(model);
-
                 }
-
 
                 if (SelectedElement != null)
                 {
@@ -290,15 +288,18 @@ namespace LDD.BrickEditor.UI.Panels
             NameTextBox.Text = element?.Name ?? string.Empty;
 
             SubMaterialIndexLabel.Visible = element is PartSurface;
-            SubMaterialIndexBox.Visible = element is PartSurface;
+            //SubMaterialIndexBox.Visible = element is PartSurface;
 
             CollisionRadiusLabel.Visible = element is PartSphereCollision;
-            CollisionRadiusBox.Visible = element is PartSphereCollision;
+            //CollisionRadiusBox.Visible = element is PartSphereCollision;
 
             CollisionSizeLabel.Visible = element is PartBoxCollision;
-            CollisionSizeEditor.Visible = element is PartBoxCollision;
+            //CollisionSizeEditor.Visible = element is PartBoxCollision;
             BonePhysPropertiesLabel.Visible = element is PartBone;
             BoneBoundsLabel.Visible = element is PartBone;
+
+            PatternRepetitionsLabel.Visible = element is RepetitionPattern;
+            CircularPatternAngleLabel.Visible = element is CircularPattern;
 
             if (TransformEdit.Tag != null)
                 TransformEdit.BindPhysicalElement(null);
@@ -338,6 +339,10 @@ namespace LDD.BrickEditor.UI.Panels
                             true, DataSourceUpdateMode.OnPropertyChanged));
 
                         FrictionCheckBox.Checked = bone.PhysicsAttributes.FrictionType == 1;
+                        break;
+
+                    case RepetitionPattern repetitionPattern:
+
                         break;
                 }
             }

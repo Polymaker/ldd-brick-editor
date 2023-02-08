@@ -114,6 +114,10 @@ namespace LDD.BrickEditor.Models.Navigation
             }
             else if (Element is ClonePattern pattern)
             {
+                foreach (var elemRef in pattern.Elements)
+                {
+
+                }
                 //Nodes.Add(new ElementCollectionNode(pattern, pattern.Elements,
                 //        "Elements"));
             }
@@ -191,6 +195,8 @@ namespace LDD.BrickEditor.Models.Navigation
                 {
                     if (elementNode.Element is SurfaceComponent)
                         return true;
+                    else if (elementNode.Element is ClonePattern)
+                        return true;
                 }
                 else if (node is ElementCollectionNode collectionNode)
                 {
@@ -203,6 +209,8 @@ namespace LDD.BrickEditor.Models.Navigation
                 if (node is ProjectElementNode elementNode)
                 {
                     if (elementNode.Element is PartBone)
+                        return true;
+                    else if (elementNode.Element is ClonePattern)
                         return true;
                 }
                 else if (node is ElementCollectionNode collectionNode)

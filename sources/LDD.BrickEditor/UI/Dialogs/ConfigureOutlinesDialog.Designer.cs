@@ -31,13 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigureOutlinesDialog));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.AddGroupButton = new System.Windows.Forms.ToolStripButton();
+            this.RemoveGroupButton = new System.Windows.Forms.ToolStripButton();
+            this.controlLabel2 = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.ThicknessBox = new LDD.BrickEditor.UI.Controls.NumberTextBox();
+            this.NoOutlineCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.AvailableMeshList = new BrightIdeasSoftware.ObjectListView();
             this.GroupMeshList = new BrightIdeasSoftware.ObjectListView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.controlLabel2 = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.BreakAngleLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
             this.BreakAngleBox = new LDD.BrickEditor.UI.Controls.NumberTextBox();
             this.controlLabel1 = new LDD.BrickEditor.UI.Controls.ControlLabel();
             this.GroupNameBox = new System.Windows.Forms.TextBox();
@@ -46,10 +50,14 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlLabel2)).BeginInit();
+            this.controlLabel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvailableMeshList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupMeshList)).BeginInit();
-            this.controlLabel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BreakAngleLabel)).BeginInit();
+            this.BreakAngleLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlLabel1)).BeginInit();
             this.controlLabel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,23 +72,54 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Panel2.Controls.Add(this.controlLabel2);
+            this.splitContainer1.Panel2.Controls.Add(this.NoOutlineCheckBox);
+            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer1.Panel2.Controls.Add(this.BreakAngleLabel);
             this.splitContainer1.Panel2.Controls.Add(this.controlLabel1);
             // 
             // toolStrip1
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.AddGroupButton,
+            this.RemoveGroupButton});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             // 
-            // toolStripButton1
+            // AddGroupButton
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.Name = "toolStripButton1";
+            this.AddGroupButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            resources.ApplyResources(this.AddGroupButton, "AddGroupButton");
+            this.AddGroupButton.Name = "AddGroupButton";
+            // 
+            // RemoveGroupButton
+            // 
+            this.RemoveGroupButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            resources.ApplyResources(this.RemoveGroupButton, "RemoveGroupButton");
+            this.RemoveGroupButton.Name = "RemoveGroupButton";
+            // 
+            // controlLabel2
+            // 
+            this.controlLabel2.Controls.Add(this.ThicknessBox);
+            resources.ApplyResources(this.controlLabel2, "controlLabel2");
+            this.controlLabel2.MatchSiblingLabels = true;
+            this.controlLabel2.Name = "controlLabel2";
+            // 
+            // ThicknessBox
+            // 
+            resources.ApplyResources(this.ThicknessBox, "ThicknessBox");
+            this.ThicknessBox.MaximumValue = 2D;
+            this.ThicknessBox.MinimumValue = 0.1D;
+            this.ThicknessBox.Name = "ThicknessBox";
+            this.ThicknessBox.Value = 1D;
+            // 
+            // NoOutlineCheckBox
+            // 
+            resources.ApplyResources(this.NoOutlineCheckBox, "NoOutlineCheckBox");
+            this.NoOutlineCheckBox.Name = "NoOutlineCheckBox";
+            this.NoOutlineCheckBox.UseVisualStyleBackColor = true;
+            this.NoOutlineCheckBox.CheckedChanged += new System.EventHandler(this.NoOutlineCheckBox_CheckedChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -97,6 +136,7 @@
             this.AvailableMeshList.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.AvailableMeshList, "AvailableMeshList");
             this.AvailableMeshList.FullRowSelect = true;
+            this.AvailableMeshList.HideSelection = false;
             this.AvailableMeshList.IsSimpleDragSource = true;
             this.AvailableMeshList.Name = "AvailableMeshList";
             this.AvailableMeshList.UseCompatibleStateImageBehavior = false;
@@ -130,12 +170,12 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // controlLabel2
+            // BreakAngleLabel
             // 
-            this.controlLabel2.Controls.Add(this.BreakAngleBox);
-            resources.ApplyResources(this.controlLabel2, "controlLabel2");
-            this.controlLabel2.MatchSiblingLabels = true;
-            this.controlLabel2.Name = "controlLabel2";
+            this.BreakAngleLabel.Controls.Add(this.BreakAngleBox);
+            resources.ApplyResources(this.BreakAngleLabel, "BreakAngleLabel");
+            this.BreakAngleLabel.MatchSiblingLabels = true;
+            this.BreakAngleLabel.Name = "BreakAngleLabel";
             // 
             // BreakAngleBox
             // 
@@ -169,16 +209,22 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlLabel2)).EndInit();
+            this.controlLabel2.ResumeLayout(false);
+            this.controlLabel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvailableMeshList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupMeshList)).EndInit();
-            this.controlLabel2.ResumeLayout(false);
-            this.controlLabel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BreakAngleLabel)).EndInit();
+            this.BreakAngleLabel.ResumeLayout(false);
+            this.BreakAngleLabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlLabel1)).EndInit();
             this.controlLabel1.ResumeLayout(false);
             this.controlLabel1.PerformLayout();
             this.ResumeLayout(false);
@@ -189,8 +235,8 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private Controls.ControlLabel controlLabel2;
+        private System.Windows.Forms.ToolStripButton AddGroupButton;
+        private Controls.ControlLabel BreakAngleLabel;
         private Controls.NumberTextBox BreakAngleBox;
         private Controls.ControlLabel controlLabel1;
         private System.Windows.Forms.TextBox GroupNameBox;
@@ -199,5 +245,9 @@
         private BrightIdeasSoftware.ObjectListView GroupMeshList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox NoOutlineCheckBox;
+        private System.Windows.Forms.ToolStripButton RemoveGroupButton;
+        private Controls.ControlLabel controlLabel2;
+        private Controls.NumberTextBox ThicknessBox;
     }
 }

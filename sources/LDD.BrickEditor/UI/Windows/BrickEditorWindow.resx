@@ -129,7 +129,7 @@
     <value>6, 6, 6, 6</value>
   </data>
   <data name="DockPanelControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>984, 734</value>
+    <value>1084, 834</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="DockPanelControl.TabIndex" type="System.Int32, mscorlib">
@@ -397,13 +397,16 @@
     <value>Output files in:</value>
   </data>
   <data name="BuildConfigComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 23</value>
+    <value>139, 23</value>
   </data>
   <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="MainMenu.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>7, 2, 0, 2</value>
+  </data>
   <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>984, 27</value>
+    <value>1084, 27</value>
   </data>
   <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -442,13 +445,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>984, 761</value>
+    <value>1084, 861</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>LDD Brick Editor</value>

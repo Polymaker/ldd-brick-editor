@@ -443,7 +443,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.SelectionInfoPanel);
+            this.DockAreas = ((WeifenLuo.WinFormsUI.Docking.DockAreas)((((((WeifenLuo.WinFormsUI.Docking.DockAreas.Float | WeifenLuo.WinFormsUI.Docking.DockAreas.DockLeft) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.DockRight) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.DockTop) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.DockBottom) 
+            | WeifenLuo.WinFormsUI.Docking.DockAreas.Document)));
             this.Name = "ViewportPanel";
+            this.ShowHint = WeifenLuo.WinFormsUI.Docking.DockState.Unknown;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.SelectionInfoPanel.ResumeLayout(false);

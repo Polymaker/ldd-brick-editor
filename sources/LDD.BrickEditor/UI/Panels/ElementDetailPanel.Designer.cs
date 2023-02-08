@@ -46,11 +46,11 @@
             this.CollisionRadiusBox = new LDD.BrickEditor.UI.Controls.NumberTextBox();
             this.SelectionInfoLabel = new System.Windows.Forms.Label();
             this.localizableStringList1 = new LDD.BrickEditor.Localization.LocalizableStringList(this.components);
-            this.MultiSelectionMsg = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
-            this.NoSelectionMsg = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
-            this.TopStudsLabel = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
-            this.BottomStudsLabel = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
-            this.NoConnectorRefLabel = ((LDD.BrickEditor.Localization.LocalizableString)(new LDD.BrickEditor.Localization.LocalizableString()));
+            this.MultiSelectionMsg = new LDD.BrickEditor.Localization.LocalizableString();
+            this.NoSelectionMsg = new LDD.BrickEditor.Localization.LocalizableString();
+            this.TopStudsLabel = new LDD.BrickEditor.Localization.LocalizableString();
+            this.BottomStudsLabel = new LDD.BrickEditor.Localization.LocalizableString();
+            this.NoConnectorRefLabel = new LDD.BrickEditor.Localization.LocalizableString();
             this.SelectionToolStrip = new System.Windows.Forms.ToolStrip();
             this.CurrentSelectionLabel = new System.Windows.Forms.ToolStripLabel();
             this.ElementsComboBox = new System.Windows.Forms.ToolStripComboBox();
@@ -62,6 +62,10 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BonePhysPropertiesLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
             this.BoneBoundsLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.CircularPatternAngleLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.CircularPatternAngleBox = new LDD.BrickEditor.UI.Controls.NumberTextBox();
+            this.PatternRepetitionsLabel = new LDD.BrickEditor.UI.Controls.ControlLabel();
+            this.PatternRepetitionsBox = new LDD.BrickEditor.UI.Controls.NumberTextBox();
             this.tableLayoutPanel3.SuspendLayout();
             this.SelectionToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NameLabel)).BeginInit();
@@ -79,6 +83,10 @@
             this.BonePhysPropertiesLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BoneBoundsLabel)).BeginInit();
             this.BoneBoundsLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CircularPatternAngleLabel)).BeginInit();
+            this.CircularPatternAngleLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PatternRepetitionsLabel)).BeginInit();
+            this.PatternRepetitionsLabel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel3
@@ -268,6 +276,8 @@
             this.flowLayoutPanel1.Controls.Add(this.SubMaterialIndexLabel);
             this.flowLayoutPanel1.Controls.Add(this.CollisionRadiusLabel);
             this.flowLayoutPanel1.Controls.Add(this.CollisionSizeLabel);
+            this.flowLayoutPanel1.Controls.Add(this.PatternRepetitionsLabel);
+            this.flowLayoutPanel1.Controls.Add(this.CircularPatternAngleLabel);
             this.flowLayoutPanel1.Controls.Add(this.BonePhysPropertiesLabel);
             this.flowLayoutPanel1.Controls.Add(this.BoneBoundsLabel);
             this.flowLayoutPanel1.Controls.Add(this.TransformEdit);
@@ -289,6 +299,35 @@
             resources.ApplyResources(this.BoneBoundsLabel, "BoneBoundsLabel");
             this.BoneBoundsLabel.MatchSiblingLabels = true;
             this.BoneBoundsLabel.Name = "BoneBoundsLabel";
+            // 
+            // CircularPatternAngleLabel
+            // 
+            this.CircularPatternAngleLabel.AutoSizeWidth = true;
+            this.CircularPatternAngleLabel.Controls.Add(this.CircularPatternAngleBox);
+            resources.ApplyResources(this.CircularPatternAngleLabel, "CircularPatternAngleLabel");
+            this.CircularPatternAngleLabel.MatchSiblingLabels = true;
+            this.CircularPatternAngleLabel.Name = "CircularPatternAngleLabel";
+            // 
+            // CircularPatternAngleBox
+            // 
+            resources.ApplyResources(this.CircularPatternAngleBox, "CircularPatternAngleBox");
+            this.CircularPatternAngleBox.MaximumValue = 180D;
+            this.CircularPatternAngleBox.MinimumValue = -180D;
+            this.CircularPatternAngleBox.Name = "CircularPatternAngleBox";
+            // 
+            // PatternRepetitionsLabel
+            // 
+            this.PatternRepetitionsLabel.AutoSizeWidth = true;
+            this.PatternRepetitionsLabel.Controls.Add(this.PatternRepetitionsBox);
+            resources.ApplyResources(this.PatternRepetitionsLabel, "PatternRepetitionsLabel");
+            this.PatternRepetitionsLabel.MatchSiblingLabels = true;
+            this.PatternRepetitionsLabel.Name = "PatternRepetitionsLabel";
+            // 
+            // PatternRepetitionsBox
+            // 
+            resources.ApplyResources(this.PatternRepetitionsBox, "PatternRepetitionsBox");
+            this.PatternRepetitionsBox.MaximumValue = 200D;
+            this.PatternRepetitionsBox.Name = "PatternRepetitionsBox";
             // 
             // ElementDetailPanel
             // 
@@ -323,6 +362,12 @@
             this.BonePhysPropertiesLabel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BoneBoundsLabel)).EndInit();
             this.BoneBoundsLabel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CircularPatternAngleLabel)).EndInit();
+            this.CircularPatternAngleLabel.ResumeLayout(false);
+            this.CircularPatternAngleLabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PatternRepetitionsLabel)).EndInit();
+            this.PatternRepetitionsLabel.ResumeLayout(false);
+            this.PatternRepetitionsLabel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +406,9 @@
         private Controls.BoundingBoxEditor BoundingEditor;
         private Controls.ControlLabel BoneBoundsLabel;
         private Controls.ControlLabel BonePhysPropertiesLabel;
+        private Controls.ControlLabel CircularPatternAngleLabel;
+        private Controls.NumberTextBox CircularPatternAngleBox;
+        private Controls.ControlLabel PatternRepetitionsLabel;
+        private Controls.NumberTextBox PatternRepetitionsBox;
     }
 }

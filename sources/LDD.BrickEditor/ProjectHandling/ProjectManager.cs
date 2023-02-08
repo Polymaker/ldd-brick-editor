@@ -246,13 +246,24 @@ namespace LDD.BrickEditor.ProjectHandling
                 //SaveUserProperties();
 
                 StartBatchChanges();
+                
                 CurrentProject.RemoveUnreferencedMeshes();
+                CurrentProject.ProjectPath = TemporaryProjectPath;
+                CurrentProject.LoadProjectXml();
+                foreach (var mesh in CurrentProject.Meshes)
+                {
+                    if (!mesh.IsModelLoaded)
+                        mesh.ReloadModelFromXml();
+                }
+                CurrentProject.UnloadProjectXml();
+
                 EndBatchChanges();
 
+                CurrentProject.ProjectPath = targetPath;
                 CurrentProject.Save(targetPath);
 
                 if (CurrentProject.ErrorMessages.Any())
-                    MessageBoxEX.ShowDetails(Messages.Caption_UnexpectedError, Messages.Caption_UnexpectedError, string.Join(Environment.NewLine, CurrentProject));
+                    MessageBoxEX.ShowDetails(Messages.Caption_UnexpectedError, Messages.Caption_UnexpectedError, string.Join(Environment.NewLine, CurrentProject.ErrorMessages));
 
                 CurrentProjectPath = targetPath;
                 
@@ -264,6 +275,9 @@ namespace LDD.BrickEditor.ProjectHandling
 
                 SettingsManager.AddRecentProject(GetCurrentProjectInfo(), false);
                 ProjectModified?.Invoke(this, EventArgs.Empty);
+
+                foreach (var mesh in CurrentProject.Meshes)
+                    mesh.UnloadModel();
             }
         }
 

@@ -128,7 +128,7 @@
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AddGroupButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -143,20 +143,29 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="AddGroupButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 22</value>
+  <data name="AddGroupButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 22</value>
   </data>
-  <data name="toolStripButton1.Text" xml:space="preserve">
-    <value>Add</value>
+  <data name="AddGroupButton.Text" xml:space="preserve">
+    <value>Add group</value>
+  </data>
+  <data name="RemoveGroupButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="RemoveGroupButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 22</value>
+  </data>
+  <data name="RemoveGroupButton.Text" xml:space="preserve">
+    <value>Remove</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 25</value>
+    <value>246, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -189,6 +198,81 @@
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ThicknessBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 3</value>
+  </data>
+  <data name="ThicknessBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 23</value>
+  </data>
+  <data name="ThicknessBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ThicknessBox.Name" xml:space="preserve">
+    <value>ThicknessBox</value>
+  </data>
+  <data name="&gt;&gt;ThicknessBox.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ThicknessBox.Parent" xml:space="preserve">
+    <value>controlLabel2</value>
+  </data>
+  <data name="&gt;&gt;ThicknessBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="controlLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 66</value>
+  </data>
+  <data name="controlLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 29</value>
+  </data>
+  <data name="controlLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="controlLabel2.Text" xml:space="preserve">
+    <value>Thickness</value>
+  </data>
+  <data name="&gt;&gt;controlLabel2.Name" xml:space="preserve">
+    <value>controlLabel2</value>
+  </data>
+  <data name="&gt;&gt;controlLabel2.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;controlLabel2.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;controlLabel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="NoOutlineCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="NoOutlineCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="NoOutlineCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 40</value>
+  </data>
+  <data name="NoOutlineCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 19</value>
+  </data>
+  <data name="NoOutlineCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="NoOutlineCheckBox.Text" xml:space="preserve">
+    <value>Do not outline by default</value>
+  </data>
+  <data name="&gt;&gt;NoOutlineCheckBox.Name" xml:space="preserve">
+    <value>NoOutlineCheckBox</value>
+  </data>
+  <data name="&gt;&gt;NoOutlineCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NoOutlineCheckBox.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;NoOutlineCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="tableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -199,10 +283,10 @@
     <value>Fill</value>
   </data>
   <data name="AvailableMeshList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 16</value>
+    <value>244, 18</value>
   </data>
   <data name="AvailableMeshList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 247</value>
+    <value>235, 267</value>
   </data>
   <data name="AvailableMeshList.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -223,10 +307,10 @@
     <value>Fill</value>
   </data>
   <data name="GroupMeshList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
+    <value>3, 18</value>
   </data>
   <data name="GroupMeshList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 247</value>
+    <value>235, 267</value>
   </data>
   <data name="GroupMeshList.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -256,7 +340,7 @@
     <value>3, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
+    <value>83, 15</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -286,10 +370,10 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 0</value>
+    <value>244, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 13</value>
+    <value>98, 15</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -310,13 +394,13 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 64</value>
+    <value>3, 103</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 266</value>
+    <value>482, 288</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -331,16 +415,16 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AvailableMeshList" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="GroupMeshList" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="BreakAngleBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 3</value>
+    <value>94, 3</value>
   </data>
   <data name="BreakAngleBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>93, 23</value>
   </data>
   <data name="BreakAngleBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -349,43 +433,46 @@
     <value>BreakAngleBox</value>
   </data>
   <data name="&gt;&gt;BreakAngleBox.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Studio, Version=1.0.7.16417, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BreakAngleBox.Parent" xml:space="preserve">
-    <value>controlLabel2</value>
+    <value>BreakAngleLabel</value>
   </data>
   <data name="&gt;&gt;BreakAngleBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="controlLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 30</value>
+  <data name="BreakAngleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 35</value>
   </data>
-  <data name="controlLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 26</value>
+  <data name="BreakAngleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 29</value>
   </data>
-  <data name="controlLabel2.TabIndex" type="System.Int32, mscorlib">
+  <data name="BreakAngleLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="controlLabel2.Text" xml:space="preserve">
-    <value>Break Angle</value>
+  <data name="BreakAngleLabel.Text" xml:space="preserve">
+    <value>Angle threshold</value>
   </data>
-  <data name="&gt;&gt;controlLabel2.Name" xml:space="preserve">
-    <value>controlLabel2</value>
+  <data name="&gt;&gt;BreakAngleLabel.Name" xml:space="preserve">
+    <value>BreakAngleLabel</value>
   </data>
-  <data name="&gt;&gt;controlLabel2.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.16417, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;BreakAngleLabel.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;controlLabel2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BreakAngleLabel.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
   </data>
-  <data name="&gt;&gt;controlLabel2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;BreakAngleLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GroupNameBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="GroupNameBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 3</value>
+    <value>94, 3</value>
   </data>
   <data name="GroupNameBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>148, 23</value>
   </data>
   <data name="GroupNameBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -406,25 +493,25 @@
     <value>3, 3</value>
   </data>
   <data name="controlLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 26</value>
+    <value>245, 29</value>
   </data>
   <data name="controlLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="controlLabel1.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>Group name</value>
   </data>
   <data name="&gt;&gt;controlLabel1.Name" xml:space="preserve">
     <value>controlLabel1</value>
   </data>
   <data name="&gt;&gt;controlLabel1.Type" xml:space="preserve">
-    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Studio, Version=1.0.7.16417, Culture=neutral, PublicKeyToken=null</value>
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;controlLabel1.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;controlLabel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -439,10 +526,13 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>577, 333</value>
+    <value>743, 395</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>192</value>
+    <value>246</value>
+  </data>
+  <data name="splitContainer1.SplitterWidth" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -463,10 +553,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>577, 333</value>
+    <value>743, 395</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
@@ -474,10 +567,16 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Configure Outlines</value>
   </data>
-  <data name="&gt;&gt;toolStripButton1.Name" xml:space="preserve">
-    <value>toolStripButton1</value>
+  <data name="&gt;&gt;AddGroupButton.Name" xml:space="preserve">
+    <value>AddGroupButton</value>
   </data>
-  <data name="&gt;&gt;toolStripButton1.Type" xml:space="preserve">
+  <data name="&gt;&gt;AddGroupButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RemoveGroupButton.Name" xml:space="preserve">
+    <value>RemoveGroupButton</value>
+  </data>
+  <data name="&gt;&gt;RemoveGroupButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

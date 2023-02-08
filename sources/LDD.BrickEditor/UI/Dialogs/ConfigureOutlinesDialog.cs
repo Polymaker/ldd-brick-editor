@@ -23,8 +23,8 @@ namespace LDD.BrickEditor.UI.Windows
         private OutlinesGroupConfig CurrentConfig { get; set; }
 
         private List<MeshRefNode> AvailableMeshes { get; set; }
-        private List<MeshRefNode> AllGroupedMeshes { get; set; }
-        private List<MeshRefNode> GroupMeshes { get; set; }
+        private List<MeshRefNode> CurrentlyGrouppedMeshes { get; set; }
+        private List<MeshRefNode> CurrentGroupMeshes { get; set; }
 
         private Dictionary<string, string> SurfaceGroups { get; set; }
 
@@ -43,8 +43,27 @@ namespace LDD.BrickEditor.UI.Windows
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+
+            InitializeLists();
             ConfigureListViews();
-            InitializeStuff();
+            LoadGroups();
+        }
+
+        private void InitializeLists()
+        {
+            OutlinesGroups = new BindingList<OutlinesGroupConfig>(Project.OutlinesConfigs.ToList());
+
+            SurfaceGroups = new Dictionary<string, string>();
+
+            foreach (var comp in Project.GetAllElements<SurfaceComponent>())
+            {
+                var gk = $"{comp.Surface.SurfaceID}_{comp.Name}";
+                SurfaceGroups.Add(gk, $"{ProjectManager.GetSurfaceName(comp.Surface)} - {comp.Name}");
+            }
+
+            AvailableMeshes = new List<MeshRefNode>();
+            CurrentGroupMeshes = new List<MeshRefNode>();
+            CurrentlyGrouppedMeshes = new List<MeshRefNode>();
         }
 
         private void ConfigureListViews()
@@ -88,28 +107,46 @@ namespace LDD.BrickEditor.UI.Windows
             return groupKey;
         }
 
-        private void InitializeStuff()
+        
+
+        private void LoadGroups()
         {
+            LoadGroupDetails(Project.DefaultOutlineConfigs, true);
+        }
 
+        private void LoadGroupDetails(OutlinesGroupConfig groupConfig, bool isDefault)
+        {
+            CurrentConfig = groupConfig;
 
+            GroupNameBox.Text = groupConfig.Name;
+            GroupNameBox.Enabled = !isDefault;
+            NoOutlineCheckBox.Visible = isDefault;
+            NoOutlineCheckBox.Checked = groupConfig.AngleThreshold == 0;
+            BreakAngleBox.Value = Math.Max(groupConfig.AngleThreshold, BreakAngleBox.MinimumValue);
+            ThicknessBox.Value = groupConfig.Thickness;
+            GroupMeshList.ClearObjects();
+            AvailableMeshList.Clear();
 
-            OutlinesGroups = new BindingList<OutlinesGroupConfig>(Project.OutlinesConfigs.ToList());
+            GroupMeshList.Enabled = !isDefault;
 
-            SurfaceGroups = new Dictionary<string, string>();
-            foreach (var comp in Project.GetAllElements<SurfaceComponent>())
-            {
-                var gk = $"{comp.Surface.SurfaceID}_{comp.Name}";
-                SurfaceGroups.Add(gk, $"{ProjectManager.GetSurfaceName(comp.Surface)} - {comp.Name}");
-            }
+            RefreshMeshLists();
+        }
 
+        private void RefreshMeshLists()
+        {
             AvailableMeshes = Project.GetAllMeshReferences().Select(m => new MeshRefNode(m)).ToList();
-            GroupMeshes = new List<MeshRefNode>();
-            AllGroupedMeshes = new List<MeshRefNode>();
+            CurrentGroupMeshes = new List<MeshRefNode>();
+            CurrentlyGrouppedMeshes = new List<MeshRefNode>();
+
+            if (CurrentConfig != null)
+            {
+               
+            }
 
             foreach (var mesh in AvailableMeshes)
             {
                 if (OutlinesGroups.Any(g => g.Elements.OfType<ModelMeshReference>().Any(mr => mr.ID == mesh.MeshId)))
-                    AllGroupedMeshes.Add(mesh);
+                    CurrentlyGrouppedMeshes.Add(mesh);
             }
 
             AvailableMeshList.AddObjects(AvailableMeshes);
@@ -118,7 +155,7 @@ namespace LDD.BrickEditor.UI.Windows
         private void GroupMeshList_ModelCanDrop(object sender, BrightIdeasSoftware.ModelDropEventArgs e)
         {
             var draggedMeshes = e.SourceModels.OfType<MeshRefNode>().ToList();
-            if (draggedMeshes.Any(m => !GroupMeshes.Contains(m)))
+            if (draggedMeshes.Any(m => !CurrentGroupMeshes.Contains(m)))
                 e.Effect = DragDropEffects.Move;
             else
                 e.Effect = DragDropEffects.None;
@@ -129,10 +166,10 @@ namespace LDD.BrickEditor.UI.Windows
             var draggedMeshes = e.SourceModels.OfType<MeshRefNode>().ToList();
             foreach(var m in draggedMeshes)
             {
-                if (!AllGroupedMeshes.Contains(m))
+                if (!CurrentlyGrouppedMeshes.Contains(m))
                 {
-                    GroupMeshes.Add(m);
-                    AllGroupedMeshes.Add(m);
+                    CurrentGroupMeshes.Add(m);
+                    CurrentlyGrouppedMeshes.Add(m);
                     GroupMeshList.AddObject(m);
                 }
                 AvailableMeshList.RefreshObjects(draggedMeshes);
@@ -146,8 +183,8 @@ namespace LDD.BrickEditor.UI.Windows
                 var selectedMeshes = GroupMeshList.SelectedObjects.OfType<MeshRefNode>().ToList();
                 if (selectedMeshes.Any())
                 {
-                    GroupMeshes.Remove(selectedMeshes);
-                    AllGroupedMeshes.Remove(selectedMeshes);
+                    CurrentGroupMeshes.Remove(selectedMeshes);
+                    CurrentlyGrouppedMeshes.Remove(selectedMeshes);
                     GroupMeshList.RemoveObjects(selectedMeshes);
                     AvailableMeshList.RefreshObjects(selectedMeshes);
                 }
@@ -185,7 +222,7 @@ namespace LDD.BrickEditor.UI.Windows
 
             e.Item.CellPadding = new Rectangle(10, 2, 2, 2);
 
-            if (AllGroupedMeshes.Contains(meshNode))
+            if (CurrentlyGrouppedMeshes.Contains(meshNode))
             {
                 e.Item.BackColor = Color.Gainsboro;
                 e.Item.ForeColor = Color.DimGray;
@@ -198,6 +235,12 @@ namespace LDD.BrickEditor.UI.Windows
                 return;
 
             e.Item.CellPadding = new Rectangle(10, 2, 2, 2);
+        }
+
+        private void NoOutlineCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            BreakAngleBox.Enabled = !NoOutlineCheckBox.Checked;
+            ThicknessBox.Enabled = !NoOutlineCheckBox.Checked;
         }
     }
 }

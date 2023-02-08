@@ -102,6 +102,7 @@ namespace LDD.BrickEditor.UI.Panels
 
             MeshesMenu_ConfigureOutlines.Visible = Program.IsDebug();
 
+
 #if DEBUG
             var dbgMenu = new ToolStripMenuItem
             {

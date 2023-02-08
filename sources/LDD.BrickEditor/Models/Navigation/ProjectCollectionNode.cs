@@ -33,6 +33,7 @@ namespace LDD.BrickEditor.Models.Navigation
             NodeID = collection.GetHashCode().ToString();
             Text = text;
         }
+
         protected override void OnManagerAssigned()
         {
             base.OnManagerAssigned();

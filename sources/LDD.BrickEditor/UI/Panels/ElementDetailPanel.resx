@@ -445,7 +445,7 @@
     <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;TransformEdit.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="SubMaterialIndexBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>95, 3</value>
@@ -567,6 +567,15 @@
   <metadata name="SelectionToolStrip.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="CurrentSelectionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
+    <value>Current:</value>
+  </data>
+  <data name="ElementsComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 23</value>
+  </data>
   <data name="SelectionToolStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -593,15 +602,6 @@
   </data>
   <data name="&gt;&gt;SelectionToolStrip.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="CurrentSelectionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="CurrentSelectionLabel.Text" xml:space="preserve">
-    <value>Current:</value>
-  </data>
-  <data name="ElementsComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 23</value>
   </data>
   <data name="NameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 22</value>
@@ -741,8 +741,104 @@
   <data name="flowLayoutPanel1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="BonePhysPropertiesLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PatternRepetitionsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 3</value>
+  </data>
+  <data name="PatternRepetitionsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="PatternRepetitionsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;PatternRepetitionsBox.Name" xml:space="preserve">
+    <value>PatternRepetitionsBox</value>
+  </data>
+  <data name="&gt;&gt;PatternRepetitionsBox.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PatternRepetitionsBox.Parent" xml:space="preserve">
+    <value>PatternRepetitionsLabel</value>
+  </data>
+  <data name="&gt;&gt;PatternRepetitionsBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PatternRepetitionsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 126</value>
+  </data>
+  <data name="PatternRepetitionsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="PatternRepetitionsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 26</value>
+  </data>
+  <data name="PatternRepetitionsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="PatternRepetitionsLabel.Text" xml:space="preserve">
+    <value>Repetitions</value>
+  </data>
+  <data name="&gt;&gt;PatternRepetitionsLabel.Name" xml:space="preserve">
+    <value>PatternRepetitionsLabel</value>
+  </data>
+  <data name="&gt;&gt;PatternRepetitionsLabel.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PatternRepetitionsLabel.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;PatternRepetitionsLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="CircularPatternAngleBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 3</value>
+  </data>
+  <data name="CircularPatternAngleBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="CircularPatternAngleBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;CircularPatternAngleBox.Name" xml:space="preserve">
+    <value>CircularPatternAngleBox</value>
+  </data>
+  <data name="&gt;&gt;CircularPatternAngleBox.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.NumberTextBox, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CircularPatternAngleBox.Parent" xml:space="preserve">
+    <value>CircularPatternAngleLabel</value>
+  </data>
+  <data name="&gt;&gt;CircularPatternAngleBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CircularPatternAngleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 152</value>
+  </data>
+  <data name="CircularPatternAngleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="CircularPatternAngleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 26</value>
+  </data>
+  <data name="CircularPatternAngleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="CircularPatternAngleLabel.Text" xml:space="preserve">
+    <value>Angle</value>
+  </data>
+  <data name="&gt;&gt;CircularPatternAngleLabel.Name" xml:space="preserve">
+    <value>CircularPatternAngleLabel</value>
+  </data>
+  <data name="&gt;&gt;CircularPatternAngleLabel.Type" xml:space="preserve">
+    <value>LDD.BrickEditor.UI.Controls.ControlLabel, Brick Editor, Version=1.0.7.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CircularPatternAngleLabel.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;CircularPatternAngleLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="BonePhysPropertiesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 178</value>
   </data>
   <data name="BonePhysPropertiesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -766,10 +862,10 @@
     <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;BonePhysPropertiesLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="BoneBoundsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 223</value>
+    <value>6, 275</value>
   </data>
   <data name="BoneBoundsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -793,7 +889,7 @@
     <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;BoneBoundsLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
