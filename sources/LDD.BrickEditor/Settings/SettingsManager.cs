@@ -155,6 +155,7 @@ namespace LDD.BrickEditor.Settings
 
         public static void ValidateLddPaths()
         {
+
             if (!LDDEnvironment.HasInitialized)
             {
                 if (!string.IsNullOrEmpty(Current.LddSettings.ProgramFilesPath) ||
@@ -168,11 +169,13 @@ namespace LDD.BrickEditor.Settings
                 return;
             }
 
-            bool sameAsInstalled = false;
 
-            if (LDDEnvironment.IsInstalled)
+            if (!string.IsNullOrEmpty(Current.LddSettings.ProgramFilesPath) &&
+                !string.IsNullOrEmpty(Current.LddSettings.ApplicationDataPath))
             {
-                sameAsInstalled = StringUtils.EqualsIC(
+                if (LDDEnvironment.IsInstalled)
+                {
+                    bool sameAsInstalled = StringUtils.EqualsIC(
                         Current.LddSettings.ApplicationDataPath,
                         LDDEnvironment.InstalledEnvironment.ApplicationDataPath
                     ) &&
@@ -180,31 +183,26 @@ namespace LDD.BrickEditor.Settings
                         Current.LddSettings.ProgramFilesPath,
                         LDDEnvironment.InstalledEnvironment.ProgramFilesPath
                     );
+
+                    if (sameAsInstalled)
+                    {
+                        LDDEnvironment.SetOverride(null);
+                        return;
+                    }
+                }
+
+                var custom = LDDEnvironment.Create(
+                        Current.LddSettings.ProgramFilesPath,
+                        Current.LddSettings.ApplicationDataPath);
+                LDDEnvironment.SetOverride(custom);
             }
 
-            if (sameAsInstalled)
-                LDDEnvironment.SetOverride(null);
-            else
-            {
-                if (LDDEnvironment.IsInstalled)
-                {
-                    if (string.IsNullOrEmpty(Current.LddSettings.ProgramFilesPath))
-                        Current.LddSettings.ProgramFilesPath = LDDEnvironment.InstalledEnvironment.ProgramFilesPath;
-                    if (string.IsNullOrEmpty(Current.LddSettings.ApplicationDataPath))
-                        Current.LddSettings.ApplicationDataPath = LDDEnvironment.InstalledEnvironment.ApplicationDataPath;
-                }
-                
-                if (!string.IsNullOrEmpty(Current.LddSettings.ProgramFilesPath) || 
-                    !string.IsNullOrEmpty(Current.LddSettings.ApplicationDataPath))
-                {
-                    var custom = LDDEnvironment.Create(
-                        Current.LddSettings.ProgramFilesPath, 
-                        Current.LddSettings.ApplicationDataPath);
-                    LDDEnvironment.SetOverride(custom);
-                }
-                else
-                    LDDEnvironment.SetOverride(null);
-            }
+            if (string.IsNullOrEmpty(Current.LddSettings.ProgramFilesPath) && LDDEnvironment.IsInstalled)
+                Current.LddSettings.ProgramFilesPath = LDDEnvironment.InstalledEnvironment.ProgramFilesPath;
+            if (string.IsNullOrEmpty(Current.LddSettings.ApplicationDataPath) && LDDEnvironment.IsInstalled)
+                Current.LddSettings.ApplicationDataPath = LDDEnvironment.InstalledEnvironment.ApplicationDataPath;
+
+            SaveSettings();
         }
 
         public static void SaveSettings()
